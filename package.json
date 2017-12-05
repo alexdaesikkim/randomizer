@@ -1,0 +1,15 @@
+{
+  "name": "randomizer",
+  "version": "0.0.1",
+  "description": "serving random songs for tournament organizers",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Alex D Kim",
+  "license": "ISC",
+  "dependencies": {
+    "create-react-app": "^1.4.3",
+    "express": "^4.16.2"
+  }
+}
