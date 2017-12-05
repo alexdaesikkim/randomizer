@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "create-react-app": "^1.4.3",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "path": "^0.12.7",
+    "xlsx": "^0.11.12"
   }
 }
