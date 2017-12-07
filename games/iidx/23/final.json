@@ -1,0 +1,950 @@
+{
+	"id": "beatmaniaiidx23",
+	"songs": [
+		{
+			"name": "In The Breeze",
+			"artist": "96 & Sota ft. Mayumi Morinaga",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Love Me Do",
+			"artist": "AKIRA YAMAOKA",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "ヨシダさん",
+			"artist": "AKIRA YAMAOKA",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Real",
+			"artist": "Aya",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Nasty!",
+			"artist": "Baby Weapon feat.Asuka M",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Brazilian Fire",
+			"artist": "Ben Franklin",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "NΦ CRIME",
+			"artist": "C×F",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "INFERNO",
+			"artist": "Caldeira feat.星野奏子",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "かげぬい ～ Ver.BENIBOTAN ～",
+			"artist": "CULTVOICE by S.S.D.PRODUCTS",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Bad Routine",
+			"artist": "D.J. Spugna",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "We are Disっ娘よっつ打ち命",
+			"artist": "DANCE☆MAN feat. Disっ娘",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Close my Eyes for Me",
+			"artist": "D-crew feat.DENNIS GUNN (DJ Yoshitaka SCRATCHING)",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "minimalian",
+			"artist": "DETROIAN",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Exchange Place",
+			"artist": "Dirty Androids",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Miami Sunset Drive",
+			"artist": "Dirty Androids",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "To The Paradise",
+			"artist": "DJ Genki feat. SHIN from HYPERNOVA",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Shining World",
+			"artist": "DJ Genki feat. Yukacco",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Frozen Ray (original mix)",
+			"artist": "dj TAKA",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Tomorrow Perfume",
+			"artist": "dj TAKA",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Silvia Drive",
+			"artist": "dj TAKA feat.Noria",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "pandora",
+			"artist": "dj TAKA feat.Tomomi",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "METALLIC MIND",
+			"artist": "DJ TECHNORCH fw. GUHROOVY",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "虹色",
+			"artist": "DJ YOSHITAKA feat. G.S.C license",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "CaptivAte～裁き～",
+			"artist": "DJ YOSHITAKA feat.A/I",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "High School Love",
+			"artist": "DJ YOSHITAKA feat.DWP",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "WISH(EUROBEAT MIX)",
+			"artist": "DJ YOSHITAKA feat.杉村ことみ",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Claiomh Solais",
+			"artist": "DJ Yoshitaka VS S.S.D.",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "neogenesis",
+			"artist": "DM Ashura",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "高高度降下低高度開傘",
+			"artist": "Dr. Honda",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "ASTRAL VOYAGE",
+			"artist": "EeL",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "MOON RACE",
+			"artist": "ELEKTEL",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Cheer Train",
+			"artist": "Fuzita Blender",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "First Resolution",
+			"artist": "good-cool",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Last Message",
+			"artist": "good-cool feat. Meg",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "ALL I NEED YOUR LOVE",
+			"artist": "GUHROOVY fw. M-Project",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "MAD ATTACK",
+			"artist": "HALFBY",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "まほろば",
+			"artist": "HHH+H",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "LUV CAN SAVE U",
+			"artist": "HIDEKI NAGANUMA",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "下弦の月",
+			"artist": "iNO",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Raspberry♡Heart(English version)",
+			"artist": "jun feat. PAULA TERRY",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "A MINSTREL ～ver. short-scape～",
+			"artist": "KANTASIA by S.S.D. PRODUCTS",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Liquid Crystal Girl feat. echo",
+			"artist": "kmp",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "I FIGHT ME",
+			"artist": "kobo feat. Marsha",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Clione",
+			"artist": "kors k",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Echo Of Forever",
+			"artist": "kors k",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "heaven above",
+			"artist": "kors k",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Special One",
+			"artist": "kors k feat. Suzuyo Miyamoto",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "IXION",
+			"artist": "L.E.D.",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "GENOM SCREAMS",
+			"artist": "L.E.D.LIGHT",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "thunder",
+			"artist": "Lion MUSASHI",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Watch out!!",
+			"artist": "MAD Sequence*",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Damage Per Second",
+			"artist": "Maozon",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Round and Round",
+			"artist": "Masayoshi Minoshima feat. 綾倉盟",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "ANAGRAMS I to Y",
+			"artist": "Mayumi Morinaga",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "dual control",
+			"artist": "Mr.T",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "STILL IN MY HEART",
+			"artist": "NAOKI",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Broken My Heart",
+			"artist": "NAOKI feat.PAULA TERRY",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "MARIA (I believe... )",
+			"artist": "NAOKI feat.PAULA TERRY",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "太陽～T・A・I・Y・O～",
+			"artist": "NAOKI feat.星野奏子",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Melody Life",
+			"artist": "Noria",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Recollection",
+			"artist": "Noria",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Golden Horn",
+			"artist": "Osamu Kubota",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "MY FUTURE",
+			"artist": "PINK PONG",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "STAR DREAM",
+			"artist": "PINK PONG",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "CARRY ON NIGHT (English version)",
+			"artist": "platoniX (EURO style)",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Howling",
+			"artist": "PON",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "白露の風",
+			"artist": "Qrispy Joybox feat. 常盤ゆう",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "ACT",
+			"artist": "RAM",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "ALL RIGHT",
+			"artist": "RAM",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "HIGH",
+			"artist": "RAM",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "LOW",
+			"artist": "RAM",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "satfinal",
+			"artist": "RAM",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Mermaid girl-秋葉工房 MIX-",
+			"artist": "Remixed by DJ Command",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Voxane",
+			"artist": "Remo-con",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "LESSON 5",
+			"artist": "Risk Junk feat.Erika Mochizuki",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "AGEHA",
+			"artist": "Ryu☆",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Mind Mapping",
+			"artist": "Ryu☆",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "starmine",
+			"artist": "Ryu☆",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "BRIDAL FESTIVAL !!!",
+			"artist": "S.S.D. with ななっち",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "STAR FIELD",
+			"artist": "SADA",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "route 80s",
+			"artist": "sampling masters MEGA",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "真夏の花・真夏の夢",
+			"artist": "Sana",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "the trigger of innocence",
+			"artist": "Seiya Murai",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "AVE DE RAPINA",
+			"artist": "Shawn The Horny Master",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Crazy K.I.N.O.",
+			"artist": "Shoichiro Hirata",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "MUSIC TO YOUR HEAD",
+			"artist": "SLAKE",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Ready To Rockit Blues",
+			"artist": "SLAKE",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "beatonic nation",
+			"artist": "Sota Fujimori",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "In Heaven",
+			"artist": "Sota Fujimori",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "PLASMA",
+			"artist": "Sota Fujimori",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "with you…",
+			"artist": "Sota Fujimori",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "SURVIVOR",
+			"artist": "SOUND HOLIC Vs. ZYTOKINE feat. Nana Takahashi",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Boundary",
+			"artist": "SPARKER",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "BRIGHTNESS DARKNESS",
+			"artist": "SPARKER",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "I know You know",
+			"artist": "Suke+Suke feat. Ribbon",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "RUGGED ASH",
+			"artist": "SYMPHONIC DEFOGGERS",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "esrev:eR",
+			"artist": "TAG meets ",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "memories",
+			"artist": "TAKA",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "abstract",
+			"artist": "TaQ",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "era (nostalmix)",
+			"artist": "TaQ",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "era (step mix)",
+			"artist": "TaQ",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Double♡♡Loving Heart",
+			"artist": "Tatsh feat. Junko Hirata ＆ Sayaka Minami",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Change the World",
+			"artist": "Tatsh feat.小田ユウ",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Don't Stop The Music feat.森高千里",
+			"artist": "tofubeats",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "コスモス",
+			"artist": "TSU-NA",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Freezing atmosphere",
+			"artist": "Twin AmadeuS",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "ULTiM∧TE",
+			"artist": "TЁЯRA",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "零 - ZERO -",
+			"artist": "TЁЯRA",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Attitude",
+			"artist": "Y&Co.",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Monkey Dance",
+			"artist": "Y&Co.",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "SPEEDY CAT",
+			"artist": "Y&Co.",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "エコ爺",
+			"artist": "Y&Co.",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "IN THE NAME OF LOVE",
+			"artist": "Y&Co. feat.Erica",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Medicine of love",
+			"artist": "イロハ＆リリナ",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "大桟橋",
+			"artist": "ウッチーズ",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "たからもの",
+			"artist": "セリカ＆エリカ",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Roots of my way!",
+			"artist": "ナイア",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "YELLOW FROG from Steel Chronicle",
+			"artist": "劇団レコード",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Under the Sky",
+			"artist": "南さやか(BeForU) with platoniX",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "WISE UP!",
+			"artist": "木之下慶行 feat.星野奏子",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Far east nightbird",
+			"artist": "猫叉Master",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Journey",
+			"artist": "猫叉Master",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Element of SPADA",
+			"artist": "猫叉Master feat. 霜月はるか",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "170"
+		},
+		{
+			"name": "chrono diver -fragment-",
+			"artist": "猫叉Master feat.三澤 秋",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Kick Out 仮面",
+			"artist": "上野圭市 (aka. Babyweapon",
+			"level": "DJ SWAMI)feat.星野奏子",
+			"difficutly": "9",
+			"bpm": "3"
+		},
+		{
+			"name": "beatchic☆仮面～好き、でいさせて～",
+			"artist": "上野圭市 (transforming into Masao♥Lovely)feat.星野奏子",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "Give Me Your Love",
+			"artist": "星野奏子",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "To my star",
+			"artist": "星野奏子",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "恋は白帯、サンシロー",
+			"artist": "星野奏子",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "未来のプリズム",
+			"artist": "星野奏子",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "陽炎",
+			"artist": "星野奏子",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "タシカナモノ",
+			"artist": "星野奏子 with the BAND",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "翼",
+			"artist": "小林ゆう",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "SHOOTING STAR",
+			"artist": "小坂りゆ",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		},
+		{
+			"name": "INJECTION OF LOVE",
+			"artist": "新谷あきら",
+			"level": "9",
+			"difficutly": "3",
+			"bpm": "150"
+		}
+	]
+}

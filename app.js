@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 var fs = require('fs');
 
 var game_data = require('./games/game_data.json')
+const cache_size = 10;
 
 var game_cache = {
   "size": 0,
@@ -15,7 +16,6 @@ var game_cache = {
 
 app.use(bodyParser.json());
 
-//LRU cache
 
 
 //fisher-yates
@@ -29,19 +29,18 @@ function shuffle(array, size){
   return array;
 }
 
-function check_cache(name){
-  if(game_cache.name == null){
-
+//LRU cache
+function check_cache(game, version, build){
+  if(game_cache.game_songs.name == null){
+    if(game_cache.size < cache_size){
+      game_cache.size++;
+      var filename = "./" + game + "/" + version + "/" + build + ".json";
+      var obj = JSON.parse(fs.readFileSync(filename, 'utf8'));
+      game_cache.game_songs[name] = obj;
+    }
   }
+  return game_cache.game_songs[name];
 }
-
-//due to this being guac specific, some calls will be very specific to this case
-//this code, if used elsewhere, would not work as well as it would
-//i.e. selecting within range + level would require sql type call
-//unless organized very well
-
-//yes, this is framework for the 'master' random song generator that will come later
-//but for now, i have deadline
 
 //personal note: heroku has 10k limit for each postgres database, but i dont think
 //there's a limit on how much i can make
@@ -49,65 +48,96 @@ function check_cache(name){
 //if i really want to host this for FREE, i need to get through some loopholes
 //if this was purely json data and pulling data from it, i can use randomizer with ease
 //todo later: make mental note somewhere else
-
+function filter_object(obj, difficulty, min, max){
+  return null;
+}
 
 app.get('/:game/:version/:build/random/', function(req, res, next){
-  var count = req.body.count;
-  var difficulty = req.body.difficulty;
+  var count = req.body.count > 1 ? req.body.count : 1;
+  var difficulty = req.body.difficulty > 1 ? req.body.difficulty : 0;
   var min = req.body.min;
   var max = req.body.max;
   var game = req.params.game;
   var version = req.params.version;
   var build = req.params.build;
   var obj = {};
+  var song_obj = {};
+  console.log(count);
 
-
-  if(game_data.games[game] == null){
-    console.log("case 1");
-    obj = {
-      status:{
-        message: "Invalid game name",
-        code: 401
+  try{
+      var filename = "./games/" + game + "/" + version + "/" + build + ".json";
+      song_obj = JSON.parse(fs.readFileSync(filename, 'utf8'));
+  }
+  catch(err){
+    if(game_data.games[game] == null){
+      console.log("case 1");
+      obj = {
+        status:{
+          message: "Invalid game name",
+          code: 401
+        }
       }
+      res.status(401);
     }
-    res.status(401);
+
+    else if(game_data.games[game].versions[version] == null){
+      console.log("case 2");
+      obj = {
+        status:{
+          message: "Invalid version name",
+          code: 401
+        }
+      }
+      res.status(401);
+    }
+
+    //have to filter builds and check here
+    else if(game_data.games[game].versions[version].builds.filter(function(str){return build == str}).length == 0){
+      obj = {
+        status:{
+          message: "Invalid build name",
+          code: 401
+        }
+      }
+      res.status(401);
+    }
+    else{
+      obj = {
+        status:{
+          message: "Internal error, please contact administrator (File not found)",
+          code: 500
+        }
+      }
+      res.status(500)
+    }
     res.json(obj);
     res.end();
     return;
   }
 
-  if(game_data.games[game].versions[version] == null){
-    console.log("case 2");
-    obj = {
-      status:{
-        message: "Invalid version name",
-        code: 401
-      }
-    }
-    res.status(401);
-    res.json(obj);
-    res.end();
-    return;
-  }
 
-  //have to filter builds and check here
-  if(game_data.games[game].versions[version].builds.filter(function(str){return build == str}).length == 0){
-    obj = {
-      status:{
-        message: "Invalid build name",
-        code: 401
-      }
-    }
-    res.status(401);
-    res.json(obj);
-    res.end();
-    return;
-  }
+  console.log(song_obj.id);
 
-  var filename = "./" + game + "/" + version + "/" + build + ".json";
-  var obj = JSON.parse(fs.readFileSync(filename, 'uft8'));
   //need to cache the objects
-  console.log("case 4");
+
+  //FILTER results based on the params given
+
+  //not really time consuming to generate
+  var array = [];
+  var length = song_obj.songs.length;
+  for(var i = 0;  i < length; i++){
+    array.push(i);
+  }
+  array = shuffle(array, length);
+  obj = {
+    count: 1,
+    songs: []
+  }
+  for(var i = 0; i < 1; i++){
+    obj.songs.push(song_obj.songs[array[0]]);
+  }
+
+  res.json(obj);
   res.status(200);
   res.end();
   return;
