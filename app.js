@@ -2,8 +2,11 @@ var express = require('express');
 var path = require('path');
 var app = express();
 var excel = require('xlsx');
+var bodyParser = require('body-parser');
 
-app.use(express.static(path.join(__dirname, 'guac-frontend/build')));
+var game_data = require('./games/game_data.json')
+
+app.use(bodyParser.json());
 
 //fisher-yates
 function shuffle(array, size){
@@ -32,80 +35,65 @@ function shuffle(array, size){
 //todo later: make mental note somewhere else
 
 
-//this function is using excel, and grabing stuff one by one
-//conver this so that i use json
-//can use filter to get the data that I want
-function grab_data(worksheet, row){
-  var songname = worksheet[("A" + row)].v;
-  var artist = worksheet[("B" + row)].v;
-  var level = worksheet[("C" + row)].v;
-  var difficulty = worksheet[("D" + row)].v;
-
-  var obj = {
-    name: songname,
-    artist: artist,
-    level: level,
-    difficulty: difficulty
-  }
-  return obj;
-}
-
-app.get('/:game/:version:/random/', function(req, res, next){
-  var count = req.params.count;
-  var difficulty = req.params.difficulty;
-  var min = req.params.min;
-  var max = req.params.max;
+app.get('/:game/:version/:build/random/', function(req, res, next){
+  var count = req.body.count;
+  var difficulty = req.body.difficulty;
+  var min = req.body.min;
+  var max = req.body.max;
   var game = req.params.game;
   var version = req.params.version;
+  var build = req.params.build;
+  var obj = {};
 
-  //should change this to json
-  var filename = "guac_" + name + ".xlsx";
 
-  try{
-    var workbook = excel.readFile(filename);
-  }
-  catch(err){
-    //remember to add msg and send it as part of the response
-    console.log("File not found for game " + name);
-    res.status(404);
-    res.end();
-    return;
-  }
-
-  if(min > max){
+  if(game_data.games[game] == null){
+    console.log("case 1");
+    obj = {
+      status:{
+        message: "Invalid game name",
+        code: 401
+      }
+    }
     res.status(401);
+    res.json(obj);
     res.end();
     return;
   }
-  var total = 0;
-  var offset = 0;
-  var worksheet = workbook.Sheets[workbook.SheetNames[0]];
-  var x = 1; //due to column title "total";
-  for(x; x < req.params.min; x++){
-    var cell = "F"+x;
-    offset += worksheet[cell].v;
-  }
-  for(x; x <= req.params.max; x++){
-    var cell = "F"+x;
-    total += worksheet[cell].v;
+
+  if(game_data.games[game].versions[version] == null){
+    console.log("case 2");
+    obj = {
+      status:{
+        message: "Invalid version name",
+        code: 401
+      }
+    }
+    res.status(401);
+    res.json(obj);
+    res.end();
+    return;
   }
 
-  var array = [];
-  for(var i = 1;  i <= total; i++){
-    array.push(i);
+  //have to filter builds and check here
+  if(game_data.games[game].versions[version].builds.filter(function(str){return build == str}).length == 0){
+    obj = {
+      status:{
+        message: "Invalid build name",
+        code: 401
+      }
+    }
+    res.status(401);
+    res.json(obj);
+    res.end();
+    return;
   }
-  array = shuffle(array, total);
 
-  var return_obj = {
-    songs: []
-  }
-  for(var i = 0; i < count; i++){
-    var obj = grab_data(worksheet, (array[i]+offset));
-    return_obj.songs.push(obj);
-  }
-  console.log(return_obj.songs);
-  console.log(count);
-  res.json(return_obj);
+  var filename = "./" + game + "/" + version + "/" + build + ".json";
+
+  console.log("case 4");
+  res.status(200);
+  res.end();
+  return;
 
 });
 

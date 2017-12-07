@@ -1,0 +1,34 @@
+{
+  "games":{
+    "iidx":{
+      "name": "beatmania IIDX",
+      "difficulties": [1, 2, 3],
+      "styles": ["single", "double"],
+      "versions": {
+        "23":{
+          "name": "Copula",
+          "builds": ["final"]
+        },
+        "24":{
+          "name": "Sinobuz",
+          "builds": ["final"]
+        }
+      }
+    },
+    "ddr":{
+      "name": "Dance Dance Revolution",
+      "difficulties": [0, 1, 2, 3, 4, 5],
+      "styles": ["single", "double"],
+      "versions": {
+        "15":{
+          "name": "2014",
+          "builds": ["final"]
+        },
+        "16":{
+          "name": "Ace",
+          "builds": ["final"]
+        }
+      }
+    }
+  }
+}
