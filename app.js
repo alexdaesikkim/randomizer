@@ -3,10 +3,20 @@ var path = require('path');
 var app = express();
 var excel = require('xlsx');
 var bodyParser = require('body-parser');
+var fs = require('fs');
 
 var game_data = require('./games/game_data.json')
 
+var game_cache = {
+  "size": 0,
+  "game_songs": {},
+  "stack": []
+};
+
 app.use(bodyParser.json());
+
+//LRU cache
+
 
 //fisher-yates
 function shuffle(array, size){
@@ -17,6 +27,12 @@ function shuffle(array, size){
     array[j] = temp;
   }
   return array;
+}
+
+function check_cache(name){
+  if(game_cache.name == null){
+
+  }
 }
 
 //due to this being guac specific, some calls will be very specific to this case
@@ -89,7 +105,8 @@ app.get('/:game/:version/:build/random/', function(req, res, next){
   }
 
   var filename = "./" + game + "/" + version + "/" + build + ".json";
-
+  var obj = JSON.parse(fs.readFileSync(filename, 'uft8'));
+  //need to cache the objects
   console.log("case 4");
   res.status(200);
   res.end();
