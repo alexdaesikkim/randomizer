@@ -29,7 +29,8 @@ function shuffle(array, size){
   return array;
 }
 
-//LRU cache
+//LRU cache?
+//MVP: no need to implement this now.
 function check_cache(game, version, build){
   if(game_cache.game_songs.name == null){
     if(game_cache.size < cache_size){
@@ -48,21 +49,54 @@ function check_cache(game, version, build){
 //if i really want to host this for FREE, i need to get through some loopholes
 //if this was purely json data and pulling data from it, i can use randomizer with ease
 //todo later: make mental note somewhere else
-function filter_object(obj, difficulty, min, max){
-  return null;
+function filter_object(obj, d_min, d_max, l_min, l_max){
+  var new_obj = obj;
+
+  //filter by difficulty, IF not default
+  if(d_min != 0 || d_max != 0){
+    if(d_max == 0){
+      new_obj.filter(function(data){
+        return data.difficulty >= d_min;
+      })
+    }
+    else{
+      new_obj.filter(function(data){
+        return (data.difficulty >= d_min && data.difficulty <= d_max);
+      })
+    }
+  }
+
+  //filter by level, IF not default
+  if(l_min != 0 || l_max != 0){
+    if(l_max == 0){
+      new_obj.filter(function(data){
+        return data.level >= l_min;
+      })
+    }
+    else{
+      return (data.level >= l_min && data.level <= l_max);
+    }
+  }
+
+  return new_obj;
 }
 
 app.get('/:game/:version/:build/random/', function(req, res, next){
   var count = req.body.count > 1 ? req.body.count : 1;
-  var difficulty = req.body.difficulty > 1 ? req.body.difficulty : 0;
-  var min = req.body.min;
-  var max = req.body.max;
+  var min_difficulty = req.body.difficulty != null ? req.body.difficulty.min : 0;
+  var max_difficulty = req.body.difficulty != null ? req.body.difficulty.max : 0;
+  var min_level = req.body.min != null ? req.body.min : 0; //integer
+  var max_level = req.body.max != null ? req.body.max : 0; //integer
   var game = req.params.game;
   var version = req.params.version;
   var build = req.params.build;
   var obj = {};
   var song_obj = {};
-  console.log(count);
+
+  console.log("D Min: " + min_difficulty);
+  console.log("D Max: " + max_difficulty);
+  console.log("L Min: " + min_level);
+  console.log("L Max: " + max_level);
 
   try{
       var filename = "./games/" + game + "/" + version + "/" + build + ".json";

@@ -2,7 +2,10 @@
   "games":{
     "iidx":{
       "name": "beatmania IIDX",
-      "difficulties": [1, 2, 3],
+      "difficultiy":{
+        "min": 1,
+        "max": 4
+      },
       "styles": ["single", "double"],
       "versions": {
         "23":{
@@ -17,7 +20,10 @@
     },
     "ddr":{
       "name": "Dance Dance Revolution",
-      "difficulties": [0, 1, 2, 3, 4, 5],
+      "difficultiy":{
+        "min": 1,
+        "max": 5
+      },
       "styles": ["single", "double"],
       "versions": {
         "15":{
