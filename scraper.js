@@ -24,8 +24,7 @@ request(options, function(error, response, html){
     x.each(function(i, element){
       var a = $(this).children();
       if(a.length == 11){
-        var title_raw = a[10].children[0].data;
-        var title = jconv.decode(title_raw, 'EUCJP');
+        var title = a[10].children[0].data;
         file.write(title + "\n");
         console.log(title);
         count++;
