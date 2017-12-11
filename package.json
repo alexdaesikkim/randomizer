@@ -13,6 +13,8 @@
     "cheerio": "^1.0.0-rc.2",
     "create-react-app": "^1.4.3",
     "express": "^4.16.2",
+    "iconv-lite": "^0.4.19",
+    "jconv": "^0.1.5",
     "path": "^0.12.7",
     "request": "^2.83.0",
     "xlsx": "^0.11.12"
