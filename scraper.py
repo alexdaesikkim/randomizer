@@ -52,32 +52,26 @@ def get_level(col):
             index = index-1
         level = level[index+1:len(level)]
     elif level == '-':
-        level = 0
+        level = -1
     return level
 
 diff_options = {
-    0: "spb",
-    1: "spn",
-    2: "sph",
-    3: "spa",
-    4: "dpn",
-    5: "dph",
-    6: "dpa",
-    7: "spl",
-    8: "dpl"
+    0: "basic",
+    1: "novice",
+    2: "hyper",
+    3: "another",
+    4: "leggendaria"
 }
 
-def get_song(level, difficulty, title, artist, bpm):
-    if(level != 0):
+def get_song(level, difficulty, style, title, artist, genre, bpm):
+    if(level != -1):
         diff_name = diff_options[difficulty]
-        style = "single"
-        if difficulty > 3:
-            style = "double"
-        key = title + " " + diff_name
+        key = title + " " + diff_name + " " + style
         if key not in song_dict:
             data = {
                 "title": title,
                 "artist": artist,
+                "genre": genre,
                 "bpm": bpm,
                 "style": style,
                 "difficulty": difficulty,
@@ -98,6 +92,7 @@ def parse_raw(rows):
             #if it ends with hcn just nope
             title = cols[9].text
             artist = cols[10].text
+            genre = cols[8].text
             if title.startswith('crew['):
                 title = "crew"
                 artist = "beatnation Records"
@@ -107,16 +102,40 @@ def parse_raw(rows):
                 artist = "DJ SWAN"
             bpm = cols[7].text
             if title.endswith(leggendaria_mark) or title.endswith(leggendaria):
-                get_song(get_level(cols[3]), 7, title, artist, bpm)
-                get_song(get_level(cols[6]), 8, title, artist, bpm)
+                get_song(get_level(cols[3]), 4, "single", title, artist, genre, bpm)
+                get_song(get_level(cols[6]), 4, "double", title, artist, genre, bpm)
             elif not title.endswith(hcn):
-                get_song(get_level(cols[0]), 0, title, artist, bpm)
-                get_song(get_level(cols[1]), 1, title, artist, bpm)
-                get_song(get_level(cols[2]), 2, title, artist, bpm)
-                get_song(get_level(cols[3]), 3, title, artist, bpm)
-                get_song(get_level(cols[4]), 4, title, artist, bpm)
-                get_song(get_level(cols[5]), 5, title, artist, bpm)
-                get_song(get_level(cols[6]), 6, title, artist, bpm)
+                if title.startswith('crew['):
+                    get_song(get_level(cols[1]), 1, "single", "crew -original mix-", "beatnation Records feat.星野奏子", "ANTHEM", bpm)
+                    get_song(get_level(cols[2]), 2, "single", "crew -VENUS mix-", "beatnation Records feat.VENUS", "WITHOUT YOU TONIGHT", bpm)
+                    get_song(get_level(cols[3]), 3, "single", "crew -Ryu☆ mix-", "beatnation Records feat.NU-KO", "EURODANCE", bpm)
+                    get_song(get_level(cols[4]), 1, "double", "crew -original mix-", "beatnation Records feat.星野奏子", "ANTHEM", bpm)
+                    get_song(get_level(cols[5]), 2, "double", "crew -kors k mix-", "beatnation Records feat.星野奏子", "J-CORE", bpm)
+                    get_song(get_level(cols[6]), 3, "double", "crew -Prim version-", "beatnation Records feat.Prim", "Hi ANTHEM", bpm)
+                elif title.startswith('Evans['):
+                    get_song(get_level(cols[0]), 0, "single", "Evans -prototype-", artist, genre, bpm)
+                    get_song(get_level(cols[1]), 1, "single", "Evans -prototype-", artist, genre, bpm)
+                    get_song(get_level(cols[2]), 2, "single", "Evans -prototype-", artist, genre, bpm)
+                    get_song(get_level(cols[3]), 3, "single", "Evans", artist, genre, bpm)
+                    get_song(get_level(cols[4]), 1, "double", "Evans -prototype-", artist, genre, bpm)
+                    get_song(get_level(cols[5]), 2, "double", "Evans -prototype-", artist, genre, bpm)
+                    get_song(get_level(cols[6]), 3, "double", "Evans", artist, genre, bpm)
+                elif artist.startswith('DJ SWAN['):
+                    get_song(get_level(cols[0]), 0, "single", title, "DJ SWAN", genre, bpm)
+                    get_song(get_level(cols[1]), 1, "single", title, "DJ SWAN", genre, bpm)
+                    get_song(get_level(cols[2]), 2, "single", title, "DJ SWAN", genre, bpm)
+                    get_song(get_level(cols[3]), 3, "single", title, "DJ SWAN (Toshiaki Komiya & Keiichi Ueno)", genre, bpm)
+                    get_song(get_level(cols[4]), 1, "double", title, "DJ SWAN", genre, bpm)
+                    get_song(get_level(cols[5]), 2, "double", title, "DJ SWAN", genre, bpm)
+                    get_song(get_level(cols[6]), 3, "double", title, "DJ SWAN (Toshiaki Komiya & Keiichi Ueno)", genre, bpm)
+                else:
+                    get_song(get_level(cols[0]), 0, "single", title, artist, genre, bpm)
+                    get_song(get_level(cols[1]), 1, "single", title, artist, genre, bpm)
+                    get_song(get_level(cols[2]), 2, "single", title, artist, genre, bpm)
+                    get_song(get_level(cols[3]), 3, "single", title, artist, genre, bpm)
+                    get_song(get_level(cols[4]), 1, "double", title, artist, genre, bpm)
+                    get_song(get_level(cols[5]), 2, "double", title, artist, genre, bpm)
+                    get_song(get_level(cols[6]), 3, "double", title, artist, genre, bpm)
     return
 
 parse_raw(sinobuz_new_rows)
@@ -133,6 +152,7 @@ final_data = {
     "id": "beatmaniaiidx24",
     "songs": songs
 }
+#remember to change the datetime to the one from the page, not on the date it was update on the app's server
 with open('./games/iidx/24/' + now.strftime('%Y%m%d') + '.json', 'wb') as file:
     json.dump(final_data, file)
 

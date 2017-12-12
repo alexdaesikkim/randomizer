@@ -49,18 +49,16 @@ function check_cache(game, version, build){
 //if i really want to host this for FREE, i need to get through some loopholes
 //if this was purely json data and pulling data from it, i can use randomizer with ease
 //todo later: make mental note somewhere else
-function filter_object(obj, d_min, d_max, l_min, l_max){
-  var new_obj = obj;
-
+function filter_songs(array, d_min, d_max, l_min, l_max){
   //filter by difficulty, IF not default
-  if(d_min != 0 || d_max != 0){
-    if(d_max == 0){
-      new_obj.filter(function(data){
+  if(d_min != -1 || d_max != -1){
+    if(d_max == -1){
+      array = array.filter(function(data){
         return data.difficulty >= d_min;
       })
     }
     else{
-      new_obj.filter(function(data){
+      array = array.filter(function(data){
         return (data.difficulty >= d_min && data.difficulty <= d_max);
       })
     }
@@ -69,24 +67,26 @@ function filter_object(obj, d_min, d_max, l_min, l_max){
   //filter by level, IF not default
   if(l_min != 0 || l_max != 0){
     if(l_max == 0){
-      new_obj.filter(function(data){
+      array = array.filter(function(data){
         return data.level >= l_min;
       })
     }
     else{
-      return (data.level >= l_min && data.level <= l_max);
+      array = array.filter(function(data){
+        return (data.level >= l_min && data.level <= l_max);
+      })
     }
   }
-
-  return new_obj;
+  return array;
 }
 
 app.get('/:game/:version/:build/random/', function(req, res, next){
   var count = req.body.count > 1 ? req.body.count : 1;
-  var min_difficulty = req.body.difficulty != null ? req.body.difficulty.min : 0;
-  var max_difficulty = req.body.difficulty != null ? req.body.difficulty.max : 0;
-  var min_level = req.body.min != null ? req.body.min : 0; //integer
-  var max_level = req.body.max != null ? req.body.max : 0; //integer
+  var min_difficulty = (req.body.difficulty != null && req.body.difficulty.min != null) ? req.body.difficulty.min : -1;
+  var max_difficulty = (req.body.difficulty != null && req.body.difficulty.max != null) ? req.body.difficulty.max : -1;
+  var min_level = (req.body.level != null && req.body.level.min != null) ? req.body.level.min : 0;
+  var max_level = (req.body.level != null && req.body.level.max != null) ? req.body.level.max : 0;
+  var style = req.body.style;
   var game = req.params.game;
   var version = req.params.version;
   var build = req.params.build;
@@ -149,26 +149,24 @@ app.get('/:game/:version/:build/random/', function(req, res, next){
     return;
   }
 
-
-  console.log(song_obj.id);
-
   //need to cache the objects
 
   //FILTER results based on the params given
 
   //not really time consuming to generate
-  var array = [];
-  var length = song_obj.songs.length;
-  for(var i = 0;  i < length; i++){
-    array.push(i);
-  }
-  array = shuffle(array, length);
+  //how does it fare against using the actually array to sort?
+  var songs = song_obj.songs;
+  songs = shuffle(songs, song_obj.songs.length);
+  songs = filter_songs(songs, min_difficulty, max_difficulty, min_level, max_level)
+
   obj = {
-    count: 1,
+    id: song_obj.id,
     songs: []
   }
-  for(var i = 0; i < 1; i++){
-    obj.songs.push(song_obj.songs[array[0]]);
+
+
+  for(var i = 0; i < count; i++){
+    obj.songs.push(songs[i]);
   }
 
   res.json(obj);
