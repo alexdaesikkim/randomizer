@@ -153,7 +153,7 @@ final_data = {
     "songs": songs
 }
 #remember to change the datetime to the one from the page, not on the date it was update on the app's server
-with open('./games/iidx/24/' + now.strftime('%Y%m%d') + '.json', 'wb') as file:
+with open('./games/iidx/24/' + herokutest + '.json', 'wb') as file:
     json.dump(final_data, file)
 
 print "Finished"
