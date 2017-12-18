@@ -5,6 +5,8 @@ var excel = require('xlsx');
 var bodyParser = require('body-parser');
 var fs = require('fs');
 
+var PythonShell = require('python-shell');
+
 var game_data = require('./games/game_data.json')
 const cache_size = 10;
 
@@ -196,6 +198,14 @@ app.get('/all/', function(){
   //show all games available for this API
 });
 //for anything else, return 404
+
+//solely for testing purposes
+app.get('/scrape/sinobuz/', function(){
+  PythonShell.run('scraper.py', function (err) {
+    if (err) throw err;
+    console.log('finished');
+  });
+})
 
 
 const port = process.env.PORT || 3001;
