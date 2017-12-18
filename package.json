@@ -4,7 +4,8 @@
   "description": "serving random songs for tournament organizers",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "start": "node app.js",
+    "heroku-postbuild": ""
   },
   "author": "Alex D Kim",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "iconv-lite": "^0.4.19",
     "jconv": "^0.1.5",
     "path": "^0.12.7",
+    "python-shell": "^0.4.0",
     "request": "^2.83.0",
     "xlsx": "^0.11.12"
   }
