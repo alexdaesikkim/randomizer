@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "heroku-postbuild": ""
+    "heroku-postbuild": "cd front-end && npm install && npm run build"
   },
   "author": "Alex D Kim",
   "license": "ISC",

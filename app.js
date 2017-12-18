@@ -18,7 +18,7 @@ var game_cache = {
 
 app.use(bodyParser.json());
 
-
+app.use(express.static(path.join(__dirname, 'front-end/build')));
 
 //fisher-yates
 function shuffle(array, size){
