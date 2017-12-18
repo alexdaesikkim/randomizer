@@ -14,9 +14,6 @@ var App = createReactClass({
             <img src={logo} className="App-logo" alt="logo" />
             <h1 className="App-title">Welcome to React</h1>
           </header>
-          <p className="App-intro">
-            To get started, edit <code>src/App.js</code> and save to reload.
-          </p>
         </div>
         <div className="content">
           <div className="container">
@@ -28,7 +25,7 @@ var App = createReactClass({
                   <b>Entry Point:</b>
                   <br/>
                   <code>
-                    /random/&#123;game&#125;/&#123;version&#125;/
+                    GET /random/&#123;game&#125;/&#123;version&#125;/
                   </code>
                   <br/>
                   <br/>
