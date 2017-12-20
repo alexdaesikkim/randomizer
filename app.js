@@ -90,16 +90,42 @@ function filter_songs(array, style, d_min, d_max, l_min, l_max){
 
 app.get('/random/:game/:version/', function(req, res, next){
   var count = req.body.count > 1 ? req.body.count : 1;
-  var min_difficulty = (req.body.difficulty !== null && req.body.difficulty.min != null) ? req.body.difficulty.min : -1;
-  var max_difficulty = (req.body.difficulty !== null && req.body.difficulty.max != null) ? req.body.difficulty.max : -1;
-  var min_level = (req.body.level !== null && req.body.level.min != null) ? req.body.level.min : 0;
-  var max_level = (req.body.level !== null && req.body.level.max != null) ? req.body.level.max : 0;
-  var build = req.body.build !== null ? req.params.build : "latest";
-  var style = req.body.style !== null ? req.body.style : "all";
+  var min_difficulty = (req.body.difficulty != null && req.body.difficulty.min != null) ? req.body.difficulty.min : -1;
+  var max_difficulty = (req.body.difficulty != null && req.body.difficulty.max != null) ? req.body.difficulty.max : -1;
+  var min_level = (req.body.level != null && req.body.level.min != null) ? req.body.level.min : 0;
+  var max_level = (req.body.level != null && req.body.level.max != null) ? req.body.level.max : 0;
+  var build = req.body.build != null ? req.params.build : "";
+  var style = req.body.style != null ? req.body.style : "all";
   var game = req.params.game;
   var version = req.params.version;
   var obj = {};
   var song_obj = {};
+
+  if(build === ""){
+    try{
+      build = game_data.games[game].versions[version].current;
+    }
+    catch(err){
+      if(game_data.games[game] == null){
+        obj = {
+          status:{
+            message: "Invalid game name",
+            code: 401
+          }
+        }
+        res.status(401);
+      }
+      else{
+        obj = {
+          status:{
+            message: "Invalid version name",
+            code: 401
+          }
+        }
+        res.status(401);
+      }
+    }
+  }
 
   try{
       var filename = "./games/" + game + "/" + version + "/" + build + ".json";

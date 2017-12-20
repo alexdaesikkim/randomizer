@@ -8,13 +8,10 @@
       },
       "styles": ["single", "double"],
       "versions": {
-        "23":{
-          "name": "COPULA",
-          "builds": ["final"]
-        },
         "24":{
           "name": "SINOBUZ",
-          "builds": ["final"]
+          "current": "2017082800",
+          "builds": ["2017082800"]
         }
       }
     },
