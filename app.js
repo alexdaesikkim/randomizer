@@ -51,8 +51,11 @@ function check_cache(game, version, build){
 //if i really want to host this for FREE, i need to get through some loopholes
 //if this was purely json data and pulling data from it, i can use randomizer with ease
 //todo later: make mental note somewhere else
+
+
+//todo: error check function and route everything to that.
 function filter_songs(array, style, d_min, d_max, l_min, l_max){
-  //filter by difficulty, IF not default
+  //filter by difficulty, if it is not the default value of -1
   if(d_min !== -1 || d_max !== -1){
     if(d_max === -1){
       array = array.filter(function(data){
@@ -66,7 +69,7 @@ function filter_songs(array, style, d_min, d_max, l_min, l_max){
     }
   }
 
-  //filter by level, IF not default
+  //filter by level, if its not the default value of 0
   if(l_min !== 0 || l_max !== 0){
     if(l_max === 0){
       array = array.filter(function(data){
@@ -196,19 +199,19 @@ app.get('/random/:game/:version/', function(req, res, next){
 
 });
 
-app.get('/:game/:version/info/', function(){
+app.get('/info/:game/:version/', function(){
   //get information on the version itself
 });
 
-app.get('/:game/:version/all/', function(){
+app.get('/all/:game/:version/', function(){
   //show all versions available with the associated game
 });
 
-app.get('/:game/info/', function(){
+app.get('/info/:game/', function(){
   //get information on the game itself, as well as versions that comes along with it
 });
 
-app.get('/:game/all/', function(){
+app.get('/all/:game/', function(){
   //does it overlap with above?
 });
 
