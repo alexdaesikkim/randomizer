@@ -49,10 +49,10 @@ function check_cache(game, version, build){
 //if i really want to host this for FREE, i need to get through some loopholes
 //if this was purely json data and pulling data from it, i can use randomizer with ease
 //todo later: make mental note somewhere else
-function filter_songs(array, d_min, d_max, l_min, l_max){
+function filter_songs(array, style, d_min, d_max, l_min, l_max){
   //filter by difficulty, IF not default
-  if(d_min != -1 || d_max != -1){
-    if(d_max == -1){
+  if(d_min !== -1 || d_max !== -1){
+    if(d_max === -1){
       array = array.filter(function(data){
         return data.difficulty >= d_min;
       })
@@ -65,8 +65,8 @@ function filter_songs(array, d_min, d_max, l_min, l_max){
   }
 
   //filter by level, IF not default
-  if(l_min != 0 || l_max != 0){
-    if(l_max == 0){
+  if(l_min !== 0 || l_max !== 0){
+    if(l_max === 0){
       array = array.filter(function(data){
         return data.level >= l_min;
       })
@@ -77,26 +77,27 @@ function filter_songs(array, d_min, d_max, l_min, l_max){
       })
     }
   }
+
+  if (style === "single" || style === "double"){
+    array = array.filter(function(data){
+      return (data.style === style)
+    })
+  }
   return array;
 }
 
-app.get('/:game/:version/:build/random/', function(req, res, next){
+app.get('/random/:game/:version/', function(req, res, next){
   var count = req.body.count > 1 ? req.body.count : 1;
-  var min_difficulty = (req.body.difficulty != null && req.body.difficulty.min != null) ? req.body.difficulty.min : -1;
-  var max_difficulty = (req.body.difficulty != null && req.body.difficulty.max != null) ? req.body.difficulty.max : -1;
-  var min_level = (req.body.level != null && req.body.level.min != null) ? req.body.level.min : 0;
-  var max_level = (req.body.level != null && req.body.level.max != null) ? req.body.level.max : 0;
-  var style = req.body.style;
+  var min_difficulty = (req.body.difficulty !== null && req.body.difficulty.min != null) ? req.body.difficulty.min : -1;
+  var max_difficulty = (req.body.difficulty !== null && req.body.difficulty.max != null) ? req.body.difficulty.max : -1;
+  var min_level = (req.body.level !== null && req.body.level.min != null) ? req.body.level.min : 0;
+  var max_level = (req.body.level !== null && req.body.level.max != null) ? req.body.level.max : 0;
+  var build = req.body.build !== null ? req.params.build : "latest";
+  var style = req.body.style !== null ? req.body.style : "all";
   var game = req.params.game;
   var version = req.params.version;
-  var build = req.params.build;
   var obj = {};
   var song_obj = {};
-
-  console.log("D Min: " + min_difficulty);
-  console.log("D Max: " + max_difficulty);
-  console.log("L Min: " + min_level);
-  console.log("L Max: " + max_level);
 
   try{
       var filename = "./games/" + game + "/" + version + "/" + build + ".json";
@@ -125,16 +126,6 @@ app.get('/:game/:version/:build/random/', function(req, res, next){
       res.status(401);
     }
 
-    //have to filter builds and check here
-    else if(game_data.games[game].versions[version].builds.filter(function(str){return build == str}).length == 0){
-      obj = {
-        status:{
-          message: "Invalid build name",
-          code: 401
-        }
-      }
-      res.status(401);
-    }
     else{
       obj = {
         status:{
@@ -157,10 +148,11 @@ app.get('/:game/:version/:build/random/', function(req, res, next){
   //how does it fare against using the actually array to sort?
   var songs = song_obj.songs;
   songs = shuffle(songs, song_obj.songs.length);
-  songs = filter_songs(songs, min_difficulty, max_difficulty, min_level, max_level)
+  songs = filter_songs(songs, style, min_difficulty, max_difficulty, min_level, max_level)
 
   obj = {
     id: song_obj.id,
+    version: version,
     songs: []
   }
 

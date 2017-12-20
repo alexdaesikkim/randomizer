@@ -3,17 +3,17 @@
     "iidx":{
       "name": "beatmania IIDX",
       "difficultiy":{
-        "min": 1,
-        "max": 4
+        "min": 0,
+        "max": 6
       },
       "styles": ["single", "double"],
       "versions": {
         "23":{
-          "name": "Copula",
+          "name": "COPULA",
           "builds": ["final"]
         },
         "24":{
-          "name": "Sinobuz",
+          "name": "SINOBUZ",
           "builds": ["final"]
         }
       }
@@ -21,8 +21,8 @@
     "ddr":{
       "name": "Dance Dance Revolution",
       "difficultiy":{
-        "min": 1,
-        "max": 5
+        "min": 0,
+        "max": 10
       },
       "styles": ["single", "double"],
       "versions": {
