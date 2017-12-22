@@ -11,25 +11,25 @@ from bs4 import BeautifulSoup
 #2. somehow use json properties? but how to do this?
 #3. use dict to store all data, then convert it to json later?
 
-sinobuz_version_url = "http://bemaniwiki.com/index.php?beatmania%20IIDX%2024%20SINOBUZ"
-main_page = urlopen(sinobuz_version_url)
-version_name = BeautifulSoup(main_page, "html.parser").findAll('strong', text=re.compile("^LDJ:J:A:A:"))[0].text[-10:]
+cb_version_url = "http://bemaniwiki.com/index.php?beatmania%20IIDX%2025%20CANNON%20BALLERS"
+main_page = urlopen(cb_version_url)
+version_name = BeautifulSoup(main_page, "html.parser").findAll('strong', text=re.compile("^LDJ:J:B:A:"))[0].text[-10:]
 print(version_name)
 
-if not os.path.isfile('../games/iidx/24/' + version_name + '.json'):
-    sinobuz_new_url = "http://bemaniwiki.com/index.php?beatmania%20IIDX%2024%20SINOBUZ%2F%BF%B7%B6%CA%A5%EA%A5%B9%A5%C8"
-    sinobuz_old_url = "http://bemaniwiki.com/index.php?beatmania%20IIDX%2024%20SINOBUZ%2F%B5%EC%B6%CA%A5%EA%A5%B9%A5%C8"
+if not os.path.isfile('../games/iidx/25/' + version_name + '.json'):
+    cb_new_url = "http://bemaniwiki.com/index.php?beatmaniaIIDX%2025%20CANNON%20BALLERS%2F%BF%B7%B6%CA%A5%EA%A5%B9%A5%C8"
+    cb_old_url = "http://bemaniwiki.com/index.php?beatmania%20IIDX%2025%20CANNON%20BALLERS%2F%B5%EC%B6%CA%A5%EA%A5%B9%A5%C8"
 
-    page_new = urlopen(sinobuz_new_url)
-    page_old = urlopen(sinobuz_old_url)
+    page_new = urlopen(cb_new_url)
+    page_old = urlopen(cb_old_url)
 
     print ("Opened pages")
 
     song_new_table = BeautifulSoup(page_new, "html.parser").find('div', class_='ie5')
     song_old_table = BeautifulSoup(page_old, "html.parser").find_all('div', class_='ie5')[1]
 
-    sinobuz_new_rows = song_new_table.find_all('tr')
-    sinobuz_old_rows = song_old_table.find_all('tr')
+    cb_new_rows = song_new_table.find_all('tr')
+    cb_old_rows = song_old_table.find_all('tr')
 
     print ("Parsed pages")
 
@@ -47,7 +47,7 @@ if not os.path.isfile('../games/iidx/24/' + version_name + '.json'):
 
     def get_level(col):
         level = col.text
-        if len(col) != 1 and level != '-':
+        if len(col) != 1 and level != '-' and len(col) != 0:
             index = len(level)-1
             end_index = index
             while (level[index] != ']'):
@@ -144,23 +144,20 @@ if not os.path.isfile('../games/iidx/24/' + version_name + '.json'):
                         get_song(get_level(cols[6]), 3, version, "double", title, artist, genre, bpm)
         return
 
-    parse_raw(sinobuz_new_rows)
-    parse_raw(sinobuz_old_rows)
+    parse_raw(cb_new_rows)
+    parse_raw(cb_old_rows)
 
     for x in song_dict:
         songs.append(song_dict[x])
-        print(x)
-
-    now = datetime.datetime.now()
 
     print ("Writing json")
 
     final_data = {
-        "id": "beatmaniaiidx24",
+        "id": "beatmaniaiidx25",
         "songs": songs
     }
     #remember to change the datetime to the one from the page, not on the date it was update on the app's server
-    with open('../games/iidx/24/' +  version_name + '.json', 'w') as file:
+    with open('../games/iidx/25/' +  version_name + '.json', 'w') as file:
         json.dump(final_data, file)
     print ("Finished")
 else:
