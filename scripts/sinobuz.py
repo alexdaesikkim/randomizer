@@ -86,18 +86,16 @@ if not os.path.isfile('../games/iidx/24/' + version_name + '.json'):
     leggendaria_mark = "†"
     hcn = "(HCN Ver.)"
 
-    def parse_raw(rows):
-        version = ""
+    def parse_raw(rows, version):
         for row in rows:
             cols = row.find_all('td')
-            if len(cols) == 1:
+            if version != "beatmania IIDX 24 SINOBUZ" and len(cols) == 1:
                 if(re.match("beatmania", cols[0].text)):
                     version = cols[0].text
                     if(version.endswith(" ▲ ▼ △")):
                         version = version[:-6]
                     if(version.endswith(" ▲ △") or version.endswith(" ▼ △")):
                         version = version[:-4]
-                    print(version)
             if len(cols) == 11:
                 #basic
                 #if it ends in leggendaria, there's only another difficulty
@@ -144,12 +142,11 @@ if not os.path.isfile('../games/iidx/24/' + version_name + '.json'):
                         get_song(get_level(cols[6]), 3, version, "double", title, artist, genre, bpm)
         return
 
-    parse_raw(sinobuz_new_rows)
-    parse_raw(sinobuz_old_rows)
+    parse_raw(sinobuz_new_rows, "beatmania IIDX 24 SINOBUZ")
+    parse_raw(sinobuz_old_rows, "")
 
     for x in song_dict:
         songs.append(song_dict[x])
-        print(x)
 
     now = datetime.datetime.now()
 

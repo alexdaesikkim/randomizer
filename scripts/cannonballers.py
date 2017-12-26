@@ -17,7 +17,7 @@ version_name = BeautifulSoup(main_page, "html.parser").findAll('strong', text=re
 print(version_name)
 
 if not os.path.isfile('../games/iidx/25/' + version_name + '.json'):
-    cb_new_url = "http://bemaniwiki.com/index.php?beatmaniaIIDX%2025%20CANNON%20BALLERS%2F%BF%B7%B6%CA%A5%EA%A5%B9%A5%C8"
+    cb_new_url = "http://bemaniwiki.com/index.php?beatmania%20IIDX%2025%20CANNON%20BALLERS%2F%BF%B7%B6%CA%A5%EA%A5%B9%A5%C8"
     cb_old_url = "http://bemaniwiki.com/index.php?beatmania%20IIDX%2025%20CANNON%20BALLERS%2F%B5%EC%B6%CA%A5%EA%A5%B9%A5%C8"
 
     page_new = urlopen(cb_new_url)
@@ -86,18 +86,16 @@ if not os.path.isfile('../games/iidx/25/' + version_name + '.json'):
     leggendaria_mark = "†"
     hcn = "(HCN Ver.)"
 
-    def parse_raw(rows):
-        version = ""
+    def parse_raw(rows, version):
         for row in rows:
             cols = row.find_all('td')
-            if len(cols) == 1:
+            if version != "beatmania IIDX 25 CANNON BALLERS" and len(cols) == 1:
                 if(re.match("beatmania", cols[0].text)):
                     version = cols[0].text
                     if(version.endswith(" ▲ ▼ △")):
                         version = version[:-6]
                     if(version.endswith(" ▲ △") or version.endswith(" ▼ △")):
                         version = version[:-4]
-                    print(version)
             if len(cols) == 11:
                 #basic
                 #if it ends in leggendaria, there's only another difficulty
@@ -144,8 +142,8 @@ if not os.path.isfile('../games/iidx/25/' + version_name + '.json'):
                         get_song(get_level(cols[6]), 3, version, "double", title, artist, genre, bpm)
         return
 
-    parse_raw(cb_new_rows)
-    parse_raw(cb_old_rows)
+    parse_raw(cb_new_rows, "beatmania IIDX 25 CANNON BALLERS")
+    parse_raw(cb_old_rows, "")
 
     for x in song_dict:
         songs.append(song_dict[x])
