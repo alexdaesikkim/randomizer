@@ -11,25 +11,25 @@ from bs4 import BeautifulSoup
 #2. somehow use json properties? but how to do this?
 #3. use dict to store all data, then convert it to json later?
 
-ddr_ace_version_url = "http://bemaniwiki.com/index.php?DanceDanceRevolution%20A"
-main_page = urlopen(ddr_ace_version_url)
-version_name = BeautifulSoup(main_page, "html.parser").findAll('strong', text=re.compile("^MDX:"))[0].text[-10:]
+ddr_2014_version_url = "http://bemaniwiki.com/?DanceDanceRevolution(2014)"
+main_page = urlopen(ddr_2014_version_url)
+version_name = "2016021000"
 print(version_name)
 
-if not os.path.isfile('../games/iidx/25/' + version_name + '.json'):
-    ddr_ace_new_url = "http://bemaniwiki.com/index.php?DanceDanceRevolution%20A%2F%BF%B7%B6%CA%A5%EA%A5%B9%A5%C8"
-    ddr_ace_old_url = "http://bemaniwiki.com/index.php?DanceDanceRevolution%20A%2F%B5%EC%B6%CA%A5%EA%A5%B9%A5%C8"
+if not os.path.isfile('../games/ddr/2014/' + version_name + '.json'):
+    ddr_2014_new_url = "http://bemaniwiki.com/index.php?DanceDanceRevolution%282014%29%2F%BF%B7%B6%CA%A5%EA%A5%B9%A5%C8"
+    ddr_2014_old_url = "http://bemaniwiki.com/index.php?DanceDanceRevolution%282014%29%2F%B5%EC%B6%CA%A5%EA%A5%B9%A5%C8"
 
-    page_new = urlopen(ddr_ace_new_url)
-    page_old = urlopen(ddr_ace_old_url)
+    page_new = urlopen(ddr_2014_new_url)
+    page_old = urlopen(ddr_2014_old_url)
 
     print ("Opened pages")
 
     song_new_table = BeautifulSoup(page_new, "html.parser").find('div', class_='ie5')
     song_old_table = BeautifulSoup(page_old, "html.parser").find_all('div', class_='ie5')[1]
 
-    ddr_ace_new_rows = song_new_table.find_all('tr')
-    ddr_ace_old_rows = song_old_table.find_all('tr')
+    ddr_2014_new_rows = song_new_table.find_all('tr')
+    ddr_2014_old_rows = song_old_table.find_all('tr')
 
     print ("Parsed pages")
 
@@ -65,7 +65,7 @@ if not os.path.isfile('../games/iidx/25/' + version_name + '.json'):
         4: "challenge"
     }
 
-    def get_song(level, difficulty, version, style, title, artist, source, bpm, north_america):
+    def get_song(level, difficulty, version, style, title, artist, source, bpm):
         if(level != -1):
             diff_name = diff_options[difficulty]
             key = title + " " + diff_name + " " + style
@@ -78,15 +78,14 @@ if not os.path.isfile('../games/iidx/25/' + version_name + '.json'):
                     "style": style,
                     "difficulty": difficulty,
                     "level": level,
-                    "version": version,
-                    "north_america": north_america
+                    "version": version
                 }
                 song_dict[key] = data
 
     def parse_raw(rows, version):
         for row in rows:
             cols = row.find_all('td')
-            if version != "DanceDanceRevolution A" and len(cols) == 1:
+            if version != "DanceDanceRevolution" and len(cols) == 1:
                 version = cols[0].text
                 if(version.endswith(" ▲ ▼ △")):
                     version = version[:-6]
@@ -99,31 +98,29 @@ if not os.path.isfile('../games/iidx/25/' + version_name + '.json'):
                 if(version.endswith("▲")):
                     version = version[:-1]
                 print(version)
+            else:
+                version = "DanceDanceRevolution 2014"
             if len(cols) == 15:
                 #basic
                 #if it ends in leggendaria, there's only another difficulty
                 #if it ends with hcn just nope
-                if not (cols[1].has_key('style') and cols[1]['style'] == "background-color:#CCCCCC;"):
-                    north_america = True
-                    if(cols[1].has_key('style') and cols[1]['style'] == "background-color:orange;"):
-                        north_america = False
-                    title = cols[1].text
-                    artist = cols[2].text
-                    source = cols[3].text
-                    bpm = cols[4].text
-                    get_song(get_level(cols[6]), 0, version, "single", title, artist, source, bpm, north_america)
-                    get_song(get_level(cols[7]), 1, version, "single", title, artist, source, bpm, north_america)
-                    get_song(get_level(cols[8]), 2, version, "single", title, artist, source, bpm, north_america)
-                    get_song(get_level(cols[9]), 3, version, "single", title, artist, source, bpm, north_america)
-                    get_song(get_level(cols[10]), 4, version, "single", title, artist, source, bpm, north_america)
-                    get_song(get_level(cols[11]), 1, version, "double", title, artist, source, bpm, north_america)
-                    get_song(get_level(cols[12]), 2, version, "double", title, artist, source, bpm, north_america)
-                    get_song(get_level(cols[13]), 3, version, "double", title, artist, source, bpm, north_america)
-                    get_song(get_level(cols[14]), 4, version, "double", title, artist, source, bpm, north_america)
+                title = cols[1].text
+                artist = cols[2].text
+                source = cols[3].text
+                bpm = cols[4].text
+                get_song(get_level(cols[6]), 0, version, "single", title, artist, source, bpm)
+                get_song(get_level(cols[7]), 1, version, "single", title, artist, source, bpm)
+                get_song(get_level(cols[8]), 2, version, "single", title, artist, source, bpm)
+                get_song(get_level(cols[9]), 3, version, "single", title, artist, source, bpm)
+                get_song(get_level(cols[10]), 4, version, "single", title, artist, source, bpm)
+                get_song(get_level(cols[11]), 1, version, "double", title, artist, source, bpm)
+                get_song(get_level(cols[12]), 2, version, "double", title, artist, source, bpm)
+                get_song(get_level(cols[13]), 3, version, "double", title, artist, source, bpm)
+                get_song(get_level(cols[14]), 4, version, "double", title, artist, source, bpm)
         return
 
-    parse_raw(ddr_ace_new_rows, "DanceDanceRevolution A")
-    parse_raw(ddr_ace_old_rows, "")
+    parse_raw(ddr_2014_new_rows, "DanceDanceRevolution")
+    parse_raw(ddr_2014_old_rows, "")
 
     for x in song_dict:
         songs.append(song_dict[x])
