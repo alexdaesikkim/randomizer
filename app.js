@@ -77,7 +77,6 @@ function filter_songs(array, style, d_min, d_max, l_min, l_max){
       })
     }
     else{
-      console.log("hit");
       array = array.filter(function(data){
         return (data.level >= l_min && data.level <= l_max);
       })
@@ -98,12 +97,18 @@ app.get('/random/:game/:version/', function(req, res, next){
   var max_difficulty = req.body.max_difficulty != null ? req.body.max_difficulty : -1;
   var min_level = req.body.min_level != null ? req.body.min_level : 0;
   var max_level = req.body.max_level != null ? req.body.max_level : 0;
-  var build = req.body.build != null ? req.params.build : "";
+  var build = req.body.build != null ? req.body.build : "";
   var style = req.body.style != null ? req.body.style : "all";
   var game = req.params.game;
   var version = req.params.version;
   var obj = {};
   var song_obj = {};
+
+  count = parseInt(count, 10);
+  min_difficulty = parseInt(min_difficulty, 10);
+  max_difficulty = parseInt(max_difficulty, 10);
+  min_level = parseInt(min_level, 10);
+  max_level = parseInt(max_level, 10);
 
   if(!build){
     try{
