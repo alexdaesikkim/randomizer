@@ -25,7 +25,8 @@ if not os.path.isfile('../games/ddr/2014/' + version_name + '.json'):
 
     print ("Opened pages")
 
-    song_new_table = BeautifulSoup(page_new, "html.parser").find('div', class_='ie5')
+    song_2014_table = BeautifulSoup(page_new, "html.parser").find('div', class_='ie5')
+    song_2013_table = BeautifulSoup(page_new, "html.parser").find('div', class_='ie5')[1]
     song_old_table = BeautifulSoup(page_old, "html.parser").find_all('div', class_='ie5')[1]
 
     ddr_2014_new_rows = song_new_table.find_all('tr')

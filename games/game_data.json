@@ -12,6 +12,11 @@
           "name": "SINOBUZ",
           "current": "2017082800",
           "builds": ["2017082800"]
+        },
+        "25":{
+          "name": "CANNON BALLERS",
+          "current": "",
+          "builds": []
         }
       }
     },
