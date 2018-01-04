@@ -15,7 +15,7 @@ var game_cache = {
   "game_songs": {},
   "stack": []
 };
-
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'front-end/build')));
@@ -77,6 +77,7 @@ function filter_songs(array, style, d_min, d_max, l_min, l_max){
       })
     }
     else{
+      console.log("hit");
       array = array.filter(function(data){
         return (data.level >= l_min && data.level <= l_max);
       })
@@ -93,10 +94,10 @@ function filter_songs(array, style, d_min, d_max, l_min, l_max){
 
 app.get('/random/:game/:version/', function(req, res, next){
   var count = req.body.count > 1 ? req.body.count : 1;
-  var min_difficulty = (req.body.difficulty != null && req.body.difficulty.min != null) ? req.body.difficulty.min : -1;
-  var max_difficulty = (req.body.difficulty != null && req.body.difficulty.max != null) ? req.body.difficulty.max : -1;
-  var min_level = (req.body.level != null && req.body.level.min != null) ? req.body.level.min : 0;
-  var max_level = (req.body.level != null && req.body.level.max != null) ? req.body.level.max : 0;
+  var min_difficulty = req.body.min_difficulty != null ? req.body.min_difficulty : -1;
+  var max_difficulty = req.body.max_difficulty != null ? req.body.max_difficulty : -1;
+  var min_level = req.body.min_level != null ? req.body.min_level : 0;
+  var max_level = req.body.max_level != null ? req.body.max_level : 0;
   var build = req.body.build != null ? req.params.build : "";
   var style = req.body.style != null ? req.body.style : "all";
   var game = req.params.game;
@@ -104,7 +105,7 @@ app.get('/random/:game/:version/', function(req, res, next){
   var obj = {};
   var song_obj = {};
 
-  if(build === ""){
+  if(!build){
     try{
       build = game_data.games[game].versions[version].current;
     }
@@ -129,7 +130,6 @@ app.get('/random/:game/:version/', function(req, res, next){
       }
     }
   }
-
   try{
       var filename = "./games/" + game + "/" + version + "/" + build + ".json";
       song_obj = JSON.parse(fs.readFileSync(filename, 'utf8'));
@@ -230,6 +230,6 @@ app.get('/scrape/sinobuz/', function(){
 })
 
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 4001;
 
 app.listen(port);
