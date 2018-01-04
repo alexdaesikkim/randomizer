@@ -93,8 +93,6 @@ function filter_songs(array, style, d_min, d_max, l_min, l_max){
 }
 
 app.get('/random/:game/:version/', function(req, res, next){
-  console.log("get request");
-  console.log(req.body);
   var count = req.body.count > 1 ? req.body.count : 1;
   var min_difficulty = req.body.min_difficulty != null ? req.body.min_difficulty : -1;
   var max_difficulty = req.body.max_difficulty != null ? req.body.max_difficulty : -1;
@@ -106,13 +104,6 @@ app.get('/random/:game/:version/', function(req, res, next){
   var version = req.params.version;
   var obj = {};
   var song_obj = {};
-  console.log(count);
-  console.log(min_level);
-  console.log(max_level);
-  console.log(min_difficulty);
-  console.log(max_difficulty);
-  console.log(style);
-  console.log(build);
 
   if(!build){
     try{
@@ -139,7 +130,6 @@ app.get('/random/:game/:version/', function(req, res, next){
       }
     }
   }
-  console.log("build is "+ build);
   try{
       var filename = "./games/" + game + "/" + version + "/" + build + ".json";
       song_obj = JSON.parse(fs.readFileSync(filename, 'utf8'));
