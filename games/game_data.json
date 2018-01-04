@@ -4,7 +4,7 @@
       "name": "beatmania IIDX",
       "difficultiy":{
         "min": 0,
-        "max": 6
+        "max": 3
       },
       "styles": ["single", "double"],
       "versions": {
@@ -19,17 +19,14 @@
       "name": "Dance Dance Revolution",
       "difficultiy":{
         "min": 0,
-        "max": 10
+        "max": 4
       },
       "styles": ["single", "double"],
       "versions": {
-        "15":{
-          "name": "2014",
-          "builds": ["final"]
-        },
-        "16":{
+        "ace":{
           "name": "Ace",
-          "builds": ["final"]
+          "current": "2017121400",
+          "builds": ["2017121400"]
         }
       }
     }
