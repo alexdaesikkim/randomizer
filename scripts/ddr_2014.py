@@ -25,12 +25,14 @@ if not os.path.isfile('../games/ddr/2014/' + version_name + '.json'):
 
     print ("Opened pages")
 
-    song_2014_table = BeautifulSoup(page_new, "html.parser").find('div', class_='ie5')
-    song_2013_table = BeautifulSoup(page_new, "html.parser").find('div', class_='ie5')[1]
+    new_table = BeautifulSoup(page_new, "html.parser").find_all('div', class_='ie5')
+    song_2014_table = new_table[0]
+    song_2013_table = new_table[1]
     song_old_table = BeautifulSoup(page_old, "html.parser").find_all('div', class_='ie5')[1]
 
-    ddr_2014_new_rows = song_new_table.find_all('tr')
-    ddr_2014_old_rows = song_old_table.find_all('tr')
+    ddr_2014_rows = song_2014_table.find_all('tr')
+    ddr_2013_rows = song_2013_table.find_all('tr')
+    ddr_old_rows = song_old_table.find_all('tr')
 
     print ("Parsed pages")
 
@@ -86,7 +88,8 @@ if not os.path.isfile('../games/ddr/2014/' + version_name + '.json'):
     def parse_raw(rows, version):
         for row in rows:
             cols = row.find_all('td')
-            if version != "DanceDanceRevolution" and len(cols) == 1:
+            if version != "DanceDanceRevolution 2014" and version != "DanceDanceRevolution 2013" and len(cols) == 1:
+                print(cols)
                 version = cols[0].text
                 if(version.endswith(" ▲ ▼ △")):
                     version = version[:-6]
@@ -99,8 +102,6 @@ if not os.path.isfile('../games/ddr/2014/' + version_name + '.json'):
                 if(version.endswith("▲")):
                     version = version[:-1]
                 print(version)
-            else:
-                version = "DanceDanceRevolution 2014"
             if len(cols) == 15:
                 #basic
                 #if it ends in leggendaria, there's only another difficulty
@@ -120,8 +121,9 @@ if not os.path.isfile('../games/ddr/2014/' + version_name + '.json'):
                 get_song(get_level(cols[14]), 4, version, "double", title, artist, source, bpm)
         return
 
-    parse_raw(ddr_2014_new_rows, "DanceDanceRevolution")
-    parse_raw(ddr_2014_old_rows, "")
+    parse_raw(ddr_2014_rows, "DanceDanceRevolution 2014")
+    parse_raw(ddr_2013_rows, "DanceDanceRevolution 2013")
+    parse_raw(ddr_old_rows, "")
 
     for x in song_dict:
         songs.append(song_dict[x])
@@ -133,8 +135,9 @@ if not os.path.isfile('../games/ddr/2014/' + version_name + '.json'):
         "songs": songs
     }
     #remember to change the datetime to the one from the page, not on the date it was update on the app's server
-    with open('../games/ddr/ace/' +  version_name + '.json', 'w') as file:
+    '''with open('../games/ddr/ace/' +  version_name + '.json', 'w') as file:
         json.dump(final_data, file)
     print ("Finished")
+    '''
 else:
     print("Version " + version_name + " already exists. Exiting...")
