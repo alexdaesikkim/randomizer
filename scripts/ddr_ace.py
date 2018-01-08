@@ -81,7 +81,8 @@ if not os.path.isfile('../games/iidx/25/' + version_name + '.json'):
                     "version": version,
                     "north_america": north_america
                 }
-                song_dict[key] = data
+                song_dict[key] = True
+                songs.append(data)
 
     def parse_raw(rows, version):
         for row in rows:
@@ -124,9 +125,6 @@ if not os.path.isfile('../games/iidx/25/' + version_name + '.json'):
 
     parse_raw(ddr_ace_new_rows, "DanceDanceRevolution A")
     parse_raw(ddr_ace_old_rows, "")
-
-    for x in song_dict:
-        songs.append(song_dict[x])
 
     print ("Writing json")
 

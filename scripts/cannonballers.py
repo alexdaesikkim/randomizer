@@ -80,7 +80,8 @@ if not os.path.isfile('../games/iidx/25/' + version_name + '.json'):
                     "level": level,
                     "version": version
                 }
-                song_dict[key] = data
+                song_dict[key] = True
+                songs.append(data)
 
     leggendaria = "LEGGENDARIA"
     leggendaria_mark = "†"
@@ -142,11 +143,8 @@ if not os.path.isfile('../games/iidx/25/' + version_name + '.json'):
                         get_song(get_level(cols[6]), 3, version, "double", title, artist, genre, bpm)
         return
 
-    parse_raw(cb_new_rows, "beatmania IIDX 25 CANNON BALLERS")
     parse_raw(cb_old_rows, "")
-
-    for x in song_dict:
-        songs.append(song_dict[x])
+    parse_raw(cb_new_rows, "beatmania IIDX 25 CANNON BALLERS")
 
     print ("Writing json")
 
