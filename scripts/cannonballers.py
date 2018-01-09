@@ -11,12 +11,14 @@ from bs4 import BeautifulSoup
 #2. somehow use json properties? but how to do this?
 #3. use dict to store all data, then convert it to json later?
 
+force_update = True
+
 cb_version_url = "http://bemaniwiki.com/index.php?beatmania%20IIDX%2025%20CANNON%20BALLERS"
 main_page = urlopen(cb_version_url)
 version_name = BeautifulSoup(main_page, "html.parser").findAll('strong', text=re.compile("^LDJ:J:B:A:"))[0].text[-10:]
 print(version_name)
 
-if not os.path.isfile('../games/iidx/25/' + version_name + '.json'):
+if not os.path.isfile('../games/iidx/25/' + version_name + '.json') or force_update:
     cb_new_url = "http://bemaniwiki.com/index.php?beatmania%20IIDX%2025%20CANNON%20BALLERS%2F%BF%B7%B6%CA%A5%EA%A5%B9%A5%C8"
     cb_old_url = "http://bemaniwiki.com/index.php?beatmania%20IIDX%2025%20CANNON%20BALLERS%2F%B5%EC%B6%CA%A5%EA%A5%B9%A5%C8"
 
@@ -154,7 +156,26 @@ if not os.path.isfile('../games/iidx/25/' + version_name + '.json'):
     }
     #remember to change the datetime to the one from the page, not on the date it was update on the app's server
     with open('../games/iidx/25/' +  version_name + '.json', 'w') as file:
-        json.dump(final_data, file)
+        json.dump(final_data, file, indent=2)
     print ("Finished")
+
+    data = {}
+    with open('../games/game_data.json') as file:
+        data = json.load(file)
+        data["games"]["iidx"]["versions"]["25"]["current"] = version_name
+        array = data["games"]["iidx"]["versions"]["25"]["builds"]
+        check = False
+        for x in array:
+            print(x)
+            print(version_name)
+            if(version_name == x):
+                check = True
+        if not check:
+            data["games"]["iidx"]["versions"]["25"]["builds"].append(version_name)
+    print ("Finished reading game_data.json file")
+
+    with open('../games/game_data.json', 'w') as file:
+        json.dump(data, file, indent=2)
+    print ("Finished updating game_data.json file")
 else:
     print("Version " + version_name + " already exists. Exiting...")
