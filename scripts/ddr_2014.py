@@ -142,7 +142,7 @@ if not os.path.isfile('../games/ddr/2014/' + version_name + '.json') or force_up
                 artist = "NC underground"
                 source = "DDR 2010"
                 bpm = "48-380(95-380)"
-                print(title)
+
                 get_song(get_level(cols[5]), 0, version, "single", title, artist, source, bpm)
                 get_song(get_level(cols[6]), 1, version, "single", title, artist, source, bpm)
                 get_song(get_level(cols[7]), 2, version, "single", title, artist, source, bpm)
@@ -163,7 +163,7 @@ if not os.path.isfile('../games/ddr/2014/' + version_name + '.json') or force_up
                 get_song(get_level(cols[11]), 2, version, "double", title, artist, source, bpm)
                 get_song(get_level(cols[12]), 3, version, "double", title, artist, source, bpm)
                 get_song(get_level(cols[13]), 4, version, "double", title, artist, source, bpm)
-                print(title)
+
                 title = "New York EVOLVED (Type C)"
                 get_song(get_level(cols[5]), 0, version, "single", title, artist, source, bpm)
                 get_song(get_level(cols[6]), 1, version, "single", title, artist, source, bpm)
@@ -174,7 +174,7 @@ if not os.path.isfile('../games/ddr/2014/' + version_name + '.json') or force_up
                 get_song(get_level(cols[11]), 2, version, "double", title, artist, source, bpm)
                 get_song(get_level(cols[12]), 3, version, "double", title, artist, source, bpm)
                 get_song(get_level(cols[13]), 4, version, "double", title, artist, source, bpm)
-                print(title)
+
                 i += 2
             elif cols[0].text == "osaka EVOLVED -毎度、おおきに!- (TYPE1)":
                 title = "osaka EVOLVED -毎度、おおきに!- (TYPE1)"

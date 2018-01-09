@@ -5,26 +5,26 @@
         "single",
         "double"
       ],
-      "difficultiy": {
-        "min": 0,
-        "max": 3
-      },
       "name": "beatmania IIDX",
       "versions": {
-        "25": {
-          "builds": [
-            "2017122700"
-          ],
-          "name": "CANNON BALLERS",
-          "current": "2017122700"
-        },
         "24": {
           "builds": [
             "2017082800"
           ],
           "name": "SINOBUZ",
           "current": "2017082800"
+        },
+        "25": {
+          "builds": [
+            "2017122700"
+          ],
+          "name": "CANNON BALLERS",
+          "current": "2017122700"
         }
+      },
+      "difficultiy": {
+        "max": 3,
+        "min": 0
       }
     },
     "ddr": {
@@ -32,26 +32,26 @@
         "single",
         "double"
       ],
-      "difficultiy": {
-        "min": 0,
-        "max": 4
-      },
       "name": "Dance Dance Revolution",
       "versions": {
-        "ace": {
-          "builds": [
-            "2017121400"
-          ],
-          "name": "Ace",
-          "current": "2017121400"
-        },
         "2014": {
           "builds": [
             "2016021000"
           ],
           "name": "2014",
           "current": "2016021000"
+        },
+        "ace": {
+          "builds": [
+            "2017121400"
+          ],
+          "name": "Ace",
+          "current": "2017121400"
         }
+      },
+      "difficultiy": {
+        "max": 4,
+        "min": 0
       }
     }
   }

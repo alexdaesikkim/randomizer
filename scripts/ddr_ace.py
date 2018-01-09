@@ -302,13 +302,12 @@ if not os.path.isfile('../games/iidx/25/' + version_name + '.json') or force_upd
                         version = version[:-2]
                     if(version.endswith("▲")):
                         version = version[:-1]
-                    print(version)
                 if len(cols) == 15:
                     #basic
                     #if it ends in leggendaria, there's only another difficulty
                     #if it ends with hcn just nope
-                    if not (cols[1].has_key('style') and cols[1]['style'] == "background-color:#CCCCCC;"):
-                        if(cols[1].has_key('style') and cols[1]['style'] == "background-color:orange;"):
+                    if not (cols[1].has_attr('style') and cols[1]['style'] == "background-color:#CCCCCC;"):
+                        if(cols[1].has_attr('style') and cols[1]['style'] == "background-color:orange;"):
                             north_america = False
                         title = cols[1].text
                         artist = cols[2].text
