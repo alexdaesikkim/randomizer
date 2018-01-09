@@ -1,37 +1,56 @@
 {
-  "games":{
-    "iidx":{
-      "name": "beatmania IIDX",
-      "difficultiy":{
+  "games": {
+    "iidx": {
+      "styles": [
+        "single",
+        "double"
+      ],
+      "difficultiy": {
         "min": 0,
         "max": 3
       },
-      "styles": ["single", "double"],
+      "name": "beatmania IIDX",
       "versions": {
-        "24":{
-          "name": "SINOBUZ",
-          "current": "2017082800",
-          "builds": ["2017082800"]
-        },
-        "25":{
+        "25": {
+          "builds": [
+            "2017122700"
+          ],
           "name": "CANNON BALLERS",
-          "current": "",
-          "builds": []
+          "current": "2017122700"
+        },
+        "24": {
+          "builds": [
+            "2017082800"
+          ],
+          "name": "SINOBUZ",
+          "current": "2017082800"
         }
       }
     },
-    "ddr":{
-      "name": "Dance Dance Revolution",
-      "difficultiy":{
+    "ddr": {
+      "styles": [
+        "single",
+        "double"
+      ],
+      "difficultiy": {
         "min": 0,
         "max": 4
       },
-      "styles": ["single", "double"],
+      "name": "Dance Dance Revolution",
       "versions": {
-        "ace":{
+        "ace": {
+          "builds": [
+            "2017121400"
+          ],
           "name": "Ace",
-          "current": "2017121400",
-          "builds": ["2017121400"]
+          "current": "2017121400"
+        },
+        "2014": {
+          "builds": [
+            "2016021000"
+          ],
+          "name": "2014",
+          "current": "2016021000"
         }
       }
     }
