@@ -11,12 +11,17 @@ from bs4 import BeautifulSoup
 #2. somehow use json properties? but how to do this?
 #3. use dict to store all data, then convert it to json later?
 
+force_update = True
+
 ddr_2014_version_url = "http://bemaniwiki.com/?DanceDanceRevolution(2014)"
 main_page = urlopen(ddr_2014_version_url)
 version_name = "2016021000"
 print(version_name)
 
-if not os.path.isfile('../games/ddr/2014/' + version_name + '.json'):
+if not os.path.isfile('../games/ddr/2014/' + version_name + '.json') or force_update:
+
+
+
     ddr_2014_new_url = "http://bemaniwiki.com/index.php?DanceDanceRevolution%282014%29%2F%BF%B7%B6%CA%A5%EA%A5%B9%A5%C8"
     ddr_2014_old_url = "http://bemaniwiki.com/index.php?DanceDanceRevolution%282014%29%2F%B5%EC%B6%CA%A5%EA%A5%B9%A5%C8"
 
@@ -137,7 +142,7 @@ if not os.path.isfile('../games/ddr/2014/' + version_name + '.json'):
                 artist = "NC underground"
                 source = "DDR 2010"
                 bpm = "48-380(95-380)"
-                print(title)
+
                 get_song(get_level(cols[5]), 0, version, "single", title, artist, source, bpm)
                 get_song(get_level(cols[6]), 1, version, "single", title, artist, source, bpm)
                 get_song(get_level(cols[7]), 2, version, "single", title, artist, source, bpm)
@@ -158,7 +163,7 @@ if not os.path.isfile('../games/ddr/2014/' + version_name + '.json'):
                 get_song(get_level(cols[11]), 2, version, "double", title, artist, source, bpm)
                 get_song(get_level(cols[12]), 3, version, "double", title, artist, source, bpm)
                 get_song(get_level(cols[13]), 4, version, "double", title, artist, source, bpm)
-                print(title)
+
                 title = "New York EVOLVED (Type C)"
                 get_song(get_level(cols[5]), 0, version, "single", title, artist, source, bpm)
                 get_song(get_level(cols[6]), 1, version, "single", title, artist, source, bpm)
@@ -169,7 +174,7 @@ if not os.path.isfile('../games/ddr/2014/' + version_name + '.json'):
                 get_song(get_level(cols[11]), 2, version, "double", title, artist, source, bpm)
                 get_song(get_level(cols[12]), 3, version, "double", title, artist, source, bpm)
                 get_song(get_level(cols[13]), 4, version, "double", title, artist, source, bpm)
-                print(title)
+
                 i += 2
             elif cols[0].text == "osaka EVOLVED -毎度、おおきに!- (TYPE1)":
                 title = "osaka EVOLVED -毎度、おおきに!- (TYPE1)"
@@ -372,8 +377,26 @@ if not os.path.isfile('../games/ddr/2014/' + version_name + '.json'):
     }
     #remember to change the datetime to the one from the page, not on the date it was update on the app's server
     with open('../games/ddr/2014/' +  version_name + '.json', 'w') as file:
-        json.dump(final_data, file)
-    print ("Finished")
+        json.dump(final_data, file, indent=2)
+    print ("Finished writing json")
 
+    data = {}
+    with open('../games/game_data.json') as file:
+        data = json.load(file)
+        data["games"]["ddr"]["versions"]["2014"]["current"] = version_name
+        array = data["games"]["ddr"]["versions"]["2014"]["builds"]
+        check = False
+        for x in array:
+            print(x)
+            print(version_name)
+            if(version_name == x):
+                check = True
+        if not check:
+            data["games"]["ddr"]["versions"]["2014"]["builds"].append(version_name)
+    print ("Finished reading game_data.json file")
+
+    with open('../games/game_data.json', 'w') as file:
+        json.dump(data, file, indent=2)
+    print ("Finished updating game_data.json file")
 else:
     print("Version " + version_name + " already exists. Exiting...")

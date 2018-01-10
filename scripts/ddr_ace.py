@@ -302,13 +302,12 @@ if not os.path.isfile('../games/iidx/25/' + version_name + '.json') or force_upd
                         version = version[:-2]
                     if(version.endswith("▲")):
                         version = version[:-1]
-                    print(version)
                 if len(cols) == 15:
                     #basic
                     #if it ends in leggendaria, there's only another difficulty
                     #if it ends with hcn just nope
-                    if not (cols[1].has_key('style') and cols[1]['style'] == "background-color:#CCCCCC;"):
-                        if(cols[1].has_key('style') and cols[1]['style'] == "background-color:orange;"):
+                    if not (cols[1].has_attr('style') and cols[1]['style'] == "background-color:#CCCCCC;"):
+                        if(cols[1].has_attr('style') and cols[1]['style'] == "background-color:orange;"):
                             north_america = False
                         title = cols[1].text
                         artist = cols[2].text
@@ -336,7 +335,26 @@ if not os.path.isfile('../games/iidx/25/' + version_name + '.json') or force_upd
     }
     #remember to change the datetime to the one from the page, not on the date it was update on the app's server
     with open('../games/ddr/ace/' +  version_name + '.json', 'w') as file:
-        json.dump(final_data, file)
+        json.dump(final_data, file, indent=2)
     print ("Finished")
+
+    with open('../games/game_data.json') as file:
+        data = json.load(file)
+        data["games"]["ddr"]["versions"]["ace"]["current"] = version_name
+        array = data["games"]["ddr"]["versions"]["ace"]["builds"]
+        check = False
+        for x in array:
+            print(x)
+            print(version_name)
+            if(version_name == x):
+                check = True
+        if not check:
+            data["games"]["ddr"]["versions"]["ace"]["builds"].append(version_name)
+    print ("Finished reading game_data.json file")
+
+    with open('../games/game_data.json', 'w') as file:
+        json.dump(data, file, indent=2)
+    print ("Finished updating game_data.json file")
+
 else:
     print("Version " + version_name + " already exists. Exiting...")
