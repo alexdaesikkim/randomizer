@@ -178,9 +178,9 @@ var Random = createReactClass({
 
     return(
       <div>
-        <a className='dropdown-button btn' href='#' data-activates='dropdown1'>{this.state.game_name === "" ? "Select Game" : this.state.game_name}</a>
+        <a className='dropdown-button btn' data-activates='game1'>{this.state.game_name === "" ? "Select Game" : this.state.game_name}</a>
 
-        <ul id='dropdown1' className='dropdown-content'>
+        <ul id='game1' className='dropdown-content'>
           {games}
         </ul>
       </div>
@@ -188,18 +188,20 @@ var Random = createReactClass({
   },
 
   displayVersionButton(){
+    var that = this;
     var versions = this.state.versions.map(function(obj){
       var version_name = obj.toUpperCase();
+      console.log(version_name);
       return(
-        <li><a id={obj} onClick={this.changeVersion}>{version_name}</a></li>
+        <li key={"versionselect_" + obj}><a id={obj} onClick={that.changeVersion}>{version_name}</a></li>
       )
     });
 
     return(
       <div>
-        <a className='dropdown-button btn' href='#' data-activates='dropdown1'>{this.state.version_name === "" ? "Select Version" : this.state.version_name}</a>
+        <a className='dropdown-button btn' data-activates='version1'>{this.state.version_name === "" ? "Select Version" : this.state.version_name}</a>
 
-        <ul id='dropdown1' className='dropdown-content'>
+        <ul id='version1' className='dropdown-content'>
           {versions}
         </ul>
       </div>
@@ -261,7 +263,14 @@ var Random = createReactClass({
                 <button className="waves-effect waves-light btn-large red" onClick={this.changeManualBox}>Manual</button>
               </div>
             </div>
-            {this.displayGameButton()}
+            <div className="row">
+              <div className="col s4">
+                {this.displayGameButton()}
+              </div>
+              <div className="col s4">
+                {this.displayVersionButton()}
+              </div>
+            </div>
             {this.displayLevelForm()}
             <br/>
           </div>
