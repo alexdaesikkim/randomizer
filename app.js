@@ -15,7 +15,7 @@ var game_cache = {
   "game_songs": {},
   "stack": []
 };
-app.use(bodyParser.urlencoded({extended: false}));
+
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'front-end/build')));
@@ -92,13 +92,13 @@ function filter_songs(array, style, d_min, d_max, l_min, l_max){
 }
 
 app.get('/random/:game/:version/', function(req, res, next){
-  var count = req.body.count > 1 ? req.body.count : 1;
-  var min_difficulty = req.body.min_difficulty != null ? req.body.min_difficulty : -1;
-  var max_difficulty = req.body.max_difficulty != null ? req.body.max_difficulty : -1;
-  var min_level = req.body.min_level != null ? req.body.min_level : 0;
-  var max_level = req.body.max_level != null ? req.body.max_level : 0;
-  var build = req.body.build != null ? req.body.build : "";
-  var style = req.body.style != null ? req.body.style : "all";
+  var count = req.query.count > 1 ? req.query.count : 1;
+  var min_difficulty = req.query.min_difficulty != null ? req.query.min_difficulty : -1;
+  var max_difficulty = req.query.max_difficulty != null ? req.query.max_difficulty : -1;
+  var min_level = req.query.min_level != null ? req.query.min_level : 0;
+  var max_level = req.query.max_level != null ? req.query.max_level : 0;
+  var build = req.query.build != null ? req.query.build : "";
+  var style = req.query.style != null ? req.query.style : "all";
   var game = req.params.game;
   var version = req.params.version;
   var obj = {};
@@ -235,6 +235,6 @@ app.get('/scrape/sinobuz/', function(){
 })
 
 
-const port = process.env.PORT || 4001;
+const port = process.env.PORT || 3001;
 
 app.listen(port);
