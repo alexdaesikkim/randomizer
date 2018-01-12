@@ -4,6 +4,35 @@
   color: white;
 }
 
-.App-intro {
-  font-size: large;
+.Song-container{
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.Song-card{
+  text-align: center;
+  display:inline-block;
+  vertical-align: top;
+  width: 250px;
+  height: 250px;
+  border-radius: 5px;
+  box-shadow: 5px 10px #888888;
+}
+
+.iidx-1{
+  background-color: #98e6f9;
+}
+
+.iidx-2{
+  background-color: #ffff89;
+}
+
+.iidx-3{
+  background-color: #ff6d6d;
+}
+
+.iidx-4{
+  color: white;
+  background-color: #870000;
 }

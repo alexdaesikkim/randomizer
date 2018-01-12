@@ -85,7 +85,7 @@ var Random = createReactClass({
         builds.sort(function(a, b){
           return(b-a);
         })
-        var build_name = builds[0];
+        var build_name = builds[0]+"(Current)";
         this.setState({
           game_title: game_title,
           version_name: version,
@@ -154,9 +154,14 @@ var Random = createReactClass({
 
   handleRandomCall(){
     var that = this;
+    var build = this.state.build_name;
+    if(build.endsWith("(Current)")){
+      build = build.slice(0,-9);
+    }
+    console.log(build);
     var query = {
       count: that.state.song_num,
-      build: that.state.build_name,
+      build: build,
       min: that.state.min_diff,
       max: that.state.max_diff,
       min_level: that.state.min_level,
@@ -164,7 +169,6 @@ var Random = createReactClass({
       style: that.state.style,
       north_america: that.state.north_america,
     }
-    console.log(query);
     $.ajax({
       url: '/random/' + that.state.game_name + "/" + that.state.version_name + "/",
       method: 'GET',
@@ -252,10 +256,9 @@ var Random = createReactClass({
         <li key={"buildselect_" + obj}><a id={obj} onClick={that.changeBuild}>{build}</a></li>
       );
     })
-
     return(
       <div>
-        <a className={this.state.version_name === "" ? 'dropdown-button btn disabled' : 'dropdown-button btn'} data-activates='builds1'>{this.state.version_name === "" ? "BUILD" : this.state.builds[0] + "(Current)"}</a>
+        <a className={this.state.version_name === "" ? 'dropdown-button btn disabled' : 'dropdown-button btn'} data-activates='builds1'>{this.state.version_name === "" ? "BUILD" : this.state.build_name}</a>
 
         <ul id='builds1' className='dropdown-content'>
           {builds}
@@ -324,9 +327,10 @@ var Random = createReactClass({
   },
 
   render() {
+    var that = this;
     var song_cards = this.state.songs.map(function(obj){
       return(
-        <Song song={obj} key={obj.name + "_" + obj.difficulty} />
+        <Song song={obj} game={that.state.game_name} key={obj.name + "_" + obj.difficulty} />
       )
     })
     return (
@@ -355,7 +359,7 @@ var Random = createReactClass({
             <br/>
           </div>
         </header>
-        <div className="row align-center">
+        <div className="Song-container center">
           {song_cards}
         </div>
         <br/>
@@ -367,34 +371,55 @@ var Random = createReactClass({
 var Song = createReactClass({
   getInitialState(){
     return{
+      game: this.props.game,
       class: this.props.song.card_class
     }
   },
 
-  render() {
-    var difficulty = "";
-    if(this.props.song.difficulty === 0) difficulty = "Beginner";
-    if(this.props.song.difficulty === 1) difficulty = "Normal";
-    if(this.props.song.difficulty === 2) difficulty = "Hyper";
-    if(this.props.song.difficulty === 3) difficulty = "Another";
-    if(this.props.song.difficulty === 4) difficulty = "Black Another";
+  diff_return(difficulty){
+    var diff_string = "";
+    switch(difficulty){
+        case 0:
+          if(this.props.game === 'ddr') diff_string = "Beginner";
+          if(this.props.game === 'iidx') diff_string = "Beginner";
+        break;
+        case 1:
+          if(this.props.game === 'ddr') diff_string = "Basic";
+          if(this.props.game === 'iidx') diff_string = "Normal";
+          if(this.props.game === 'jubeat') diff_string = "Basic";
+        break;
+        case 2:
+          if(this.props.game === 'ddr') diff_string = "Difficult";
+          if(this.props.game === 'iidx') diff_string = "Hyper";
+          if(this.props.game === 'jubeat') diff_string = "Advanced";
+        break;
+        case 3:
+          if(this.props.game === 'ddr') diff_string = "Heavy";
+          if(this.props.game === 'iidx') diff_string = "Another";
+          if(this.props.game === 'jubeat') diff_string = "Extreme";
+        break;
+        default:
+          if(this.props.game === 'ddr') diff_string = "Challenge";
+          if(this.props.game === 'iidx') diff_string = "Black Another";
+        break;
+    }
+    return diff_string;
+  },
 
+  render() {
+    var difficulty = this.diff_return(this.props.song.difficulty);
+    var card_class = this.props.game + "-" + this.props.song.difficulty;
     return (
-        <div className="col s4 offset-s4">
-          <div className="card-body white">
-            <div className="card-content align-center">
-              <br/>
-              <h3>{this.props.song.name}</h3>
-              <h5>{this.props.song.artist}</h5>
-              <h5>{difficulty + " " + this.props.song.level}</h5>
-              <h7>{this.props.song.genre}</h7>
-              <br/>
-              <h7>{"BPM: " + this.props.song.bpm}</h7>
-              <h6>{this.props.song.version}</h6>
-              <br/>
-            </div>
-          </div>
-        </div>
+      <div className={"Song-card " + card_class}>
+          <h5>{this.props.song.name}</h5>
+          <h6>{this.props.song.artist}</h6>
+          <h6>{difficulty + " " + this.props.song.level}</h6>
+          <h7>{this.props.song.genre}</h7>
+          <br/>
+          <h7>{"BPM: " + this.props.song.bpm}</h7>
+          <br/>
+          <h7>{this.props.song.version}</h7>
+      </div>
     );
   }
 });
