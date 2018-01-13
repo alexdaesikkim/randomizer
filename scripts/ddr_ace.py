@@ -308,8 +308,15 @@ def parse_raw(rows, version):
                     if(cols[1].has_attr('style') and cols[1]['style'] == "background-color:orange;"):
                         north_america = False
                     title = cols[1].text
+                    #how to regex again?
+                    if(title.endswith("*1") or title.endswith("*2") or title.endswith("*3")):
+                        title = title[:-2]
                     artist = cols[2].text
                     source = cols[3].text
+                    if(source.endswith("(BeatStream*4 )") or source.endswith("(BeatStream*5 )")):
+                        source = source[:-15] + "(BeatStream)";
+                    if(source.endswith("*1") or source.endswith("*6")):
+                        source = source[:-2]
                     bpm = cols[4].text
                     get_song(get_level(cols[6]), 0, version, "single", title, artist, source, bpm, north_america)
                     get_song(get_level(cols[7]), 1, version, "single", title, artist, source, bpm, north_america)

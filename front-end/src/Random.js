@@ -69,7 +69,8 @@ var Random = createReactClass({
           min_diff: 0,
           max_diff: 0,
           versions: Object.keys(game_data.games[g].versions),
-          styles: game_data.games[g].styles
+          styles: game_data.games[g].styles,
+          songs: []
         })
       }
     }
@@ -162,8 +163,8 @@ var Random = createReactClass({
     var query = {
       count: that.state.song_num,
       build: build,
-      min: that.state.min_diff,
-      max: that.state.max_diff,
+      min_difficulty: that.state.min_diff,
+      max_difficulty: that.state.max_diff,
       min_level: that.state.min_level,
       max_level: that.state.max_level,
       style: that.state.style,
@@ -373,52 +374,105 @@ var Song = createReactClass({
     return{
       game: this.props.game,
       class: this.props.song.card_class
+      active: true;
     }
   },
 
   diff_return(difficulty){
     var diff_string = "";
+    var class_name = "card-";
     switch(difficulty){
         case 0:
-          if(this.props.game === 'ddr') diff_string = "Beginner";
-          if(this.props.game === 'iidx') diff_string = "Beginner";
+          if(this.props.game === 'ddr') {
+            diff_string = "Beginner";
+            class_name += "blue";
+          }
+          if(this.props.game === 'iidx') {
+            diff_string = "Beginner";
+            class_name += "green";
+          }
         break;
         case 1:
-          if(this.props.game === 'ddr') diff_string = "Basic";
-          if(this.props.game === 'iidx') diff_string = "Normal";
-          if(this.props.game === 'jubeat') diff_string = "Basic";
+          if(this.props.game === 'ddr') {
+            diff_string = "Basic";
+            class_name += "yellow";
+          }
+          if(this.props.game === 'iidx') {
+            diff_string = "Normal";
+            class_name += "blue";
+          }
+          if(this.props.game === 'jubeat') {
+            diff_string = "Basic";
+            class_name += "green";
+          }
         break;
         case 2:
-          if(this.props.game === 'ddr') diff_string = "Difficult";
-          if(this.props.game === 'iidx') diff_string = "Hyper";
-          if(this.props.game === 'jubeat') diff_string = "Advanced";
+          if(this.props.game === 'ddr') {
+            diff_string = "Difficult";
+            class_name += "red";
+          }
+          if(this.props.game === 'iidx') {
+            diff_string = "Hyper";
+            class_name += "yellow";
+          }
+          if(this.props.game === 'jubeat') {
+            diff_string = "Advanced";
+            class_name += "yellow";
+          }
         break;
         case 3:
-          if(this.props.game === 'ddr') diff_string = "Heavy";
-          if(this.props.game === 'iidx') diff_string = "Another";
-          if(this.props.game === 'jubeat') diff_string = "Extreme";
+          if(this.props.game === 'ddr') {
+            diff_string = "Heavy";
+            class_name += "green";
+          }
+          if(this.props.game === 'iidx') {
+            diff_string = "Another";
+            class_name += "red";
+          }
+          if(this.props.game === 'jubeat') {
+            diff_string = "Extreme";
+            class_name += "red";
+          }
         break;
         default:
-          if(this.props.game === 'ddr') diff_string = "Challenge";
-          if(this.props.game === 'iidx') diff_string = "Black Another";
+          if(this.props.game === 'ddr') {
+            diff_string = "Challenge";
+            class_name += "purple";
+          }
+          if(this.props.game === 'iidx') {
+            diff_string = "Black Another";
+            class_name += "darkred";
+          }
         break;
     }
-    return diff_string;
+    var object = {
+      diff_string: diff_string,
+      class_name: class_name
+    }
+    return object;
   },
 
+  changeActiveClass(){
+    this.setState({
+      active: !active
+    })
+  }
+
   render() {
-    var difficulty = this.diff_return(this.props.song.difficulty);
-    var card_class = this.props.game + "-" + this.props.song.difficulty;
+    var object = this.diff_return(this.props.song.difficulty);
+    var difficulty = object.diff_string;
+    var card_class = object.class_name;
     return (
       <div className={"Song-card " + card_class}>
-          <h5>{this.props.song.name}</h5>
-          <h6>{this.props.song.artist}</h6>
-          <h6>{difficulty + " " + this.props.song.level}</h6>
-          <h7>{this.props.song.genre}</h7>
-          <br/>
-          <h7>{"BPM: " + this.props.song.bpm}</h7>
-          <br/>
-          <h7>{this.props.song.version}</h7>
+        <h5>{this.props.song.name}</h5>
+        <h6>{this.props.song.artist}</h6>
+        <h6>{difficulty + " " + this.props.song.level}</h6>
+        <h7>{this.props.song.genre}</h7>
+        <br/>
+        <h7>{"BPM: " + this.props.song.bpm}</h7>
+        <br/>
+        <h7>{this.props.song.version}</h7>
+        <br/>
       </div>
     );
   }

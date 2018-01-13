@@ -1,106 +1,107 @@
 {
   "games": {
     "ddr": {
-      "name": "DanceDanceRevolution",
       "styles": [
         "single",
         "double"
       ],
+      "name": "DanceDanceRevolution",
       "versions": {
-        "2014": {
-          "level": {
-            "min": 1,
-            "max": 19
-          },
-          "builds": [
-            "2016021000"
-          ],
-          "current": "2016021000",
-          "na_option": false,
-          "difficulty": {
-            "min": 0,
-            "max": 4
-          },
-          "name": "2014"
-        },
         "ace": {
-          "level": {
-            "min": 1,
-            "max": 19
-          },
           "builds": [
             "2017121400"
           ],
           "current": "2017121400",
-          "na_option": true,
           "difficulty": {
-            "min": 0,
-            "max": 4
+            "max": 4,
+            "min": 0
           },
-          "name": "Ace"
+          "level": {
+            "max": 19,
+            "min": 1
+          },
+          "name": "Ace",
+          "na_option": true
+        },
+        "2014": {
+          "builds": [
+            "2016021000"
+          ],
+          "current": "2016021000",
+          "difficulty": {
+            "max": 4,
+            "min": 0
+          },
+          "level": {
+            "max": 19,
+            "min": 1
+          },
+          "name": "2014",
+          "na_option": false
         }
       }
     },
     "iidx": {
-      "name": "beatmania IIDX",
       "styles": [
         "single",
         "double"
       ],
+      "name": "beatmania IIDX",
       "versions": {
         "25": {
-          "level": {
-            "min": 1,
-            "max": 12
-          },
           "builds": [
-            "2017122100", "2017122700"
+            "2017122100",
+            "2017122700"
           ],
           "current": "2017122700",
-          "na_option": false,
           "difficulty": {
-            "min": 0,
-            "max": 3
+            "max": 3,
+            "min": 0
           },
-          "name": "25 CANNON BALLERS"
+          "level": {
+            "max": 12,
+            "min": 1
+          },
+          "name": "25 CANNON BALLERS",
+          "na_option": false
         },
         "24": {
-          "level": {
-            "min": 1,
-            "max": 12
-          },
           "builds": [
             "2017082800"
           ],
           "current": "2017082800",
-          "na_option": false,
           "difficulty": {
-            "min": 0,
-            "max": 3
+            "max": 3,
+            "min": 0
           },
-          "name": "24 SINOBUZ"
+          "level": {
+            "max": 12,
+            "min": 1
+          },
+          "name": "24 SINOBUZ",
+          "na_option": false
         }
       }
     },
     "jubeat": {
-      "name": "Jubeat",
       "styles": [
         "single"
       ],
+      "name": "Jubeat",
       "versions": {
         "clan": {
-          "level": {
-            "min": 1,
-            "max": 10
-          },
           "builds": [],
           "current": "",
-          "na_option": false,
           "difficulty": {
-            "min": 1,
-            "max": 3
+            "max": 3,
+            "min": 1
           },
-          "name": "Clan"
+          "level": {
+            "max": 10,
+            "min": 1
+          },
+          "name": "Clan",
+          "na_option": false
         }
       }
     }

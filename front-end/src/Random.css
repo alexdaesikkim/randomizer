@@ -13,26 +13,44 @@
 .Song-card{
   text-align: center;
   display:inline-block;
+  margin-left: 10px;
+  margin-top: 10px;
   vertical-align: top;
-  width: 250px;
+  width: 300px;
   height: 250px;
   border-radius: 5px;
-  box-shadow: 5px 10px #888888;
+  box-shadow: 5px 5px #CCCCCC;
 }
 
-.iidx-1{
-  background-color: #98e6f9;
+.card-disabled:{
+  color: #AAAAAA;
+  background: #AAAAAA;
+  transition: background 1s;
 }
 
-.iidx-2{
-  background-color: #ffff89;
+.card-green{
+  background: linear-gradient(#48E448, rgba(72, 228, 72, 0.5))
 }
 
-.iidx-3{
-  background-color: #ff6d6d;
+.card-blue{
+  background: linear-gradient(#00C3FF, rgba(0, 195, 255, 0.5));
 }
 
-.iidx-4{
+.card-yellow{
+  background: linear-gradient(#DFC51F, #FFFF00);
+}
+
+.card-red{
   color: white;
-  background-color: #870000;
+  background: linear-gradient(#FF4747, rgba(255, 0, 0, 0.5));
+}
+
+.card-darkred{
+  color: white;
+  background: linear-gradient(#870000, rgba(135, 0, 0, 0.75));
+}
+
+.card-purple{
+  color: white;
+  background: linear-gradient(#B200B2, rgba(178, 0, 178, 0.5));
 }
