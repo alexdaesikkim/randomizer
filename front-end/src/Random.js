@@ -9,7 +9,7 @@ var createReactClass = require('create-react-class');
 var Random = createReactClass({
   getInitialState(){
     return{
-      option: false,
+      panel: true,
       game_title: '',
       game_name: '',
       games: Object.keys(game_data.games),
@@ -33,9 +33,9 @@ var Random = createReactClass({
       na_option: false,
       north_america: false,
       songs: [],
-      orig_songs: [],
-      undo_songs: [],
-      redo_songs: [],
+      song_list: [],
+      orig_list: [],
+      undo_list: [],
       status: "",
       errors:{
         error_message: "",
@@ -183,6 +183,7 @@ var Random = createReactClass({
             artist: obj.artist,
             bpm: obj.bpm,
             genre: obj.genre,
+            source: obj.source,
             level: obj.level,
             difficulty: obj.difficulty,
             version: obj.version
@@ -192,6 +193,7 @@ var Random = createReactClass({
         that.setState({
           songs: songs,
           orig_songs: songs,
+          panel: false,
           undo_songs: [],
           redo_songs: [],
           status: ""
@@ -287,31 +289,45 @@ var Random = createReactClass({
     )
   },
 
+  displaySubmitButton(){
+    if(this.state.songs.length === 0){
+      return(
+        <div>
+          <button className="btn btn-primary" onClick={this.handleRandomCall}>Grab Songs</button>
+        </div>
+      );
+    }
+    else return(
+      <div>
+        <button className="btn btn-primary" onClick={this.handleRandomCall}>Grab Songs</button>
+        &ensp;&ensp;
+        <button className="btn btn-primary" onClick={this.changePanelToggle}>Close Form</button>
+      </div>
+    );
+  },
+
   displayLevelForm(){
     if(this.state.version_name !== ''){
       return(
-        //form for min_level
         <div>
-          <div>
-            <div className="row">
-              <div className="col s6">
-                Min Level:
-                <input type="number" className="form-control" value={this.state.min_level} onChange={this.changeMinLevel}></input>
-              </div>
-              <div className="col s6">
-                Max Level:
-                <input type="number" className="form-control" value={this.state.max_level} onChange={this.changeMaxLevel}></input>
-              </div>
+          <div className="row">
+            <div className="col s6">
+              Min Level:
+              <input type="number" className="form-control" value={this.state.min_level} onChange={this.changeMinLevel}></input>
             </div>
-            <div className="row">
-              <div className="col s6">
-                Min Difficulty:
-                <input type="number" className="form-control" value={this.state.min_diff} onChange={this.changeMinDifficulty}></input>
-              </div>
-              <div className="col s6">
-                Max Difficulty:
-                <input type="number" className="form-control" value={this.state.max_diff} onChange={this.changeMaxDifficulty}></input>
-              </div>
+            <div className="col s6">
+              Max Level:
+              <input type="number" className="form-control" value={this.state.max_level} onChange={this.changeMaxLevel}></input>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col s6">
+              Min Difficulty:
+              <input type="number" className="form-control" value={this.state.min_diff} onChange={this.changeMinDifficulty}></input>
+            </div>
+            <div className="col s6">
+              Max Difficulty:
+              <input type="number" className="form-control" value={this.state.max_diff} onChange={this.changeMaxDifficulty}></input>
             </div>
           </div>
           <div className="row justify-content-center">
@@ -320,11 +336,51 @@ var Random = createReactClass({
               <input type="number" className="form-control" value={this.state.song_num} onChange={this.changeSongNum}></input>
             </div>
           </div>
-          <button className="btn btn-primary" onClick={this.handleRandomCall}>Grab Songs</button>
+          {this.displaySubmitButton()}
         </div>
       );
     }
     else return null;
+  },
+
+  //Toggle-Panel
+  changePanelToggle(){
+    this.setState({
+      panel: !this.state.panel
+    })
+  },
+  //undo
+  undoBans(){
+
+  },
+  //reset
+  resetSongs(){
+    this.setState({
+      songs: this.state.orig_songs
+    })
+  },
+
+  topPanel(){
+    if(this.state.panel){
+      return(
+        <div>
+          {this.displayLevelForm()}
+          <br/>
+        </div>
+      );
+    }
+    else{
+      return(
+        <div>
+          <div className="row">
+            <a className="waves-effect waves-light btn blue" onClick={this.changePanelToggle}>Open Form</a>
+            <a className="waves-effect waves-light btn">Undo Ban</a>
+            <a className="waves-effect waves-light btn red" onClick={this.resetSongs}>Reset</a>
+          </div>
+          <br/>
+        </div>
+      )
+    }
   },
 
   render() {
@@ -338,26 +394,28 @@ var Random = createReactClass({
       <div>
         <header className="Top-panel">
           <div className="container">
-            <br/>
             <div className="row">
-              <div className="col s3">
+              <div className="col s12 m6 l3">
                 {this.displayGameButton()}
+                <br/>
               </div>
-              <div className="col s3">
+              <div className="col s12 m6 l3">
                 {this.displayVersionButton()}
+                <br/>
               </div>
-              <div className="col s3">
+              <div className="col s12 m6 l3">
                 {this.displayBuildButton()}
+                <br/>
               </div>
-              <div className="col s3">
+              <div className="col s12 m6 l3">
                 {this.displayStyleButton()}
+                <br/>
               </div>
             </div>
             <div className="row">
               <h3>{this.state.game_title}</h3>
             </div>
-            {this.displayLevelForm()}
-            <br/>
+            {this.topPanel()}
           </div>
         </header>
         <div className="Song-container center">
@@ -373,14 +431,15 @@ var Song = createReactClass({
   getInitialState(){
     return{
       game: this.props.game,
-      class: this.props.song.card_class
-      active: true;
+      class: this.props.song.card_class,
+      active: true
     }
   },
 
   diff_return(difficulty){
     var diff_string = "";
     var class_name = "card-";
+    var button_color = "black";
     switch(difficulty){
         case 0:
           if(this.props.game === 'ddr') {
@@ -410,6 +469,7 @@ var Song = createReactClass({
           if(this.props.game === 'ddr') {
             diff_string = "Difficult";
             class_name += "red";
+            button_color = "white";
           }
           if(this.props.game === 'iidx') {
             diff_string = "Hyper";
@@ -428,53 +488,74 @@ var Song = createReactClass({
           if(this.props.game === 'iidx') {
             diff_string = "Another";
             class_name += "red";
+            button_color = "white";
           }
           if(this.props.game === 'jubeat') {
             diff_string = "Extreme";
             class_name += "red";
+            button_color = "white";
           }
         break;
         default:
           if(this.props.game === 'ddr') {
             diff_string = "Challenge";
             class_name += "purple";
+            button_color = "white";
           }
           if(this.props.game === 'iidx') {
             diff_string = "Black Another";
             class_name += "darkred";
+            button_color = "white";
           }
         break;
     }
     var object = {
       diff_string: diff_string,
-      class_name: class_name
+      class_name: class_name,
+      button_color: button_color
     }
     return object;
   },
 
   changeActiveClass(){
     this.setState({
-      active: !active
+      active: !this.state.active
     })
-  }
+  },
 
   render() {
     var object = this.diff_return(this.props.song.difficulty);
     var difficulty = object.diff_string;
     var card_class = object.class_name;
-    return (
-      <div className={"Song-card " + card_class}>
-        <h5>{this.props.song.name}</h5>
-        <h6>{this.props.song.artist}</h6>
-        <h6>{difficulty + " " + this.props.song.level}</h6>
-        <h7>{this.props.song.genre}</h7>
-        <br/>
-        <h7>{"BPM: " + this.props.song.bpm}</h7>
-        <br/>
-        <h7>{this.props.song.version}</h7>
-        <br/>
-      </div>
-    );
+    var button_color = object.button_color;
+
+    if(this.state.active){
+      return (
+        <div className={"Song-card " + card_class}>
+          <h5>{this.props.song.name}</h5>
+          <h6>{this.props.song.artist}</h6>
+          <h6>{difficulty + " " + this.props.song.level}</h6>
+          <h7>{this.props.song.genre}</h7>
+          <br/>
+          <h7>{"BPM: " + this.props.song.bpm}</h7>
+          <br/>
+          <h7>{this.props.song.version}</h7>
+          <br/>
+          <br/>
+          <div>
+          <i className="small material-icons">search</i>
+          &ensp;&ensp;
+          <i className="small material-icons" onClick={this.changeActiveClass}>block</i>
+          </div>
+        </div>
+      );
+    }
+    else{
+      return (
+        <div className={"Song-card card-out"}>
+        </div>
+      );
+    }
   }
 });
 

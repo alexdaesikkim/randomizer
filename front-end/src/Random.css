@@ -11,46 +11,66 @@
 }
 
 .Song-card{
+  color: black;
   text-align: center;
   display:inline-block;
+  position: relative;
   margin-left: 10px;
   margin-top: 10px;
   vertical-align: top;
   width: 300px;
-  height: 250px;
+  height: 275px;
+}
+
+.card-int{
+  color: black;
+  background: white;
+}
+
+.card-out{
+  width: 0px;
+  height: 0px;
+  margin-left: 0px;
+  transition: all 1s;
+  margin-top: 0px;
+  box-shadow: 5px 5px #FFFFFF;
+}
+
+.card-green{
+  background: linear-gradient(#48E448, rgba(72, 228, 72, 0.5));
   border-radius: 5px;
   box-shadow: 5px 5px #CCCCCC;
 }
 
-.card-disabled:{
-  color: #AAAAAA;
-  background: #AAAAAA;
-  transition: background 1s;
-}
-
-.card-green{
-  background: linear-gradient(#48E448, rgba(72, 228, 72, 0.5))
-}
-
 .card-blue{
   background: linear-gradient(#00C3FF, rgba(0, 195, 255, 0.5));
+  border-radius: 5px;
+  box-shadow: 5px 5px #CCCCCC;
 }
 
 .card-yellow{
   background: linear-gradient(#DFC51F, #FFFF00);
+  border-radius: 5px;
+  box-shadow: 5px 5px #CCCCCC;
 }
 
 .card-red{
   color: white;
   background: linear-gradient(#FF4747, rgba(255, 0, 0, 0.5));
+  border-radius: 5px;
+  box-shadow: 5px 5px #CCCCCC;
 }
 
 .card-darkred{
   color: white;
   background: linear-gradient(#870000, rgba(135, 0, 0, 0.75));
+  border-radius: 5px;
+  box-shadow: 5px 5px #CCCCCC;
 }
 
 .card-purple{
   color: white;
   background: linear-gradient(#B200B2, rgba(178, 0, 178, 0.5));
+  border-radius: 5px;
+  box-shadow: 5px 5px #CCCCCC;
 }
