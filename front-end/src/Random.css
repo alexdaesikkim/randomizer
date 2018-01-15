@@ -3,6 +3,12 @@ a{
 }
 .Top-panel {
   text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.Form-panel {
+  text-align: center;
   background-color: #222;
   color: white;
 }

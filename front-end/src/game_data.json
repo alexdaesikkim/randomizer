@@ -19,7 +19,8 @@
           "na_option": false,
           "difficulty": {
             "min": 0,
-            "max": 4
+            "max": 4,
+            "list": ["Beginner", "Basic", "Difficult", "Expert", "Challenge"]
           },
           "name": "2014"
         },
@@ -35,7 +36,8 @@
           "na_option": true,
           "difficulty": {
             "min": 0,
-            "max": 4
+            "max": 4,
+            "list": ["Beginner", "Basic", "Difficult", "Expert", "Challenge"]
           },
           "name": "Ace"
         }
@@ -60,7 +62,8 @@
           "na_option": false,
           "difficulty": {
             "min": 0,
-            "max": 4
+            "max": 4,
+            "list": ["Beginner", "Normal", "Hyper", "Another", "Black Another"]
           },
           "name": "25 CANNON BALLERS"
         },
@@ -76,7 +79,8 @@
           "na_option": false,
           "difficulty": {
             "min": 0,
-            "max": 4
+            "max": 4,
+            "list": ["Beginner", "Normal", "Hyper", "Another", "Black Another"]
           },
           "name": "24 SINOBUZ"
         }
@@ -97,8 +101,9 @@
           "current": "",
           "na_option": false,
           "difficulty": {
-            "min": 1,
-            "max": 3
+            "min": 0,
+            "max": 2,
+            "list": ["Basic", "Advanced", "Extreme"]
           },
           "name": "Clan"
         }

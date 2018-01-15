@@ -91,7 +91,7 @@ function filter_songs(array, style, d_min, d_max, l_min, l_max){
   return array;
 }
 
-app.get('/random/:game/:version/', function(req, res, next){
+app.get('/api/alpha/random/:game/:version/', function(req, res, next){
   var count = req.query.count > 1 ? req.query.count : 1;
   var min_difficulty = req.query.min_difficulty != null ? req.query.min_difficulty : -1;
   var max_difficulty = req.query.max_difficulty != null ? req.query.max_difficulty : -1;
@@ -204,29 +204,29 @@ app.get('/random/:game/:version/', function(req, res, next){
 
 });
 
-app.get('/info/:game/:version/', function(){
+app.get('/api/alpha/info/:game/:version/', function(){
   //get information on the version itself
 });
 
-app.get('/all/:game/:version/', function(){
+app.get('/api/alpha/all/:game/:version/', function(){
   //show all versions available with the associated game
 });
 
-app.get('/info/:game/', function(){
+app.get('/api/alpha/info/:game/', function(){
   //get information on the game itself, as well as versions that comes along with it
 });
 
-app.get('/all/:game/', function(){
+app.get('/api/alpha/all/:game/', function(){
   //does it overlap with above?
 });
 
-app.get('/all/', function(){
+app.get('/api/alpha/all/', function(){
   //show all games available for this API
 });
 //for anything else, return 404
 
 //solely for testing purposes
-app.get('/scrape/sinobuz/', function(){
+app.get('/api/alpha/scrape/sinobuz/', function(){
   PythonShell.run('scraper.py', function (err) {
     if (err) throw err;
     console.log('finished');

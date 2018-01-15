@@ -1,6 +1,7 @@
 import React from 'react';
 import './Random.css';
 import $ from 'jquery';
+import {Input, Button, Icon} from 'react-materialize';
 
 var game_data = require('./game_data.json');
 
@@ -27,6 +28,7 @@ var Random = createReactClass({
       max_level: 0,
       min_diff: 0,
       max_diff: 0,
+      diff_list: [],
       style: '',
       styles: [],
       song_num: 1,
@@ -45,39 +47,40 @@ var Random = createReactClass({
   },
 
   changeGame(event){
-    var game = event.target.id;
-    for(var x = 0; x < this.state.games.length; x++){
-      var g = this.state.games[x];
-      if(g === game){
-        var styles = game_data.games[g].styles
-        if(styles.length > 1 && styles[styles.length-1] !== "all") styles.push("all");
-        this.setState({
-          game_name: game,
-          game_title: '',
-          version_name: '',
-          build_name: '',
-          builds: [],
-          style: '',
-          game_limits:{
+    var game = event.target.value;
+    if(game !== ''){
+      for(var x = 0; x < this.state.games.length; x++){
+        var g = this.state.games[x];
+        if(g === game){
+          var styles = game_data.games[g].styles
+          if(styles.length > 1 && styles[styles.length-1] !== "all") styles.push("all");
+          this.setState({
+            game_name: game,
+            game_title: '',
+            version_name: '',
+            build_name: '',
+            builds: [],
+            style: '',
+            game_limits:{
+              min_level: 0,
+              max_level: 0,
+              min_diff: -1,
+              max_diff: -1
+            },
             min_level: 0,
             max_level: 0,
-            min_diff: -1,
-            max_diff: -1
-          },
-          min_level: 0,
-          max_level: 0,
-          min_diff: 0,
-          max_diff: 0,
-          versions: Object.keys(game_data.games[g].versions),
-          styles: game_data.games[g].styles,
-          songs: []
-        })
+            min_diff: 0,
+            max_diff: 0,
+            versions: Object.keys(game_data.games[g].versions),
+            songs: []
+          })
+        }
       }
     }
   },
 
   changeVersion(event){
-    var version = event.target.id;
+    var version = event.target.value;
     for(var x = 0; x < this.state.versions.length; x++){
       var v = this.state.versions[x];
       if(v === version){
@@ -92,6 +95,7 @@ var Random = createReactClass({
           version_name: version,
           builds: builds,
           build_name: build_name,
+          styles: game_data.games[this.state.game_name].styles,
           style: this.state.styles[0],
           game_limits:{
             min_level: game_data.games[this.state.game_name].versions[v].level.min,
@@ -103,6 +107,7 @@ var Random = createReactClass({
           max_level: game_data.games[this.state.game_name].versions[v].level.max,
           min_diff: game_data.games[this.state.game_name].versions[v].difficulty.min,
           max_diff: game_data.games[this.state.game_name].versions[v].difficulty.max,
+          diff_list: game_data.games[this.state.game_name].versions[v].difficulty.list,
           na_option: game_data.games[this.state.game_name].versions[v].na_option,
           panel: true
         })
@@ -111,6 +116,8 @@ var Random = createReactClass({
   },
 
   errorCheck(){
+    //do this to enable the submit button, instead of throwing errors
+    //is it possible to have icon next to it for popup saying what's wrong?
     if(this.state.min_level > this.state.max_level){
 
     }
@@ -127,46 +134,48 @@ var Random = createReactClass({
   },
 
   changeBuild(event){
-    var build = event.target.id;
+    var build = event.target.value;
     this.setState({
       build_name: build
     })
   },
 
   changeStyle(event){
-    var style = event.target.id;
+    var style = event.target.value;
     this.setState({
       style: style
     })
   },
 
   changeMinLevel(event){
+    console.log("triggered");
+    console.log(parseInt(event.target.value, 10))
     this.setState({
-      min_level: event.target.value
+      min_level: parseInt(event.target.value, 10)
     })
   },
 
   changeMaxLevel(event){
     this.setState({
-      max_level: event.target.value
+      max_level: parseInt(event.target.value, 10)
     })
   },
 
   changeMinDifficulty(event){
     this.setState({
-      min_diff: event.target.value
+      min_diff: parseInt(event.target.value, 10)
     })
   },
 
   changeMaxDifficulty(event){
     this.setState({
-      max_diff: event.target.value
+      max_diff: parseInt(event.target.value, 10)
     })
   },
 
   changeSongNum(event){
     this.setState({
-      song_num: event.target.value
+      song_num: parseInt(event.target.value, 10)
     })
   },
 
@@ -202,6 +211,7 @@ var Random = createReactClass({
             genre: raw_songs[i].genre,
             source: raw_songs[i].source,
             level: raw_songs[i].level,
+            style: raw_songs[i].style,
             difficulty: raw_songs[i].difficulty,
             version: raw_songs[i].version,
             active: true
@@ -226,86 +236,56 @@ var Random = createReactClass({
     })
   },
 
-  displayGameButton(){
-    var that = this
+  displayTopPanel(){
+    var that = this;
     var games = this.state.games.map(function(obj){
       var game_name = obj.toUpperCase();
       return(
-        <li key={"gameselect_"+ obj}><a id={obj} onClick={that.changeGame}>{game_name}</a></li>
+        <option value={obj} key={"gameselect_"+obj}>{game_name}</option>
       )
     });
-
-    return(
-      <div>
-        <a className='dropdown-button btn' data-activates='game1'>{this.state.game_name === "" ? "Select Game" : this.state.game_name}</a>
-
-        <ul id='game1' className='dropdown-content'>
-          {games}
-        </ul>
-      </div>
-    )
-  },
-
-  displayVersionButton(){
-    var that = this;
     var versions = this.state.versions.map(function(obj){
       var version_name = obj.toUpperCase();
       return(
-        <li key={"versionselect_" + obj}><a id={obj} onClick={that.changeVersion}>{version_name}</a></li>
+        <option value={obj} key={"versionselect_" + obj}>{version_name}</option>
       )
     });
-
-    return(
-      <div>
-        <a className={this.state.game_name === "" ? 'dropdown-button btn disabled' : 'dropdown-button btn'} data-activates='version1'>{this.state.version_name === "" ? "SELECT VERSION" : this.state.version_name}</a>
-
-        <ul id='version1' className='dropdown-content'>
-          {versions}
-        </ul>
-      </div>
-    )
-  },
-
-  displayBuildButton(){
-    var that = this;
     var builds = this.state.builds.map(function(obj){
       var build = obj;
       if(build === game_data.games[that.state.game_name].versions[that.state.version_name].current){
         build = build + "(Current)";
       }
       return(
-        <li key={"buildselect_" + obj}><a id={obj} onClick={that.changeBuild}>{build}</a></li>
+        <option value={obj} key={"buildselect_" + obj}>{build}</option>
       );
-    })
-    return(
-      <div>
-        <a className={this.state.version_name === "" ? 'dropdown-button btn disabled' : 'dropdown-button btn'} data-activates='builds1'>{this.state.version_name === "" ? "BUILD" : this.state.build_name}</a>
-
-        <ul id='builds1' className='dropdown-content'>
-          {builds}
-        </ul>
-      </div>
-    )
-  },
-
-  displayStyleButton(){
-    var that = this;
+    });
     var styles = this.state.styles.map(function(obj){
       var style = obj.toUpperCase();
       return(
-        <li key={"styleselect_" + obj}><a id={obj} onClick={that.changeStyle}>{style}</a></li>
+        <option value={obj} key={"styleselect_" + obj}>{style}</option>
       )
-    })
+    });
 
+    //need to work on disabling some buttons again
     return(
-      <div>
-        <a className={this.state.version_name === "" ? 'dropdown-button btn disabled' : 'dropdown-button btn'} data-activates='style1'>{this.state.version_name === "" ? "STYLE" : (this.state.style).toUpperCase()}</a>
-
-        <ul id='style1' className='dropdown-content'>
+      <div className="row">
+        <Input s={6} m={3} type='select' label="Game" onChange={this.changeGame}>
+          <option value="" key={"gaemselect_default"} disabled selected>Select Game</option>
+          {games}
+        </Input>
+        <Input s={6} m={3} type='select' label="Version" onChange={this.changeVersion}>
+          <option value="" key={"versionselect_default"} disabled selected>Select Version</option>
+          {versions}
+        </Input>
+        <Input s={6} m={3} type='select' label="Build" onChange={this.changeBuild}>
+          {builds}
+        </Input>
+        <Input s={6} m={3} type='select' label="Style" onChange={this.changeStyle}>
           {styles}
-        </ul>
+        </Input>
       </div>
-    )
+    );
+
   },
 
   displaySubmitButton(){
@@ -327,27 +307,57 @@ var Random = createReactClass({
 
   displayLevelForm(){
     if(this.state.version_name !== ''){
+      var that = this;
+      var levels = [];
+      for(var i = 0; i < this.state.game_limits.max_level; i++){
+        levels.push(i+1);
+      }
+
+      var min_level_dropdown = levels.map(function(l){
+        return(
+          <option value={l} key={"min_level_" + l}>{l}</option>
+        )
+      })
+
+      var max_level_dropdown = levels.map(function(l){
+        return(
+          <option value={l} key={"max_level_"+l}>{l}</option>
+        )
+      })
+      var diffs = [];
+      for(var i = 0; i < this.state.game_limits.max_diff+1; i++){
+        diffs.push(i);
+      }
+
+      var min_diff_dropdown = diffs.map(function(d){
+        return(
+          <option value={d} key={"min_diff_" + d}>{that.state.diff_list[parseInt(d, 10)]}</option>
+        )
+      })
+
+      var max_diff_dropdown = diffs.map(function(d){
+        return(
+          <option value={d} key={"max_diff_" + d}>{that.state.diff_list[parseInt(d, 10)]}</option>
+        )
+      })
+
       return(
         <div>
           <div className="row">
-            <div className="col s6">
-              Min Level:
-              <input type="number" className="form-control" value={this.state.min_level} onChange={this.changeMinLevel}></input>
-            </div>
-            <div className="col s6">
-              Max Level:
-              <input type="number" className="form-control" value={this.state.max_level} onChange={this.changeMaxLevel}></input>
-            </div>
+            <Input s={6} m={3} label="Min Level" type='select' defaultValue={this.state.min_level} onChange={this.changeMinLevel}>
+              {min_level_dropdown}
+            </Input>
+            <Input s={6} m={3} label="Max Level" type='select' defaultValue={this.state.max_level} onChange={this.changeMaxLevel}>
+              {max_level_dropdown}
+            </Input>
+            <Input s={6} m={3} label="Min Difficulty" type='select' defaultValue={this.state.min_diff} onChange={this.changeMinDifficulty}>
+              {min_diff_dropdown}
+            </Input>
+            <Input s={6} m={3} label="Max Difficulty" type='select' defaultValue={this.state.max_diff} onChange={this.changeMaxDifficulty}>
+              {max_diff_dropdown}
+            </Input>
           </div>
           <div className="row">
-            <div className="col s6">
-              Min Difficulty:
-              <input type="number" className="form-control" value={this.state.min_diff} onChange={this.changeMinDifficulty}></input>
-            </div>
-            <div className="col s6">
-              Max Difficulty:
-              <input type="number" className="form-control" value={this.state.max_diff} onChange={this.changeMaxDifficulty}></input>
-            </div>
           </div>
           <div className="row justify-content-center">
             <div className="col s12">
@@ -385,7 +395,7 @@ var Random = createReactClass({
     }, this.resetSongList)
   },
 
-  topPanel(){
+  topPanelToggle(){
     if(this.state.panel){
       return(
         <div>
@@ -419,30 +429,17 @@ var Random = createReactClass({
       <div>
         <header className="Top-panel">
           <div className="container">
-            <div className="row">
-              <div className="col s12 m6 l3">
-                {this.displayGameButton()}
-                <br/>
-              </div>
-              <div className="col s12 m6 l3">
-                {this.displayVersionButton()}
-                <br/>
-              </div>
-              <div className="col s12 m6 l3">
-                {this.displayBuildButton()}
-                <br/>
-              </div>
-              <div className="col s12 m6 l3">
-                {this.displayStyleButton()}
-                <br/>
-              </div>
-            </div>
+            {this.displayTopPanel()}
+          </div>
+        </header>
+        <div className="Form-panel">
+          <div className="container">
             <div className="row">
               <h3>{this.state.game_title}</h3>
             </div>
-            {this.topPanel()}
+            {this.topPanelToggle()}
           </div>
-        </header>
+        </div>
         <div className="Song-container center">
           {song_cards}
         </div>
@@ -546,13 +543,14 @@ var Song = createReactClass({
     var difficulty = object.diff_string;
     var card_class = object.class_name;
     var url = "https://www.google.com/search?q=" + this.props.song.name + "+" + this.props.song.version
+    var style = this.props.song.style.charAt(0).toUpperCase() + this.props.song.style.slice(1);
 
     if(this.state.active){
       return (
         <div className={"Song-card " + card_class}>
           <h5>{this.props.song.name}</h5>
           <h6>{this.props.song.artist}</h6>
-          <h6>{difficulty + " " + this.props.song.level}</h6>
+          <h6>{style + " " + difficulty + " " + this.props.song.level}</h6>
           <h6>{this.props.song.genre}</h6>
           <h6>{"BPM: " + this.props.song.bpm}</h6>
           <h6>{this.props.song.version}</h6>
