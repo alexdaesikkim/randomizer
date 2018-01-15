@@ -187,7 +187,7 @@ var Random = createReactClass({
       north_america: that.state.north_america,
     }
     $.ajax({
-      url: '/random/' + that.state.game_name + "/" + that.state.version_name + "/",
+      url: '/api/alpha/random/' + that.state.game_name + "/" + that.state.version_name + "/",
       method: 'GET',
       data: query,
       success: function(data){
