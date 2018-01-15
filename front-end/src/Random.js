@@ -33,7 +33,7 @@ var Random = createReactClass({
       na_option: false,
       north_america: false,
       songs: [],
-      song_list: [],
+      song_state: [],
       orig_list: [],
       undo_list: [],
       status: "",
@@ -50,7 +50,7 @@ var Random = createReactClass({
       var g = this.state.games[x];
       if(g === game){
         var styles = game_data.games[g].styles
-        if(styles.length > 1) styles.push("all");
+        if(styles.length > 1 && styles[styles.length-1] !== "all") styles.push("all");
         this.setState({
           game_name: game,
           game_title: '',
@@ -104,9 +104,26 @@ var Random = createReactClass({
           min_diff: game_data.games[this.state.game_name].versions[v].difficulty.min,
           max_diff: game_data.games[this.state.game_name].versions[v].difficulty.max,
           na_option: game_data.games[this.state.game_name].versions[v].na_option,
+          panel: true
         })
       }
     }
+  },
+
+  errorCheck(){
+    if(this.state.min_level > this.state.max_level){
+
+    }
+    if(this.state.min_level < this.state.game_limits.min_level){
+
+    }
+    if(this.state.max_level < this.state.game_limits.max_level){
+
+    }
+    if(this.state.min_diff > this.state.max_diff){
+
+    }
+
   },
 
   changeBuild(event){
@@ -159,7 +176,6 @@ var Random = createReactClass({
     if(build.endsWith("(Current)")){
       build = build.slice(0,-9);
     }
-    console.log(build);
     var query = {
       count: that.state.song_num,
       build: build,
@@ -175,27 +191,29 @@ var Random = createReactClass({
       method: 'GET',
       data: query,
       success: function(data){
-        var songs = data.songs;
-        console.log(data);
-        songs = songs.map(function(obj){
+        var raw_songs = data.songs;
+        var songs = [];
+        for(var i = 0; i < raw_songs.length; i++){
           var object = {
-            name: obj.title,
-            artist: obj.artist,
-            bpm: obj.bpm,
-            genre: obj.genre,
-            source: obj.source,
-            level: obj.level,
-            difficulty: obj.difficulty,
-            version: obj.version
+            id: i,
+            name: raw_songs[i].title,
+            artist: raw_songs[i].artist,
+            bpm: raw_songs[i].bpm,
+            genre: raw_songs[i].genre,
+            source: raw_songs[i].source,
+            level: raw_songs[i].level,
+            difficulty: raw_songs[i].difficulty,
+            version: raw_songs[i].version,
+            active: true
           }
-          return object;
-        })
+          songs.push(object);
+        }
+
         that.setState({
           songs: songs,
           orig_songs: songs,
           panel: false,
           undo_songs: [],
-          redo_songs: [],
           status: ""
         });
       },
@@ -271,10 +289,11 @@ var Random = createReactClass({
   },
 
   displayStyleButton(){
+    var that = this;
     var styles = this.state.styles.map(function(obj){
       var style = obj.toUpperCase();
       return(
-        <li key={"styleselect_" + obj}><a id={obj}>{style}</a></li>
+        <li key={"styleselect_" + obj}><a id={obj} onClick={that.changeStyle}>{style}</a></li>
       )
     })
 
@@ -353,11 +372,17 @@ var Random = createReactClass({
   undoBans(){
 
   },
-  //reset
-  resetSongs(){
+  //hacky way at the moment since original code+design doesn't make way for pretty way of fixing at the moment
+  resetSongList(){
     this.setState({
       songs: this.state.orig_songs
     })
+  },
+
+  resetSongs(){
+    this.setState({
+      songs: []
+    }, this.resetSongList)
   },
 
   topPanel(){
@@ -374,8 +399,8 @@ var Random = createReactClass({
         <div>
           <div className="row">
             <a className="waves-effect waves-light btn blue" onClick={this.changePanelToggle}>Open Form</a>
-            <a className="waves-effect waves-light btn">Undo Ban</a>
-            <a className="waves-effect waves-light btn red" onClick={this.resetSongs}>Reset</a>
+            <a className="waves-effect waves-light btn disabled">Undo Ban</a>
+            <a className="waves-effect waves-light btn" onClick={this.resetSongs}>Reset</a>
           </div>
           <br/>
         </div>
@@ -432,14 +457,13 @@ var Song = createReactClass({
     return{
       game: this.props.game,
       class: this.props.song.card_class,
-      active: true
+      active: this.props.song.active
     }
   },
 
   diff_return(difficulty){
     var diff_string = "";
     var class_name = "card-";
-    var button_color = "black";
     switch(difficulty){
         case 0:
           if(this.props.game === 'ddr') {
@@ -469,7 +493,6 @@ var Song = createReactClass({
           if(this.props.game === 'ddr') {
             diff_string = "Difficult";
             class_name += "red";
-            button_color = "white";
           }
           if(this.props.game === 'iidx') {
             diff_string = "Hyper";
@@ -488,31 +511,26 @@ var Song = createReactClass({
           if(this.props.game === 'iidx') {
             diff_string = "Another";
             class_name += "red";
-            button_color = "white";
           }
           if(this.props.game === 'jubeat') {
             diff_string = "Extreme";
             class_name += "red";
-            button_color = "white";
           }
         break;
         default:
           if(this.props.game === 'ddr') {
             diff_string = "Challenge";
             class_name += "purple";
-            button_color = "white";
           }
           if(this.props.game === 'iidx') {
             diff_string = "Black Another";
             class_name += "darkred";
-            button_color = "white";
           }
         break;
     }
     var object = {
       diff_string: diff_string,
       class_name: class_name,
-      button_color: button_color
     }
     return object;
   },
@@ -527,7 +545,7 @@ var Song = createReactClass({
     var object = this.diff_return(this.props.song.difficulty);
     var difficulty = object.diff_string;
     var card_class = object.class_name;
-    var button_color = object.button_color;
+    var url = "https://www.google.com/search?q=" + this.props.song.name + "+" + this.props.song.version
 
     if(this.state.active){
       return (
@@ -535,15 +553,11 @@ var Song = createReactClass({
           <h5>{this.props.song.name}</h5>
           <h6>{this.props.song.artist}</h6>
           <h6>{difficulty + " " + this.props.song.level}</h6>
-          <h7>{this.props.song.genre}</h7>
-          <br/>
-          <h7>{"BPM: " + this.props.song.bpm}</h7>
-          <br/>
-          <h7>{this.props.song.version}</h7>
-          <br/>
-          <br/>
+          <h6>{this.props.song.genre}</h6>
+          <h6>{"BPM: " + this.props.song.bpm}</h6>
+          <h6>{this.props.song.version}</h6>
           <div>
-          <i className="small material-icons">search</i>
+          <a href={url} target="_blank"><i className="small material-icons">search</i></a>
           &ensp;&ensp;
           <i className="small material-icons" onClick={this.changeActiveClass}>block</i>
           </div>
