@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 
 ddr_ace_version_url = "http://bemaniwiki.com/index.php?DanceDanceRevolution%20A"
 main_page = urlopen(ddr_ace_version_url)
-version_name = BeautifulSoup(main_page, "html.parser").findAll('strong', text=re.compile("^MDX:"))[0].text[-10:]
+version_name = BeautifulSoup(main_page, "html5lib").findAll('strong', text=re.compile("^MDX:"))[0].text[-10:]
 print(version_name)
 
 ddr_ace_new_url = "http://bemaniwiki.com/index.php?DanceDanceRevolution%20A%2F%BF%B7%B6%CA%A5%EA%A5%B9%A5%C8"
@@ -25,8 +25,8 @@ page_old = urlopen(ddr_ace_old_url)
 
 print ("Opened pages")
 
-song_new_table = BeautifulSoup(page_new, "html.parser").find('div', class_='ie5')
-song_old_table = BeautifulSoup(page_old, "html.parser").find_all('div', class_='ie5')[1]
+song_new_table = BeautifulSoup(page_new, "html5lib").find('div', class_='ie5')
+song_old_table = BeautifulSoup(page_old, "html5lib").find_all('div', class_='ie5')[1]
 
 ddr_ace_new_rows = song_new_table.find_all('tr')
 ddr_ace_old_rows = song_old_table.find_all('tr')

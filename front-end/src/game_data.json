@@ -1,111 +1,170 @@
 {
   "games": {
-    "ddr": {
-      "name": "DanceDanceRevolution",
-      "styles": [
-        "single",
-        "double"
-      ],
-      "versions": {
-        "2014": {
-          "level": {
-            "min": 1,
-            "max": 19
-          },
-          "builds": [
-            "2016021000"
-          ],
-          "current": "2016021000",
-          "na_option": false,
-          "difficulty": {
-            "min": 0,
-            "max": 4,
-            "list": ["Beginner", "Basic", "Difficult", "Expert", "Challenge"]
-          },
-          "name": "2014"
-        },
-        "ace": {
-          "level": {
-            "min": 1,
-            "max": 19
-          },
-          "builds": [
-            "2017121400"
-          ],
-          "current": "2017121400",
-          "na_option": true,
-          "difficulty": {
-            "min": 0,
-            "max": 4,
-            "list": ["Beginner", "Basic", "Difficult", "Expert", "Challenge"]
-          },
-          "name": "Ace"
-        }
-      }
-    },
     "iidx": {
-      "name": "beatmania IIDX",
       "styles": [
         "single",
         "double"
       ],
+      "name": "beatmania IIDX",
       "versions": {
-        "25": {
-          "level": {
-            "min": 1,
-            "max": 12
-          },
-          "builds": [
-            "2017122100", "2017122700"
-          ],
-          "current": "2017122700",
-          "na_option": false,
-          "difficulty": {
-            "min": 0,
-            "max": 4,
-            "list": ["Beginner", "Normal", "Hyper", "Another", "Black Another"]
-          },
-          "name": "25 CANNON BALLERS"
-        },
         "24": {
-          "level": {
-            "min": 1,
-            "max": 12
-          },
           "builds": [
             "2017082800"
           ],
-          "current": "2017082800",
+          "name": "24 SINOBUZ",
           "na_option": false,
+          "level": {
+            "min": 1,
+            "max": 12
+          },
+          "current": "2017082800",
           "difficulty": {
             "min": 0,
-            "max": 4,
-            "list": ["Beginner", "Normal", "Hyper", "Another", "Black Another"]
+            "list": [
+              "Beginner",
+              "Normal",
+              "Hyper",
+              "Another",
+              "Black Another"
+            ],
+            "max": 4
+          }
+        },
+        "25": {
+          "builds": [
+            "2017122100",
+            "2017122700"
+          ],
+          "name": "25 CANNON BALLERS",
+          "na_option": false,
+          "level": {
+            "min": 1,
+            "max": 12
           },
-          "name": "24 SINOBUZ"
+          "current": "2017122700",
+          "difficulty": {
+            "min": 0,
+            "list": [
+              "Beginner",
+              "Normal",
+              "Hyper",
+              "Another",
+              "Black Another"
+            ],
+            "max": 4
+          }
         }
       }
     },
     "jubeat": {
-      "name": "Jubeat",
       "styles": [
         "single"
       ],
+      "name": "Jubeat",
       "versions": {
         "clan": {
+          "builds": [],
+          "name": "Clan",
+          "na_option": false,
           "level": {
             "min": 1,
             "max": 10
           },
-          "builds": [],
           "current": "",
-          "na_option": false,
           "difficulty": {
             "min": 0,
-            "max": 2,
-            "list": ["Basic", "Advanced", "Extreme"]
+            "list": [
+              "Basic",
+              "Advanced",
+              "Extreme"
+            ],
+            "max": 2
+          }
+        }
+      }
+    },
+    "ddr": {
+      "styles": [
+        "single",
+        "double"
+      ],
+      "name": "DanceDanceRevolution",
+      "versions": {
+        "2014": {
+          "builds": [
+            "2016021000"
+          ],
+          "name": "2014",
+          "na_option": false,
+          "level": {
+            "min": 1,
+            "max": 19
           },
-          "name": "Clan"
+          "current": "2016021000",
+          "difficulty": {
+            "min": 0,
+            "list": [
+              "Beginner",
+              "Basic",
+              "Difficult",
+              "Expert",
+              "Challenge"
+            ],
+            "max": 4
+          }
+        },
+        "ace": {
+          "builds": [
+            "2017121400"
+          ],
+          "name": "Ace",
+          "na_option": true,
+          "level": {
+            "min": 1,
+            "max": 19
+          },
+          "current": "2017121400",
+          "difficulty": {
+            "min": 0,
+            "list": [
+              "Beginner",
+              "Basic",
+              "Difficult",
+              "Expert",
+              "Challenge"
+            ],
+            "max": 4
+          }
+        }
+      }
+    },
+    "popn": {
+      "styles": [
+        "single"
+      ],
+      "name": "pop'n music",
+      "versions": {
+        "24": {
+          "builds": [
+            "2017121900"
+          ],
+          "name": "\u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922",
+          "na_option": false,
+          "level": {
+            "min": 1,
+            "max": 50
+          },
+          "current": "2017121900",
+          "difficulty": {
+            "min": 0,
+            "list": [
+              "Easy",
+              "Normal",
+              "Hyper",
+              "EX"
+            ],
+            "max": 3
+          }
         }
       }
     }

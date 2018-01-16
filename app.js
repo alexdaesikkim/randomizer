@@ -1,11 +1,8 @@
 var express = require('express');
 var path = require('path');
 var app = express();
-var excel = require('xlsx');
 var bodyParser = require('body-parser');
 var fs = require('fs');
-
-var PythonShell = require('python-shell');
 
 var game_data = require('./games/game_data.json')
 const cache_size = 10;
@@ -233,19 +230,19 @@ app.get('/api/alpha/all/:game/', function(){
   //does it overlap with above?
 });
 
-app.get('/api/alpha/all/', function(){
+app.get('/api/alpha/all/games/', function(){
   //show all games available for this API
+});
+
+app.get('/api/alpha/all/', function(req, res, next){
+  //game_data.json
+  res.json(game_data);
+  res.status(200);
+  res.end();
+  return;
 });
 //for anything else, return 404
 
-//solely for testing purposes
-app.get('/api/alpha/scrape/sinobuz/', function(){
-  PythonShell.run('scraper.py', function (err) {
-    if (err) throw err;
-    console.log('finished');
-  });
-
-})
 
 
 const port = process.env.PORT || 3001;

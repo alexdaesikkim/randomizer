@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 
 sinobuz_version_url = "http://bemaniwiki.com/index.php?beatmania%20IIDX%2024%20SINOBUZ"
 main_page = urlopen(sinobuz_version_url)
-version_name = BeautifulSoup(main_page, "html.parser").findAll('strong', text=re.compile("^LDJ:J:A:A:"))[0].text[-10:]
+version_name = BeautifulSoup(main_page, "html5lib").findAll('strong', text=re.compile("^LDJ:J:A:A:"))[0].text[-10:]
 
 sinobuz_new_url = "http://bemaniwiki.com/index.php?beatmania%20IIDX%2024%20SINOBUZ%2F%BF%B7%B6%CA%A5%EA%A5%B9%A5%C8"
 sinobuz_old_url = "http://bemaniwiki.com/index.php?beatmania%20IIDX%2024%20SINOBUZ%2F%B5%EC%B6%CA%A5%EA%A5%B9%A5%C8"
@@ -24,8 +24,8 @@ page_old = urlopen(sinobuz_old_url)
 
 print ("Opened pages")
 
-song_new_table = BeautifulSoup(page_new, "html.parser").find('div', class_='ie5')
-song_old_table = BeautifulSoup(page_old, "html.parser").find_all('div', class_='ie5')[1]
+song_new_table = BeautifulSoup(page_new, "html5lib").find('div', class_='ie5')
+song_old_table = BeautifulSoup(page_old, "html5lib").find_all('div', class_='ie5')[1]
 
 sinobuz_new_rows = song_new_table.find_all('tr')
 sinobuz_old_rows = song_old_table.find_all('tr')

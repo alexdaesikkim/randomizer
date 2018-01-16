@@ -13,7 +13,7 @@ from bs4 import BeautifulSoup
 
 cb_version_url = "http://bemaniwiki.com/index.php?beatmania%20IIDX%2025%20CANNON%20BALLERS"
 main_page = urlopen(cb_version_url)
-version_name = BeautifulSoup(main_page, "html.parser").findAll('strong', text=re.compile("^LDJ:J:B:A:"))[0].text[-10:]
+version_name = BeautifulSoup(main_page, "html5lib").findAll('strong', text=re.compile("^LDJ:J:B:A:"))[0].text[-10:]
 print(version_name)
 
 cb_new_url = "http://bemaniwiki.com/index.php?beatmania%20IIDX%2025%20CANNON%20BALLERS%2F%BF%B7%B6%CA%A5%EA%A5%B9%A5%C8"
@@ -24,8 +24,8 @@ page_old = urlopen(cb_old_url)
 
 print ("Opened pages")
 
-song_new_table = BeautifulSoup(page_new, "html.parser").find('div', class_='ie5')
-song_old_table = BeautifulSoup(page_old, "html.parser").find_all('div', class_='ie5')[1]
+song_new_table = BeautifulSoup(page_new, "html5lib").find('div', class_='ie5')
+song_old_table = BeautifulSoup(page_old, "html5lib").find_all('div', class_='ie5')[1]
 
 cb_new_rows = song_new_table.find_all('tr')
 cb_old_rows = song_old_table.find_all('tr')
@@ -163,8 +163,6 @@ with open('../games/game_data.json') as file:
     array = data["games"]["iidx"]["versions"]["25"]["builds"]
     check = False
     for x in array:
-        print(x)
-        print(version_name)
         if(version_name == x):
             check = True
     if not check:

@@ -5,15 +5,15 @@ print("IIDX")
 
 print("SINOBUZ")
 try:
-    subprocess.call(["python3", "sinobuz.py"], cwd="scripts")
+    subprocess.call(["python3", "iidx_sinobuz.py"], cwd="scripts")
 except subprocess.CalledProcessError:
-    subprocess.call(["python", "sinobuz.py"], cwd="scripts")
+    subprocess.call(["python", "iidx_sinobuz.py"], cwd="scripts")
 
 print("CANNON BALLERS")
 try:
-    subprocess.call(["python3", "cannonballers.py"], cwd="scripts")
+    subprocess.call(["python3", "iidx_cannonballers.py"], cwd="scripts")
 except subprocess.CalledProcessError:
-    subprocess.call(["python", "cannonballers.py"], cwd="scripts")
+    subprocess.call(["python", "iidx_cannonballers.py"], cwd="scripts")
 
 print("DDR")
 

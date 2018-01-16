@@ -24,10 +24,10 @@ page_old = urlopen(ddr_2014_old_url)
 
 print ("Opened pages")
 
-new_table = BeautifulSoup(page_new, "html.parser").find_all('div', class_='ie5')
+new_table = BeautifulSoup(page_new, "html5lib").find_all('div', class_='ie5')
 song_2014_table = new_table[0]
 song_2013_table = new_table[1]
-song_old_table = BeautifulSoup(page_old, "html.parser").find_all('div', class_='ie5')[1]
+song_old_table = BeautifulSoup(page_old, "html5lib").find_all('div', class_='ie5')[1]
 
 ddr_2014_rows = song_2014_table.find_all('tr')
 ddr_2013_rows = song_2013_table.find_all('tr')
