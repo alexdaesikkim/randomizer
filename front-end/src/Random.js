@@ -510,6 +510,14 @@ var Song = createReactClass({
             diff_string = "Beginner";
             class_name += "green";
           }
+          if(this.props.game === 'jubeat') {
+            diff_string = "Basic";
+            class_name += "green";
+          }
+          if(this.props.game === 'popn'){
+            diff_string = "Easy";
+            class_name += "blue";
+          }
         break;
         case 1:
           if(this.props.game === 'ddr') {
@@ -521,7 +529,11 @@ var Song = createReactClass({
             class_name += "blue";
           }
           if(this.props.game === 'jubeat') {
-            diff_string = "Basic";
+            diff_string = "Advanced";
+            class_name += "yellow";
+          }
+          if(this.props.game === 'popn') {
+            diff_string = "Normal";
             class_name += "green";
           }
         break;
@@ -535,7 +547,11 @@ var Song = createReactClass({
             class_name += "yellow";
           }
           if(this.props.game === 'jubeat') {
-            diff_string = "Advanced";
+            diff_string = "Extreme";
+            class_name += "red";
+          }
+          if(this.props.game === 'popn') {
+            diff_string = "Hyper";
             class_name += "yellow";
           }
         break;
@@ -548,8 +564,8 @@ var Song = createReactClass({
             diff_string = "Another";
             class_name += "red";
           }
-          if(this.props.game === 'jubeat') {
-            diff_string = "Extreme";
+          if(this.props.game === 'popn'){
+            diff_string = "EX";
             class_name += "red";
           }
         break;
@@ -589,7 +605,7 @@ var Song = createReactClass({
         <div className={"Song-card " + card_class}>
           <h5>{this.props.song.name}</h5>
           <h6>{this.props.song.artist}</h6>
-          <h6>{style + " " + difficulty + " " + this.props.song.level}</h6>
+          <h6>{style + " " + difficulty + " "} {this.props.song.level}</h6>
           <h6>{this.props.song.genre}</h6>
           <h6>{"BPM: " + this.props.song.bpm}</h6>
           <h6>{this.props.song.version}</h6>
