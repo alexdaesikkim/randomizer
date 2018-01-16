@@ -1,6 +1,13 @@
 a{
   color: inherit;
 }
+
+.title-text{
+  padding: 0px;
+  margin-top: 0px;
+  font-size: 42px;
+}
+
 .Top-panel {
   text-align: center;
   background-color: black;

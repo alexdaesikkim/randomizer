@@ -99,6 +99,7 @@ app.get('/api/alpha/random/:game/:version/', function(req, res, next){
   var max_level = req.query.max_level != null ? req.query.max_level : 0;
   var build = req.query.build != null ? req.query.build : "";
   var style = req.query.style != null ? req.query.style : "all";
+  var north_america = req.query.north_america != null ? req.query.north_america : false;
   var game = req.params.game;
   var version = req.params.version;
   var obj = {};
@@ -183,8 +184,19 @@ app.get('/api/alpha/random/:game/:version/', function(req, res, next){
   //not really time consuming to generate
   //how does it fare against using the actually array to sort?
   var songs = song_obj.songs;
-  songs = shuffle(songs, song_obj.songs.length);
-  songs = filter_songs(songs, style, min_difficulty, max_difficulty, min_level, max_level)
+  songs = filter_songs(songs, style, min_difficulty, max_difficulty, min_level, max_level);
+  if(songs.length < count){
+    //return error
+  }
+
+  if(game_data.games[game].versions[version].na_option){
+    songs = songs.filter(function(data){
+      return data.north_america === true
+    })
+  }
+
+  songs = shuffle(songs, songs.length);
+
 
   obj = {
     id: song_obj.id,
@@ -194,6 +206,7 @@ app.get('/api/alpha/random/:game/:version/', function(req, res, next){
 
 
   for(var i = 0; i < count; i++){
+
     obj.songs.push(songs[i]);
   }
 
