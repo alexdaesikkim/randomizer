@@ -435,7 +435,9 @@ var Random = createReactClass({
         <div>
           <div className="row">
             <a className="waves-effect waves-light btn blue" onClick={this.changePanelToggle}>Open Form</a>
+            &ensp;
             <a className="waves-effect waves-light btn disabled">Undo Ban</a>
+            &ensp;
             <a className="waves-effect waves-light btn" onClick={this.resetSongs}>Reset</a>
           </div>
           <br/>
