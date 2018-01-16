@@ -106,7 +106,7 @@ var Random = createReactClass({
           builds: builds,
           build_name: build_name,
           styles: game_data.games[this.state.game_name].styles,
-          style: this.state.styles[0],
+          style: game_data.games[this.state.game_name].styles[0],
           game_title: game_title,
           game_limits:{
             min_level: game_data.games[this.state.game_name].versions[v].level.min,
@@ -210,6 +210,7 @@ var Random = createReactClass({
       style: that.state.style,
       north_america: that.state.north_america,
     }
+    console.log(query);
     $.ajax({
       url: '/api/alpha/random/' + that.state.game_name + "/" + that.state.version_name + "/",
       method: 'GET',
@@ -373,10 +374,10 @@ var Random = createReactClass({
       return(
         <div>
           <div className="row">
-            <Input s={6} l={1} label="Min Level" type='select' defaultValue={this.state.min_level} onChange={this.changeMinLevel}>
+            <Input s={6} l={1} label="Min Lvl" type='select' defaultValue={this.state.min_level} onChange={this.changeMinLevel}>
               {min_level_dropdown}
             </Input>
-            <Input s={6} l={1} label="Max Level" type='select' defaultValue={this.state.max_level} onChange={this.changeMaxLevel}>
+            <Input s={6} l={1} label="Max Lvl" type='select' defaultValue={this.state.max_level} onChange={this.changeMaxLevel}>
               {max_level_dropdown}
             </Input>
             <Input s={6} l={3} label="Min Difficulty" type='select' defaultValue={this.state.min_diff} onChange={this.changeMinDifficulty}>
@@ -385,8 +386,8 @@ var Random = createReactClass({
             <Input s={6} l={3} label="Max Difficulty" type='select' defaultValue={this.state.max_diff} onChange={this.changeMaxDifficulty}>
               {max_diff_dropdown}
             </Input>
-            <Input s={6} l={1} label="# of Songs" defaultValue={this.state.song_num} onChange={this.changeSongNum}></Input>
-            <div className="col s6 l3">
+            <Input s={6} l={2} label="# of Songs" defaultValue={this.state.song_num} onChange={this.changeSongNum}></Input>
+            <div className="col s6 l2">
               <br/>
               {this.displayNATab()}
             </div>
