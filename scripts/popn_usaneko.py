@@ -103,7 +103,6 @@ def parse_raw(rows, version):
                     version = version[:-4]
                 if(version.endswith(" /△")):
                     version = version[:-3]
-                print(version)
         if (len(cols) == 9 or len(cols) == 10 or len(cols) == 12) and cols[3].text != "BPM":
             if not (cols[0].has_attr('style') and cols[0]['style'] == "background-color:#gray;"):
                 x = 0
@@ -152,8 +151,6 @@ with open('../games/game_data.json') as file:
     array = data["games"]["popn"]["versions"]["24"]["builds"]
     check = False
     for x in array:
-        print(x)
-        print(version_name)
         if(version_name == x):
             check = True
     if not check:

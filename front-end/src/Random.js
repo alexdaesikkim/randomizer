@@ -95,10 +95,8 @@ var Random = createReactClass({
       var v = this.state.versions[x][0];
       if(v === version){
         var builds = game_data.games[this.state.game_name].versions[v].builds;
-        builds.sort(function(a, b){
-          return(b-a);
-        })
-        var build_name = builds[0]+"(Current)";
+        builds = builds.sort().reverse(); //time consuming? but small array so shouldn't matter
+        var build_name = builds[0];
 
         var game_title = game_data.games[this.state.game_name].name + " " + game_data.games[this.state.game_name].versions[v].name;
         this.setState({
@@ -117,8 +115,8 @@ var Random = createReactClass({
           min_level: game_data.games[this.state.game_name].versions[v].level.min,
           max_level: game_data.games[this.state.game_name].versions[v].level.max,
           min_diff: game_data.games[this.state.game_name].versions[v].difficulty.min,
-          max_diff: game_data.games[this.state.game_name].versions[v].difficulty.max,
           diff_list: game_data.games[this.state.game_name].versions[v].difficulty.list,
+          max_diff: game_data.games[this.state.game_name].versions[v].difficulty.max,
           na_option: game_data.games[this.state.game_name].versions[v].na_option,
           panel: true
         })
@@ -210,7 +208,6 @@ var Random = createReactClass({
       style: that.state.style,
       north_america: that.state.north_america,
     }
-    console.log(query);
     $.ajax({
       url: '/api/alpha/random/' + that.state.game_name + "/" + that.state.version_name + "/",
       method: 'GET',
@@ -218,7 +215,9 @@ var Random = createReactClass({
       success: function(data){
         var raw_songs = data.songs;
         var songs = [];
+        var styles = that.state.styles;
         for(var i = 0; i < raw_songs.length; i++){
+          var style = styles.length == 1 ? "" : raw_songs[i].style;
           var object = {
             id: i,
             name: raw_songs[i].title,
@@ -227,7 +226,7 @@ var Random = createReactClass({
             genre: raw_songs[i].genre,
             source: raw_songs[i].source,
             level: raw_songs[i].level,
-            style: raw_songs[i].style,
+            style: style,
             difficulty: raw_songs[i].difficulty,
             version: raw_songs[i].version,
             active: true
@@ -282,15 +281,16 @@ var Random = createReactClass({
       )
     });
 
-    //need to work on disabling some buttons again
+    //need to work on version button (if done more than once, it doesn't change back to select version
+    //since "" is only set with defaultvalue. see if there's a way to change its value onChange of game_name)
     if(this.state.panel){
       return(
         <div className="row">
-          <Input s={6} m={3} type='select' label="Game" defaultValue={this.state.game_name === '' ? '' : this.state.game_name} onChange={this.changeGame}>
+          <Input s={6} m={3} type='select' label="Game" defaultValue={this.state.game_name === '' ? "" : this.state.game_name} onChange={this.changeGame}>
             <option value="" key={"gaemselect_default"} disabled>Select Game</option>
             {games}
           </Input>
-          <Input s={6} m={3} type='select' label="Version" defaultValue={this.state.version_name === '' ? '' : this.state.version_name} onChange={this.changeVersion}>
+          <Input s={6} m={3} type='select' label="Version" defaultValue={this.state.version_name === '' ? "" : this.state.version_name} onChange={this.changeVersion}>
             <option value="" key={"versionselect_default"} disabled>{this.state.game_name === '' ? "" : "Select Version"}</option>
             {versions}
           </Input>
@@ -354,20 +354,26 @@ var Random = createReactClass({
           <option value={l} key={"max_level_"+l}>{l}</option>
         )
       });
-      var diffs = [];
-      for(var i = 0; i < this.state.game_limits.max_diff+1; i++){
-        diffs.push(i);
+      var diff_ids = [];
+      var diff_names = [];
+      for(var i = 0; i < this.state.diff_list.length; i++){
+        diff_ids.push(i);
+        diff_names.push(i);
       };
+      //sdvx edgecase
+      if(this.state.diff_list.length-1 !== this.state.game_limits.max_diff){
+        diff_ids[diff_ids.length-1] = this.state.game_limits.max_diff;
+      }
 
-      var min_diff_dropdown = diffs.map(function(d){
+      var min_diff_dropdown = diff_names.map(function(d){
         return(
-          <option value={d} key={"min_diff_" + d}>{that.state.diff_list[parseInt(d, 10)]}</option>
+          <option value={diff_ids[d]} key={"min_diff_" + d}>{that.state.diff_list[parseInt(d, 10)]}</option>
         )
       });
 
-      var max_diff_dropdown = diffs.map(function(d){
+      var max_diff_dropdown = diff_names.map(function(d){
         return(
-          <option value={d} key={"max_diff_" + d}>{that.state.diff_list[parseInt(d, 10)]}</option>
+          <option value={diff_ids[d]} key={"max_diff_" + d}>{that.state.diff_list[parseInt(d, 10)]}</option>
         )
       });
 
@@ -510,13 +516,21 @@ var Song = createReactClass({
             diff_string = "Beginner";
             class_name += "green";
           }
-          if(this.props.game === 'jubeat') {
-            diff_string = "Basic";
-            class_name += "green";
-          }
           if(this.props.game === 'popn'){
             diff_string = "Easy";
             class_name += "blue";
+          }
+          if(this.props.game === 'rb' || this.props.game === 'jubeat'){
+            diff_string = "Basic"
+            class_name += "green"
+          }
+          if(this.props.game === 'sdvx'){
+            diff_string = "Novice";
+            class_name += "purple";
+          }
+          if(this.props.game === 'museca'){
+            diff_string =
+            class_name += "green"
           }
         break;
         case 1:
@@ -528,13 +542,17 @@ var Song = createReactClass({
             diff_string = "Normal";
             class_name += "blue";
           }
-          if(this.props.game === 'jubeat') {
+          if(this.props.game === 'jubeat' || this.props.game === 'sdvx') {
             diff_string = "Advanced";
             class_name += "yellow";
           }
           if(this.props.game === 'popn') {
             diff_string = "Normal";
             class_name += "green";
+          }
+          if(this.props.game === 'rb'){
+            diff_string = "Medium"
+            class_name += "yellow"
           }
         break;
         case 2:
@@ -554,6 +572,14 @@ var Song = createReactClass({
             diff_string = "Hyper";
             class_name += "yellow";
           }
+          if(this.props.game === 'rb'){
+            diff_string = "Hard"
+            class_name += "red"
+          }
+          if(this.props.game === 'sdvx'){
+            diff_string = "Exhaust";
+            class_name += "red";
+          }
         break;
         case 3:
           if(this.props.game === 'ddr') {
@@ -568,6 +594,14 @@ var Song = createReactClass({
             diff_string = "EX";
             class_name += "red";
           }
+          if(this.props.game === 'rb'){
+            diff_string = "White Hard"
+            class_name += "purple"
+          }
+          if(this.props.game === 'sdvx'){
+            diff_string = "Maximum";
+            class_name += "darkred";
+          }
         break;
         default:
           if(this.props.game === 'ddr') {
@@ -577,6 +611,17 @@ var Song = createReactClass({
           if(this.props.game === 'iidx') {
             diff_string = "Black Another";
             class_name += "darkred";
+          }
+          if(this.props.game === 'sdvx'){
+            if(difficulty === 4){
+              diff_string = "Infinite";
+            }
+            else if(difficulty === 5){
+              diff_string = "Gravity";
+            }
+            else{
+              diff_string = "Heavenly";
+            }
           }
         break;
     }
