@@ -98,7 +98,7 @@ def parse_raw(rows, version):
             if version != "REFLEC BEAT 悠久のリフレシア" and len(cols) == 1:
                 if(re.match("REFLEC BEAT", cols[0].text)):
                     version = cols[0].text
-            if not (cols[1].has_attr('style') and cols[1]['style'] == "background-color:#gray;"):
+            if not (cols[1].has_attr('style') and re.match("^background-color:gray;", cols[1]['style'])):
                 title = cols[0].text
                 if(re.search("[*][0-9]$", title)):
                     title = title[:-2]

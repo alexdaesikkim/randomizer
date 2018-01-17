@@ -76,7 +76,7 @@ def parse_raw(rows, version):
     for row in rows:
         cols = row.find_all('td')
         if (len(cols) == 8) and cols[3].text != "BPM":
-            if not (cols[1].has_attr('style') and cols[1]['style'] == "background-color:#gray;"):
+            if not (cols[1].has_attr('style') and re.match("^background-color:gray;", cols[1]['style'])):
                 title = cols[1].text
                 genre = ''
                 artist = cols[2].text

@@ -104,7 +104,7 @@ def parse_raw(rows, version):
                 if(version.endswith(" /△")):
                     version = version[:-3]
         if (len(cols) == 9 or len(cols) == 10 or len(cols) == 12) and cols[3].text != "BPM":
-            if not (cols[0].has_attr('style') and cols[0]['style'] == "background-color:#gray;"):
+            if not (cols[1].has_attr('style') and re.match("^background-color:gray;", cols[1]['style'])):
                 x = 0
                 genre = ''
                 if(len(cols) == 10 or len(cols) == 12):

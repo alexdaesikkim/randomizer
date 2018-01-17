@@ -92,7 +92,7 @@ def parse_raw(rows, version):
             if(re.match("jubeat", cols[0].text)):
                 version = cols[0].text
         if (len(cols) == 10 or len(cols) == 11):
-            if not (cols[0].has_attr('style') and cols[0]['style'] == "background-color:#gray;"):
+            if not (cols[1].has_attr('style') and re.match("^background-color:gray;", cols[1]['style'])):
                 x = 0
                 if(len(cols) == 11):
                     x = 1

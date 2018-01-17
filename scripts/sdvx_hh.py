@@ -61,7 +61,9 @@ diff_options = {
     1: "Advanced",
     2: "Exhaust",
     3: "Maximum",
-    4: "Inf/Grv/Hvn"
+    4: "Inf",
+    5: "Grv",
+    6: "Hvn"
 }
 
 def get_song(level, difficulty, version, style, title, artist, genre, bpm):
@@ -86,7 +88,7 @@ def parse_raw(rows, version):
     for row in rows:
         cols = row.find_all('td')
         if (len(cols) == 9 or len(cols) == 10) and cols[3].text != "BPM":
-            if not (cols[0].has_attr('style') and cols[0]['style'] == "background-color:#gray;"):
+            if not (cols[0].has_attr('style') and cols[0]['style'] == "background-color:gray;"):
                 title = cols[0].text
                 genre = ''
                 if(title.endswith("*3") or title.endswith("*5") or title.endswith("*6") or title.endswith("*7") or title.endswith("*8")):
@@ -98,9 +100,14 @@ def parse_raw(rows, version):
                 get_song(get_level(cols[6]), 2, version, "single", title, artist, genre, bpm)
                 if(len(cols) == 10):
                     get_song(get_level(cols[7]), 3, version, "single", title, artist, genre, bpm)
-                    get_song(get_level(cols[8]), 4, version, "single", title, artist, genre, bpm)
-                else:
-                    get_song(get_level(cols[7]), 4, version, "single", title, artist, genre, bpm)
+                    get_song(get_level(cols[8]), 6, version, "single", title, artist, genre, bpm)
+                elif(cols[7].has_attr('style')):
+                    if(re.match("^background-color:#fce;", cols[7]['style'])):
+                        get_song(get_level(cols[7]), 4, version, "single", title, artist, genre, bpm)
+                    elif(re.match("^background-color:#fdc;", cols[7]['style'])):
+                        get_song(get_level(cols[7]), 5, version, "single", title, artist, genre, bpm)
+                    else:
+                        get_song(get_level(cols[7]), 6, version, "single", title, artist, genre, bpm)
     return
 
 parse_raw(sdvx_rows_1, "SOUND VOLTEX BOOTH")
