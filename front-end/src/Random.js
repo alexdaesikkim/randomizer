@@ -367,7 +367,7 @@ var Random = createReactClass({
 
       var min_diff_dropdown = diff_names.map(function(d){
         return(
-          <option value={diff_ids[d]} key={"min_diff_" + d}>{that.state.diff_list[parseInt(d, 10)]}</option>
+          <option value={d} key={"min_diff_" + d}>{that.state.diff_list[parseInt(d, 10)]}</option>
         )
       });
 
