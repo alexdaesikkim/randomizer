@@ -529,7 +529,7 @@ var Song = createReactClass({
             class_name += "purple";
           }
           if(this.props.game === 'museca'){
-            diff_string =
+            diff_string = "\u7fe0"
             class_name += "green"
           }
         break;
@@ -552,6 +552,10 @@ var Song = createReactClass({
           }
           if(this.props.game === 'rb'){
             diff_string = "Medium"
+            class_name += "yellow"
+          }
+          if(this.props.game === 'museca'){
+            diff_string = "\u6a59"
             class_name += "yellow"
           }
         break;
@@ -580,6 +584,10 @@ var Song = createReactClass({
             diff_string = "Exhaust";
             class_name += "red";
           }
+          if(this.props.game === 'museca'){
+            diff_string = "\u6731"
+            class_name += "red"
+          }
         break;
         case 3:
           if(this.props.game === 'ddr') {
@@ -596,11 +604,11 @@ var Song = createReactClass({
           }
           if(this.props.game === 'rb'){
             diff_string = "White Hard"
-            class_name += "purple"
+            class_name += "white"
           }
           if(this.props.game === 'sdvx'){
             diff_string = "Maximum";
-            class_name += "darkred";
+            class_name += "gray";
           }
         break;
         default:
@@ -615,12 +623,15 @@ var Song = createReactClass({
           if(this.props.game === 'sdvx'){
             if(difficulty === 4){
               diff_string = "Infinite";
+              class_name += "pink"
             }
             else if(difficulty === 5){
               diff_string = "Gravity";
+              class_name += "orange"
             }
             else{
               diff_string = "Heavenly";
+              class_name += "lightblue"
             }
           }
         break;
