@@ -37,6 +37,10 @@ print("JUBEAT")
 print("clan")
 subprocess.call([name, "jubeat_clan.py"], cwd="scripts")
 
+print("REFLEC BEAT")
+print("Reflesia")
+subprocess.call([name, "reflec_reflesia.py"], cwd="scripts")
+
 print("SDVX")
 subprocess.call([name, "sdvx_hh.py"], cwd="scripts")
 

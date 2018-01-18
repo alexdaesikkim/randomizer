@@ -50,7 +50,13 @@ print ("Grabbing data...")
 
 def get_level(col):
     level = col.text
-    if level == '-' or level == '' or level == '--':
+    if len(col) != 1 and level != '-' and len(col) != 0:
+        index = len(level)-1
+        end_index = index
+        while (level[index] != ']'):
+            index = index-1
+        level = level[index+1:len(level)]
+    elif level == '-' or level == '' or level == '--':
         level = -1
     elif(len(level) == 3):
         level = level[1:]
@@ -87,11 +93,13 @@ def get_song(level, difficulty, version, style, title, artist, genre, bpm):
 def parse_raw(rows, version):
     for row in rows:
         cols = row.find_all('td')
-        if (len(cols) == 9 or len(cols) == 10) and cols[3].text != "BPM":
+        #if row is 8, def old song with shorter rows
+        #if row is 9, it may be old rows or sdvx4 songs but shorter row
+        if ((len(cols) == 9 and version != "SOUND VOLTEX IV HEAVENLY HAVEN") or len(cols) == 10) and cols[3].text != "BPM":
             if not (cols[0].has_attr('style') and cols[0]['style'] == "background-color:gray;"):
                 title = cols[0].text
                 genre = ''
-                if(title.endswith("*3") or title.endswith("*5") or title.endswith("*6") or title.endswith("*7") or title.endswith("*8")):
+                if(re.search("[*][0-9]$", title)):
                     title = title[:-2]
                 artist = cols[1].text
                 bpm = cols[3].text
@@ -108,6 +116,30 @@ def parse_raw(rows, version):
                         get_song(get_level(cols[7]), 5, version, "single", title, artist, genre, bpm)
                     else:
                         get_song(get_level(cols[7]), 6, version, "single", title, artist, genre, bpm)
+        elif (len(cols) == 8 or len(cols) == 9) and cols[3].text != "BPM":
+            if not (cols[0].has_attr('style') and cols[0]['style'] == "background-color:gray;"):
+                x = 0
+                if(len(cols) == 9):
+                    x = 1
+                title = cols[0].text
+                genre = ''
+                if(re.search("[*][0-9]$", title)):
+                    title = title[:-2]
+                artist = cols[1].text
+                bpm = cols[2].text
+                get_song(get_level(cols[3]), 0, version, "single", title, artist, genre, bpm)
+                get_song(get_level(cols[4]), 1, version, "single", title, artist, genre, bpm)
+                get_song(get_level(cols[5]), 2, version, "single", title, artist, genre, bpm)
+                if(len(cols) == 9):
+                    get_song(get_level(cols[6]), 3, version, "single", title, artist, genre, bpm)
+                    get_song(get_level(cols[7]), 6, version, "single", title, artist, genre, bpm)
+                elif(cols[6].has_attr('style')):
+                    if(re.match("^background-color:#fce;", cols[6]['style'])):
+                        get_song(get_level(cols[6]), 4, version, "single", title, artist, genre, bpm)
+                    elif(re.match("^background-color:#fdc;", cols[6]['style'])):
+                        get_song(get_level(cols[6]), 5, version, "single", title, artist, genre, bpm)
+                    else:
+                        get_song(get_level(cols[6]), 6, version, "single", title, artist, genre, bpm)
     return
 
 parse_raw(sdvx_rows_1, "SOUND VOLTEX BOOTH")

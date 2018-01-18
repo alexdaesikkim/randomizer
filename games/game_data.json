@@ -2,205 +2,101 @@
   "games": {
     "ddr": {
       "versions": {
-        "2014": {
-          "difficulty": {
-            "max": 4,
-            "list": [
-              "Beginner",
-              "Basic",
-              "Difficult",
-              "Expert",
-              "Challenge"
-            ],
-            "min": 0
-          },
-          "na_option": false,
-          "level": {
-            "max": 19,
-            "min": 1
-          },
-          "name": "2014",
-          "current": "2016021000",
-          "builds": [
-            "2016021000"
-          ]
-        },
         "ace": {
-          "difficulty": {
-            "max": 4,
-            "list": [
-              "Beginner",
-              "Basic",
-              "Difficult",
-              "Expert",
-              "Challenge"
-            ],
-            "min": 0
-          },
-          "na_option": true,
-          "level": {
-            "max": 19,
-            "min": 1
-          },
-          "name": "Ace",
-          "current": "2017121400",
           "builds": [
             "2017121400"
-          ]
+          ],
+          "current": "2017121400",
+          "name": "Ace",
+          "na_option": true,
+          "difficulty": {
+            "min": 0,
+            "max": 4,
+            "list": [
+              "Beginner",
+              "Basic",
+              "Difficult",
+              "Expert",
+              "Challenge"
+            ]
+          },
+          "level": {
+            "min": 1,
+            "max": 19
+          }
+        },
+        "2014": {
+          "builds": [
+            "2016021000"
+          ],
+          "current": "2016021000",
+          "name": "2014",
+          "na_option": false,
+          "difficulty": {
+            "min": 0,
+            "max": 4,
+            "list": [
+              "Beginner",
+              "Basic",
+              "Difficult",
+              "Expert",
+              "Challenge"
+            ]
+          },
+          "level": {
+            "min": 1,
+            "max": 19
+          }
         }
       },
-      "name": "DanceDanceRevolution",
       "styles": [
         "single",
         "double"
-      ]
-    },
-    "museca": {
-      "versions": {
-        "1_5": {
-          "difficulty": {
-            "max": 2,
-            "list": [
-              "\u7fe0",
-              "\u6a59",
-              "\u6731"
-            ],
-            "min": 0
-          },
-          "na_option": false,
-          "level": {
-            "max": 15,
-            "min": 1
-          },
-          "name": "1+1/2",
-          "current": "2017122500",
-          "builds": [
-            "2017122500"
-          ]
-        }
-      },
-      "name": "M\uff83\u552eECA",
-      "styles": [
-        "single"
-      ]
+      ],
+      "name": "DanceDanceRevolution"
     },
     "rb": {
       "versions": {
         "reflesia": {
+          "builds": [
+            "2017122000"
+          ],
+          "current": "2017122000",
+          "name": "\u60a0\u4e45\u306e\u30ea\u30d5\u30ec\u30b7\u30a2",
+          "na_option": false,
           "difficulty": {
+            "min": 0,
             "max": 3,
             "list": [
               "BASIC",
               "MEDIUM",
               "HARD",
               "WHITE HARD"
-            ],
-            "min": 0
+            ]
           },
-          "na_option": false,
           "level": {
-            "max": 15,
-            "min": 1
-          },
-          "name": "\u60a0\u4e45\u306e\u30ea\u30d5\u30ec\u30b7\u30a2",
-          "current": "2017122000",
-          "builds": [
-            "2017122000"
-          ]
+            "min": 1,
+            "max": 15
+          }
         }
       },
-      "name": "REFLEC BEAT",
       "styles": [
         "single"
-      ]
-    },
-    "jubeat": {
-      "versions": {
-        "clan": {
-          "difficulty": {
-            "max": 2,
-            "list": [
-              "Basic",
-              "Advanced",
-              "Extreme"
-            ],
-            "min": 0
-          },
-          "na_option": false,
-          "level": {
-            "max": 10,
-            "min": 1
-          },
-          "name": "Clan",
-          "current": "2017121903",
-          "builds": [
-            "2017121903"
-          ]
-        }
-      },
-      "name": "Jubeat",
-      "styles": [
-        "single"
-      ]
-    },
-    "popn": {
-      "versions": {
-        "24": {
-          "difficulty": {
-            "max": 3,
-            "list": [
-              "Easy",
-              "Normal",
-              "Hyper",
-              "EX"
-            ],
-            "min": 0
-          },
-          "na_option": false,
-          "level": {
-            "max": 50,
-            "min": 1
-          },
-          "name": "\u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922",
-          "current": "2017121900",
-          "builds": [
-            "2017121900"
-          ]
-        }
-      },
-      "name": "pop'n music",
-      "styles": [
-        "single"
-      ]
+      ],
+      "name": "REFLEC BEAT"
     },
     "iidx": {
       "versions": {
         "25": {
-          "difficulty": {
-            "max": 4,
-            "list": [
-              "Beginner",
-              "Normal",
-              "Hyper",
-              "Another",
-              "Black Another"
-            ],
-            "min": 0
-          },
-          "na_option": false,
-          "level": {
-            "max": 12,
-            "min": 1
-          },
-          "name": "25 CANNON BALLERS",
-          "current": "2017122700",
           "builds": [
             "2017122100",
             "2017122700"
-          ]
-        },
-        "24": {
+          ],
+          "current": "2017122700",
+          "name": "25 CANNON BALLERS",
+          "na_option": false,
           "difficulty": {
+            "min": 0,
             "max": 4,
             "list": [
               "Beginner",
@@ -208,31 +104,83 @@
               "Hyper",
               "Another",
               "Black Another"
-            ],
-            "min": 0
+            ]
           },
-          "na_option": false,
           "level": {
-            "max": 12,
-            "min": 1
-          },
-          "name": "24 SINOBUZ",
-          "current": "2017082800",
+            "min": 1,
+            "max": 12
+          }
+        },
+        "24": {
           "builds": [
             "2017082800"
-          ]
+          ],
+          "current": "2017082800",
+          "name": "24 SINOBUZ",
+          "na_option": false,
+          "difficulty": {
+            "min": 0,
+            "max": 4,
+            "list": [
+              "Beginner",
+              "Normal",
+              "Hyper",
+              "Another",
+              "Black Another"
+            ]
+          },
+          "level": {
+            "min": 1,
+            "max": 12
+          }
         }
       },
-      "name": "beatmania IIDX",
       "styles": [
         "single",
         "double"
-      ]
+      ],
+      "name": "beatmania IIDX"
+    },
+    "museca": {
+      "versions": {
+        "1_5": {
+          "builds": [
+            "2017122500"
+          ],
+          "current": "2017122500",
+          "name": "1+1/2",
+          "na_option": false,
+          "difficulty": {
+            "min": 0,
+            "max": 2,
+            "list": [
+              "\u7fe0",
+              "\u6a59",
+              "\u6731"
+            ]
+          },
+          "level": {
+            "min": 1,
+            "max": 15
+          }
+        }
+      },
+      "styles": [
+        "single"
+      ],
+      "name": "M\uff83\u552eECA"
     },
     "sdvx": {
       "versions": {
         "iv": {
+          "builds": [
+            "201801160X"
+          ],
+          "current": "201801160X",
+          "name": "IV HEAVENLY HAVEN",
+          "na_option": false,
           "difficulty": {
+            "min": 0,
             "max": 6,
             "list": [
               "Novice",
@@ -240,26 +188,77 @@
               "Exhaust",
               "Maximum",
               "INF/GRV/HVN"
-            ],
-            "min": 0
+            ]
           },
-          "na_option": false,
           "level": {
-            "max": 20,
-            "min": 1
-          },
-          "name": "IV HEAVENLY HAVEN",
-          "current": "201801160X",
-          "builds": [
-            "201712270X",
-            "201801160X"
-          ]
+            "min": 1,
+            "max": 20
+          }
         }
       },
-      "name": "SOUND VOLTEX",
       "styles": [
         "single"
-      ]
+      ],
+      "name": "SOUND VOLTEX"
+    },
+    "jubeat": {
+      "versions": {
+        "clan": {
+          "builds": [
+            "2017121903"
+          ],
+          "current": "2017121903",
+          "name": "Clan",
+          "na_option": false,
+          "difficulty": {
+            "min": 0,
+            "max": 2,
+            "list": [
+              "Basic",
+              "Advanced",
+              "Extreme"
+            ]
+          },
+          "level": {
+            "min": 1,
+            "max": 10
+          }
+        }
+      },
+      "styles": [
+        "single"
+      ],
+      "name": "Jubeat"
+    },
+    "popn": {
+      "versions": {
+        "24": {
+          "builds": [
+            "2017121900"
+          ],
+          "current": "2017121900",
+          "name": "\u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922",
+          "na_option": false,
+          "difficulty": {
+            "min": 0,
+            "max": 3,
+            "list": [
+              "Easy",
+              "Normal",
+              "Hyper",
+              "EX"
+            ]
+          },
+          "level": {
+            "min": 1,
+            "max": 50
+          }
+        }
+      },
+      "styles": [
+        "single"
+      ],
+      "name": "pop'n music"
     }
   }
 }
