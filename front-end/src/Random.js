@@ -457,7 +457,7 @@ var Random = createReactClass({
     var that = this;
     var song_cards = this.state.songs.map(function(obj){
       return(
-        <Song song={obj} game={that.state.game_name} key={obj.name + "_" + obj.difficulty} />
+        <Song song={obj} game={that.state.game_name} version={that.state.version_name} key={obj.name + "_" + obj.difficulty} />
       )
     })
     return (
@@ -497,8 +497,6 @@ var Random = createReactClass({
 var Song = createReactClass({
   getInitialState(){
     return{
-      game: this.props.game,
-      class: this.props.song.card_class,
       active: this.props.song.active
     }
   },
@@ -506,11 +504,14 @@ var Song = createReactClass({
   diff_return(difficulty){
     var diff_string = "";
     var class_name = "card-";
+    console.log(this.props.version)
     switch(difficulty){
         case 0:
           if(this.props.game === 'ddr') {
             diff_string = "Beginner";
             class_name += "blue";
+            if(this.props.version === 'version')
+              diff_string = "Beginner";
           }
           if(this.props.game === 'iidx') {
             diff_string = "Beginner";
@@ -537,6 +538,8 @@ var Song = createReactClass({
           if(this.props.game === 'ddr') {
             diff_string = "Basic";
             class_name += "yellow";
+            if(this.props.version === 'version')
+              diff_string = "Light";
           }
           if(this.props.game === 'iidx') {
             diff_string = "Normal";
@@ -563,6 +566,8 @@ var Song = createReactClass({
           if(this.props.game === 'ddr') {
             diff_string = "Difficult";
             class_name += "red";
+            if(this.props.version === 'version')
+              diff_string = "Standard";
           }
           if(this.props.game === 'iidx') {
             diff_string = "Hyper";
@@ -591,8 +596,10 @@ var Song = createReactClass({
         break;
         case 3:
           if(this.props.game === 'ddr') {
-            diff_string = "Heavy";
+            diff_string = "Expert";
             class_name += "green";
+            if(this.props.version === 'version')
+              diff_string = "Heavy";
           }
           if(this.props.game === 'iidx') {
             diff_string = "Another";

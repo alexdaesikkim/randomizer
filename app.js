@@ -182,14 +182,16 @@ app.get('/api/alpha/random/:game/:version/', function(req, res, next){
   //how does it fare against using the actually array to sort?
   var songs = song_obj.songs;
   songs = filter_songs(songs, style, min_difficulty, max_difficulty, min_level, max_level);
-  if(songs.length < count){
-    //return error
-  }
 
   if(game_data.games[game].versions[version].na_option){
     songs = songs.filter(function(data){
       return data.north_america === true
     })
+  }
+
+  //add error message to return
+  if(songs.length < count){
+    count = songs.length
   }
 
   songs = shuffle(songs, songs.length);

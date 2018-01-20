@@ -117,8 +117,6 @@ final_data = {
     "id": "ddrextreme",
     "songs": songs
 }
-print(len(songs))
-songs.sort()
 #remember to change the datetime to the one from the page, not on the date it was update on the app's server
 with open('../games/ddr/extreme/' +  "RAWR"+ '.json', 'w') as file:
     json.dump(final_data, file, indent=2)
