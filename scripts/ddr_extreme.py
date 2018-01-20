@@ -57,11 +57,10 @@ diff_options = {
     3: "expert",
     4: "challenge"
 }
-
 def get_song(level, difficulty, version, style, title, artist, bpm):
     if(level != -1):
         diff_name = diff_options[difficulty]
-        key = title + " " + diff_name + " " + style
+        key = title + " " + artist + " " + version + " " + bpm + " "+ diff_name + " " + style
         if key not in song_dict:
             data = {
                 "title": title,
@@ -79,6 +78,7 @@ def parse_raw(rows, version):
     for row in rows:
         cols = row.find_all('td')
         if len(cols) == 12 or len(cols) == 13:
+            count = len(songs)
             x = 0
             genre = ""
             if len(cols) == 13:
@@ -104,6 +104,9 @@ def parse_raw(rows, version):
             get_song(get_level(cols[9+x]), 2, version, "double", title, artist, bpm)
             get_song(get_level(cols[10+x]), 3, version, "double", title, artist, bpm)
             get_song(get_level(cols[11+x]), 4, version, "double", title, artist, bpm)
+            if(len(songs) == count):
+                print(title)
+                print("error")
     return
 
 parse_raw(song_rows, "")
@@ -114,12 +117,14 @@ final_data = {
     "id": "ddrextreme",
     "songs": songs
 }
+print(len(songs))
+songs.sort()
 #remember to change the datetime to the one from the page, not on the date it was update on the app's server
-with open('../games/ddr/extreme/' +  version_name + '.json', 'w') as file:
+with open('../games/ddr/extreme/' +  "RAWR"+ '.json', 'w') as file:
     json.dump(final_data, file, indent=2)
 print ("Finished writing json")
 
-data = {}
+'''data = {}
 with open('../games/game_data.json') as file:
     data = json.load(file)
     data["games"]["ddr"]["versions"]["extreme"]["current"] = version_name
@@ -135,3 +140,4 @@ print ("Finished reading game_data.json file")
 with open('../games/game_data.json', 'w') as file:
     json.dump(data, file, indent=2)
 print ("Finished updating game_data.json file")
+'''

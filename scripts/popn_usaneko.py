@@ -72,7 +72,7 @@ diff_options = {
 def get_song(level, difficulty, version, style, title, artist, genre, bpm):
     if(level != -1):
         diff_name = diff_options[difficulty]
-        key = title + " " + diff_name + " " + style
+        key = title + " " + artist + " " + version + " " + bpm + " "+ diff_name + " " + style
         if key not in song_dict:
             data = {
                 "title": title,
