@@ -749,15 +749,6 @@
       "artist": "\u5c0f\u5742\u308a\u3086"
     },
     {
-      "style": "single",
-      "bpm": "177",
-      "title": "LOVE \u2661 SHINE",
-      "version": "DDR EXTREME",
-      "level": 8,
-      "difficulty": 4,
-      "artist": "\u5c0f\u5742\u308a\u3086"
-    },
-    {
       "style": "double",
       "bpm": "177",
       "title": "LOVE \u2661 SHINE",
@@ -1248,6 +1239,15 @@
       "bpm": "170",
       "title": "TRIP MACHINE survivor",
       "version": "DDR EXTREME",
+      "level": 1,
+      "difficulty": 0,
+      "artist": "DE-SIRE"
+    },
+    {
+      "style": "single",
+      "bpm": "170",
+      "title": "TRIP MACHINE survivor",
+      "version": "DDR EXTREME",
       "level": 5,
       "difficulty": 1,
       "artist": "DE-SIRE"
@@ -2240,6 +2240,15 @@
       "version": "DDR club version",
       "level": 9,
       "difficulty": 3,
+      "artist": "JJ COMPANY"
+    },
+    {
+      "style": "single",
+      "bpm": "134",
+      "title": "celebrate",
+      "version": "DDR club version",
+      "level": 1,
+      "difficulty": 0,
       "artist": "JJ COMPANY"
     },
     {
@@ -3554,15 +3563,6 @@
       "version": "\u5bb6\u5ead\u7528 DDR",
       "level": 9,
       "difficulty": 3,
-      "artist": "2MB"
-    },
-    {
-      "style": "couple",
-      "bpm": "46-196",
-      "title": "Healing Vision\n(Angelic mix)",
-      "version": "\u5bb6\u5ead\u7528 DDR",
-      "level": 2,
-      "difficulty": 1,
       "artist": "2MB"
     },
     {
@@ -5861,15 +5861,6 @@
       "artist": "good-cool feat. Meg"
     },
     {
-      "style": "single",
-      "bpm": "155",
-      "title": "Last Message",
-      "version": "beatmania IIDX",
-      "level": 7,
-      "difficulty": 4,
-      "artist": "good-cool feat. Meg"
-    },
-    {
       "style": "double",
       "bpm": "155",
       "title": "Last Message",
@@ -9452,15 +9443,6 @@
       "artist": "JOGA"
     },
     {
-      "style": "single",
-      "bpm": "142",
-      "title": "DAM DARIRAM",
-      "version": "DDR 3rdMIX",
-      "level": 8,
-      "difficulty": 4,
-      "artist": "JOGA"
-    },
-    {
       "style": "double",
       "bpm": "142",
       "title": "DAM DARIRAM",
@@ -9485,15 +9467,6 @@
       "version": "DDR 3rdMIX",
       "level": 8,
       "difficulty": 3,
-      "artist": "JOGA"
-    },
-    {
-      "style": "double",
-      "bpm": "142",
-      "title": "DAM DARIRAM",
-      "version": "DDR 3rdMIX",
-      "level": 8,
-      "difficulty": 4,
       "artist": "JOGA"
     },
     {
@@ -13887,6 +13860,15 @@
       "level": 7,
       "difficulty": 4,
       "artist": "RE-VENGE"
+    },
+    {
+      "style": "single",
+      "bpm": "140",
+      "title": "MAXIMUM OVERDRIVE\n(KC Club Mix)",
+      "version": "DDRMAX2",
+      "level": 1,
+      "difficulty": 0,
+      "artist": "2 UNLIMITED"
     },
     {
       "style": "single",
