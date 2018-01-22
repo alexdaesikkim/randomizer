@@ -1,4 +1,6 @@
-import datetime
+#currently NOT using ZiV as a credible source
+#left the code here for archive purposes (and if someone else decides to scrape the page)
+
 import json
 import os
 import re
@@ -117,10 +119,9 @@ final_data = {
     "id": "ddrextreme",
     "songs": songs
 }
-#remember to change the datetime to the one from the page, not on the date it was update on the app's server
-with open('../games/ddr/extreme/' +  "RAWR"+ '.json', 'w') as file:
-    json.dump(final_data, file, indent=2)
-print ("Finished writing json")
+'''with open('../games/ddr/extreme/' +  "wrong_data"+ '.json', 'w') as file:
+    json.dump(final_data, file, indent=2, sort_keys=True)
+print ("Finished writing json")'''
 
 '''data = {}
 with open('../games/game_data.json') as file:
@@ -136,6 +137,6 @@ with open('../games/game_data.json') as file:
 print ("Finished reading game_data.json file")
 
 with open('../games/game_data.json', 'w') as file:
-    json.dump(data, file, indent=2)
+    json.dump(data, file, indent=2, sort_keys=True)
 print ("Finished updating game_data.json file")
 '''

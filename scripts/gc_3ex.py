@@ -1,4 +1,3 @@
-import datetime
 import json
 import os
 import re
@@ -11,24 +10,23 @@ from bs4 import BeautifulSoup
 #2. somehow use json properties? but how to do this?
 #3. use dict to store all data, then convert it to json later?
 
-version_url = "http://bemaniwiki.com/index.php?MUSECA%201%2B1%2F2"
+version_url = "http://www.wikihouse.com/groove/index.php?Groove%20Coaster%A1%CAAC%C8%C7%A1%CB%2F%BC%FD%CF%BF%B6%CA%A5%EA%A5%B9%A5%C8#VARIETY"
 main_page = urlopen(version_url)
-version_name = BeautifulSoup(main_page, "html5lib").findAll('strong', text=re.compile("^PIX:"))[0].text[-10:]
+side_bar = BeautifulSoup(main_page, "html5lib").find('div', class_='span3 hidden-phone')
+text = side_bar.find_all('p')[1].text.split("(")[1]
+text = text[:-1]
+version_name = text
+
 print(version_name)
+song_url = "http://www.wikihouse.com/groove/index.php?Groove%20Coaster%A1%CAAC%C8%C7%A1%CB%2F%BC%FD%CF%BF%B6%CA%A5%EA%A5%B9%A5%C8#VARIETY"
 
-new_url = "http://bemaniwiki.com/index.php?MUSECA%201%2B1%2F2%2F%BF%B7%B6%CA%A5%EA%A5%B9%A5%C8"
-old_url = "http://bemaniwiki.com/index.php?MUSECA%201%2B1%2F2%2F%B5%EC%B6%CA%A5%EA%A5%B9%A5%C8"
+song_opened_url = urlopen(song_url)
 
-page_new = urlopen(new_url)
-page_old = urlopen(old_url)
+print ("Opened page")
 
-print ("Opened pages")
+all_song_table = BeautifulSoup(song_opened_url, "html5lib").find('div', class_='ie5')
 
-new_table = BeautifulSoup(page_new, "html5lib").find_all('div', class_='ie5')[1]
-old_table = BeautifulSoup(page_old, "html5lib").find_all('div', class_='ie5')[1]
-
-old_rows = old_table.find_all('tr')
-new_rows = new_table.find_all('tr')
+all_rows = all_song_table.find_all('tr')
 
 songs = []
 
@@ -42,16 +40,15 @@ song_dict = {}
 
 print ("Grabbing data...")
 
-def get_level(col):
-    level = col.text
-    if level == '-' or level == '' or level == '--':
-        level = -1
-    return level
+def get_levels(col):
+    levels = col.text.split(".")
+    return levels
 
 diff_options = {
-    0: "G",
-    1: "Y",
-    2: "R"
+    0: "Simple",
+    1: "Normal",
+    2: "Hard",
+    3: "Extra"
 }
 
 def get_song(level, difficulty, version, style, title, artist, genre, bpm):
@@ -73,44 +70,52 @@ def get_song(level, difficulty, version, style, title, artist, genre, bpm):
             songs.append(data)
 
 def parse_raw(rows, version):
+    #need case for era and valanga
     for row in rows:
         cols = row.find_all('td')
-        if (len(cols) == 8) and cols[3].text != "BPM":
-            if not (cols[1].has_attr('style') and re.match("^background-color:gray;", cols[1]['style'])):
-                title = cols[1].text
-                genre = ''
-                artist = cols[2].text
+        if len(cols) == 1:
+            version = cols[0].text.split(" ")[0]
+            version = version[5:]
+            print(version)
+        if len(cols) == 6 and cols[3].text != 'BPM':
+            if not (re.match("storyteller:", cols[1].text)):
+                title = cols[0].text
+                artist = cols[1].text
+                genre = ""
                 bpm = cols[3].text
-                get_song(get_level(cols[4]), 0, version, "single", title, artist, genre, bpm)
-                get_song(get_level(cols[5]), 1, version, "single", title, artist, genre, bpm)
-                get_song(get_level(cols[6]), 2, version, "single", title, artist, genre, bpm)
+                levels = get_levels(cols[2])
+
+                get_song(levels[0], 0, version, "single", title, artist, genre, bpm)
+                get_song(levels[1], 1, version, "single", title, artist, genre, bpm)
+                get_song(levels[2], 2, version, "single", title, artist, genre, bpm)
+                if(len(levels) > 3):
+                    get_song(levels[3], 3, version, "single", title, artist, genre, bpm)
     return
 
-parse_raw(old_rows, "MÚSECA")
-parse_raw(new_rows, "MÚSECA 1+1/2")
+parse_raw(all_rows, "")
 
 print ("Writing json")
 
 final_data = {
-    "id": "museca1+1/2",
+    "id": "gc_3ex",
     "songs": songs
 }
 
-with open('../games/museca/1_5/' +  version_name + '.json', 'w') as file:
+with open('../games/gc/3ex/' +  version_name + '.json', 'w') as file:
     json.dump(final_data, file, indent=2, sort_keys=True)
 print ("Finished")
 
 data = {}
 with open('../games/game_data.json') as file:
     data = json.load(file)
-    data["games"]["museca"]["versions"]["1_5"]["current"] = version_name
-    array = data["games"]["museca"]["versions"]["1_5"]["builds"]
+    data["games"]["gc"]["versions"]["3ex"]["current"] = version_name
+    array = data["games"]["gc"]["versions"]["3ex"]["builds"]
     check = False
     for x in array:
         if(version_name == x):
             check = True
     if not check:
-        data["games"]["museca"]["versions"]["1_5"]["builds"].append(version_name)
+        data["games"]["gc"]["versions"]["3ex"]["builds"].append(version_name)
 print ("Finished reading game_data.json file")
 
 with open('../games/game_data.json', 'w') as file:

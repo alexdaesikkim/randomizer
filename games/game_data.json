@@ -1,95 +1,18 @@
 {
   "games": {
-    "jubeat": {
-      "versions": {
-        "clan": {
-          "difficulty": {
-            "min": 0,
-            "list": [
-              "Basic",
-              "Advanced",
-              "Extreme"
-            ],
-            "max": 2
-          },
-          "level": {
-            "min": 1,
-            "max": 10
-          },
-          "builds": [
-            "2017121903"
-          ],
-          "current": "2017121903",
-          "na_option": false,
-          "name": "Clan"
-        }
-      },
-      "styles": [
-        "single"
-      ],
-      "name": "Jubeat"
-    },
-    "iidx": {
-      "versions": {
-        "25": {
-          "difficulty": {
-            "min": 0,
-            "list": [
-              "Beginner",
-              "Normal",
-              "Hyper",
-              "Another",
-              "Black Another"
-            ],
-            "max": 4
-          },
-          "level": {
-            "min": 1,
-            "max": 12
-          },
-          "builds": [
-            "2017122100",
-            "2017122700"
-          ],
-          "current": "2017122700",
-          "na_option": false,
-          "name": "25 CANNON BALLERS"
-        },
-        "24": {
-          "difficulty": {
-            "min": 0,
-            "list": [
-              "Beginner",
-              "Normal",
-              "Hyper",
-              "Another",
-              "Black Another"
-            ],
-            "max": 4
-          },
-          "level": {
-            "min": 1,
-            "max": 12
-          },
-          "builds": [
-            "2017082800"
-          ],
-          "current": "2017082800",
-          "na_option": false,
-          "name": "24 SINOBUZ"
-        }
-      },
+    "ddr": {
+      "name": "DanceDanceRevolution",
       "styles": [
         "single",
         "double"
       ],
-      "name": "beatmania IIDX"
-    },
-    "ddr": {
       "versions": {
         "2014": {
+          "builds": [
+            "2016021000"
+          ],
+          "current": "2016021000",
           "difficulty": {
-            "min": 0,
             "list": [
               "Beginner",
               "Basic",
@@ -97,22 +20,45 @@
               "Expert",
               "Challenge"
             ],
-            "max": 4
+            "max": 4,
+            "min": 0
           },
           "level": {
-            "min": 1,
-            "max": 19
+            "max": 19,
+            "min": 1
           },
-          "builds": [
-            "2016021000"
-          ],
-          "current": "2016021000",
           "na_option": false,
           "name": "2014"
         },
-        "extreme": {
+        "ace": {
+          "builds": [
+            "2017121400"
+          ],
+          "current": "2017121400",
           "difficulty": {
-            "min": 0,
+            "list": [
+              "Beginner",
+              "Basic",
+              "Difficult",
+              "Expert",
+              "Challenge"
+            ],
+            "max": 4,
+            "min": 0
+          },
+          "level": {
+            "max": 19,
+            "min": 1
+          },
+          "na_option": true,
+          "name": "Ace"
+        },
+        "extreme": {
+          "builds": [
+            "FINAL"
+          ],
+          "current": "FINAL",
+          "difficulty": {
             "list": [
               "Beginner",
               "Light",
@@ -120,114 +66,234 @@
               "Heavy",
               "Challenge"
             ],
-            "max": 4
+            "max": 4,
+            "min": 0
           },
           "level": {
-            "min": 1,
-            "max": 10
+            "max": 10,
+            "min": 1
           },
-          "builds": [
-            "FINAL"
-          ],
-          "current": "FINAL",
           "na_option": false,
           "name": "EXTREME"
-        },
-        "ace": {
+        }
+      }
+    },
+    "gc": {
+      "name": "GROOVE COASTER",
+      "styles": [
+        "single"
+      ],
+      "versions": {
+        "3ex": {
+          "builds": [
+            "Ver3.58"
+          ],
+          "current": "Ver3.58",
           "difficulty": {
-            "min": 0,
             "list": [
-              "Beginner",
-              "Basic",
-              "Difficult",
-              "Expert",
-              "Challenge"
+              "Simple",
+              "Normal",
+              "Hard",
+              "Extra"
             ],
-            "max": 4
+            "max": 4,
+            "min": 0
           },
           "level": {
-            "min": 1,
-            "max": 19
+            "max": 10,
+            "min": 1
           },
-          "builds": [
-            "2017121400"
-          ],
-          "current": "2017121400",
-          "na_option": true,
-          "name": "Ace"
+          "na_option": false,
+          "name": "3EX: DREAM PARTY"
         }
-      },
+      }
+    },
+    "iidx": {
+      "name": "beatmania IIDX",
       "styles": [
         "single",
         "double"
       ],
-      "name": "DanceDanceRevolution"
-    },
-    "popn": {
       "versions": {
         "24": {
+          "builds": [
+            "2017082800"
+          ],
+          "current": "2017082800",
           "difficulty": {
-            "min": 0,
+            "list": [
+              "Beginner",
+              "Normal",
+              "Hyper",
+              "Another",
+              "Black Another"
+            ],
+            "max": 4,
+            "min": 0
+          },
+          "level": {
+            "max": 12,
+            "min": 1
+          },
+          "na_option": false,
+          "name": "24 SINOBUZ"
+        },
+        "25": {
+          "builds": [
+            "2017122100",
+            "2017122700"
+          ],
+          "current": "2017122700",
+          "difficulty": {
+            "list": [
+              "Beginner",
+              "Normal",
+              "Hyper",
+              "Another",
+              "Black Another"
+            ],
+            "max": 4,
+            "min": 0
+          },
+          "level": {
+            "max": 12,
+            "min": 1
+          },
+          "na_option": false,
+          "name": "25 CANNON BALLERS"
+        }
+      }
+    },
+    "jubeat": {
+      "name": "Jubeat",
+      "styles": [
+        "single"
+      ],
+      "versions": {
+        "clan": {
+          "builds": [
+            "2017121903"
+          ],
+          "current": "2017121903",
+          "difficulty": {
+            "list": [
+              "Basic",
+              "Advanced",
+              "Extreme"
+            ],
+            "max": 2,
+            "min": 0
+          },
+          "level": {
+            "max": 10,
+            "min": 1
+          },
+          "na_option": false,
+          "name": "Clan"
+        }
+      }
+    },
+    "museca": {
+      "name": "MUSECA",
+      "styles": [
+        "single"
+      ],
+      "versions": {
+        "1_5": {
+          "builds": [
+            "2017122500"
+          ],
+          "current": "2017122500",
+          "difficulty": {
+            "list": [
+              "\u7fe0",
+              "\u6a59",
+              "\u6731"
+            ],
+            "max": 2,
+            "min": 0
+          },
+          "level": {
+            "max": 15,
+            "min": 1
+          },
+          "na_option": false,
+          "name": "1+1/2"
+        }
+      }
+    },
+    "popn": {
+      "name": "pop'n music",
+      "styles": [
+        "single"
+      ],
+      "versions": {
+        "24": {
+          "builds": [
+            "2017121900"
+          ],
+          "current": "2017121900",
+          "difficulty": {
             "list": [
               "Easy",
               "Normal",
               "Hyper",
               "EX"
             ],
-            "max": 3
+            "max": 3,
+            "min": 0
           },
           "level": {
-            "min": 1,
-            "max": 50
+            "max": 50,
+            "min": 1
           },
-          "builds": [
-            "2017121900"
-          ],
-          "current": "2017121900",
           "na_option": false,
           "name": "\u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
         }
-      },
+      }
+    },
+    "rb": {
+      "name": "REFLEC BEAT",
       "styles": [
         "single"
       ],
-      "name": "pop'n music"
-    },
-    "rb": {
       "versions": {
         "reflesia": {
+          "builds": [
+            "2017122000"
+          ],
+          "current": "2017122000",
           "difficulty": {
-            "min": 0,
             "list": [
               "BASIC",
               "MEDIUM",
               "HARD",
               "WHITE HARD"
             ],
-            "max": 3
+            "max": 3,
+            "min": 0
           },
           "level": {
-            "min": 1,
-            "max": 15
+            "max": 15,
+            "min": 1
           },
-          "builds": [
-            "2017122000"
-          ],
-          "current": "2017122000",
           "na_option": false,
           "name": "\u60a0\u4e45\u306e\u30ea\u30d5\u30ec\u30b7\u30a2"
         }
-      },
+      }
+    },
+    "sdvx": {
+      "name": "SOUND VOLTE X",
       "styles": [
         "single"
       ],
-      "name": "REFLEC BEAT"
-    },
-    "sdvx": {
       "versions": {
         "iv": {
+          "builds": [
+            "201801160X"
+          ],
+          "current": "201801160X",
           "difficulty": {
-            "min": 0,
             "list": [
               "Novice",
               "Advanced",
@@ -235,53 +301,17 @@
               "Maximum",
               "INF/GRV/HVN"
             ],
-            "max": 6
+            "max": 6,
+            "min": 0
           },
           "level": {
-            "min": 1,
-            "max": 20
+            "max": 20,
+            "min": 1
           },
-          "builds": [
-            "201801160X"
-          ],
-          "current": "201801160X",
           "na_option": false,
           "name": "IV HEAVENLY HAVEN"
         }
-      },
-      "styles": [
-        "single"
-      ],
-      "name": "SOUND VOLTEX"
-    },
-    "museca": {
-      "versions": {
-        "1_5": {
-          "difficulty": {
-            "min": 0,
-            "list": [
-              "\u7fe0",
-              "\u6a59",
-              "\u6731"
-            ],
-            "max": 2
-          },
-          "level": {
-            "min": 1,
-            "max": 15
-          },
-          "builds": [
-            "2017122500"
-          ],
-          "current": "2017122500",
-          "na_option": false,
-          "name": "1+1/2"
-        }
-      },
-      "styles": [
-        "single"
-      ],
-      "name": "MUSECA"
+      }
     }
   }
 }

@@ -155,7 +155,7 @@ final_data = {
 }
 
 with open('../games/sdvx/iv/' +  version_name + '.json', 'w') as file:
-    json.dump(final_data, file, indent=2)
+    json.dump(final_data, file, indent=2, sort_keys=True)
 print ("Finished")
 
 data = {}
@@ -172,5 +172,5 @@ with open('../games/game_data.json') as file:
 print ("Finished reading game_data.json file")
 
 with open('../games/game_data.json', 'w') as file:
-    json.dump(data, file, indent=2)
+    json.dump(data, file, indent=2, sort_keys=True)
 print ("Finished updating game_data.json file")
