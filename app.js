@@ -7,11 +7,99 @@ var fs = require('fs');
 var game_data = require('./games/game_data.json')
 const cache_size = 10;
 
+function Node(data){
+  this.data = data;
+  this.next = null;
+  this.prev = null;
+}
+
+function Linkedlist(){
+  this._size = 0;
+  this.head = null;
+  this.tail = null;
+}
+
+Linkedlist.prototype = {
+  add: function(value){
+    var node = new Node(value);
+
+    if(this._size > 0){
+      this.tail.next = node;
+      node.prev = this.tail;
+      this.tail = node;
+    }
+    else{
+      this.head = node;
+      this.tail = node;
+    }
+    this._size++;
+    return node;
+  },
+  remove: function(node){
+    if(node === this.head){
+      this.head = this.head.next;
+      this.head.prev = null;
+    }
+    else if(node === this.tail){
+      this.tail = this.tail.prev;
+      this.tail.next = null;
+    }
+    else{
+      var prev = node.prev;
+      var next = node.next;
+      prev.next = next;
+      next.prev = prev;
+    }
+    node = null;
+    this._size--;
+    return;
+  },
+  remove_last_used: function(){
+    var node = this.head;
+    var key = node.data;
+    console.log("printing key")
+    console.log(key);
+    this.head = this.head.next;
+    this.head.prev = null;
+    this._size--;
+    node = null;
+    console.log(key);
+    return key;
+  }
+}
+
 var game_cache = {
-  "size": 0,
-  "game_songs": {},
-  "stack": []
+  "size": 5,
+  "songs": {},
+  "lfu_check": new Linkedlist()
 };
+
+function grab_data_cache(key){
+  if(game_cache.songs[key] != null){
+    var node = game_cache.songs[key].node;
+    game_cache.lfu_check.remove(node);
+    game_cache.songs[key].node = game_cache.lfu_check.add(key);
+    return game_cache.songs[key].data;
+  }
+  else{
+    if(game_cache.size == game_cache.lfu_check._size){
+      var remove_key = game_cache.lfu_check.remove_last_used()
+      console.log(remove_key);
+      delete game_cache.songs[remove_key];
+    }
+    var node = game_cache.lfu_check.add(key);
+    //var filename = "./" + game + "/" + version + "/" + build + ".json";
+    //var json_obj = JSON.parse(fs.readFileSync(filename, 'utf8'));
+
+    var obj = {
+      "node": node,
+      "data": "testing for greater purposes"
+    }
+    game_cache.songs[key] = obj;
+    console.log(game_cache)
+    return obj.data;
+  }
+}
 
 app.use(bodyParser.json());
 
@@ -26,20 +114,6 @@ function shuffle(array, size){
     array[j] = temp;
   }
   return array;
-}
-
-//LRU cache?
-//MVP: no need to implement this now.
-function check_cache(game, version, build){
-  if(game_cache.game_songs.name == null){
-    if(game_cache.size < cache_size){
-      game_cache.size++;
-      var filename = "./" + game + "/" + version + "/" + build + ".json";
-      var obj = JSON.parse(fs.readFileSync(filename, 'utf8'));
-      game_cache.game_songs[name] = obj;
-    }
-  }
-  return game_cache.game_songs[name];
 }
 
 //personal note: heroku has 10k limit for each postgres database, but i dont think
@@ -87,6 +161,17 @@ function filter_songs(array, style, d_min, d_max, l_min, l_max){
   }
   return array;
 }
+
+app.get('/testing_cache/', function(req, res, next){
+  console.log("HI");
+  grab_data_cache("1");
+  grab_data_cache("2");
+  grab_data_cache("3");
+  grab_data_cache("4");
+  grab_data_cache("5");
+  grab_data_cache("1");
+  grab_data_cache("6");
+})
 
 app.get('/api/alpha/random/:game/:version/', function(req, res, next){
   var count = req.query.count > 1 ? req.query.count : 1;
