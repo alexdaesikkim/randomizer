@@ -283,7 +283,7 @@
       }
     },
     "sdvx": {
-      "name": "SOUND VOLTE X",
+      "name": "SOUND VOLTEX",
       "styles": [
         "single"
       ],
@@ -299,7 +299,9 @@
               "Advanced",
               "Exhaust",
               "Maximum",
-              "INF/GRV/HVN"
+              "Infinite",
+              "Gravity",
+              "Heavenly"
             ],
             "max": 6,
             "min": 0

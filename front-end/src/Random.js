@@ -35,9 +35,7 @@ var Random = createReactClass({
       na_option: false,
       north_america: false,
       songs: [],
-      song_state: [],
-      orig_list: [],
-      undo_list: [],
+      undo_bans: [],
       status: "",
       errors:{
         error_message: "",
@@ -63,6 +61,7 @@ var Random = createReactClass({
             pair.push(version.name);
             version_list.push(pair);
           }
+          version_list.reverse();
           if(styles.length > 1 && styles[styles.length-1] !== "all") styles.push("all");
           this.setState({
             game_name: game,
@@ -97,7 +96,8 @@ var Random = createReactClass({
         var builds = game_data.games[this.state.game_name].versions[v].builds;
         builds = builds.sort().reverse(); //time consuming? but small array so shouldn't matter
         var build_name = builds[0];
-
+        var diff_list = game_data.games[this.state.game_name].versions[v].difficulty.list
+        if(this.state.game_name === 'sdvx' && version === 'iv') diff_list = ["Novice", "Advanced", "Exhaust", "Maximum", "INF/GRV/HVN"]
         var game_title = game_data.games[this.state.game_name].name + " " + game_data.games[this.state.game_name].versions[v].name;
         this.setState({
           version_name: version,
@@ -115,7 +115,7 @@ var Random = createReactClass({
           min_level: game_data.games[this.state.game_name].versions[v].level.min,
           max_level: game_data.games[this.state.game_name].versions[v].level.max,
           min_diff: game_data.games[this.state.game_name].versions[v].difficulty.min,
-          diff_list: game_data.games[this.state.game_name].versions[v].difficulty.list,
+          diff_list: diff_list,
           max_diff: game_data.games[this.state.game_name].versions[v].difficulty.max,
           na_option: game_data.games[this.state.game_name].versions[v].na_option,
           panel: true
@@ -236,9 +236,8 @@ var Random = createReactClass({
 
         that.setState({
           songs: songs,
-          orig_songs: songs,
           panel: false,
-          undo_songs: [],
+          undo_bans: [],
           status: ""
         });
       },
@@ -411,21 +410,44 @@ var Random = createReactClass({
       panel: !this.state.panel
     })
   },
-  //undo
-  undoBans(){
 
+  //changing props will change child value at the same time
+  //NOT sure if this is react way of doing things. but in this case, it works
+  undoBans(){
+    if(this.state.undo_bans.length > 0){
+      var songs = this.state.songs;
+      var undos = this.state.undo_bans;
+      var num = undos.pop();
+      songs[num].active = true;
+      this.setState({
+        songs: songs,
+        undo_bans: undos
+      })
+    }
   },
-  //hacky way at the moment since original code+design doesn't make way for pretty way of fixing at the moment
-  resetSongList(){
+
+  handleBans(num){
+    var songs = this.state.songs;
+    songs[num].active = false;
+    console.log(songs)
+    var undos = this.state.undo_bans;
+    undos.push(num);
     this.setState({
-      songs: this.state.orig_songs
+      songs: songs,
+      undo_bans: undos
     })
   },
 
   resetSongs(){
+    var songs = this.state.songs;
+    songs.map(function(obj){
+      obj.active = true;
+      return obj;
+    })
     this.setState({
-      songs: []
-    }, this.resetSongList)
+      songs: songs,
+      undo_bans: []
+    })
   },
 
   topPanelToggle(){
@@ -443,7 +465,8 @@ var Random = createReactClass({
           <div className="row">
             <a className="waves-effect waves-light btn blue" onClick={this.changePanelToggle}>Open Form</a>
             &ensp;
-            <a className="waves-effect waves-light btn disabled">Undo Ban</a>
+            <a className={"waves-effect waves-light btn " + (this.state.undo_bans.length > 0 ? "deep-orange darken-4" : "disabled")}
+              onClick={this.undoBans}>{"Undo Ban (" + this.state.undo_bans.length + ")"}</a>
             &ensp;
             <a className="waves-effect waves-light btn" onClick={this.resetSongs}>Reset</a>
           </div>
@@ -457,7 +480,7 @@ var Random = createReactClass({
     var that = this;
     var song_cards = this.state.songs.map(function(obj){
       return(
-        <Song song={obj} game={that.state.game_name} version={that.state.version_name} key={obj.name + "_" + obj.difficulty} />
+        <Song song={obj} game={that.state.game_name} version={that.state.version_name} difficulties={game_data.games[that.state.game_name].versions[that.state.version_name].difficulty.list} ban = {that.handleBans} key={obj.name + "_" + obj.difficulty} />
       )
     })
     return (
@@ -495,166 +518,20 @@ var Random = createReactClass({
 });
 
 var Song = createReactClass({
-  getInitialState(){
-    return{
-      active: this.props.song.active
-    }
-  },
 
   diff_return(difficulty){
-    var diff_string = "";
+    var diff_string = this.props.difficulties[difficulty];
     var class_name = "card-";
-    console.log(this.props.version)
-    switch(difficulty){
-        case 0:
-          if(this.props.game === 'ddr') {
-            diff_string = "Beginner";
-            class_name += "blue";
-            if(this.props.version === 'version')
-              diff_string = "Beginner";
-          }
-          if(this.props.game === 'iidx') {
-            diff_string = "Beginner";
-            class_name += "green";
-          }
-          if(this.props.game === 'popn'){
-            diff_string = "Easy";
-            class_name += "blue";
-          }
-          if(this.props.game === 'rb' || this.props.game === 'jubeat'){
-            diff_string = "Basic"
-            class_name += "green"
-          }
-          if(this.props.game === 'sdvx'){
-            diff_string = "Novice";
-            class_name += "purple";
-          }
-          if(this.props.game === 'museca'){
-            diff_string = "\u7fe0"
-            class_name += "green"
-          }
-          if(this.props.game === 'gc'){
-            diff_string = "Simple"
-            class_name += "blue"
-          }
-        break;
-        case 1:
-          if(this.props.game === 'ddr') {
-            diff_string = "Basic";
-            class_name += "yellow";
-            if(this.props.version === 'version')
-              diff_string = "Light";
-          }
-          if(this.props.game === 'iidx') {
-            diff_string = "Normal";
-            class_name += "blue";
-          }
-          if(this.props.game === 'jubeat' || this.props.game === 'sdvx') {
-            diff_string = "Advanced";
-            class_name += "yellow";
-          }
-          if(this.props.game === 'popn') {
-            diff_string = "Normal";
-            class_name += "green";
-          }
-          if(this.props.game === 'rb'){
-            diff_string = "Medium"
-            class_name += "yellow"
-          }
-          if(this.props.game === 'museca'){
-            diff_string = "\u6a59"
-            class_name += "yellow"
-          }
-          if(this.props.game === 'gc'){
-            diff_string = "Normal"
-            class_name += "yellow"
-          }
-        break;
-        case 2:
-          if(this.props.game === 'ddr') {
-            diff_string = "Difficult";
-            class_name += "red";
-            if(this.props.version === 'version')
-              diff_string = "Standard";
-          }
-          if(this.props.game === 'iidx') {
-            diff_string = "Hyper";
-            class_name += "yellow";
-          }
-          if(this.props.game === 'jubeat') {
-            diff_string = "Extreme";
-            class_name += "red";
-          }
-          if(this.props.game === 'popn') {
-            diff_string = "Hyper";
-            class_name += "yellow";
-          }
-          if(this.props.game === 'rb'){
-            diff_string = "Hard"
-            class_name += "red"
-          }
-          if(this.props.game === 'sdvx' || this.props.game === 'gc'){
-            diff_string = "Exhaust";
-            class_name += "red";
-          }
-          if(this.props.game === 'museca'){
-            diff_string = "\u6731"
-            class_name += "red"
-          }
-        break;
-        case 3:
-          if(this.props.game === 'ddr') {
-            diff_string = "Expert";
-            class_name += "green";
-            if(this.props.version === 'version')
-              diff_string = "Heavy";
-          }
-          if(this.props.game === 'iidx') {
-            diff_string = "Another";
-            class_name += "red";
-          }
-          if(this.props.game === 'popn'){
-            diff_string = "EX";
-            class_name += "red";
-          }
-          if(this.props.game === 'rb'){
-            diff_string = "White Hard"
-            class_name += "white"
-          }
-          if(this.props.game === 'sdvx'){
-            diff_string = "Maximum";
-            class_name += "gray";
-          }
-          if(this.props.game === 'gc'){
-            diff_string = "Extra";
-            class_name += "gray";
-          }
-        break;
-        default:
-          if(this.props.game === 'ddr') {
-            diff_string = "Challenge";
-            class_name += "purple";
-          }
-          if(this.props.game === 'iidx') {
-            diff_string = "Black Another";
-            class_name += "darkred";
-          }
-          if(this.props.game === 'sdvx'){
-            if(difficulty === 4){
-              diff_string = "Infinite";
-              class_name += "pink"
-            }
-            else if(difficulty === 5){
-              diff_string = "Gravity";
-              class_name += "orange"
-            }
-            else{
-              diff_string = "Heavenly";
-              class_name += "lightblue"
-            }
-          }
-        break;
-    }
+    var classes = []
+    if(this.props.game === 'ddr') classes = ['blue', 'yellow', 'red', 'green', 'purple']
+    if(this.props.game === 'iidx') classes = ['green', 'blue', 'yellow', 'red', 'darkred']
+    if(this.props.game === 'sdvx') classes = ['purple', 'yellow', 'red', 'gray', 'pink', 'orange', 'lightblue']
+    if(this.props.game === 'popn') classes = ['blue', 'green', 'yellow', 'red']
+    if(this.props.game === 'rb') classes = ['green', 'yellow', 'red', 'white']
+    if(this.props.game === 'museca') classes = ['green', 'yellow', 'red']
+    if(this.props.game === 'gc') classes = ['blue', 'yellow', 'red', 'gray']
+    if(this.props.game === 'jubeat') classes = ['green', 'yellow', 'red']
+    class_name += classes[difficulty]
     var object = {
       diff_string: diff_string,
       class_name: class_name,
@@ -663,9 +540,7 @@ var Song = createReactClass({
   },
 
   changeActiveClass(){
-    this.setState({
-      active: !this.state.active
-    })
+    this.props.ban(this.props.song.id);
   },
 
   render() {
@@ -675,29 +550,22 @@ var Song = createReactClass({
     var url = "https://www.google.com/search?q=" + this.props.song.name + "+" + this.props.song.version
     var style = this.props.song.style.charAt(0).toUpperCase() + this.props.song.style.slice(1);
 
-    if(this.state.active){
-      return (
-        <div className={"Song-card " + card_class}>
-          <h5>{this.props.song.name}</h5>
-          <h6>{this.props.song.artist}</h6>
-          <h6>{style + " " + difficulty + " "} {this.props.song.level}</h6>
-          <h6>{this.props.song.genre}</h6>
-          <h6>{"BPM: " + this.props.song.bpm}</h6>
-          <h6>{this.props.song.version}</h6>
-          <div>
-          <a href={url} target="_blank"><i className="small material-icons">search</i></a>
-          &ensp;&ensp;
-          <i className="small material-icons" onClick={this.changeActiveClass}>block</i>
-          </div>
+    var card_class = this.props.song.active ? object.class_name : "Song-card card-out"
+    return (
+      <div className={"Song-card " + card_class}>
+        <h5>{this.props.song.name}</h5>
+        <h6>{this.props.song.artist}</h6>
+        <h6>{style + " " + difficulty + " "} {this.props.song.level}</h6>
+        <h6>{this.props.song.genre}</h6>
+        <h6>{"BPM: " + this.props.song.bpm}</h6>
+        <h6>{this.props.song.version}</h6>
+        <div>
+        <a href={url} target="_blank"><i className="small material-icons">search</i></a>
+        &ensp;&ensp;
+        <i className="small material-icons" onClick={this.changeActiveClass}>block</i>
         </div>
-      );
-    }
-    else{
-      return (
-        <div className={"Song-card card-out"}>
-        </div>
-      );
-    }
+      </div>
+    );
   }
 });
 

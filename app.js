@@ -1,3 +1,6 @@
+//npm install -S appmetrics-dash
+//require('appmetrics-dash').monitor();
+
 var express = require('express');
 var path = require('path');
 var app = express();
@@ -37,7 +40,6 @@ Linkedlist.prototype = {
     return node;
   },
   remove: function(node){
-    console.log("removing");
     if(node === this.head && node === this.tail){
       this.head = null;
       this.tail = null;
@@ -120,11 +122,7 @@ function grab_data_cache(game, version, build){
   }
 }
 
-app.use(bodyParser.json());
-
-app.use(express.static(path.join(__dirname, 'front-end/build')));
-
-//fisher-yates
+//fisher-yates algorithm
 function shuffle(array, size){
   for(var i = 0; i < size; i++){
     var j = Math.floor((Math.random() * (size-i)) + i);
@@ -178,16 +176,9 @@ function filter_songs(array, style, d_min, d_max, l_min, l_max){
   return array;
 }
 
-app.get('/testing_cache/', function(req, res, next){
-  console.log("HI");
-  grab_data_cache("1");
-  grab_data_cache("2");
-  grab_data_cache("3");
-  grab_data_cache("4");
-  grab_data_cache("5");
-  grab_data_cache("1");
-  grab_data_cache("6");
-})
+app.use(bodyParser.json());
+
+app.use(express.static(path.join(__dirname, 'front-end/build')));
 
 app.get('/api/alpha/random/:game/:version/', function(req, res, next){
   var count = req.query.count > 1 ? req.query.count : 1;
@@ -237,19 +228,21 @@ app.get('/api/alpha/random/:game/:version/', function(req, res, next){
   if(!build) build = game_data.games[game].versions[version].current;
 
   else{
-    builds = game_data.games[game].versions[version]
+    builds = game_data.games[game].versions[version].builds
     if(!builds.includes(build)){
+      console.log(build)
+      console.log(builds)
       obj = {
         status:{
           message: "Invalid build name",
           code: 401
         }
       }
+      res.status(401);
+      res.json(obj);
+      res.end();
+      return;
     }
-    res.status(401);
-    res.json(obj);
-    res.end();
-    return;
   }
 
   var song_obj = grab_data_cache(game, version, build);
@@ -260,7 +253,6 @@ app.get('/api/alpha/random/:game/:version/', function(req, res, next){
     res.end();
     return;
   }
-  console.log(game_cache);
 
   //need to cache the objects
 
@@ -277,13 +269,11 @@ app.get('/api/alpha/random/:game/:version/', function(req, res, next){
     })
   }
 
-  //add error message to return
   if(songs.length < count){
     count = songs.length
   }
 
   songs = shuffle(songs, songs.length);
-
 
   obj = {
     id: song_obj.id,
