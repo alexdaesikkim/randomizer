@@ -5,8 +5,9 @@ var bodyParser = require('body-parser');
 var fs = require('fs');
 
 var game_data = require('./games/game_data.json')
-const cache_size = 10;
+const cache_size = 5;
 
+//lfu cache
 function Node(data){
   this.data = data;
   this.next = null;
@@ -36,6 +37,11 @@ Linkedlist.prototype = {
     return node;
   },
   remove: function(node){
+    console.log("removing");
+    if(node === this.head && node === this.tail){
+      this.head = null;
+      this.tail = null;
+    }
     if(node === this.head){
       this.head = this.head.next;
       this.head.prev = null;
@@ -69,16 +75,19 @@ Linkedlist.prototype = {
 }
 
 var game_cache = {
-  "size": 5,
+  "size": cache_size,
   "songs": {},
   "lfu_check": new Linkedlist()
 };
 
-function grab_data_cache(key){
+function grab_data_cache(game, version, build){
+  var key = game + "_" + version + "_" + build;
   if(game_cache.songs[key] != null){
-    var node = game_cache.songs[key].node;
-    game_cache.lfu_check.remove(node);
-    game_cache.songs[key].node = game_cache.lfu_check.add(key);
+    if(game_cache.lfu_check._size > 1){
+      var node = game_cache.songs[key].node;
+      game_cache.lfu_check.remove(node);
+      game_cache.songs[key].node = game_cache.lfu_check.add(key);
+    }
     return game_cache.songs[key].data;
   }
   else{
@@ -88,15 +97,25 @@ function grab_data_cache(key){
       delete game_cache.songs[remove_key];
     }
     var node = game_cache.lfu_check.add(key);
-    //var filename = "./" + game + "/" + version + "/" + build + ".json";
-    //var json_obj = JSON.parse(fs.readFileSync(filename, 'utf8'));
+    try{
+        var filename = "./games/" + game + "/" + version + "/" + build + ".json";
+        song_obj = JSON.parse(fs.readFileSync(filename, 'utf8'));
+    }
+    catch(err){
+      var obj = {
+        status:{
+          message: "Internal Error. Please contact admin",
+          code: 500
+        }
+      }
+      return obj;
+    }
 
     var obj = {
       "node": node,
-      "data": "testing for greater purposes"
+      "data": song_obj
     }
     game_cache.songs[key] = obj;
-    console.log(game_cache)
     return obj.data;
   }
 }
@@ -115,9 +134,6 @@ function shuffle(array, size){
   }
   return array;
 }
-
-//personal note: heroku has 10k limit for each postgres database, but i dont think
-//there's a limit on how much i can make
 
 //if i really want to host this for FREE, i need to get through some loopholes
 //if this was purely json data and pulling data from it, i can use randomizer with ease
@@ -193,71 +209,58 @@ app.get('/api/alpha/random/:game/:version/', function(req, res, next){
   min_level = parseInt(min_level, 10);
   max_level = parseInt(max_level, 10);
 
-  if(!build){
-    try{
-      build = game_data.games[game].versions[version].current;
-    }
-    catch(err){
-      if(game_data.games[game] == null){
-        obj = {
-          status:{
-            message: "Invalid game name",
-            code: 401
-          }
-        }
-        res.status(401);
-      }
-      else{
-        obj = {
-          status:{
-            message: "Invalid version name",
-            code: 401
-          }
-        }
-        res.status(401);
+  if(game_data.games[game] == null){
+    obj = {
+      status:{
+        message: "Invalid game name",
+        code: 401
       }
     }
-  }
-  try{
-      var filename = "./games/" + game + "/" + version + "/" + build + ".json";
-      song_obj = JSON.parse(fs.readFileSync(filename, 'utf8'));
-  }
-  catch(err){
-    if(game_data.games[game] == null){
-      console.log("case 1");
-      obj = {
-        status:{
-          message: "Invalid game name",
-          code: 401
-        }
-      }
-      res.status(401);
-    }
-
-    else if(game_data.games[game].versions[version] == null){
-      console.log("case 2");
-      obj = {
-        status:{
-          message: "Invalid version name",
-          code: 401
-        }
-      }
-      res.status(401);
-    }
-
-    else{
-      obj = {
-        status:{
-          message: "Internal error, please contact administrator (File not found)",
-          code: 500
-        }
-      }
-      res.status(500)
-    }
+    res.status(401);
     res.json(obj);
     res.end();
     return;
   }
+  else if(game_data.games[game].versions[version] == null){
+    obj = {
+      status:{
+        message: "Invalid version name",
+        code: 401
+      }
+    }
+    res.status(401);
+    res.json(obj);
+    res.end();
+    return;
+  }
+
+  if(!build) build = game_data.games[game].versions[version].current;
+
+  else{
+    builds = game_data.games[game].versions[version]
+    if(!builds.includes(build)){
+      obj = {
+        status:{
+          message: "Invalid build name",
+          code: 401
+        }
+      }
+    }
+    res.status(401);
+    res.json(obj);
+    res.end();
+    return;
+  }
+
+  var song_obj = grab_data_cache(game, version, build);
+
+  if(song_obj.status != null){
+    res.status(song_obj.status.code)
+    res.json(song_obj);
+    res.end();
+    return;
+  }
+  console.log(game_cache);
 
   //need to cache the objects
 
