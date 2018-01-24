@@ -34,6 +34,8 @@ var Random = createReactClass({
       song_num: 1,
       na_option: false,
       north_america: false,
+      card_draw: false,
+      cd_song_num: 0,
       songs: [],
       undo_bans: [],
       status: "",
@@ -80,6 +82,8 @@ var Random = createReactClass({
             max_level: 0,
             min_diff: 0,
             max_diff: 0,
+            card_draw: false,
+            cd_song_num: 0,
             versions: version_list,
             songs: []
           })
@@ -186,9 +190,21 @@ var Random = createReactClass({
     })
   },
 
+  changeCardDrawNum(event){
+    this.setState({
+      cd_song_num: parseInt(event.target.value, 10)
+    })
+  },
+
   changeNASettings(){
     this.setState({
       north_america: !this.state.north_america
+    })
+  },
+
+  changeCardDrawSettings(){
+    this.setState({
+      card_draw: !this.state.card_draw
     })
   },
 
@@ -285,18 +301,18 @@ var Random = createReactClass({
     if(this.state.panel){
       return(
         <div className="row">
-          <Input s={6} m={3} type='select' label="Game" defaultValue={this.state.game_name === '' ? "" : this.state.game_name} onChange={this.changeGame}>
+          <Input s={6} m={3} type='select' label="Game" value={this.state.game_name === '' ? "" : this.state.game_name} onChange={this.changeGame}>
             <option value="" key={"gaemselect_default"} disabled>Select Game</option>
             {games}
           </Input>
-          <Input s={6} m={3} type='select' label="Version" defaultValue={this.state.version_name === '' ? "" : this.state.version_name} onChange={this.changeVersion}>
+          <Input s={6} m={3} type='select' label="Version" value={this.state.version_name === '' ? "" : this.state.version_name} onChange={this.changeVersion}>
             <option value="" key={"versionselect_default"} disabled>{this.state.game_name === '' ? "" : "Select Version"}</option>
             {versions}
           </Input>
-          <Input s={6} m={3} type='select' label="Build" defaultValue={this.state.build_name === '' ? '' : this.state.build_name} onChange={this.changeBuild}>
+          <Input s={6} m={3} type='select' label="Build" value={this.state.build_name === '' ? '' : this.state.build_name} onChange={this.changeBuild}>
             {builds}
           </Input>
-          <Input s={6} m={3} type='select' label="Play Style" defaultValue={this.state.style === '' ? '' : this.state.style} onChange={this.changeStyle}>
+          <Input s={6} m={3} type='select' label="Play Style" value={this.state.style === '' ? '' : this.state.style} onChange={this.changeStyle}>
             {styles}
           </Input>
         </div>
@@ -331,6 +347,17 @@ var Random = createReactClass({
     }
     else return(
       <Input name='na_option' type='checkbox' label='NA Ver' disabled='disabled'/>
+    )
+  },
+
+  displayCardDraw(){
+    if(this.state.card_draw){
+      return(
+        <Input s={12} l={2} name='cd_num' type='number' defaultValue={1} label='# to Play'></Input>
+      )
+    }
+    else return(
+      <Input s={12} l={2} name='cd_num' type='number' defaultValue={1} label='# to Play' disabled></Input>
     )
   },
 
@@ -377,27 +404,32 @@ var Random = createReactClass({
       });
 
       return(
-        <div>
-          <div className="row">
-            <Input s={6} l={1} label="Min Lvl" type='select' defaultValue={this.state.min_level} onChange={this.changeMinLevel}>
-              {min_level_dropdown}
-            </Input>
-            <Input s={6} l={1} label="Max Lvl" type='select' defaultValue={this.state.max_level} onChange={this.changeMaxLevel}>
-              {max_level_dropdown}
-            </Input>
-            <Input s={6} l={3} label="Min Difficulty" type='select' defaultValue={this.state.min_diff} onChange={this.changeMinDifficulty}>
-              {min_diff_dropdown}
-            </Input>
-            <Input s={6} l={3} label="Max Difficulty" type='select' defaultValue={this.state.max_diff} onChange={this.changeMaxDifficulty}>
-              {max_diff_dropdown}
-            </Input>
-            <Input s={6} l={2} label="# of Songs" defaultValue={this.state.song_num} onChange={this.changeSongNum}></Input>
-            <div className="col s6 l2">
-              <br/>
-              {this.displayNATab()}
+        <div className="valign-wrapper">
+          <div className="valign">
+            <div className="row">
+              <Input s={6} l={1} label="Min Lvl" type='select' value={this.state.min_level} onChange={this.changeMinLevel}>
+                {min_level_dropdown}
+              </Input>
+              <Input s={6} l={1} label="Max Lvl" type='select' value={this.state.max_level} onChange={this.changeMaxLevel}>
+                {max_level_dropdown}
+              </Input>
+              <Input s={6} l={3} label="Min Diff" type='select' value={this.state.min_diff} onChange={this.changeMinDifficulty}>
+                {min_diff_dropdown}
+              </Input>
+              <Input s={6} l={3} label="Max Diff" type='select' value={this.state.max_diff} onChange={this.changeMaxDifficulty}>
+                {max_diff_dropdown}
+              </Input>
+              <Input s={6} l={2} label="# of Songs" value={this.state.song_num} onChange={this.changeSongNum}></Input>
+              {this.displayCardDraw()}
+              <div className="col s12 center-align">
+                {this.displayNATab()}
+                <Input name='cd_option' type='checkbox' label='Card Draw' defaultValue={true} onChange={this.changeCardDrawSettings}></Input>
+              </div>
+            </div>
+            <div className="row">
+              {this.displaySubmitButton()}
             </div>
           </div>
-          {this.displaySubmitButton()}
         </div>
       );
     }
@@ -462,25 +494,32 @@ var Random = createReactClass({
     else{
       return(
         <div>
-          <div className="row">
-            <a className="waves-effect waves-light btn blue" onClick={this.changePanelToggle}>Open Form</a>
-            &ensp;
-            <a className={"waves-effect waves-light btn " + (this.state.undo_bans.length > 0 ? "deep-orange darken-4" : "disabled")}
-              onClick={this.undoBans}>{"Undo Ban (" + this.state.undo_bans.length + ")"}</a>
-            &ensp;
-            <a className="waves-effect waves-light btn" onClick={this.resetSongs}>Reset</a>
-          </div>
+          SONG NUMS
           <br/>
         </div>
       )
     }
   },
 
+  menuButton(){
+      if(!this.state.panel){
+        return(
+          <div>
+            <Button floating fab='horizontal' icon='menu' className='gray' large style={{bottom: '25px', right: '25px'}}>
+              <Button floating icon='view_agenda' className='yellow darken-1' onClick={this.changePanelToggle}/>
+              <Button floating icon='undo' className={this.state.undo_bans.length > 0 ? "deep-orange darken-4" : "disabled"} onClick={this.undoBans}/>
+              <Button floating icon='replay' className={this.state.undo_bans.length > 0 ? "blue" : "disabled"} onClick={this.resetSongs}/>
+            </Button>
+          </div>
+        )
+      }
+  },
+
   render() {
     var that = this;
     var song_cards = this.state.songs.map(function(obj){
       return(
-        <Song song={obj} game={that.state.game_name} version={that.state.version_name} difficulties={game_data.games[that.state.game_name].versions[that.state.version_name].difficulty.list} ban = {that.handleBans} key={obj.name + "_" + obj.difficulty} />
+        <Song song={obj} card_draw={that.state.card_draw} game={that.state.game_name} version={that.state.version_name} difficulties={game_data.games[that.state.game_name].versions[that.state.version_name].difficulty.list} ban = {that.handleBans} key={obj.name + "_" + obj.difficulty} />
       )
     })
     return (
@@ -489,7 +528,7 @@ var Random = createReactClass({
           <nav className="black">
             <div className="container">
               <div className="nav-wrapper">
-                <a href="#" className="brand-logo">Alpha Test</a>
+                <a href="#" className="brand-logo">Alpha Test v1.1</a>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
                   <li><a href="sass.html">Randomizer</a></li>
                 </ul>
@@ -511,6 +550,7 @@ var Random = createReactClass({
         <div className="Song-container">
           {song_cards}
         </div>
+        {this.menuButton()}
         <br/>
       </div>
     );
@@ -518,6 +558,11 @@ var Random = createReactClass({
 });
 
 var Song = createReactClass({
+  getInitialState(){
+    return{
+      card_draw: this.props.card_draw
+    }
+  },
 
   diff_return(difficulty){
     var diff_string = this.props.difficulties[difficulty];
@@ -543,11 +588,28 @@ var Song = createReactClass({
     this.props.ban(this.props.song.id);
   },
 
+  card_ban(){
+    var url = "https://www.google.com/search?q=" + this.props.song.name + "+" + this.props.song.version
+    if(this.state.card_draw){
+      return(
+        <div>
+          <a href={url} target="_blank"><i className="small material-icons">search</i></a>
+          &ensp;&ensp;
+          <i className="small material-icons" onClick={this.changeActiveClass}>block</i>
+        </div>
+      )
+    }
+    else return(
+      <div>
+        <a href={url} target="_blank"><i className="small material-icons">search</i></a>
+      </div>
+    )
+  },
+
   render() {
     var object = this.diff_return(this.props.song.difficulty);
     var difficulty = object.diff_string;
     var card_class = object.class_name;
-    var url = "https://www.google.com/search?q=" + this.props.song.name + "+" + this.props.song.version
     var style = this.props.song.style.charAt(0).toUpperCase() + this.props.song.style.slice(1);
 
     var card_class = this.props.song.active ? object.class_name : "Song-card card-out"
@@ -560,9 +622,7 @@ var Song = createReactClass({
         <h6>{"BPM: " + this.props.song.bpm}</h6>
         <h6>{this.props.song.version}</h6>
         <div>
-        <a href={url} target="_blank"><i className="small material-icons">search</i></a>
-        &ensp;&ensp;
-        <i className="small material-icons" onClick={this.changeActiveClass}>block</i>
+          {this.card_ban()}
         </div>
       </div>
     );
