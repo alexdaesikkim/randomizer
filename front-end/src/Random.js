@@ -342,7 +342,7 @@ var Random = createReactClass({
   displayNATab(){
     if(this.state.na_option){
       return(
-        <Input name='na_option' type='checkbox' label='NA Ver' onChange={this.changeNASettings}/>
+        <Input name='na_option' type='checkbox' label='NA Ver' checked={this.state.north_america} onChange={this.changeNASettings}/>
       )
     }
     else return(
@@ -353,7 +353,7 @@ var Random = createReactClass({
   displayCardDraw(){
     if(this.state.card_draw){
       return(
-        <Input s={12} l={2} name='cd_num' type='number' defaultValue={1} label='# to Play'></Input>
+        <Input s={12} l={2} name='cd_num' type='number' defaultValue={this.state.cd_song_num} label='# to Play' onChange={this.changeCardDrawNum}></Input>
       )
     }
     else return(
@@ -407,23 +407,23 @@ var Random = createReactClass({
         <div className="valign-wrapper">
           <div className="valign">
             <div className="row">
-              <Input s={6} l={1} label="Min Lvl" type='select' value={this.state.min_level} onChange={this.changeMinLevel}>
+              <Input s={6} l={1} label="Min Lvl" type='select' defaultValue={this.state.min_level} onChange={this.changeMinLevel}>
                 {min_level_dropdown}
               </Input>
-              <Input s={6} l={1} label="Max Lvl" type='select' value={this.state.max_level} onChange={this.changeMaxLevel}>
+              <Input s={6} l={1} label="Max Lvl" type='select' defaultValue={this.state.max_level} onChange={this.changeMaxLevel}>
                 {max_level_dropdown}
               </Input>
-              <Input s={6} l={3} label="Min Diff" type='select' value={this.state.min_diff} onChange={this.changeMinDifficulty}>
+              <Input s={6} l={3} label="Min Diff" type='select' defaultValue={this.state.min_diff} onChange={this.changeMinDifficulty}>
                 {min_diff_dropdown}
               </Input>
-              <Input s={6} l={3} label="Max Diff" type='select' value={this.state.max_diff} onChange={this.changeMaxDifficulty}>
+              <Input s={6} l={3} label="Max Diff" type='select' defaultValue={this.state.max_diff} onChange={this.changeMaxDifficulty}>
                 {max_diff_dropdown}
               </Input>
-              <Input s={6} l={2} label="# of Songs" value={this.state.song_num} onChange={this.changeSongNum}></Input>
+              <Input s={6} l={2} label="# of Songs" defaultValue={this.state.song_num} onChange={this.changeSongNum}></Input>
               {this.displayCardDraw()}
               <div className="col s12 center-align">
                 {this.displayNATab()}
-                <Input name='cd_option' type='checkbox' label='Card Draw' defaultValue={true} onChange={this.changeCardDrawSettings}></Input>
+                <Input name='cd_option' type='checkbox' label='Card Draw' checked={this.state.card_draw} onChange={this.changeCardDrawSettings}></Input>
               </div>
             </div>
             <div className="row">
@@ -461,7 +461,6 @@ var Random = createReactClass({
   handleBans(num){
     var songs = this.state.songs;
     songs[num].active = false;
-    console.log(songs)
     var undos = this.state.undo_bans;
     undos.push(num);
     this.setState({
