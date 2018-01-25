@@ -1,7 +1,7 @@
 import React from 'react';
 import './Random.css';
 import $ from 'jquery';
-import {Input, Button, Icon} from 'react-materialize';
+import {Input, Button, Icon, CardPanel} from 'react-materialize';
 
 var game_data = require('./game_data.json');
 
@@ -35,7 +35,9 @@ var Random = createReactClass({
       na_option: false,
       north_america: false,
       card_draw: false,
+      card_draw_panel: false,
       cd_song_num: 0,
+      cd_curr_num: 0,
       songs: [],
       undo_bans: [],
       status: "",
@@ -83,6 +85,7 @@ var Random = createReactClass({
             min_diff: 0,
             max_diff: 0,
             card_draw: false,
+            card_draw_panel: false,
             cd_song_num: 0,
             versions: version_list,
             songs: []
@@ -254,7 +257,9 @@ var Random = createReactClass({
           songs: songs,
           panel: false,
           undo_bans: [],
-          status: ""
+          status: "",
+          cd_curr_num: songs.length,
+          card_draw_panel: that.state.card_draw
         });
       },
       error: function(data){
@@ -453,7 +458,9 @@ var Random = createReactClass({
       songs[num].active = true;
       this.setState({
         songs: songs,
-        undo_bans: undos
+        undo_bans: undos,
+        cd_curr_num: this.state.cd_curr_num+1,
+        card_draw_panel: true
       })
     }
   },
@@ -463,9 +470,12 @@ var Random = createReactClass({
     songs[num].active = false;
     var undos = this.state.undo_bans;
     undos.push(num);
+    var cd_curr_num = this.state.cd_curr_num-1
     this.setState({
       songs: songs,
-      undo_bans: undos
+      undo_bans: undos,
+      cd_curr_num: cd_curr_num,
+      card_draw_panel: !(cd_curr_num === this.state.cd_song_num)
     })
   },
 
@@ -477,7 +487,8 @@ var Random = createReactClass({
     })
     this.setState({
       songs: songs,
-      undo_bans: []
+      undo_bans: [],
+      cd_song_num: songs.length
     })
   },
 
@@ -493,7 +504,9 @@ var Random = createReactClass({
     else{
       return(
         <div>
-          SONG NUMS
+          <div>
+            <button className="btn btn-primary" onClick={this.changePanelToggle}>Open Form</button>
+          </div>
           <br/>
         </div>
       )
@@ -505,7 +518,6 @@ var Random = createReactClass({
         return(
           <div>
             <Button floating fab='horizontal' icon='menu' className='gray' large style={{bottom: '25px', right: '25px'}}>
-              <Button floating icon='view_agenda' className='yellow darken-1' onClick={this.changePanelToggle}/>
               <Button floating icon='undo' className={this.state.undo_bans.length > 0 ? "deep-orange darken-4" : "disabled"} onClick={this.undoBans}/>
               <Button floating icon='replay' className={this.state.undo_bans.length > 0 ? "blue" : "disabled"} onClick={this.resetSongs}/>
             </Button>
@@ -514,11 +526,29 @@ var Random = createReactClass({
       }
   },
 
+  warningPanel(){
+
+  },
+
+  banPanel(){
+    if(this.state.songs.length > 0 && this.state.card_draw_panel){
+      return(
+        <div className="row">
+          <div className="col s12 m8 l4 offset-m2 offset-l4">
+            <CardPanel className="yellow red-text">
+              <h5>{(this.state.cd_curr_num-this.state.cd_song_num) + " more song(s) to ban"}</h5>
+            </CardPanel>
+          </div>
+        </div>
+      )
+    }
+  },
+
   render() {
     var that = this;
     var song_cards = this.state.songs.map(function(obj){
       return(
-        <Song song={obj} card_draw={that.state.card_draw} game={that.state.game_name} version={that.state.version_name} difficulties={game_data.games[that.state.game_name].versions[that.state.version_name].difficulty.list} ban = {that.handleBans} key={obj.name + "_" + obj.difficulty} />
+        <Song song={obj} card_draw_panel={that.state.card_draw_panel} game={that.state.game_name} version={that.state.version_name} difficulties={game_data.games[that.state.game_name].versions[that.state.version_name].difficulty.list} ban = {that.handleBans} key={obj.name + "_" + obj.difficulty} />
       )
     })
     return (
@@ -546,10 +576,14 @@ var Random = createReactClass({
             </div>
           </div>
         </div>
+        <div className="Ban-panel">
+          {this.banPanel()}
+        </div>
         <div className="Song-container">
           {song_cards}
         </div>
         {this.menuButton()}
+        <br/>
         <br/>
       </div>
     );
@@ -557,11 +591,6 @@ var Random = createReactClass({
 });
 
 var Song = createReactClass({
-  getInitialState(){
-    return{
-      card_draw: this.props.card_draw
-    }
-  },
 
   diff_return(difficulty){
     var diff_string = this.props.difficulties[difficulty];
@@ -569,7 +598,7 @@ var Song = createReactClass({
     var classes = []
     if(this.props.game === 'ddr') classes = ['blue', 'yellow', 'red', 'green', 'purple']
     if(this.props.game === 'iidx') classes = ['green', 'blue', 'yellow', 'red', 'darkred']
-    if(this.props.game === 'sdvx') classes = ['purple', 'yellow', 'red', 'gray', 'pink', 'orange', 'lightblue']
+    if(this.props.game === 'sdvx') classes = ['purple', 'yellow', 'red', 'white', 'pink', 'orange', 'lightblue']
     if(this.props.game === 'popn') classes = ['blue', 'green', 'yellow', 'red']
     if(this.props.game === 'rb') classes = ['green', 'yellow', 'red', 'white']
     if(this.props.game === 'museca') classes = ['green', 'yellow', 'red']
@@ -589,7 +618,7 @@ var Song = createReactClass({
 
   card_ban(){
     var url = "https://www.google.com/search?q=" + this.props.song.name + "+" + this.props.song.version
-    if(this.state.card_draw){
+    if(this.props.card_draw_panel){
       return(
         <div>
           <a href={url} target="_blank"><i className="small material-icons">search</i></a>

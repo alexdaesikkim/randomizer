@@ -20,6 +20,11 @@ a{
   color: white;
 }
 
+.Ban-panel{
+  text-align: center;
+  color: red;
+}
+
 
 .Song-container{
   width: 95%;
@@ -51,74 +56,70 @@ a{
 
 .card-green{
   color: black;
-  background: linear-gradient(#48E448, rgba(72, 228, 72, 0.5));
+  background: linear-gradient(rgba(72, 228, 72, 0.75), rgba(72, 228, 72, 0.25));
   border-radius: 5px;
   box-shadow: 5px 5px #CCCCCC;
 }
 
 .card-blue{
   color: black;
-  background: linear-gradient(#00C3FF, rgba(0, 195, 255, 0.5));
+  background: linear-gradient(rgba(0, 195, 255, 0.75), rgba(0, 195, 255, 0.25));
   border-radius: 5px;
   box-shadow: 5px 5px #CCCCCC;
 }
 
 .card-yellow{
   color: black;
-  background: linear-gradient(#DFC51F, #FFFF00);
+  background: linear-gradient(rgba(255, 255, 0, .75), rgba(255, 255, 0, .25));
   border-radius: 5px;
   box-shadow: 5px 5px #CCCCCC;
 }
 
 .card-red{
-  background: linear-gradient(#FD3A3D, rgba(253, 58, 61, 0.5));
+  color: black;
+  background: linear-gradient(rgba(253, 10, 10, 0.75), rgba(253, 10, 10, 0.25));
   border-radius: 5px;
   box-shadow: 5px 5px #CCCCCC;
 }
 
 .card-darkred{
-  background: linear-gradient(#870000, rgba(135, 0, 0, 0.75));
+  color: black;
+  background: linear-gradient(rgba(190, 27, 27, 0.75), rgba(190, 27, 27, 0.25));
   border-radius: 5px;
   box-shadow: 5px 5px #CCCCCC;
 }
 
 .card-purple{
-  background: linear-gradient(#B200B2, rgba(178, 0, 178, 0.5));
-  border-radius: 5px;
-  box-shadow: 5px 5px #CCCCCC;
-}
-
-.card-gray{
   color: black;
-  background: linear-gradient(#EDEDED, rgba(237, 237, 237, 0.5));
+  background: linear-gradient(rgba(178, 0, 178, 0.75), rgba(178, 0, 178, 0.25));
   border-radius: 5px;
   box-shadow: 5px 5px #CCCCCC;
 }
 
 .card-pink{
   color: black;
-  background: linear-gradient(#FF84D8, rgba(255, 132, 216, 0.5));
+  background: linear-gradient(rgba(255, 132, 216, 0.75), rgba(255, 132, 216, 0.25));
   border-radius: 5px;
   box-shadow: 5px 5px #CCCCCC;
 }
 
 .card-orange{
   color: black;
-  background: linear-gradient(#FF8000, rgba(255, 128, 0, 0.5));
+  background: linear-gradient(rgba(255, 190, 0, 0.75), rgba(255, 190, 0, 0.25));
   border-radius: 5px;
   box-shadow: 5px 5px #CCCCCC;
 }
 
 .card-lightblue{
   color: black;
-  background: linear-gradient(#0AD6FF, rgba(10, 214, 255, 0.5));
+  background: linear-gradient(rgba(10, 214, 255, 0.75), rgba(10, 214, 255, 0.25));
   border-radius: 5px;
   box-shadow: 5px 5px #CCCCCC;
 }
 
 .card-white{
-  color: #C100C1;
-  background: linear-gradient(#EDEDED, rgba(237, 237, 237, 0.5));
+  color: black;
+  background: linear-gradient(rgba(237, 237, 237, 1), rgba(237, 237, 237, 0.25));
   border-radius: 5px;
   box-shadow: 5px 5px #CCCCCC;
 }
