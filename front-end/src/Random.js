@@ -37,12 +37,12 @@ var Random = createReactClass({
       card_draw: false,
       card_draw_panel: false,
       cd_song_num: 0,
+      cd_form_num: 1,
       cd_curr_num: 0,
       songs: [],
       undo_bans: [],
-      status: "",
       errors:{
-        error_message: "",
+        error_messages: [],
         error_class: ""
       }
     }
@@ -87,6 +87,8 @@ var Random = createReactClass({
             card_draw: false,
             card_draw_panel: false,
             cd_song_num: 0,
+            cd_curr_num: 0,
+            cd_form_num: 1,
             versions: version_list,
             songs: []
           })
@@ -132,20 +134,50 @@ var Random = createReactClass({
   },
 
   errorCheck(){
-    //do this to enable the submit button, instead of throwing errors
-    //is it possible to have icon next to it for popup saying what's wrong?
+    var obj = {}
+    var error_messages = []
     if(this.state.min_level > this.state.max_level){
-
+      error_messages.push("Min level cannot be higher than max level")
     }
     if(this.state.min_level < this.state.game_limits.min_level){
-
+      error_messages.push("Min level should not fall under the game's level range")
     }
-    if(this.state.max_level < this.state.game_limits.max_level){
-
+    if(this.state.max_level > this.state.game_limits.max_level){
+      error_messages.push("Max level should not exceed the game's level range")
+    }
+    if(this.state.min_level > this.state.game_limits.max_level){
+      error_messages.push("Min level should not exceed the game's level range")
+    }
+    if(this.state.max_level < this.state.game_limits.min_level){
+      error_messages.push("Max level should not fall under the game's level range")
     }
     if(this.state.min_diff > this.state.max_diff){
-
+      error_messages.push("Min difficulty cannot be higher than max difficulty")
     }
+    if(this.state.song_num > 100){
+      if(this.state.song_num === 573) error_messages.push("Nice try")
+      else error_messages.push("Exceeds the cap for number of songs to be grabbed (100)")
+    }
+    if(this.state.song_num <= 0){
+      error_messages.push("Number of songs should be positive integer")
+    }
+    if(this.state.cd_form_num <= 0){
+      error_messages.push("Number of songs to play should be positive integer")
+    }
+    if(this.state.song_num <= this.state.cd_form_num){
+      error_messages.push("Number of songs to play cannot exceed or equal the number of songs to be grabbed")
+    }
+    if(error_messages.length > 0){
+      console.log(error_messages)
+      this.setState({
+        errors:{
+          error_messages: error_messages,
+          error_class: "form-error"
+        }
+      })
+      return true;
+    }
+    return false;
 
   },
 
@@ -195,7 +227,7 @@ var Random = createReactClass({
 
   changeCardDrawNum(event){
     this.setState({
-      cd_song_num: parseInt(event.target.value, 10)
+      cd_form_num: parseInt(event.target.value, 10)
     })
   },
 
@@ -212,63 +244,71 @@ var Random = createReactClass({
   },
 
   handleRandomCall(){
-    var that = this;
-    var build = this.state.build_name;
-    if(build.endsWith("(Current)")){
-      build = build.slice(0,-9);
-    }
-    var query = {
-      count: that.state.song_num,
-      build: build,
-      min_difficulty: that.state.min_diff,
-      max_difficulty: that.state.max_diff,
-      min_level: that.state.min_level,
-      max_level: that.state.max_level,
-      style: that.state.style,
-      north_america: that.state.north_america,
-    }
-    $.ajax({
-      url: '/api/alpha/random/' + that.state.game_name + "/" + that.state.version_name + "/",
-      method: 'GET',
-      data: query,
-      success: function(data){
-        var raw_songs = data.songs;
-        var songs = [];
-        var styles = that.state.styles;
-        for(var i = 0; i < raw_songs.length; i++){
-          var style = styles.length == 1 ? "" : raw_songs[i].style;
-          var object = {
-            id: i,
-            name: raw_songs[i].title,
-            artist: raw_songs[i].artist,
-            bpm: raw_songs[i].bpm,
-            genre: raw_songs[i].genre,
-            source: raw_songs[i].source,
-            level: raw_songs[i].level,
-            style: style,
-            difficulty: raw_songs[i].difficulty,
-            version: raw_songs[i].version,
-            active: true
-          }
-          songs.push(object);
-        }
-
-        that.setState({
-          songs: songs,
-          panel: false,
-          undo_bans: [],
-          status: "",
-          cd_curr_num: songs.length,
-          card_draw_panel: that.state.card_draw
-        });
-      },
-      error: function(data){
-        that.setState({
-          error_message: "There was an error. Please try reloading the page or tweet @supernovamaniac for support",
-          error_class: "alert-danger"
-        })
+    if(!this.errorCheck()){
+      var that = this;
+      var build = this.state.build_name;
+      if(build.endsWith("(Current)")){
+        build = build.slice(0,-9);
       }
-    })
+      var query = {
+        count: that.state.song_num,
+        build: build,
+        min_difficulty: that.state.min_diff,
+        max_difficulty: that.state.max_diff,
+        min_level: that.state.min_level,
+        max_level: that.state.max_level,
+        style: that.state.style,
+        north_america: that.state.north_america,
+      }
+      $.ajax({
+        url: '/api/alpha/random/' + that.state.game_name + "/" + that.state.version_name + "/",
+        method: 'GET',
+        data: query,
+        success: function(data){
+          var raw_songs = data.songs;
+          var songs = [];
+          var styles = that.state.styles;
+          for(var i = 0; i < raw_songs.length; i++){
+            var style = styles.length == 1 ? "" : raw_songs[i].style;
+            var object = {
+              id: i,
+              name: raw_songs[i].title,
+              artist: raw_songs[i].artist,
+              bpm: raw_songs[i].bpm,
+              genre: raw_songs[i].genre,
+              source: raw_songs[i].source,
+              level: raw_songs[i].level,
+              style: style,
+              difficulty: raw_songs[i].difficulty,
+              version: raw_songs[i].version,
+              active: true
+            }
+            songs.push(object);
+          }
+
+          that.setState({
+            songs: songs,
+            panel: false,
+            undo_bans: [],
+            cd_curr_num: songs.length,
+            card_draw_panel: that.state.card_draw,
+            cd_song_num: that.state.cd_form_num,
+            errors:{
+              error_messages: [],
+              error_class: ""
+            }
+          });
+        },
+        error: function(data){
+          that.setState({
+            errors:{
+              error_messages: [],
+              error_class: ""
+            }
+          })
+        }
+      })
+    }
   },
 
   displayTopPanel(){
@@ -358,11 +398,11 @@ var Random = createReactClass({
   displayCardDraw(){
     if(this.state.card_draw){
       return(
-        <Input s={12} l={2} name='cd_num' type='number' defaultValue={this.state.cd_song_num} label='# to Play' onChange={this.changeCardDrawNum}></Input>
+        <Input s={6} l={2} name='cd_num' type='number' defaultValue={this.state.cd_form_num} label='# to Play' onChange={this.changeCardDrawNum}></Input>
       )
     }
     else return(
-      <Input s={12} l={2} name='cd_num' type='number' defaultValue={1} label='# to Play' disabled></Input>
+      <Input s={6} l={2} name='cd_num' type='number' defaultValue={1} label='# to Play' disabled></Input>
     )
   },
 
@@ -548,18 +588,6 @@ var Random = createReactClass({
     })
     return (
       <div>
-        <header>
-          <nav className="black">
-            <div className="container">
-              <div className="nav-wrapper">
-                <a href="#" className="brand-logo">Alpha Test v1.1</a>
-                <ul id="nav-mobile" className="right hide-on-med-and-down">
-                  <li><a href="sass.html">Randomizer</a></li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </header>
         <div>
           <div className="Form-panel">
             <div className="container">
