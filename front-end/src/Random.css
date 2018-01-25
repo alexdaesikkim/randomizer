@@ -20,9 +20,21 @@ a{
   color: white;
 }
 
+
 .Ban-panel{
   text-align: center;
   color: red;
+  opacity: 1;
+  height: 50px;
+  transition: all 0.25s;
+}
+
+.Ban-panel-out{
+  text-align: center;
+  color: red;
+  height: 0px;
+  opacity: 0;
+  transition: all 0.25s;
 }
 
 

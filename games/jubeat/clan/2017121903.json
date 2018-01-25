@@ -23612,6 +23612,156 @@
       "version": "jubeat clan"
     },
     {
+      "artist": "\u30bb\u30ea\u30ab\uff06\u30a8\u30ea\u30ab",
+      "bpm": "182",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "3",
+      "style": "single",
+      "title": "\u305f\u304b\u3089\u3082\u306e",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "\u30bb\u30ea\u30ab\uff06\u30a8\u30ea\u30ab",
+      "bpm": "182",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "7",
+      "style": "single",
+      "title": "\u305f\u304b\u3089\u3082\u306e",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "\u30bb\u30ea\u30ab\uff06\u30a8\u30ea\u30ab",
+      "bpm": "182",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "9",
+      "style": "single",
+      "title": "\u305f\u304b\u3089\u3082\u306e",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "Lucky Vacuum",
+      "bpm": "190",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "3",
+      "style": "single",
+      "title": "STAR SHIP\u2606HERO",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "Lucky Vacuum",
+      "bpm": "190",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "6",
+      "style": "single",
+      "title": "STAR SHIP\u2606HERO",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "Lucky Vacuum",
+      "bpm": "190",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "9",
+      "style": "single",
+      "title": "STAR SHIP\u2606HERO",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "\u30ed\u30de\u30f3\u30c1\u30c3\u30af\u2661Prim\u59eb",
+      "bpm": "160",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "4",
+      "style": "single",
+      "title": "\u30e4\u30de\u30c8\u306a\u3067\u306a\u3067\u2661\u304b\u3050\u3084\u59eb",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "\u30ed\u30de\u30f3\u30c1\u30c3\u30af\u2661Prim\u59eb",
+      "bpm": "160",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "7",
+      "style": "single",
+      "title": "\u30e4\u30de\u30c8\u306a\u3067\u306a\u3067\u2661\u304b\u3050\u3084\u59eb",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "\u30ed\u30de\u30f3\u30c1\u30c3\u30af\u2661Prim\u59eb",
+      "bpm": "160",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "9",
+      "style": "single",
+      "title": "\u30e4\u30de\u30c8\u306a\u3067\u306a\u3067\u2661\u304b\u3050\u3084\u59eb",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "Qrispy Joybox feat.mao",
+      "bpm": "175",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "2",
+      "style": "single",
+      "title": "Shout!!",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "Qrispy Joybox feat.mao",
+      "bpm": "175",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "5",
+      "style": "single",
+      "title": "Shout!!",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "Qrispy Joybox feat.mao",
+      "bpm": "175",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "8",
+      "style": "single",
+      "title": "Shout!!",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "Dirty Androids",
+      "bpm": "175",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "3",
+      "style": "single",
+      "title": "Aerial Skydive",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "Dirty Androids",
+      "bpm": "175",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "7",
+      "style": "single",
+      "title": "Aerial Skydive",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "Dirty Androids",
+      "bpm": "175",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "9",
+      "style": "single",
+      "title": "Aerial Skydive",
+      "version": "jubeat clan"
+    },
+    {
       "artist": "\u65e5\u5411\u7f8e\u30d3\u30bf\u30fc\u30b9\u30a4\u30fc\u30c4\u266a",
       "bpm": "88-206",
       "difficulty": 0,

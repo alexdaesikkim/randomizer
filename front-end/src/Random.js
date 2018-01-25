@@ -424,7 +424,7 @@ var Random = createReactClass({
               <Input s={6} l={3} label="Max Diff" type='select' defaultValue={this.state.max_diff} onChange={this.changeMaxDifficulty}>
                 {max_diff_dropdown}
               </Input>
-              <Input s={6} l={2} label="# of Songs" defaultValue={this.state.song_num} onChange={this.changeSongNum}></Input>
+              <Input s={6} l={2} label="# to Grab" defaultValue={this.state.song_num} onChange={this.changeSongNum}></Input>
               {this.displayCardDraw()}
               <div className="col s12 center-align">
                 {this.displayNATab()}
@@ -488,7 +488,7 @@ var Random = createReactClass({
     this.setState({
       songs: songs,
       undo_bans: [],
-      cd_song_num: songs.length
+      cd_curr_num: songs.length
     })
   },
 
@@ -531,17 +531,11 @@ var Random = createReactClass({
   },
 
   banPanel(){
-    if(this.state.songs.length > 0 && this.state.card_draw_panel){
       return(
-        <div className="row">
-          <div className="col s12 m8 l4 offset-m2 offset-l4">
-            <CardPanel className="yellow red-text">
-              <h5>{(this.state.cd_curr_num-this.state.cd_song_num) + " more song(s) to ban"}</h5>
-            </CardPanel>
-          </div>
-        </div>
+            <div className={(this.state.songs.length > 0 && this.state.card_draw_panel) ? "Ban-panel" : "Ban-panel-out"}>
+              <h5>{(this.state.songs.length > 0 && this.state.card_draw_panel) ? (this.state.cd_curr_num-this.state.cd_song_num) + " more song(s) to ban" : ""}</h5>
+            </div>
       )
-    }
   },
 
   render() {
@@ -576,9 +570,7 @@ var Random = createReactClass({
             </div>
           </div>
         </div>
-        <div className="Ban-panel">
-          {this.banPanel()}
-        </div>
+        {this.banPanel()}
         <div className="Song-container">
           {song_cards}
         </div>
