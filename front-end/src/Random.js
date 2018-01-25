@@ -488,7 +488,8 @@ var Random = createReactClass({
     this.setState({
       songs: songs,
       undo_bans: [],
-      cd_curr_num: songs.length
+      cd_curr_num: songs.length,
+      card_draw_panel: true
     })
   },
 

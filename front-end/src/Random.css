@@ -46,6 +46,7 @@ a{
 
 .Song-card{
   color: white;
+  word-wrap: break-word;
   text-align: center;
   display:inline-block;
   position: relative;
