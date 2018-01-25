@@ -43,7 +43,7 @@ var Random = createReactClass({
       undo_bans: [],
       errors:{
         error_messages: [],
-        error_class: ""
+        error_class: "no-error"
       }
     }
   },
@@ -164,7 +164,7 @@ var Random = createReactClass({
     if(this.state.cd_form_num <= 0){
       error_messages.push("Number of songs to play should be positive integer")
     }
-    if(this.state.song_num <= this.state.cd_form_num){
+    if(this.state.song_num <= this.state.cd_form_num && this.state.card_draw){
       error_messages.push("Number of songs to play cannot exceed or equal the number of songs to be grabbed")
     }
     if(error_messages.length > 0){
@@ -295,7 +295,7 @@ var Random = createReactClass({
             cd_song_num: that.state.cd_form_num,
             errors:{
               error_messages: [],
-              error_class: ""
+              error_class: "no-error"
             }
           });
         },
@@ -303,12 +303,28 @@ var Random = createReactClass({
           that.setState({
             errors:{
               error_messages: [],
-              error_class: ""
+              error_class: "no-error"
             }
           })
         }
       })
     }
+  },
+
+  displayFormErrorPanel(){
+    var errors = this.state.errors.error_messages.map(function(obj){
+      return(
+        <h6>-{obj}</h6>
+      )
+    })
+    return(
+      <div className={this.state.errors.error_class}>
+        <div className="col s12 m6 offset-m3">
+          <h5>{this.state.errors.error_messages.length} error(s) prevented the form from submitting</h5>
+          {errors}
+        </div>
+      </div>
+    )
   },
 
   displayTopPanel(){
@@ -345,21 +361,26 @@ var Random = createReactClass({
     //since "" is only set with defaultvalue. see if there's a way to change its value onChange of game_name)
     if(this.state.panel){
       return(
-        <div className="row">
-          <Input s={6} m={3} type='select' label="Game" value={this.state.game_name === '' ? "" : this.state.game_name} onChange={this.changeGame}>
-            <option value="" key={"gaemselect_default"} disabled>Select Game</option>
-            {games}
-          </Input>
-          <Input s={6} m={3} type='select' label="Version" value={this.state.version_name === '' ? "" : this.state.version_name} onChange={this.changeVersion}>
-            <option value="" key={"versionselect_default"} disabled>{this.state.game_name === '' ? "" : "Select Version"}</option>
-            {versions}
-          </Input>
-          <Input s={6} m={3} type='select' label="Build" value={this.state.build_name === '' ? '' : this.state.build_name} onChange={this.changeBuild}>
-            {builds}
-          </Input>
-          <Input s={6} m={3} type='select' label="Play Style" value={this.state.style === '' ? '' : this.state.style} onChange={this.changeStyle}>
-            {styles}
-          </Input>
+        <div>
+          <div className="row">
+            {this.displayFormErrorPanel()}
+          </div>
+          <div className="row">
+            <Input s={6} m={3} type='select' label="Game" value={this.state.game_name === '' ? "" : this.state.game_name} onChange={this.changeGame}>
+              <option value="" key={"gaemselect_default"} disabled>Select Game</option>
+              {games}
+            </Input>
+            <Input s={6} m={3} type='select' label="Version" value={this.state.version_name === '' ? "" : this.state.version_name} onChange={this.changeVersion}>
+              <option value="" key={"versionselect_default"} disabled>{this.state.game_name === '' ? "" : "Select Version"}</option>
+              {versions}
+            </Input>
+            <Input s={6} m={3} type='select' label="Build" value={this.state.build_name === '' ? '' : this.state.build_name} onChange={this.changeBuild}>
+              {builds}
+            </Input>
+            <Input s={6} m={3} type='select' label="Play Style" value={this.state.style === '' ? '' : this.state.style} onChange={this.changeStyle}>
+              {styles}
+            </Input>
+          </div>
         </div>
       );
     }

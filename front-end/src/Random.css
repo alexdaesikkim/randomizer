@@ -20,6 +20,21 @@ a{
   color: white;
 }
 
+.no-error{
+  opacity: 0;
+  height: 0px;
+  display: inline-block;
+  transition: all 0.25s;
+}
+
+.form-error{
+  color: red;
+  text-align: left;
+  opacity: 1;
+  display: block;
+  height: auto;
+  transition: all 0.25s;
+}
 
 .Ban-panel{
   text-align: center;
