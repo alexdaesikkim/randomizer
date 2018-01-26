@@ -8,8 +8,6 @@
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -50,6 +48,119 @@
         </div>
       </nav>
     </header>
+    <div class="container">
+      <h5>API Documentation</h5>
+      <ul class="collapsible" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header">Grab Random Song</div>
+          <div class="collapsible-body">
+            <b>Entry Point:</b>
+            <br/>
+            <code>
+              GET /random/&#123;game&#125;/&#123;version&#125;/
+            </code>
+            <br/>
+            <br/>
+            <b>Query Parameters</b> (via object):
+            <table>
+              <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default Value</th>
+                    <th>Description</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>count</td>
+                  <td>Integer</td>
+                  <td>1</td>
+                  <td>Number of songs to return.</td>
+                </tr>
+                <tr>
+                  <td>min_difficulty</td>
+                  <td>Integer</td>
+                  <td>0</td>
+                  <td>Minimum difficulty. Based on numbers, not string.</td>
+                </tr>
+                <tr>
+                  <td>max_difficulty</td>
+                  <td>Integer</td>
+                  <td>0</td>
+                  <td>Max difficulty. Based on numbers, not string.</td>
+                </tr>
+                <tr>
+                  <td>min_level</td>
+                  <td>Integer</td>
+                  <td>0</td>
+                  <td>Max level cap on the song returned</td>
+                </tr>
+                <tr>
+                  <td>max_level</td>
+                  <td>Integer</td>
+                  <td>0</td>
+                  <td>Max level cap on the song returned</td>
+                </tr>
+                <tr>
+                  <td>build</td>
+                  <td>String</td>
+                  <td>"latest"</td>
+                  <td>Game build. Find accepted values via API call to game&#39;s information.</td>
+                </tr>
+                <tr>
+                  <td>style</td>
+                  <td>String</td>
+                  <td>"single"</td>
+                  <td>Play style. Find accepted values via API call to game&#39;s information.</td>
+                </tr>
+                <tr>
+                  <td>na_option</td>
+                  <td>Boolean</td>
+                  <td>"single"</td>
+                  <td>NA Option. Filters songs not available in North American version of the game (Limited to DDR Ace only).</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">Grab Random Song</div>
+          <div class="collapsible-body">
+            <b>Entry Point:</b>
+            <br/>
+            <code>
+              GET /random/&#123;game&#125;/&#123;version&#125;/
+            </code>
+            <br/>
+            <br/>
+            <b>Query Parameters</b> (via object):
+            <table>
+              <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default Value</th>
+                    <th>Description</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>count</td>
+                  <td>Integer</td>
+                  <td>1</td>
+                  <td>Number of songs to return.</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </li>
+      </ul>
+    </div>
 
   </body>
 </html>
