@@ -49,10 +49,15 @@
       </nav>
     </header>
     <div class="container">
-      <h5>API Documentation</h5>
+      <h5>API Address: http://rdm-alpha.herokuapp.com/api/alpha/</h5>
       <ul class="collapsible" data-collapsible="accordion">
         <li>
-          <div class="collapsible-header">Grab Random Song</div>
+          <div class="collapsible-header valign-wrapper">
+            <div class="chip green">
+              GET
+            </div>
+            Grab Random Song
+          </div>
           <div class="collapsible-body">
             <b>Entry Point:</b>
             <br/>
@@ -120,39 +125,6 @@
                   <td>Boolean</td>
                   <td>"single"</td>
                   <td>NA Option. Filters songs not available in North American version of the game (Limited to DDR Ace only).</td>
-                </tr>
-              </tbody>
-            </table>
-
-          </div>
-        </li>
-        <li>
-          <div class="collapsible-header">Grab Random Song</div>
-          <div class="collapsible-body">
-            <b>Entry Point:</b>
-            <br/>
-            <code>
-              GET /random/&#123;game&#125;/&#123;version&#125;/
-            </code>
-            <br/>
-            <br/>
-            <b>Query Parameters</b> (via object):
-            <table>
-              <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Type</th>
-                    <th>Default Value</th>
-                    <th>Description</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td>count</td>
-                  <td>Integer</td>
-                  <td>1</td>
-                  <td>Number of songs to return.</td>
                 </tr>
               </tbody>
             </table>

@@ -294,36 +294,84 @@ app.get('/api/alpha/random/:game/:version/', function(req, res, next){
 
 });
 
-app.get('/api/alpha/info/:game/:version/', function(){
-  //get information on the version itself
-});
-
-app.get('/api/alpha/all/:game/:version/', function(){
-  //show all versions available with the associated game
-});
-
-app.get('/api/alpha/info/:game/', function(){
-  //get information on the game itself, as well as versions that comes along with it
-});
-
-app.get('/api/alpha/all/:game/', function(){
-  //does it overlap with above?
-});
-
-app.get('/api/alpha/all/games/', function(){
-  //show all games available for this API
-});
-
-app.get('/api/alpha/all/', function(req, res, next){
-  //game_data.json
-  res.json(game_data);
+app.get('/api/alpha/info/:game/:version/current', function(req, res, next){
+  var obj = {
+    current: game_data.games[req.params.game].versions[req.params.version].current
+  }
+  res.json(obj);
   res.status(200);
   res.end();
-  return;
+})
+
+app.get('/api/alpha/info/:game/:version/builds', function(req, res, next){
+  //returns list of builds available
+  var obj = {
+    builds: game_data.games[req.params.game].versions[req.params.version].builds
+  };
+  res.json(obj);
+  res.status(200);
+  res.end();
+})
+
+app.get('/api/alpha/info/:game/:version/', function(req, res, next){
+  //still need errorcheck
+  var game = req.params.game;
+  var version = req.params.version;
+  var version_obj = game_data.games[game].versions[version];
+  var obj = {
+    name: version_obj.name,
+    difficulty: version_obj.difficulty,
+    level: version_obj.level,
+    na_option: version_obj.level
+  }
+  res.json(obj);
+  res.status(200);
+  res.end();
 });
-//for anything else, return 404
 
+app.get('/api/alpha/list/:game/versions/', function(req, res, next){
+  //still need errorcheck
+  var game = req.params.game;
+  var versions = [];
+  for(var key in game_data.games[game].versions){
+    versions.push(key);
+  }
+  var obj = {
+    versions: versions
+  }
+  res.json(obj);
+  res.status(200);
+  res.end()
+});
 
+app.get('/api/alpha/info/:game/', function(req, res, next){
+  var game_obj = game_data.games[game];
+  var obj = {
+    name: game_obj.name,
+    styles: game_obj.styles
+  }
+  res.json(obj);
+  res.status(200);
+  res.end();
+});
+
+app.get('/api/alpha/list/games/', function(req, res, next){
+  var games = [];
+  for(var key in game_data.games){
+    games.push(key);
+  }
+  var obj = {
+    games: games
+  }
+  res.json(obj);
+  res.status(200);
+  res.end();
+});
+
+app.get('*', function(req, res){
+  res.send('Page not found', 404);
+  res.end();
+});
 
 const port = process.env.PORT || 3001;
 

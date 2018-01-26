@@ -370,14 +370,14 @@ var Random = createReactClass({
               <option value="" key={"gaemselect_default"} disabled>Select Game</option>
               {games}
             </Input>
-            <Input s={6} m={3} type='select' label="Version" value={this.state.version_name === '' ? "" : this.state.version_name} onChange={this.changeVersion}>
+            <Input s={6} m={3} type='select' label="Version" value={this.state.version_name === '' ? "" : this.state.version_name} disabled={this.state.game_name === '' ? true : false} onChange={this.changeVersion}>
               <option value="" key={"versionselect_default"} disabled>{this.state.game_name === '' ? "" : "Select Version"}</option>
               {versions}
             </Input>
-            <Input s={6} m={3} type='select' label="Build" value={this.state.build_name === '' ? '' : this.state.build_name} onChange={this.changeBuild}>
+            <Input s={6} m={3} type='select' label="Build" value={this.state.build_name === '' ? '' : this.state.build_name} disabled={this.state.build_name === '' ? true : false} onChange={this.changeBuild}>
               {builds}
             </Input>
-            <Input s={6} m={3} type='select' label="Play Style" value={this.state.style === '' ? '' : this.state.style} onChange={this.changeStyle}>
+            <Input s={6} m={3} type='select' label="Play Style" value={this.state.style === '' ? '' : this.state.style} disabled={this.state.style === '' ? true : false} onChange={this.changeStyle}>
               {styles}
             </Input>
           </div>
@@ -485,7 +485,7 @@ var Random = createReactClass({
               <Input s={6} l={3} label="Max Diff" type='select' defaultValue={this.state.max_diff} onChange={this.changeMaxDifficulty}>
                 {max_diff_dropdown}
               </Input>
-              <Input s={6} l={2} label="# to Grab" defaultValue={this.state.song_num} onChange={this.changeSongNum}></Input>
+              <Input s={6} l={2} type='number' label="# to Grab" defaultValue={this.state.song_num} onChange={this.changeSongNum}></Input>
               {this.displayCardDraw()}
               <div className="col s12 center-align">
                 {this.displayNATab()}
