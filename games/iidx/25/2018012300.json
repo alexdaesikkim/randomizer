@@ -62636,7 +62636,7 @@
       "bpm": "157",
       "difficulty": 2,
       "genre": "HARDSTYLE",
-      "level": "9",
+      "level": "8",
       "style": "double",
       "title": "RISING FIRE HAWK",
       "version": "beatmania IIDX 24 SINOBUZ"
@@ -67829,6 +67829,66 @@
       "level": "12",
       "style": "double",
       "title": "Usual Days-remix",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "Massive New Krew",
+      "bpm": "155",
+      "difficulty": 1,
+      "genre": "HARDSTYLE",
+      "level": "6",
+      "style": "single",
+      "title": "Persephone",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "Massive New Krew",
+      "bpm": "155",
+      "difficulty": 2,
+      "genre": "HARDSTYLE",
+      "level": "9",
+      "style": "single",
+      "title": "Persephone",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "Massive New Krew",
+      "bpm": "155",
+      "difficulty": 3,
+      "genre": "HARDSTYLE",
+      "level": "12",
+      "style": "single",
+      "title": "Persephone",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "Massive New Krew",
+      "bpm": "155",
+      "difficulty": 3,
+      "genre": "HARDSTYLE",
+      "level": "12",
+      "style": "double",
+      "title": "Persephone",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "BEMANI Sound Team \"SYUNN\"",
+      "bpm": "180",
+      "difficulty": 3,
+      "genre": "DRUMSTEP",
+      "level": "12",
+      "style": "single",
+      "title": "Papilio ulysses",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "BEMANI Sound Team \"SYUNN\"",
+      "bpm": "180",
+      "difficulty": 3,
+      "genre": "DRUMSTEP",
+      "level": "12",
+      "style": "double",
+      "title": "Papilio ulysses",
       "version": "beatmania IIDX 25 CANNON BALLERS"
     },
     {

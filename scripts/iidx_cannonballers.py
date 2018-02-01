@@ -46,13 +46,13 @@ print ("Grabbing data...")
 
 def get_level(col):
     level = col.text
-    if len(col) != 1 and level != '-' and len(col) != 0:
+    if len(col) != 1 and level != '-' and level != '' and len(col) != 0:
         index = len(level)-1
         end_index = index
         while (level[index] != ']'):
             index = index-1
         level = level[index+1:len(level)]
-    elif level == '-':
+    elif level == '-' or level == '':
         level = -1
     return level
 

@@ -487,11 +487,14 @@ var Random = createReactClass({
               </Input>
               <Input s={6} l={2} type='number' label="# to Grab" defaultValue={this.state.song_num} onChange={this.changeSongNum}></Input>
               {this.displayCardDraw()}
-              <div className="col s12 center-align">
-                {this.displayNATab()}
+            </div>
+            <div className="row">
+              <div className="center-forms">
                 <Input name='cd_option' type='checkbox' label='Card Draw' checked={this.state.card_draw} onChange={this.changeCardDrawSettings}></Input>
+                {this.displayNATab()}
               </div>
             </div>
+            <br/>
             <div className="row">
               {this.displaySubmitButton()}
             </div>

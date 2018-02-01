@@ -2,6 +2,21 @@ a{
   color: inherit;
 }
 
+.checkbox-align{
+  text-align: center;
+  display:inline-block;
+}
+
+.container .row {
+  margin: 0 auto;
+}
+
+.center-forms {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .title-text{
   padding: 0px;
   margin-top: 0px;
