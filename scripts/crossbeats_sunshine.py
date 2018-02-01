@@ -7,14 +7,65 @@ from bs4 import BeautifulSoup
 version_name = "FINAL"
 print(version_name)
 
-license_page_url = "http://crossbeatsrev.wiki.fc2.com/wiki/%E5%8F%8E%E9%8C%B2%E6%9B%B2%E4%B8%80%E8%A6%A7%28%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E6%9B%B2%E3%81%AE%E3%81%BF%29"
-orig_page_url = "http://crossbeatsrev.wiki.fc2.com/wiki/%E5%8F%8E%E9%8C%B2%E6%9B%B2%E4%B8%80%E8%A6%A7%28%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%8A%E3%83%AB%E6%9B%B2%E3%81%AE%E3%81%BF%29"
+pickup_url = "http://www.capcom.co.jp/arcade/rev/PC/music_pickup.html"
+jpop_url = "http://www.capcom.co.jp/arcade/rev/PC/music_jpop.html"
+vocaloid_url = "http://www.capcom.co.jp/arcade/rev/PC/music_vocaloid.html"
+toho_url = "http://www.capcom.co.jp/arcade/rev/PC/music_toho.html"
+original_url = "http://www.capcom.co.jp/arcade/rev/PC/music_originaln.html"
+variety_url = "http://www.capcom.co.jp/arcade/rev/PC/music_variety.html"
 
-license_opened = urlopen(license_page_url)
-orig_opened = urlopen(orig_page_url)
+pickup_opened = urlopen(pickup_url)
+jpop_opened = urlopen(jpop_url)
+vocaloid_opened = urlopen(vocaloid_url)
+toho_opened = urlopen(toho_url)
+original_opened = urlopen(original_url)
+variety_opened = urlopen(variety_url)
+
+base_url = "http://www.capcom.co.jp/arcade/rev/PC/"
 
 print ("Opened pages")
 
+print ("Processing links")
+
+def find_links(orig_url):
+    pages = []
+    opened_page = urlopen(orig_url)
+    links = BeautifulSoup(opened_page, "html5lib").find('div', class_='mPager-top').find_all('a')
+    if not links:
+        pages.append(orig_url)
+    else:
+        for link in links:
+            pages.append(base_url + link['href'])
+    return pages
+
+pickup_pages = find_links(pickup_url)
+jpop_pages = find_links(jpop_url)
+vocaloid_pages = find_links(vocaloid_url)
+toho_pages = find_links(toho_url)
+original_pages = find_links(original_url)
+variety_pages = find_links(variety_url)
+
+songs = [];
+
+def page_to_array(urls, title):
+    for url in urls:
+        page = urlopen(url)
+        opened_page = BeautifulSoup(page, "html5lib").find_all('li', class_='gr-Black2');
+        for song in opened_page:
+            obj = {
+                "title": title,
+                "li": song
+            }
+            songs.append(obj)
+
+page_to_array(pickup_pages, "PICKUP")
+page_to_array(jpop_pages, "J-POP")
+page_to_array(vocaloid_pages, "VOCALOID")
+page_to_array(toho_pages, "東方Project")
+page_to_array(original_pages, "ORIGINAL")
+page_to_array(variety_pages, "VARIETY")
+
+'''
 license_songs = BeautifulSoup(license_opened, "html5lib")
 license_song_tables = license_songs.find('div', id='main').find_all('table')
 license_titles = license_songs.find('div', id='main').find_all('h3')
@@ -22,10 +73,6 @@ orig_songs = BeautifulSoup(orig_opened, "html5lib")
 orig_song_tables = orig_songs.find('div', id='main').find_all('table')
 orig_titles = orig_songs.find('div', id='main').find_all('h3')
 
-print(len(license_song_tables))
-print(len(license_titles))
-print(len(orig_song_tables))
-print(len(orig_titles))
 
 print ("Parsed pages")
 
@@ -112,7 +159,7 @@ def parse_raw(rows, version):
                 print("error")
     return
 
-parse_raw(song_rows, "")
+parse_raw(song_rows, "")'''
 '''
 print ("Writing json")
 

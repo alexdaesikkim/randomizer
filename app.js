@@ -65,13 +65,10 @@ Linkedlist.prototype = {
   remove_last_used: function(){
     var node = this.head;
     var key = node.data;
-    console.log("printing key")
-    console.log(key);
     this.head = this.head.next;
     this.head.prev = null;
     this._size--;
     node = null;
-    console.log(key);
     return key;
   }
 }
