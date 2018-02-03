@@ -86,18 +86,18 @@ toho_pages = find_links(toho_url)
 original_pages = find_links(original_url)
 variety_pages = find_links(variety_url)
 
-songs = [];
+raw_songs = [];
 
 def page_to_array(urls, title):
     for url in urls:
         page = urlopen(url)
         opened_page = BeautifulSoup(page, "html5lib").find_all('li', class_='gr-Black2');
-        for song in opened_page:
+        for raw_song in opened_page:
             obj = {
                 "title": title,
-                "li": song
+                "li": raw_song
             }
-            songs.append(obj)
+            raw_songs.append(obj)
 
 page_to_array(pickup_pages, "PICKUP")
 page_to_array(jpop_pages, "J-POP")
@@ -107,6 +107,8 @@ page_to_array(original_pages, "ORIGINAL")
 page_to_array(variety_pages, "VARIETY")
 
 print ("Parsed pages")
+
+songs = []
 
 song_dict = {}
 
@@ -118,18 +120,6 @@ song_dict = {}
 
 print ("Grabbing data...")
 
-'''def get_level(col):
-    level = col.text
-    if len(col) != 1 and level != '-' and len(col) != 0:
-        index = len(level)-1
-        end_index = index
-        while (level[index] != ']'):
-            index = index-1
-        level = level[index+1:len(level)]
-    elif level == '-':
-        level = -1
-    return level
-
 diff_options = {
     0: "EASY",
     1: "MEDIUM",
@@ -139,7 +129,7 @@ diff_options = {
 }
 
 def get_song(level, difficulty, version, style, title, artist, bpm):
-    if(level != -1):
+    if(level != "--"):
         diff_name = diff_options[difficulty]
         key = title + " " + artist + " " + version + " " + bpm + " "+ diff_name + " " + style
         if key not in song_dict:
@@ -157,19 +147,27 @@ def get_song(level, difficulty, version, style, title, artist, bpm):
 
 def parse_raw(rows):
     for row in rows:
-        version = row.title;
-        song_info = row.li;
-
+        version = row["title"];
+        song_info = row["li"];
+        title = song_info.find('p', class_="n-mTitle").text
+        artist = song_info.find('p', class_="n-mAuther").text
+        bpm = song_info.find('p', class_="n-mDataBpm").find('span').text
+        get_song(song_info.find('span', class_="easy").text, 0, version, "single", title, artist, bpm)
+        get_song(song_info.find('span', class_="standard").text, 0, version, "single", title, artist, bpm)
+        get_song(song_info.find('span', class_="hard").text, 0, version, "single", title, artist, bpm)
+        get_song(song_info.find('span', class_="master").text, 0, version, "single", title, artist, bpm)
+        get_song(song_info.find('span', class_="unlimited").text, 0, version, "single", title, artist, bpm)
     return
 
-parse_raw(song_rows, "")
+parse_raw(raw_songs)
 
 print ("Writing json")
 
 final_data = {
-    "id": "ddrextreme",
+    "id": "crossbeats_sunshine",
     "songs": songs
-}'''
+}
+print(final_data)
 '''
 with open('../games/crossbeats/sunshine/' +  + '.json', 'w') as file:
     json.dump(final_data, file, indent=2, sort_keys=True)
