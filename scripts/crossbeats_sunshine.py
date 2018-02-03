@@ -4,7 +4,49 @@ import re
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
-version_name = "FINAL"
+from datetime import datetime, timedelta
+from pytz import timezone
+#to grab version name, go to main page, get the latest news entry and use that version_name
+#checking for update:
+#1. check to see if the date has passed yet. if yes, get the new date version. if not, go back one and grab the version name from there
+#sidenote: might have to do this multiple times
+#2. after grabbing the version name, update
+
+current_time_jst = datetime.now(timezone('Asia/Tokyo'))
+
+base_url = "http://www.capcom.co.jp/arcade/rev/PC/"
+
+update_page = "http://www.capcom.co.jp/arcade/rev/PC/news1.html"
+update_page_opened = urlopen(update_page)
+update_links = BeautifulSoup(update_page_opened, "html5lib").find('div', class_='layout-1st').find_all('a')
+version_index = 0
+version_found = False
+while not version_found:
+    link = update_links[version_index]
+    version_index += 1
+    if(link['href'].startswith('newsentry')):
+        news_url = base_url + link['href']
+        news_page_opened = urlopen(news_url)
+        news_content = BeautifulSoup(news_page_opened, "html5lib").find('small')
+        for content in news_content.find_all("br"):
+            content.replace_with("\n")
+        news_content = news_content.text.split("\n")
+        news_content = [x for x in news_content if x != '']
+        date = news_content[0]
+        version_name = news_content[1]
+        date_length = len(date)
+        date_starting_index = date.find('201')
+        date_ending_index = date.find(':')+3
+        date = date[date_starting_index:-(date_length-date_ending_index)]
+        update_time = datetime.strptime(date, '%Y年%m月%d日 %I:%M')
+        update_time_jst = timezone('Asia/Tokyo').localize(update_time)
+        if current_time_jst >= update_time_jst:
+            version_num_start = version_name.find('【')
+            version_num_end = version_name.find('】')
+            version_length = len(version_name)
+            version_name = version_name[version_num_start+1 : -(version_length - version_num_end)]
+            version_found = True
+
 print(version_name)
 
 pickup_url = "http://www.capcom.co.jp/arcade/rev/PC/music_pickup.html"
@@ -21,7 +63,6 @@ toho_opened = urlopen(toho_url)
 original_opened = urlopen(original_url)
 variety_opened = urlopen(variety_url)
 
-base_url = "http://www.capcom.co.jp/arcade/rev/PC/"
 
 print ("Opened pages")
 
@@ -65,18 +106,7 @@ page_to_array(toho_pages, "東方Project")
 page_to_array(original_pages, "ORIGINAL")
 page_to_array(variety_pages, "VARIETY")
 
-'''
-license_songs = BeautifulSoup(license_opened, "html5lib")
-license_song_tables = license_songs.find('div', id='main').find_all('table')
-license_titles = license_songs.find('div', id='main').find_all('h3')
-orig_songs = BeautifulSoup(orig_opened, "html5lib")
-orig_song_tables = orig_songs.find('div', id='main').find_all('table')
-orig_titles = orig_songs.find('div', id='main').find_all('h3')
-
-
 print ("Parsed pages")
-
-songs = []
 
 song_dict = {}
 
@@ -88,7 +118,7 @@ song_dict = {}
 
 print ("Grabbing data...")
 
-def get_level(col):
+'''def get_level(col):
     level = col.text
     if len(col) != 1 and level != '-' and len(col) != 0:
         index = len(level)-1
@@ -101,12 +131,13 @@ def get_level(col):
     return level
 
 diff_options = {
-    0: "beginner",
-    1: "basic",
-    2: "difficult",
-    3: "expert",
-    4: "challenge"
+    0: "EASY",
+    1: "MEDIUM",
+    2: "STANDARD",
+    3: "MASTER",
+    4: "UNLIMITED"
 }
+
 def get_song(level, difficulty, version, style, title, artist, bpm):
     if(level != -1):
         diff_name = diff_options[difficulty]
@@ -124,50 +155,23 @@ def get_song(level, difficulty, version, style, title, artist, bpm):
             song_dict[key] = True
             songs.append(data)
 
-def parse_raw(rows, version):
+def parse_raw(rows):
     for row in rows:
-        cols = row.find_all('td')
-        if len(cols) == 12 or len(cols) == 13:
-            count = len(songs)
-            x = 0
-            genre = ""
-            if len(cols) == 13:
-                x = 1;
-                genre = cols[2].text
-            title = cols[0]
-            if(title.find('span') is None):
-                title = title.text
-            else:
-                title = title.find('span').text
-            artist = cols[1]
-            if(artist.find('span') is None):
-                artist = artist.text
-            else:
-                artist = artist.find('span').text
-            bpm = cols[2+x].text
-            get_song(get_level(cols[3+x]), 0, version, "single", title, artist, bpm)
-            get_song(get_level(cols[4+x]), 1, version, "single", title, artist, bpm)
-            get_song(get_level(cols[5+x]), 2, version, "single", title, artist, bpm)
-            get_song(get_level(cols[6+x]), 3, version, "single", title, artist, bpm)
-            get_song(get_level(cols[7+x]), 4, version, "single", title, artist, bpm)
-            get_song(get_level(cols[8+x]), 1, version, "double", title, artist, bpm)
-            get_song(get_level(cols[9+x]), 2, version, "double", title, artist, bpm)
-            get_song(get_level(cols[10+x]), 3, version, "double", title, artist, bpm)
-            get_song(get_level(cols[11+x]), 4, version, "double", title, artist, bpm)
-            if(len(songs) == count):
-                print(title)
-                print("error")
+        version = row.title;
+        song_info = row.li;
+
     return
 
-parse_raw(song_rows, "")'''
-'''
+parse_raw(song_rows, "")
+
 print ("Writing json")
 
 final_data = {
     "id": "ddrextreme",
     "songs": songs
-}
-with open('../games/ddr/extreme/' +  "wrong_data"+ '.json', 'w') as file:
+}'''
+'''
+with open('../games/crossbeats/sunshine/' +  + '.json', 'w') as file:
     json.dump(final_data, file, indent=2, sort_keys=True)
 print ("Finished writing json")
 
