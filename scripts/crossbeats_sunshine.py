@@ -153,10 +153,10 @@ def parse_raw(rows):
         artist = song_info.find('p', class_="n-mAuther").text
         bpm = song_info.find('p', class_="n-mDataBpm").find('span').text
         get_song(song_info.find('span', class_="easy").text, 0, version, "single", title, artist, bpm)
-        get_song(song_info.find('span', class_="standard").text, 0, version, "single", title, artist, bpm)
-        get_song(song_info.find('span', class_="hard").text, 0, version, "single", title, artist, bpm)
-        get_song(song_info.find('span', class_="master").text, 0, version, "single", title, artist, bpm)
-        get_song(song_info.find('span', class_="unlimited").text, 0, version, "single", title, artist, bpm)
+        get_song(song_info.find('span', class_="standard").text, 1, version, "single", title, artist, bpm)
+        get_song(song_info.find('span', class_="hard").text, 2, version, "single", title, artist, bpm)
+        get_song(song_info.find('span', class_="master").text, 3, version, "single", title, artist, bpm)
+        get_song(song_info.find('span', class_="unlimited").text, 4, version, "single", title, artist, bpm)
     return
 
 parse_raw(raw_songs)
@@ -167,13 +167,12 @@ final_data = {
     "id": "crossbeats_sunshine",
     "songs": songs
 }
-print(final_data)
-'''
-with open('../games/crossbeats/sunshine/' +  + '.json', 'w') as file:
+with open('../games/crossbeats/sunshine/' + version_name + '.json', 'w') as file:
     json.dump(final_data, file, indent=2, sort_keys=True)
 print ("Finished writing json")
 
 data = {}
+'''
 with open('../games/game_data.json') as file:
     data = json.load(file)
     data["games"]["ddr"]["versions"]["extreme"]["current"] = version_name
