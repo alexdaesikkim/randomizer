@@ -165,10 +165,10 @@ parse_raw(raw_songs)
 print ("Writing json")
 
 final_data = {
-    "id": "crossbeats_sunshine",
+    "id": "crossbeats_sunrise",
     "songs": songs
 }
-with open('../games/crossbeats/sunshine/' + version_name + '.json', 'w') as file:
+with open('../games/crossbeats/sunrise/' + version_name + '.json', 'w') as file:
     json.dump(final_data, file, indent=2, sort_keys=True)
 print ("Finished writing json")
 
