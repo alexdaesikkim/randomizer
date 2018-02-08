@@ -128,7 +128,7 @@ diff_options = {
     4: "UNLIMITED"
 }
 
-def get_song(level, difficulty, version, style, title, artist, bpm):
+def get_song(level, difficulty, version, style, title, artist, genre, bpm):
     if(level != "--"):
         diff_name = diff_options[difficulty]
         key = title + " " + artist + " " + version + " " + bpm + " "+ diff_name + " " + style
@@ -140,23 +140,24 @@ def get_song(level, difficulty, version, style, title, artist, bpm):
                 "style": style,
                 "difficulty": difficulty,
                 "level": level,
-                "version": version
+                "version": version,
+                "genre": genre
             }
             song_dict[key] = True
             songs.append(data)
 
 def parse_raw(rows):
     for row in rows:
-        version = row["title"];
+        genre = row["title"];
         song_info = row["li"];
         title = song_info.find('p', class_="n-mTitle").text
         artist = song_info.find('p', class_="n-mAuther").text
         bpm = song_info.find('p', class_="n-mDataBpm").find('span').text
-        get_song(song_info.find('span', class_="easy").text, 0, version, "single", title, artist, bpm)
-        get_song(song_info.find('span', class_="standard").text, 1, version, "single", title, artist, bpm)
-        get_song(song_info.find('span', class_="hard").text, 2, version, "single", title, artist, bpm)
-        get_song(song_info.find('span', class_="master").text, 3, version, "single", title, artist, bpm)
-        get_song(song_info.find('span', class_="unlimited").text, 4, version, "single", title, artist, bpm)
+        get_song(song_info.find('span', class_="easy").text, 0, "", "single", title, artist, genre, bpm)
+        get_song(song_info.find('span', class_="standard").text, 1, "", "single", title, artist, genre, bpm)
+        get_song(song_info.find('span', class_="hard").text, 2, "", "single", title, artist, genre, bpm)
+        get_song(song_info.find('span', class_="master").text, 3, "", "single", title, artist, genre, bpm)
+        get_song(song_info.find('span', class_="unlimited").text, 4, "", "single", title, artist, genre, bpm)
     return
 
 parse_raw(raw_songs)

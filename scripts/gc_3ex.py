@@ -81,15 +81,15 @@ def parse_raw(rows, version):
             if not (re.match("storyteller:", cols[1].text)):
                 title = cols[0].text
                 artist = cols[1].text
-                genre = ""
+                genre = version
                 bpm = cols[3].text
                 levels = get_levels(cols[2])
 
-                get_song(levels[0], 0, version, "single", title, artist, genre, bpm)
-                get_song(levels[1], 1, version, "single", title, artist, genre, bpm)
-                get_song(levels[2], 2, version, "single", title, artist, genre, bpm)
+                get_song(levels[0], 0, "", "single", title, artist, genre, bpm)
+                get_song(levels[1], 1, "", "single", title, artist, genre, bpm)
+                get_song(levels[2], 2, "", "single", title, artist, genre, bpm)
                 if(len(levels) > 3):
-                    get_song(levels[3], 3, version, "single", title, artist, genre, bpm)
+                    get_song(levels[3], 3, "", "single", title, artist, genre, bpm)
     return
 
 parse_raw(all_rows, "")
