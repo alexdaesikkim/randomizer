@@ -227,8 +227,6 @@ app.get('/api/alpha/random/:game/:version/', function(req, res, next){
   else{
     builds = game_data.games[game].versions[version].builds
     if(!builds.includes(build)){
-      console.log(build)
-      console.log(builds)
       obj = {
         status:{
           message: "Invalid build name",
@@ -242,6 +240,8 @@ app.get('/api/alpha/random/:game/:version/', function(req, res, next){
     }
   }
 
+  //need to cache the objects
+
   var song_obj = grab_data_cache(game, version, build);
 
   if(song_obj.status != null){
@@ -251,12 +251,10 @@ app.get('/api/alpha/random/:game/:version/', function(req, res, next){
     return;
   }
 
-  //need to cache the objects
-
   //FILTER results based on the params given
 
   //not really time consuming to generate
-  //how does it fare against using the actually array to sort?
+  //how does it fare against using the actual array to sort?
   var songs = song_obj.songs;
   songs = filter_songs(songs, style, min_difficulty, max_difficulty, min_level, max_level);
 

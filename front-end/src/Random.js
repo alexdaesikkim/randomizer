@@ -649,6 +649,7 @@ var Song = createReactClass({
     if(this.props.game === 'museca') classes = ['green', 'yellow', 'red']
     if(this.props.game === 'gc') classes = ['blue', 'yellow', 'red', 'gray']
     if(this.props.game === 'jubeat') classes = ['green', 'yellow', 'red']
+    if(this.props.game === 'crossbeats') classes = ['blue', 'green', 'yellow', 'red', 'purple']
     class_name += classes[difficulty]
     var object = {
       diff_string: diff_string,
