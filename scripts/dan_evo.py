@@ -16,22 +16,13 @@ print(version_name)
 
 url = "http://bemaniwiki.com/index.php?DanceEvolution%20ARCADE%2F%BC%FD%CF%BF%B6%CA%A5%EA%A5%B9%A5%C8"
 
-page_new = urlopen(new_url)
-page_old = urlopen(old_url)
+song_page = urlopen(url)
 
 print ("Opened pages")
 
-new_tables = BeautifulSoup(page_new, "html5lib").find_all('div', class_='ie5')
-old_tables = BeautifulSoup(page_old, "html5lib").find_all('div', class_='ie5')
-new_table_1 = new_tables[0]
-new_table_2 = new_tables[1]
-new_table_3 = new_tables[2]
-old_table = old_tables[2]
+table = BeautifulSoup(page_new, "html5lib").find_all('div', class_='ie5')
 
-new_rows_1 = new_table_1.find_all('tr')
-new_rows_2 = new_table_2.find_all('tr')
-new_rows_3 = new_table_3.find_all('tr')
-old_rows = old_table.find_all('tr')
+song_rows = table.find_all('tr')
 
 print ("Parsed pages")
 

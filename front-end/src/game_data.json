@@ -1,5 +1,36 @@
 {
   "games": {
+    "crossbeats": {
+      "name": "crossbeats REV.",
+      "styles": [
+        "single"
+      ],
+      "versions": {
+        "sunrise": {
+          "builds": [
+            "ver1.03.14[104]"
+          ],
+          "current": "ver1.03.14[104]",
+          "difficulty": {
+            "list": [
+              "EASY",
+              "MEDIUM",
+              "STANDARD",
+              "MASTER",
+              "UNLIMITED"
+            ],
+            "max": 4,
+            "min": 0
+          },
+          "level": {
+            "max": 99,
+            "min": 1
+          },
+          "na_option": false,
+          "name": "SUNRISE"
+        }
+      }
+    },
     "ddr": {
       "name": "DanceDanceRevolution",
       "styles": [
@@ -87,9 +118,10 @@
       "versions": {
         "3ex": {
           "builds": [
-            "Ver3.58"
+            "Ver3.58",
+            "Ver3.59"
           ],
-          "current": "Ver3.58",
+          "current": "Ver3.59",
           "difficulty": {
             "list": [
               "Simple",
@@ -174,9 +206,10 @@
       "versions": {
         "clan": {
           "builds": [
-            "2017121903"
+            "2017121903",
+            "2018020501"
           ],
-          "current": "2017121903",
+          "current": "2018020501",
           "difficulty": {
             "list": [
               "Basic",

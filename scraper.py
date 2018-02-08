@@ -15,9 +15,6 @@ print("Starting")
 
 print("IIDX")
 
-print("SINOBUZ")
-subprocess.call([name, "iidx_sinobuz.py"], cwd="scripts")
-
 print("CANNON BALLERS")
 subprocess.call([name, "iidx_cannonballers.py"], cwd="scripts")
 
@@ -42,7 +39,17 @@ print("Reflesia")
 subprocess.call([name, "reflec_reflesia.py"], cwd="scripts")
 
 print("SDVX")
+print("Heavenly Haven")
 subprocess.call([name, "sdvx_hh.py"], cwd="scripts")
 
 print("MUSECA")
+print("1+1/2")
 subprocess.call([name, "museca_half.py"], cwd="scripts")
+
+print("GROOVE COASTER")
+print("3EX")
+subprocess.call([name, "gc_3ex.py"], cwd="scripts")
+
+print("crossbeats REV.")
+print("SUNRISE")
+subprocess.call([name, "crossbeats_sunrise.py"], cwd="scripts")

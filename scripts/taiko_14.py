@@ -1,110 +1,28 @@
+import datetime
 import json
 import os
 import re
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
-from datetime import datetime, timedelta
-from pytz import timezone
-#to grab version name, go to main page, get the latest news entry and use that version_name
-#checking for update:
-#1. check to see if the date has passed yet. if yes, get the new date version. if not, go back one and grab the version name from there
-#sidenote: might have to do this multiple times
-#2. after grabbing the version name, update
 
-current_time_jst = datetime.now(timezone('Asia/Tokyo'))
+#problem: how to solve overlapping issues?
+#1. can use local dict and keep track, but will double the memory size (3000ish max)
+#2. somehow use json properties? but how to do this?
+#3. use dict to store all data, then convert it to json later?
 
-base_url = "http://www.capcom.co.jp/arcade/rev/PC/"
-
-update_page = "http://www.capcom.co.jp/arcade/rev/PC/news1.html"
-update_page_opened = urlopen(update_page)
-update_links = BeautifulSoup(update_page_opened, "html5lib").find('div', class_='layout-1st').find_all('a')
-version_index = 0
-version_found = False
-while not version_found:
-    link = update_links[version_index]
-    version_index += 1
-    if(link['href'].startswith('newsentry')):
-        news_url = base_url + link['href']
-        news_page_opened = urlopen(news_url)
-        news_content = BeautifulSoup(news_page_opened, "html5lib").find('small')
-        for content in news_content.find_all("br"):
-            content.replace_with("\n")
-        news_content = news_content.text.split("\n")
-        news_content = [x for x in news_content if x != '']
-        date = news_content[0]
-        version_name = news_content[1]
-        date_length = len(date)
-        date_starting_index = date.find('201')
-        date_ending_index = date.find(':')+3
-        date = date[date_starting_index:-(date_length-date_ending_index)]
-        update_time = datetime.strptime(date, '%Y年%m月%d日 %I:%M')
-        update_time_jst = timezone('Asia/Tokyo').localize(update_time)
-        if current_time_jst >= update_time_jst:
-            version_num_start = version_name.find('【')
-            version_num_end = version_name.find('】')
-            version_length = len(version_name)
-            version_name = version_name[version_num_start+1 : -(version_length - version_num_end)]
-            version_found = True
-
+version_name = "2016080100"
 print(version_name)
 
-pickup_url = "http://www.capcom.co.jp/arcade/rev/PC/music_pickup.html"
-jpop_url = "http://www.capcom.co.jp/arcade/rev/PC/music_jpop.html"
-vocaloid_url = "http://www.capcom.co.jp/arcade/rev/PC/music_vocaloid.html"
-toho_url = "http://www.capcom.co.jp/arcade/rev/PC/music_toho.html"
-original_url = "http://www.capcom.co.jp/arcade/rev/PC/music_originaln.html"
-variety_url = "http://www.capcom.co.jp/arcade/rev/PC/music_variety.html"
+url = "http://www.wikihouse.com/taiko/index.php?AC14%A4%CE%BC%FD%CF%BF%B6%CA"
 
-pickup_opened = urlopen(pickup_url)
-jpop_opened = urlopen(jpop_url)
-vocaloid_opened = urlopen(vocaloid_url)
-toho_opened = urlopen(toho_url)
-original_opened = urlopen(original_url)
-variety_opened = urlopen(variety_url)
-
+song_page = urlopen(url)
 
 print ("Opened pages")
 
-print ("Processing links")
+table = BeautifulSoup(page_new, "html5lib").find_all('div', class_='ie5')
 
-def find_links(orig_url):
-    pages = []
-    opened_page = urlopen(orig_url)
-    links = BeautifulSoup(opened_page, "html5lib").find('div', class_='mPager-top').find_all('a')
-    if not links:
-        pages.append(orig_url)
-    else:
-        for link in links:
-            pages.append(base_url + link['href'])
-    return pages
-
-pickup_pages = find_links(pickup_url)
-jpop_pages = find_links(jpop_url)
-vocaloid_pages = find_links(vocaloid_url)
-toho_pages = find_links(toho_url)
-original_pages = find_links(original_url)
-variety_pages = find_links(variety_url)
-
-raw_songs = [];
-
-def page_to_array(urls, title):
-    for url in urls:
-        page = urlopen(url)
-        opened_page = BeautifulSoup(page, "html5lib").find_all('li', class_='gr-Black2');
-        for raw_song in opened_page:
-            obj = {
-                "title": title,
-                "li": raw_song
-            }
-            raw_songs.append(obj)
-
-page_to_array(pickup_pages, "PICKUP")
-page_to_array(jpop_pages, "J-POP")
-page_to_array(vocaloid_pages, "VOCALOID")
-page_to_array(toho_pages, "東方Project")
-page_to_array(original_pages, "ORIGINAL")
-page_to_array(variety_pages, "VARIETY")
+song_rows = table[1].find_all('tr')
 
 print ("Parsed pages")
 
@@ -112,30 +30,35 @@ songs = []
 
 song_dict = {}
 
-#solution: use dictionary, have title + difficulty (in plain text, i.e. SPA) as the key
-#REMINDER: leggendarias are separate difficulty due to reasons
-#also, remove (HCN ver.) before creating key
-
-#reminder to self for DDR: BSP, two of them exist. differentiate beginner
-
 print ("Grabbing data...")
 
+def get_level(col):
+    level = col.text
+    if len(col) != 1 and level != '-' and level != '' and level != '--' and len(col) != 0:
+        index = len(level)-1
+        while (level[index] != ']'):
+            index = index-1
+        level = level[index+1:len(level)]
+    elif level == '-' or level == '' or level == '--':
+        level = -1
+    return level
+
 diff_options = {
-    0: "EASY",
-    1: "MEDIUM",
-    2: "STANDARD",
-    3: "MASTER",
-    4: "UNLIMITED"
+    0: "kantan",
+    1: "futsuu",
+    2: "muzukashii",
+    3: "oni"
 }
 
-def get_song(level, difficulty, version, style, title, artist, bpm):
-    if(level != "--"):
+def get_song(level, difficulty, version, style, title, artist, genre, bpm):
+    if(level != -1):
         diff_name = diff_options[difficulty]
         key = title + " " + artist + " " + version + " " + bpm + " "+ diff_name + " " + style
         if key not in song_dict:
             data = {
                 "title": title,
                 "artist": artist,
+                "genre": genre,
                 "bpm": bpm,
                 "style": style,
                 "difficulty": difficulty,
@@ -146,43 +69,48 @@ def get_song(level, difficulty, version, style, title, artist, bpm):
             songs.append(data)
 
 def parse_raw(rows):
+    version = ""
     for row in rows:
-        version = row["title"];
-        song_info = row["li"];
-        title = song_info.find('p', class_="n-mTitle").text
-        artist = song_info.find('p', class_="n-mAuther").text
-        bpm = song_info.find('p', class_="n-mDataBpm").find('span').text
-        get_song(song_info.find('span', class_="easy").text, 0, version, "single", title, artist, bpm)
-        get_song(song_info.find('span', class_="standard").text, 1, version, "single", title, artist, bpm)
-        get_song(song_info.find('span', class_="hard").text, 2, version, "single", title, artist, bpm)
-        get_song(song_info.find('span', class_="master").text, 3, version, "single", title, artist, bpm)
-        get_song(song_info.find('span', class_="unlimited").text, 4, version, "single", title, artist, bpm)
+        cols = row.find_all('td')
+        if len(cols) == 1:
+            version = cols[0].text
+        if (len(cols) == 8):
+                title = cols[1].text
+                artist = cols[2].text
+                bpm = cols[3].text
+                get_song(get_level(cols[4]), 0, version, "single", title, artist, genre, bpm)
+                get_song(get_level(cols[5]), 1, version, "single", title, artist, genre, bpm)
+                get_song(get_level(cols[6]), 2, version, "single", title, artist, genre, bpm)
+                get_song(get_level(cols[7]), 2, version, "single", title, artist, genre, bpm)
     return
 
-parse_raw(raw_songs)
+parse_raw(old_rows, "")
+parse_raw(new_rows_1, "jubeat clan")
+parse_raw(new_rows_2, "jubeat clan")
+parse_raw(new_rows_3, "jubeat clan")
 
 print ("Writing json")
 
-final_data = {
-    "id": "crossbeats_sunshine",
+'''final_data = {
+    "id": "jubeatclan",
     "songs": songs
 }
-with open('../games/crossbeats/sunshine/' + version_name + '.json', 'w') as file:
+
+with open('../games/jubeat/clan/' +  version_name + '.json', 'w') as file:
     json.dump(final_data, file, indent=2, sort_keys=True)
-print ("Finished writing json")
+print ("Finished")
 
 data = {}
-'''
 with open('../games/game_data.json') as file:
     data = json.load(file)
-    data["games"]["ddr"]["versions"]["extreme"]["current"] = version_name
-    array = data["games"]["ddr"]["versions"]["extreme"]["builds"]
+    data["games"]["jubeat"]["versions"]["clan"]["current"] = version_name
+    array = data["games"]["jubeat"]["versions"]["clan"]["builds"]
     check = False
     for x in array:
         if(version_name == x):
             check = True
     if not check:
-        data["games"]["ddr"]["versions"]["extreme"]["builds"].append(version_name)
+        data["games"]["jubeat"]["versions"]["clan"]["builds"].append(version_name)
 print ("Finished reading game_data.json file")
 
 with open('../games/game_data.json', 'w') as file:

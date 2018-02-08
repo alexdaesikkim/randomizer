@@ -67864,6 +67864,26 @@
     {
       "artist": "Massive New Krew",
       "bpm": "155",
+      "difficulty": 1,
+      "genre": "HARDSTYLE",
+      "level": "6",
+      "style": "double",
+      "title": "Persephone",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "Massive New Krew",
+      "bpm": "155",
+      "difficulty": 2,
+      "genre": "HARDSTYLE",
+      "level": "10",
+      "style": "double",
+      "title": "Persephone",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "Massive New Krew",
+      "bpm": "155",
       "difficulty": 3,
       "genre": "HARDSTYLE",
       "level": "12",

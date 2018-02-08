@@ -29295,17 +29295,6 @@
       "version": "DDR X2  "
     },
     {
-      "artist": "\u30d4\u30f3\u30af\u30bf\u30fc\u30dc",
-      "bpm": "185",
-      "difficulty": 4,
-      "level": "",
-      "north_america": true,
-      "source": "DDR X2",
-      "style": "double",
-      "title": "\u2606shining\u2606",
-      "version": "DDR X2  "
-    },
-    {
       "artist": "CAPACITY GATE",
       "bpm": "(25-)100",
       "difficulty": 0,
@@ -54941,7 +54930,7 @@
       "difficulty": 0,
       "level": "3",
       "north_america": true,
-      "source": "pop'n 20 fantasia\uff0f\u30d5\u30a1\u30c3\u30b7\u30cd\u30a4\u30b7\u30e7\u30f3",
+      "source": "pop'n 20 fantasia",
       "style": "single",
       "title": "\u6727",
       "version": "DanceDanceRevolution A"
@@ -54952,7 +54941,7 @@
       "difficulty": 1,
       "level": "6",
       "north_america": true,
-      "source": "pop'n 20 fantasia\uff0f\u30d5\u30a1\u30c3\u30b7\u30cd\u30a4\u30b7\u30e7\u30f3",
+      "source": "pop'n 20 fantasia",
       "style": "single",
       "title": "\u6727",
       "version": "DanceDanceRevolution A"
@@ -54963,7 +54952,7 @@
       "difficulty": 2,
       "level": "8",
       "north_america": true,
-      "source": "pop'n 20 fantasia\uff0f\u30d5\u30a1\u30c3\u30b7\u30cd\u30a4\u30b7\u30e7\u30f3",
+      "source": "pop'n 20 fantasia",
       "style": "single",
       "title": "\u6727",
       "version": "DanceDanceRevolution A"
@@ -54974,7 +54963,7 @@
       "difficulty": 3,
       "level": "11",
       "north_america": true,
-      "source": "pop'n 20 fantasia\uff0f\u30d5\u30a1\u30c3\u30b7\u30cd\u30a4\u30b7\u30e7\u30f3",
+      "source": "pop'n 20 fantasia",
       "style": "single",
       "title": "\u6727",
       "version": "DanceDanceRevolution A"
@@ -54985,7 +54974,7 @@
       "difficulty": 4,
       "level": "13",
       "north_america": true,
-      "source": "pop'n 20 fantasia\uff0f\u30d5\u30a1\u30c3\u30b7\u30cd\u30a4\u30b7\u30e7\u30f3",
+      "source": "pop'n 20 fantasia",
       "style": "single",
       "title": "\u6727",
       "version": "DanceDanceRevolution A"
@@ -54996,7 +54985,7 @@
       "difficulty": 1,
       "level": "8",
       "north_america": true,
-      "source": "pop'n 20 fantasia\uff0f\u30d5\u30a1\u30c3\u30b7\u30cd\u30a4\u30b7\u30e7\u30f3",
+      "source": "pop'n 20 fantasia",
       "style": "double",
       "title": "\u6727",
       "version": "DanceDanceRevolution A"
@@ -55007,7 +54996,7 @@
       "difficulty": 2,
       "level": "10",
       "north_america": true,
-      "source": "pop'n 20 fantasia\uff0f\u30d5\u30a1\u30c3\u30b7\u30cd\u30a4\u30b7\u30e7\u30f3",
+      "source": "pop'n 20 fantasia",
       "style": "double",
       "title": "\u6727",
       "version": "DanceDanceRevolution A"
@@ -55018,7 +55007,7 @@
       "difficulty": 3,
       "level": "13",
       "north_america": true,
-      "source": "pop'n 20 fantasia\uff0f\u30d5\u30a1\u30c3\u30b7\u30cd\u30a4\u30b7\u30e7\u30f3",
+      "source": "pop'n 20 fantasia",
       "style": "double",
       "title": "\u6727",
       "version": "DanceDanceRevolution A"
@@ -55029,7 +55018,7 @@
       "difficulty": 4,
       "level": "14",
       "north_america": true,
-      "source": "pop'n 20 fantasia\uff0f\u30d5\u30a1\u30c3\u30b7\u30cd\u30a4\u30b7\u30e7\u30f3",
+      "source": "pop'n 20 fantasia",
       "style": "double",
       "title": "\u6727",
       "version": "DanceDanceRevolution A"
