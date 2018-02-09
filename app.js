@@ -289,6 +289,14 @@ app.get('/api/alpha/random/:game/:version/', function(req, res, next){
 
 });
 
+app.get('/api/alpha/info/all', function(req, res, next){
+  var obj = game_data;
+  res.json(obj);
+  res.status(200);
+  res.end();
+
+})
+
 app.get('/api/alpha/info/:game/:version/current', function(req, res, next){
   var obj = {
     current: game_data.games[req.params.game].versions[req.params.version].current

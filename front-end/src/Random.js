@@ -3,17 +3,16 @@ import './Random.css';
 import $ from 'jquery';
 import {Input, Button, Icon, CardPanel} from 'react-materialize';
 
-var game_data = require('./game_data.json');
-
 var createReactClass = require('create-react-class');
 
 var Random = createReactClass({
   getInitialState(){
     return{
+      game_data: [],
       panel: true,
-      game_title: 'Bemani Randomizer',
+      game_title: 'Loading...',
       game_name: '',
-      games: Object.keys(game_data.games),
+      games: [],
       version_name: '',
       versions: [],
       build_name: '',
@@ -48,18 +47,41 @@ var Random = createReactClass({
     }
   },
 
+  componentDidMount(){
+    var that = this;
+    $.ajax({
+      url: '/api/alpha/info/all',
+      method: 'GET',
+      success: function(data){
+        that.setState({
+          game_title: 'Randomizer',
+          game_data: data,
+          games: Object.keys(data.games)
+        });
+      },
+      error: function(data){
+        that.setState({
+          errors:{
+            error_messages: [],
+            error_class: "no-error"
+          }
+        })
+      }
+    })
+  },
+
   changeGame(event){
     var game = event.target.value;
     if(game !== ''){
       for(var x = 0; x < this.state.games.length; x++){
         var g = this.state.games[x];
         if(g === game){
-          var styles = game_data.games[g].styles;
-          var versions = Object.keys(game_data.games[g].versions);
+          var styles = this.state.game_data.games[g].styles;
+          var versions = Object.keys(this.state.game_data.games[g].versions);
           var version_list = [];
           for(var i = 0; i < versions.length; i++){
             var key = versions[i];
-            var version = game_data.games[g].versions[key];
+            var version = this.state.game_data.games[g].versions[key];
             var pair = [];
             pair.push(key);
             pair.push(version.name);
@@ -102,31 +124,31 @@ var Random = createReactClass({
     for(var x = 0; x < this.state.versions.length; x++){
       var v = this.state.versions[x][0];
       if(v === version){
-        var builds = game_data.games[this.state.game_name].versions[v].builds;
+        var builds = this.state.game_data.games[this.state.game_name].versions[v].builds;
         builds = builds.sort().reverse(); //time consuming? but small array so shouldn't matter
         var build_name = builds[0];
-        var diff_list = game_data.games[this.state.game_name].versions[v].difficulty.list
+        var diff_list = this.state.game_data.games[this.state.game_name].versions[v].difficulty.list
         if(this.state.game_name === 'sdvx' && version === 'iv') diff_list = ["Novice", "Advanced", "Exhaust", "Maximum", "INF/GRV/HVN"]
-        var game_title = game_data.games[this.state.game_name].name + " " + game_data.games[this.state.game_name].versions[v].name;
+        var game_title = this.state.game_data.games[this.state.game_name].name + " " + this.state.game_data.games[this.state.game_name].versions[v].name;
         this.setState({
           version_name: version,
           builds: builds,
           build_name: build_name,
-          styles: game_data.games[this.state.game_name].styles,
-          style: game_data.games[this.state.game_name].styles[0],
+          styles: this.state.game_data.games[this.state.game_name].styles,
+          style: this.state.game_data.games[this.state.game_name].styles[0],
           game_title: game_title,
           game_limits:{
-            min_level: game_data.games[this.state.game_name].versions[v].level.min,
-            max_level: game_data.games[this.state.game_name].versions[v].level.max,
-            min_diff: game_data.games[this.state.game_name].versions[v].difficulty.min,
-            max_diff: game_data.games[this.state.game_name].versions[v].difficulty.max
+            min_level: this.state.game_data.games[this.state.game_name].versions[v].level.min,
+            max_level: this.state.game_data.games[this.state.game_name].versions[v].level.max,
+            min_diff: this.state.game_data.games[this.state.game_name].versions[v].difficulty.min,
+            max_diff: this.state.game_data.games[this.state.game_name].versions[v].difficulty.max
           },
-          min_level: game_data.games[this.state.game_name].versions[v].level.min,
-          max_level: game_data.games[this.state.game_name].versions[v].level.max,
-          min_diff: game_data.games[this.state.game_name].versions[v].difficulty.min,
+          min_level: this.state.game_data.games[this.state.game_name].versions[v].level.min,
+          max_level: this.state.game_data.games[this.state.game_name].versions[v].level.max,
+          min_diff: this.state.game_data.games[this.state.game_name].versions[v].difficulty.min,
           diff_list: diff_list,
-          max_diff: game_data.games[this.state.game_name].versions[v].difficulty.max,
-          na_option: game_data.games[this.state.game_name].versions[v].na_option,
+          max_diff: this.state.game_data.games[this.state.game_name].versions[v].difficulty.max,
+          na_option: this.state.game_data.games[this.state.game_name].versions[v].na_option,
           panel: true
         })
       }
@@ -134,7 +156,6 @@ var Random = createReactClass({
   },
 
   errorCheck(){
-    var obj = {}
     var error_messages = []
     if(this.state.min_level > this.state.max_level){
       error_messages.push("Min level cannot be higher than max level")
@@ -269,7 +290,7 @@ var Random = createReactClass({
           var songs = [];
           var styles = that.state.styles;
           for(var i = 0; i < raw_songs.length; i++){
-            var style = styles.length == 1 ? "" : raw_songs[i].style;
+            var style = styles.length === 1 ? "" : raw_songs[i].style;
             var object = {
               id: i,
               name: raw_songs[i].title,
@@ -343,7 +364,7 @@ var Random = createReactClass({
     });
     var builds = this.state.builds.map(function(obj){
       var build = obj;
-      if(build === game_data.games[that.state.game_name].versions[that.state.version_name].current){
+      if(build === that.state.game_data.games[that.state.game_name].versions[that.state.version_name].current){
         build = build + "(Current)";
       }
       return(
@@ -582,7 +603,7 @@ var Random = createReactClass({
       if(!this.state.panel){
         return(
           <div>
-            <Button floating fab='horizontal' fabClickOnly='true' icon='menu' className='gray' large style={{bottom: '25px', right: '25px'}}>
+            <Button floating fab='horizontal' fabClickOnly={true} icon='menu' className='gray' large style={{bottom: '25px', right: '25px'}}>
               <Button floating icon='undo' className={this.state.undo_bans.length > 0 ? "deep-orange darken-4" : "disabled"} onClick={this.undoBans}/>
               <Button floating icon='replay' className={this.state.undo_bans.length > 0 ? "blue" : "disabled"} onClick={this.resetSongs}/>
             </Button>
@@ -607,7 +628,7 @@ var Random = createReactClass({
     var that = this;
     var song_cards = this.state.songs.map(function(obj){
       return(
-        <Song song={obj} card_draw_panel={that.state.card_draw_panel} game={that.state.game_name} version={that.state.version_name} difficulties={game_data.games[that.state.game_name].versions[that.state.version_name].difficulty.list} ban = {that.handleBans} key={obj.name + "_" + obj.difficulty} />
+        <Song song={obj} card_draw_panel={that.state.card_draw_panel} game={that.state.game_name} version={that.state.version_name} difficulties={that.state.game_data.games[that.state.game_name].versions[that.state.version_name].difficulty.list} ban = {that.handleBans} key={obj.name + "_" + obj.difficulty} />
       )
     })
     return (
