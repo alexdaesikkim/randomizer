@@ -1,7 +1,7 @@
 import React from 'react';
 import './Random.css';
 import $ from 'jquery';
-import {Input, Button, Icon, CardPanel} from 'react-materialize';
+import {Input, Button} from 'react-materialize';
 
 var createReactClass = require('create-react-class');
 
@@ -62,8 +62,8 @@ var Random = createReactClass({
       error: function(data){
         that.setState({
           errors:{
-            error_messages: [],
-            error_class: "no-error"
+            error_messages: ["Please reload the page and try again. If error persists, please contact admin (AJAX return error)"],
+            error_class: "form-error"
           }
         })
       }
@@ -469,9 +469,9 @@ var Random = createReactClass({
       });
       var diff_ids = [];
       var diff_names = [];
-      for(var i = 0; i < this.state.diff_list.length; i++){
-        diff_ids.push(i);
-        diff_names.push(i);
+      for(var j = 0; j < this.state.diff_list.length; j++){
+        diff_ids.push(j);
+        diff_names.push(j);
       };
       //sdvx edgecase
       if(this.state.diff_list.length-1 !== this.state.game_limits.max_diff){
@@ -704,7 +704,6 @@ var Song = createReactClass({
   render() {
     var object = this.diff_return(this.props.song.difficulty);
     var difficulty = object.diff_string;
-    var card_class = object.class_name;
     var style = this.props.song.style.charAt(0).toUpperCase() + this.props.song.style.slice(1);
 
     var card_class = this.props.song.active ? object.class_name : "Song-card card-out"
