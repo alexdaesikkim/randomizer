@@ -669,7 +669,7 @@ var Song = createReactClass({
     if(this.props.game === 'popn') classes = ['blue', 'green', 'yellow', 'red']
     if(this.props.game === 'rb') classes = ['green', 'yellow', 'red', 'white']
     if(this.props.game === 'museca') classes = ['green', 'yellow', 'red']
-    if(this.props.game === 'gc') classes = ['blue', 'yellow', 'red', 'gray']
+    if(this.props.game === 'groovecoaster') classes = ['blue', 'yellow', 'red', 'gray']
     if(this.props.game === 'jubeat') classes = ['green', 'yellow', 'red']
     if(this.props.game === 'crossbeats') classes = ['blue', 'green', 'yellow', 'red', 'purple']
     if(this.props.game === 'danevo') classes = ['white']
