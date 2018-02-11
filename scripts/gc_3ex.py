@@ -97,25 +97,25 @@ parse_raw(all_rows, "")
 print ("Writing json")
 
 final_data = {
-    "id": "gc_3ex",
+    "id": "groovecoaster_3ex",
     "songs": songs
 }
 
-with open('../games/gc/3ex/' +  version_name + '.json', 'w') as file:
+with open('../games/groovecoaster/3ex/' +  version_name + '.json', 'w') as file:
     json.dump(final_data, file, indent=2, sort_keys=True)
 print ("Finished")
 
 data = {}
 with open('../games/game_data.json') as file:
     data = json.load(file)
-    data["games"]["gc"]["versions"]["3ex"]["current"] = version_name
-    array = data["games"]["gc"]["versions"]["3ex"]["builds"]
+    data["games"]["groovecoaster"]["versions"]["3ex"]["current"] = version_name
+    array = data["games"]["groovecoaster"]["versions"]["3ex"]["builds"]
     check = False
     for x in array:
         if(version_name == x):
             check = True
     if not check:
-        data["games"]["gc"]["versions"]["3ex"]["builds"].append(version_name)
+        data["games"]["groovecoaster"]["versions"]["3ex"]["builds"].append(version_name)
 print ("Finished reading game_data.json file")
 
 with open('../games/game_data.json', 'w') as file:

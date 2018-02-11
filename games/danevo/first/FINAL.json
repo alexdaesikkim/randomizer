@@ -1,0 +1,765 @@
+{
+  "id": "danevo",
+  "songs": [
+    {
+      "artist": "AKB48",
+      "bpm": "(155-)178",
+      "difficulty": 0,
+      "genre": "AKB48 17th Single\u300c\u30d8\u30d3\u30fc\u30ed\u30fc\u30c6\u30fc\u30b7\u30e7\u30f3\u300d",
+      "level": "4",
+      "style": "single",
+      "title": "\u30d8\u30d3\u30fc\u30ed\u30fc\u30c6\u30fc\u30b7\u30e7\u30f3",
+      "version": ""
+    },
+    {
+      "artist": "\u30b4\u30fc\u30eb\u30c7\u30f3\u30dc\u30f3\u30d0\u30fc",
+      "bpm": "143",
+      "difficulty": 0,
+      "genre": "\u30b4\u30fc\u30eb\u30c7\u30f3\u30dc\u30f3\u30d0\u30fc 7th Single\u300c\u5973\u3005\u3057\u304f\u3066 / \u7720\u305f\u304f\u3066\u300d",
+      "level": "4",
+      "style": "single",
+      "title": "\u5973\u3005\u3057\u304f\u3066",
+      "version": ""
+    },
+    {
+      "artist": "\u5b9f\u8c37\u306a\u306a",
+      "bpm": "160",
+      "difficulty": 0,
+      "genre": "\u5b9f\u8c37\u306a\u306a 1st Single\u300c\u30eb\u30ab\u30eb\u30ab\u2605\u30ca\u30a4\u30c8\u30d5\u30a3\u30fc\u30d0\u30fc\u300d",
+      "level": "4",
+      "style": "single",
+      "title": "\u30eb\u30ab\u30eb\u30ab\u2605\u30ca\u30a4\u30c8\u30d5\u30a3\u30fc\u30d0\u30fc",
+      "version": ""
+    },
+    {
+      "artist": "\u3082\u3082\u3044\u308d\u30af\u30ed\u30fc\u30d0\u30fcZ",
+      "bpm": "160",
+      "difficulty": 0,
+      "genre": "\u3082\u3082\u3044\u308d\u30af\u30ed\u30fc\u30d0\u30fcZ 1st Album\u300c\u30d0\u30c8\u30eb\u30a2\u30f3\u30c9\u30ed\u30de\u30f3\u30b9\u300d",
+      "level": "4",
+      "style": "single",
+      "title": "\u884c\u304f\u305c\u3063\uff01\u602a\u76d7\u5c11\u5973 -Zver.-",
+      "version": ""
+    },
+    {
+      "artist": "ST\u2606RISH",
+      "bpm": "129",
+      "difficulty": 0,
+      "genre": "TV\u30a2\u30cb\u30e1\u300c\u3046\u305f\u306e\u2606\u30d7\u30ea\u30f3\u30b9\u3055\u307e\u3063\u266a \u30de\u30b8LOVE1000%\u300d(ST\u2606RISH 1st Single\u300c\u30de\u30b8LOVE1000%\u300d)",
+      "level": "3",
+      "style": "single",
+      "title": "\u30de\u30b8LOVE1000%",
+      "version": ""
+    },
+    {
+      "artist": "AKB48",
+      "bpm": "122",
+      "difficulty": 0,
+      "genre": "AKB48 32nd Single\u300c\u604b\u3059\u308b\u30d5\u30a9\u30fc\u30c1\u30e5\u30f3\u30af\u30c3\u30ad\u30fc\u300d",
+      "level": "1",
+      "style": "single",
+      "title": "\u604b\u3059\u308b\u30d5\u30a9\u30fc\u30c1\u30e5\u30f3\u30af\u30c3\u30ad\u30fc",
+      "version": ""
+    },
+    {
+      "artist": "\u798f\u539f\u9065",
+      "bpm": "174",
+      "difficulty": 0,
+      "genre": "\u798f\u539f\u9065 5th Single\u300c\u306a\u3081\u3053\u306e\u3046\u305f\u300d",
+      "level": "1",
+      "style": "single",
+      "title": "\u306a\u3081\u3053\u306e\u3046\u305f",
+      "version": ""
+    },
+    {
+      "artist": "ST\u2606RISH",
+      "bpm": "141",
+      "difficulty": 0,
+      "genre": "TV\u30a2\u30cb\u30e1\u300c\u3046\u305f\u306e\u2606\u30d7\u30ea\u30f3\u30b9\u3055\u307e\u3063\u266a \u30de\u30b8LOVE2000%\u300d(ST\u2606RISH 2nd Single\u300c\u30de\u30b8LOVE2000%\u300d)",
+      "level": "3",
+      "style": "single",
+      "title": "\u30de\u30b8LOVE2000%",
+      "version": ""
+    },
+    {
+      "artist": "\u79c1\u7acb\u6075\u6bd4\u5bff\u4e2d\u5b66",
+      "bpm": "170",
+      "difficulty": 0,
+      "genre": "\u79c1\u7acb\u6075\u6bd4\u5bff\u4e2d\u5b66 5th Single\u300c\u672a\u78ba\u8a8d\u4e2d\u5b66\u751fX\u300d",
+      "level": "4",
+      "style": "single",
+      "title": "\u672a\u78ba\u8a8d\u4e2d\u5b66\u751fX",
+      "version": ""
+    },
+    {
+      "artist": "\u304d\u3083\u308a\u30fc\u3071\u307f\u3085\u3071\u307f\u3085",
+      "bpm": "160",
+      "difficulty": 0,
+      "genre": "\u304d\u3083\u308a\u30fc\u3071\u307f\u3085\u3071\u307f\u3085 6th Single\u300c\u30a4\u30f3\u30d9\u30fc\u30c0\u30fc\u30a4\u30f3\u30d9\u30fc\u30c0\u30fc\u300d",
+      "level": "3",
+      "style": "single",
+      "title": "\u30a4\u30f3\u30d9\u30fc\u30c0\u30fc\u30a4\u30f3\u30d9\u30fc\u30c0\u30fc",
+      "version": ""
+    },
+    {
+      "artist": "\u6b4c\u7d44\u96ea\u6708\u82b1",
+      "bpm": "160",
+      "difficulty": 0,
+      "genre": "TV\u30a2\u30cb\u30e1\u300c\u6a5f\u5de7\u5c11\u5973\u306f\u50b7\u3064\u304b\u306a\u3044\u300d",
+      "level": "3",
+      "style": "single",
+      "title": "\u56de\u30ec\uff01\u96ea\u6708\u82b1",
+      "version": ""
+    },
+    {
+      "artist": "AKB48",
+      "bpm": "98",
+      "difficulty": 0,
+      "genre": "AKB48 37th single\u300c\u5fc3\u306e\u30d7\u30e9\u30ab\u30fc\u30c9\u300d",
+      "level": "1",
+      "style": "single",
+      "title": "\u5fc3\u306e\u30d7\u30e9\u30ab\u30fc\u30c9",
+      "version": ""
+    },
+    {
+      "artist": "\u3075\u306a\u3063\u3057\u30fc",
+      "bpm": "152",
+      "difficulty": 0,
+      "genre": "\u3075\u306a\u3063\u3057\u30fc 1st single\u300c\u3075\u306a \u3075\u306a \u3075\u306a\u3063\u3057\u30fc\u266a\u301c\u3075\u306a\u3063\u3057\u30fc\u516c\u5f0f\u30c6\u30fc\u30de\u30bd\u30f3\u30b0\u301c\u300d",
+      "level": "2",
+      "style": "single",
+      "title": "\u3075\u306a \u3075\u306a \u3075\u306a\u3063\u3057\u30fc\u266a\u301c\u3075\u306a\u3063\u3057\u30fc\u516c\u5f0f\u30c6\u30fc\u30de\u30bd\u30f3\u30b0\u301c",
+      "version": ""
+    },
+    {
+      "artist": "EasyPop",
+      "bpm": "127",
+      "difficulty": 0,
+      "genre": "\u30cb\u30b3\u30cb\u30b3\u52d5\u753b \u8e0a:sm12926280(\u539f\u66f2:sm12825985)",
+      "level": "2",
+      "style": "single",
+      "title": "\u30cf\u30c3\u30d4\u30fc\u30b7\u30f3\u30bb\u30b5\u30a4\u30b6",
+      "version": ""
+    },
+    {
+      "artist": "\u5b9f\u8c37\u306a\u306a",
+      "bpm": "162",
+      "difficulty": 0,
+      "genre": "\u30cb\u30b3\u30cb\u30b3\u52d5\u753b \u8e0a:sm12682209(\u539f\u66f2:sm7452616 \u6b4c:sm7479782)",
+      "level": "4",
+      "style": "single",
+      "title": "\u30e1\u30b0\u30e1\u30b0\u2606\u30d5\u30a1\u30a4\u30a2\u30fc\u30a8\u30f3\u30c9\u30ec\u30b9\u30ca\u30a4\u30c8",
+      "version": ""
+    },
+    {
+      "artist": "NAOKI feat. SMiLE.dk",
+      "bpm": "140",
+      "difficulty": 0,
+      "genre": "DDR X",
+      "level": "3",
+      "style": "single",
+      "title": "A Geisha's Dream",
+      "version": ""
+    },
+    {
+      "artist": "8 bit",
+      "bpm": "200",
+      "difficulty": 0,
+      "genre": "DanceManiaX 1st",
+      "level": "5",
+      "style": "single",
+      "title": "AFRONOVA PRIMEVAL",
+      "version": ""
+    },
+    {
+      "artist": "NAOKI with Y&Co.",
+      "bpm": "155",
+      "difficulty": 0,
+      "genre": "ParaParaParadise 1st",
+      "level": "2",
+      "style": "single",
+      "title": "CAN'T STOP FALLIN' IN LOVE-super euro version-",
+      "version": ""
+    },
+    {
+      "artist": "NAOKI feat.YASMINE",
+      "bpm": "135",
+      "difficulty": 0,
+      "genre": "DDR \u30d5\u30eb\u30d5\u30eb\u266a\u30d1\u30fc\u30c6\u30a3\u30fc",
+      "level": "2",
+      "style": "single",
+      "title": "INTO YOUR HEART (Ruffage remix)",
+      "version": ""
+    },
+    {
+      "artist": "NM",
+      "bpm": "132",
+      "difficulty": 0,
+      "genre": "DDR \u30d5\u30eb\u30d5\u30eb\u266a\u30d1\u30fc\u30c6\u30a3\u30fc",
+      "level": "2",
+      "style": "single",
+      "title": "Keep on movin'",
+      "version": ""
+    },
+    {
+      "artist": "jun",
+      "bpm": "(95-)190",
+      "difficulty": 0,
+      "genre": "DDR X2 & MUSIC FIT",
+      "level": "4",
+      "style": "single",
+      "title": "KIMONO\u2665PRINCESS",
+      "version": ""
+    },
+    {
+      "artist": "Carlos Coco Garcia",
+      "bpm": "130",
+      "difficulty": 0,
+      "genre": "DDR X2 & MUSIC FIT",
+      "level": "5",
+      "style": "single",
+      "title": "La receta",
+      "version": ""
+    },
+    {
+      "artist": "MITSU-O! with GEILA",
+      "bpm": "100",
+      "difficulty": 0,
+      "genre": "DDR 4thMIX",
+      "level": "1",
+      "style": "single",
+      "title": "MY SUMMER LOVE",
+      "version": ""
+    },
+    {
+      "artist": "NM feat. JaY_bEe(JB Ah-Fua)",
+      "bpm": "82",
+      "difficulty": 0,
+      "genre": "DDR \u30d5\u30eb\u30d5\u30eb\u266a\u30d1\u30fc\u30c6\u30a3\u30fc",
+      "level": "1",
+      "style": "single",
+      "title": "Open Your Eyes",
+      "version": ""
+    },
+    {
+      "artist": "SUPER STAR \u6e80-MITSURU-",
+      "bpm": "(85-)170",
+      "difficulty": 0,
+      "genre": "beatmaniaIIDX 17 SIRIUS",
+      "level": "3",
+      "style": "single",
+      "title": "She is my wife",
+      "version": ""
+    },
+    {
+      "artist": "NAOKI",
+      "bpm": "150",
+      "difficulty": 0,
+      "genre": "DDR 5thMIX",
+      "level": "1",
+      "style": "single",
+      "title": "STILL IN MY HEART",
+      "version": ""
+    },
+    {
+      "artist": "The Remembers",
+      "bpm": "120",
+      "difficulty": 0,
+      "genre": "DDR \u30d5\u30eb\u30d5\u30eb\u266a\u30d1\u30fc\u30c6\u30a3\u30fc",
+      "level": "3",
+      "style": "single",
+      "title": "Unity",
+      "version": ""
+    },
+    {
+      "artist": "D-crew feat.Matt Tucker",
+      "bpm": "119",
+      "difficulty": 0,
+      "genre": "DDR \u30d5\u30eb\u30d5\u30eb\u266a\u30d1\u30fc\u30c6\u30a3\u30fc",
+      "level": "5",
+      "style": "single",
+      "title": "We Can Win the Fight",
+      "version": ""
+    },
+    {
+      "artist": "HHH\u00d7MM\u00d7ST",
+      "bpm": "140",
+      "difficulty": 0,
+      "genre": "beatmaniaIIDX 19 Lincle",
+      "level": "5",
+      "style": "single",
+      "title": "Follow Tomorrow",
+      "version": ""
+    },
+    {
+      "artist": "T\u0401\u042fRA",
+      "bpm": "160",
+      "difficulty": 0,
+      "genre": "T\u0401\u042fRA 2ndAlbum\u300c\u0401VOLUTI\u03a6N\u300d(DDR SuperNOVA)",
+      "level": "4",
+      "style": "single",
+      "title": "\u83ef\u721b\u6f2b -Flowers- (2nd EDITION)",
+      "version": ""
+    },
+    {
+      "artist": "RevenG",
+      "bpm": "190",
+      "difficulty": 0,
+      "genre": "DDR MAX",
+      "level": "2",
+      "style": "single",
+      "title": "exotic ethnic",
+      "version": ""
+    },
+    {
+      "artist": "NM",
+      "bpm": "190",
+      "difficulty": 0,
+      "genre": "beatmania 6thMIX",
+      "level": "4",
+      "style": "single",
+      "title": "HYSTERIA 2001",
+      "version": ""
+    },
+    {
+      "artist": "Reven-G",
+      "bpm": "(13-)320",
+      "difficulty": 0,
+      "genre": "beatmaniaIIDX 8th style",
+      "level": "4",
+      "style": "single",
+      "title": "\u685c",
+      "version": ""
+    },
+    {
+      "artist": "\u65e5\u5411\u7f8e\u30d3\u30bf\u30fc\u30b9\u30a4\u30fc\u30c4\u266a",
+      "bpm": "205",
+      "difficulty": 0,
+      "genre": "\u30e1\u30c7\u30a3\u30a2\u30df\u30c3\u30af\u30b9\u4f01\u753b\u300c\u3072\u306a\u30d3\u30bf\u266a\u300d",
+      "level": "3",
+      "style": "single",
+      "title": "\u3061\u304f\u308f\u30d1\u30d5\u30a7\u3060\u3088\u2606CKP",
+      "version": ""
+    },
+    {
+      "artist": "\u7d05\u8272\u30ea\u30c8\u30de\u30b9",
+      "bpm": "163",
+      "difficulty": 0,
+      "genre": "pop'n music 15 ADVENTURE",
+      "level": "4",
+      "style": "single",
+      "title": "\u51db\u3068\u3057\u3066\u54b2\u304f\u82b1\u306e\u5982\u304f",
+      "version": ""
+    },
+    {
+      "artist": "\u65e5\u5411\u7f8e\u30d3\u30bf\u30fc\u30b9\u30a4\u30fc\u30c4\u266a & \u3053\u3053\u306a\u3064",
+      "bpm": "196",
+      "difficulty": 0,
+      "genre": "\u30e1\u30c7\u30a3\u30a2\u30df\u30c3\u30af\u30b9\u4f01\u753b\u300c\u3072\u306a\u30d3\u30bf\u266a\u300d",
+      "level": "2",
+      "style": "single",
+      "title": "\u30c1\u30e7\u30b3\u30ec\u30fc\u30c8\u30b9\u30de\u30a4\u30eb",
+      "version": ""
+    },
+    {
+      "artist": "SOUND HOLIC feat. Nana Takahashi",
+      "bpm": "150",
+      "difficulty": 0,
+      "genre": "SOUND VOLTEX BOOTH",
+      "level": "4",
+      "style": "single",
+      "title": "Ha\u30fblle\u30fblu\u30fbjah",
+      "version": ""
+    },
+    {
+      "artist": "jun",
+      "bpm": "170",
+      "difficulty": 0,
+      "genre": "DDR HOTTEST PARTY",
+      "level": "4",
+      "style": "single",
+      "title": "SUPER SAMURAI",
+      "version": ""
+    },
+    {
+      "artist": "NAOKI",
+      "bpm": "150",
+      "difficulty": 0,
+      "genre": "DDR \u30d5\u30eb\u30d5\u30eb\u266a\u30d1\u30fc\u30c6\u30a3\u30fc",
+      "level": "3",
+      "style": "single",
+      "title": "Brilliant 2U",
+      "version": ""
+    },
+    {
+      "artist": "LEA DROP feat. Ant Johnston",
+      "bpm": "90",
+      "difficulty": 0,
+      "genre": "DDR SuperNOVA2",
+      "level": "2",
+      "style": "single",
+      "title": "Every Day, Every Night (NM STYLE)",
+      "version": ""
+    },
+    {
+      "artist": "NM feat.SUNNY",
+      "bpm": "132",
+      "difficulty": 0,
+      "genre": "DDR 4thMIX",
+      "level": "2",
+      "style": "single",
+      "title": "HIGHER",
+      "version": ""
+    },
+    {
+      "artist": "APHs",
+      "bpm": "130",
+      "difficulty": 0,
+      "genre": "MAMBO A GO GO",
+      "level": "2",
+      "style": "single",
+      "title": "Lover's High",
+      "version": ""
+    },
+    {
+      "artist": "NAOKI feat. Becky Lucinda",
+      "bpm": "155",
+      "difficulty": 0,
+      "genre": "DDR SuperNOVA",
+      "level": "2",
+      "style": "single",
+      "title": "My Only Shining Star",
+      "version": ""
+    },
+    {
+      "artist": "NAOKI in the MERCURE",
+      "bpm": "(70-)140",
+      "difficulty": 0,
+      "genre": "DDR SuperNOVA2",
+      "level": "3",
+      "style": "single",
+      "title": "L'amour et la libert\u00e9(Darwin & DJ Silver remix)",
+      "version": ""
+    },
+    {
+      "artist": "DIVAS",
+      "bpm": "98",
+      "difficulty": 0,
+      "genre": "DDR MAX2",
+      "level": "4",
+      "style": "single",
+      "title": "Secret Rendez-vous",
+      "version": ""
+    },
+    {
+      "artist": "D-crew with VAL TIATIA",
+      "bpm": "105",
+      "difficulty": 0,
+      "genre": "DDR X2 & MUSIC FIT",
+      "level": "4",
+      "style": "single",
+      "title": "Crazy Control",
+      "version": ""
+    },
+    {
+      "artist": "DJ YOSHITAKA",
+      "bpm": "173",
+      "difficulty": 0,
+      "genre": "jubeat knit APPEND",
+      "level": "5",
+      "style": "single",
+      "title": "FLOWER",
+      "version": ""
+    },
+    {
+      "artist": "VENUS",
+      "bpm": "157",
+      "difficulty": 0,
+      "genre": "REFLEC BEAT colette -Spring-",
+      "level": "3",
+      "style": "single",
+      "title": "Wow Wow VENUS",
+      "version": ""
+    },
+    {
+      "artist": "TAG feat. ERi",
+      "bpm": "148",
+      "difficulty": 0,
+      "genre": "DanceEvolution ARCADE",
+      "level": "3",
+      "style": "single",
+      "title": "Do The Evolution",
+      "version": ""
+    },
+    {
+      "artist": "Y&Co.",
+      "bpm": "157",
+      "difficulty": 0,
+      "genre": "beatmaniaIIDX 10th style",
+      "level": "4",
+      "style": "single",
+      "title": "Daisuke",
+      "version": ""
+    },
+    {
+      "artist": "NAOKI",
+      "bpm": "155",
+      "difficulty": 0,
+      "genre": "DDR 4thMIX",
+      "level": "3",
+      "style": "single",
+      "title": "BURNIN' THE FLOOR",
+      "version": ""
+    },
+    {
+      "artist": "DIVAS",
+      "bpm": "96",
+      "difficulty": 0,
+      "genre": "DDR 4thMIX",
+      "level": "3",
+      "style": "single",
+      "title": "BABY BABY GIMME YOUR LOVE",
+      "version": ""
+    },
+    {
+      "artist": "Stone Bros.",
+      "bpm": "102",
+      "difficulty": 0,
+      "genre": "CS DDR EXTRA MIX",
+      "level": "4",
+      "style": "single",
+      "title": "Let the beat hit em!(CLASSIC R&B STYLE)",
+      "version": ""
+    },
+    {
+      "artist": "Latenighter",
+      "bpm": "130",
+      "difficulty": 0,
+      "genre": "DDR HOTTEST PARTY",
+      "level": "3",
+      "style": "single",
+      "title": "Mess With My Emotions",
+      "version": ""
+    },
+    {
+      "artist": "VENUS",
+      "bpm": "165",
+      "difficulty": 0,
+      "genre": "REFLEC BEAT colette -Autumn-",
+      "level": "3",
+      "style": "single",
+      "title": "Chu\u2606Chu\u2606Tonight",
+      "version": ""
+    },
+    {
+      "artist": "HHH\u00d7MM\u00d7ST",
+      "bpm": "149",
+      "difficulty": 0,
+      "genre": "pop'n music 20 Fantasia",
+      "level": "4",
+      "style": "single",
+      "title": "\u6727",
+      "version": ""
+    },
+    {
+      "artist": "Y&Co. feat. Karin",
+      "bpm": "155",
+      "difficulty": 0,
+      "genre": "jubeat knit",
+      "level": "2",
+      "style": "single",
+      "title": "Sweet Rain",
+      "version": ""
+    },
+    {
+      "artist": "VENUS",
+      "bpm": "158",
+      "difficulty": 0,
+      "genre": "REFLEC BEAT groovin'!!",
+      "level": "3",
+      "style": "single",
+      "title": "FUJIMORI -\u796d- FESTIVAL",
+      "version": ""
+    },
+    {
+      "artist": "Cream puff",
+      "bpm": "140",
+      "difficulty": 0,
+      "genre": "beatmaniaIIDX 18 Resort Anthem",
+      "level": "4",
+      "style": "single",
+      "title": "Mermaid girl",
+      "version": ""
+    },
+    {
+      "artist": "DJ Mass MAD Izm* VS.DJ Yoshitaka",
+      "bpm": "148",
+      "difficulty": 0,
+      "genre": "beatmaniaIIDX 18 Resort Anthem",
+      "level": "5",
+      "style": "single",
+      "title": "Watch Out Pt.2",
+      "version": ""
+    },
+    {
+      "artist": "\u30c0\u30a4\u30ca\u30df\u30c3\u30af\u91ce\u7403\u5144\u5f1f v.s. \u30af\u30ed\u30b9\u30d5\u30a1\u30a4\u30e4\u30fcPrim",
+      "bpm": "180",
+      "difficulty": 0,
+      "genre": "\u71b1\u95d8\uff01BEMANI\u30b9\u30bf\u30b8\u30a2\u30e0",
+      "level": "5",
+      "style": "single",
+      "title": "\u8f5f\u3051!\u604b\u306e\u30d3\u30fc\u30f3\u30dc\u30fc\u30eb!!",
+      "version": ""
+    },
+    {
+      "artist": "\u30c0\u30a4\u30ca\u30df\u30c3\u30af\u91ce\u7403\u5144\u5f1f v.s. \u30af\u30ed\u30b9\u30d5\u30a1\u30a4\u30e4\u30fcPrim",
+      "bpm": "180",
+      "difficulty": 0,
+      "genre": "\u71b1\u95d8\uff01BEMANI\u30b9\u30bf\u30b8\u30a2\u30e0",
+      "level": "5",
+      "style": "single",
+      "title": "\u8f5f\u3051!\u604b\u306e\u30d3\u30fc\u30f3\u30dc\u30fc\u30eb!!(9\u56de\u88cf\u632f\u4ed8ver)",
+      "version": ""
+    },
+    {
+      "artist": "Ryu\u2606",
+      "bpm": "181",
+      "difficulty": 0,
+      "genre": "DDR X2",
+      "level": "4",
+      "style": "single",
+      "title": "Sakura Sunrise",
+      "version": ""
+    },
+    {
+      "artist": "REDALiCE feat. Ayumi Nomiya",
+      "bpm": "183",
+      "difficulty": 0,
+      "genre": "beatmaniaIIDX 20 tricoro",
+      "level": "4",
+      "style": "single",
+      "title": "Little Star",
+      "version": ""
+    },
+    {
+      "artist": "Xceon feat. Mayumi Morinaga",
+      "bpm": "144",
+      "difficulty": 0,
+      "genre": "beatmaniaIIDX 21 SPADA",
+      "level": "5",
+      "style": "single",
+      "title": "\u7f6a\u3068\u7f70",
+      "version": ""
+    },
+    {
+      "artist": "serena",
+      "bpm": "188",
+      "difficulty": 0,
+      "genre": "GUITARFREAKS 11thMIX & drummania 10thMIX",
+      "level": "4",
+      "style": "single",
+      "title": "Reaching for the Stars",
+      "version": ""
+    },
+    {
+      "artist": "HIDEKI NAGANUMA",
+      "bpm": "140",
+      "difficulty": 0,
+      "genre": "beatmania IIDX 20 tricoro",
+      "level": "3",
+      "style": "single",
+      "title": "LUV CAN SAVE U",
+      "version": ""
+    },
+    {
+      "artist": "kors k",
+      "bpm": "138",
+      "difficulty": 0,
+      "genre": "jubeat saucer",
+      "level": "5",
+      "style": "single",
+      "title": "Gimme a Big Beat",
+      "version": ""
+    },
+    {
+      "artist": "Ryu\u2606 feat.Mayumi Morinaga",
+      "bpm": "140",
+      "difficulty": 0,
+      "genre": "DanceDanceRevolution(2014)",
+      "level": "3",
+      "style": "single",
+      "title": "Din Don Dan",
+      "version": ""
+    },
+    {
+      "artist": "Ryu\u2606",
+      "bpm": "181",
+      "difficulty": 0,
+      "genre": "jubeat knit",
+      "level": "2",
+      "style": "single",
+      "title": "I'm so Happy",
+      "version": ""
+    },
+    {
+      "artist": "SOUND HOLIC Vs. VENUS feat. Nana Takahashi",
+      "bpm": "180",
+      "difficulty": 0,
+      "genre": "VENUS 1st Album\u300cDEUS\u300d",
+      "level": "3",
+      "style": "single",
+      "title": "\u7121\u53cc",
+      "version": ""
+    },
+    {
+      "artist": "U1 night style",
+      "bpm": "110",
+      "difficulty": 0,
+      "genre": "\u30c0\u30f3\u30b9\u30c0\u30f3\u30b9\u30ec\u30dc\u30ea\u30e5\u30fc\u30b7\u30e7\u30f3 \u30d5\u30eb\u30d5\u30eb\u266a\u30d1\u30fc\u30c6\u30a3\u30fc",
+      "level": "4",
+      "style": "single",
+      "title": "Settin' the Scene",
+      "version": ""
+    },
+    {
+      "artist": "NU-KO",
+      "bpm": "178",
+      "difficulty": 0,
+      "genre": "pop'n music \u30e9\u30d4\u30b9\u30c8\u30ea\u30a2",
+      "level": "5",
+      "style": "single",
+      "title": "\u6731\u3068\u78a7\u306e\u30e9\u30f3\u30da\u30fc\u30b8",
+      "version": ""
+    },
+    {
+      "artist": "kors k feat. Suzuyo Miyamoto",
+      "bpm": "128",
+      "difficulty": 0,
+      "genre": "jubeat",
+      "level": "3",
+      "style": "single",
+      "title": "Special One",
+      "version": ""
+    },
+    {
+      "artist": "Y&Co.",
+      "bpm": "160",
+      "difficulty": 0,
+      "genre": "beatmania IIDX 22 PENDUAL",
+      "level": "3",
+      "style": "single",
+      "title": "TA\u30fbDA \u2606 YO\u30fbSHI",
+      "version": ""
+    },
+    {
+      "artist": "TAG",
+      "bpm": "148",
+      "difficulty": 0,
+      "genre": "DanceDanceRevolution X3 VS 2ndMIX",
+      "level": "2",
+      "style": "single",
+      "title": "\u30a2\u30eb\u30b9\u30c8\u30ed\u30e1\u30ea\u30a2 (walk with you remix)",
+      "version": ""
+    }
+  ]
+}

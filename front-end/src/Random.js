@@ -91,7 +91,7 @@ var Random = createReactClass({
           if(styles.length > 1 && styles[styles.length-1] !== "all") styles.push("all");
           this.setState({
             game_name: game,
-            game_title: 'Bemani Randomizer',
+            game_title: 'Randomizer',
             version_name: '',
             build_name: '',
             builds: [],
@@ -111,6 +111,7 @@ var Random = createReactClass({
             cd_song_num: 0,
             cd_curr_num: 0,
             cd_form_num: 1,
+            song_num: 1,
             versions: version_list,
             songs: []
           })
@@ -671,6 +672,7 @@ var Song = createReactClass({
     if(this.props.game === 'gc') classes = ['blue', 'yellow', 'red', 'gray']
     if(this.props.game === 'jubeat') classes = ['green', 'yellow', 'red']
     if(this.props.game === 'crossbeats') classes = ['blue', 'green', 'yellow', 'red', 'purple']
+    if(this.props.game === 'danevo') classes = ['white']
     class_name += classes[difficulty]
     var object = {
       diff_string: diff_string,
@@ -703,15 +705,15 @@ var Song = createReactClass({
 
   render() {
     var object = this.diff_return(this.props.song.difficulty);
-    var difficulty = object.diff_string;
-    var style = this.props.song.style.charAt(0).toUpperCase() + this.props.song.style.slice(1);
+    var difficulty = this.props.game === 'danevo' ? "Level " : object.diff_string + " ";
+    var style =  this.props.song.style.charAt(0).toUpperCase() + this.props.song.style.slice(1)+ " ";
 
     var card_class = this.props.song.active ? object.class_name : "Song-card card-out"
     return (
       <div className={"Song-card " + card_class}>
         <h5>{this.props.song.name}</h5>
         <h6>{this.props.song.artist}</h6>
-        <h6>{style + " " + difficulty + " "} {this.props.song.level}</h6>
+        <h6>{style + difficulty} {this.props.song.level}</h6>
         <h6>{this.props.song.genre}</h6>
         <h6>{"BPM: " + this.props.song.bpm}</h6>
         <h6>{this.props.song.version}</h6>

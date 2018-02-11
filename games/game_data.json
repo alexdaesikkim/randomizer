@@ -31,6 +31,31 @@
         }
       }
     },
+    "danevo": {
+      "name": "DanceEvolution",
+      "styles": [
+        "single"
+      ],
+      "versions": {
+        "first": {
+          "builds": [
+            "FINAL"
+          ],
+          "current": "FINAL",
+          "difficulty": {
+            "list": ["All"],
+            "max": 0,
+            "min": 0
+          },
+          "level": {
+            "max": 5,
+            "min": 1
+          },
+          "na_option": false,
+          "name": "Arcade"
+        }
+      }
+    },
     "ddr": {
       "name": "DanceDanceRevolution",
       "styles": [
@@ -110,7 +135,7 @@
         }
       }
     },
-    "gc": {
+    "groovecoaster": {
       "name": "GROOVE COASTER",
       "styles": [
         "single"

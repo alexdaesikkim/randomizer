@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 #2. somehow use json properties? but how to do this?
 #3. use dict to store all data, then convert it to json later?
 
-version_name = "2016080100"
+version_name = "FINAL"
 print(version_name)
 
 url = "http://bemaniwiki.com/index.php?DanceEvolution%20ARCADE%2F%BC%FD%CF%BF%B6%CA%A5%EA%A5%B9%A5%C8"
@@ -20,7 +20,7 @@ song_page = urlopen(url)
 
 print ("Opened pages")
 
-table = BeautifulSoup(page_new, "html5lib").find_all('div', class_='ie5')
+table = BeautifulSoup(song_page, "html5lib").find('div', class_='ie5')
 
 song_rows = table.find_all('tr')
 
@@ -50,9 +50,7 @@ def get_level(col):
     return level
 
 diff_options = {
-    0: "Basic",
-    1: "Advanced",
-    2: "Extreme",
+    0: "All"
 }
 
 def get_song(level, difficulty, version, style, title, artist, genre, bpm):
@@ -76,57 +74,27 @@ def get_song(level, difficulty, version, style, title, artist, genre, bpm):
 def parse_raw(rows, version):
     for row in rows:
         cols = row.find_all('td')
-        if version != "jubeat clan" and len(cols) == 1:
-            if(re.match("jubeat", cols[0].text)):
-                version = cols[0].text
-        if (len(cols) == 10 or len(cols) == 11):
-            if not (cols[1].has_attr('style') and re.match("^background-color:gray;", cols[1]['style'])):
+        if (not len(cols) == 1 and (len(cols) == 8 or len(cols) == 9)):
+            if not (cols[1].has_attr('style') and re.match("^background-color:GRAY;", cols[1]['style'])) and cols[3].text != 'BPM':
                 x = 0
-                if(len(cols) == 11):
+                if(len(cols) == 9):
                     x = 1
-                genre = cols[0+x].text
-                title = cols[1+x].text
-                if(title.endswith("*3") or title.endswith("*4")):
-                    title = title[:-2]
-                artist = cols[2+x].text
-                if(artist.endswith("*1") or artist.endswith("*2")):
-                    title = title[:-2]
+                title = cols[0+x].text
+                artist = cols[1+x].text
                 bpm = cols[3+x].text
+                genre = cols[7+x].text
                 get_song(get_level(cols[4+x]), 0, version, "single", title, artist, genre, bpm)
-                get_song(get_level(cols[6+x]), 1, version, "single", title, artist, genre, bpm)
-                get_song(get_level(cols[8+x]), 2, version, "single", title, artist, genre, bpm)
     return
 
-parse_raw(old_rows, "")
-parse_raw(new_rows_1, "jubeat clan")
-parse_raw(new_rows_2, "jubeat clan")
-parse_raw(new_rows_3, "jubeat clan")
+parse_raw(song_rows, "")
 
 print ("Writing json")
 
-'''final_data = {
-    "id": "jubeatclan",
+final_data = {
+    "id": "danevo",
     "songs": songs
 }
 
-with open('../games/jubeat/clan/' +  version_name + '.json', 'w') as file:
+with open('../games/danevo/first/FINAL.json', 'w') as file:
     json.dump(final_data, file, indent=2, sort_keys=True)
 print ("Finished")
-
-data = {}
-with open('../games/game_data.json') as file:
-    data = json.load(file)
-    data["games"]["jubeat"]["versions"]["clan"]["current"] = version_name
-    array = data["games"]["jubeat"]["versions"]["clan"]["builds"]
-    check = False
-    for x in array:
-        if(version_name == x):
-            check = True
-    if not check:
-        data["games"]["jubeat"]["versions"]["clan"]["builds"].append(version_name)
-print ("Finished reading game_data.json file")
-
-with open('../games/game_data.json', 'w') as file:
-    json.dump(data, file, indent=2, sort_keys=True)
-print ("Finished updating game_data.json file")
-'''
