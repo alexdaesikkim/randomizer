@@ -372,7 +372,8 @@ app.get('/api/alpha/list/games/', function(req, res, next){
 });
 
 app.get('*', function(req, res){
-  res.send('Page not found', 404);
+  res.send('Invalid address');
+  res.status(404)
   res.end();
 });
 
