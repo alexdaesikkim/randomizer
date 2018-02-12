@@ -5,6 +5,7 @@
   "dependencies": {
     "create-react-class": "^15.6.2",
     "jquery": "^3.2.1",
+    "kuroshiro": "^0.2.1",
     "materialize-css": "^0.100.2",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",

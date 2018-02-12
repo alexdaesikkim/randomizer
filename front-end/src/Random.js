@@ -613,10 +613,6 @@ var Random = createReactClass({
       }
   },
 
-  warningPanel(){
-
-  },
-
   banPanel(){
       return(
             <div className={(this.state.songs.length > 0 && this.state.card_draw_panel) ? "Ban-panel" : "Ban-panel-out"}>
@@ -686,7 +682,7 @@ var Song = createReactClass({
   },
 
   card_ban(){
-    var url = "https://www.google.com/search?q=" + this.props.song.name + "+" + this.props.song.version
+    var url = "https://www.google.com/search?q=" + this.props.song.name + "+" + this.props.song.version + "+" + this.props.game
     if(this.props.card_draw_panel){
       return(
         <div>
