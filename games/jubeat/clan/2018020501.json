@@ -23132,6 +23132,96 @@
       "version": "jubeat clan"
     },
     {
+      "artist": "RoughSketch ft.Aikapin & Chiyoko",
+      "bpm": "190",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "4",
+      "style": "single",
+      "title": "\u30d8\u30f3\u30bc\u30eb\u3068\u30b0\u30ec\u30fc\u30c6\u30eb",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "RoughSketch ft.Aikapin & Chiyoko",
+      "bpm": "190",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "8",
+      "style": "single",
+      "title": "\u30d8\u30f3\u30bc\u30eb\u3068\u30b0\u30ec\u30fc\u30c6\u30eb",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "RoughSketch ft.Aikapin & Chiyoko",
+      "bpm": "190",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "\u30d8\u30f3\u30bc\u30eb\u3068\u30b0\u30ec\u30fc\u30c6\u30eb",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "\u306f\u308b\u306a\u3070",
+      "bpm": "160",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "4",
+      "style": "single",
+      "title": "Last Dress",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "\u306f\u308b\u306a\u3070",
+      "bpm": "160",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "9",
+      "style": "single",
+      "title": "Last Dress",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "\u306f\u308b\u306a\u3070",
+      "bpm": "160",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "Last Dress",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "BEMANI Sound Team \"U1 overground\"",
+      "bpm": "160",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "5",
+      "style": "single",
+      "title": "Never See You Again",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "BEMANI Sound Team \"U1 overground\"",
+      "bpm": "160",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "8",
+      "style": "single",
+      "title": "Never See You Again",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "BEMANI Sound Team \"U1 overground\"",
+      "bpm": "160",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "Never See You Again",
+      "version": "jubeat clan"
+    },
+    {
       "artist": "TAG",
       "bpm": "160",
       "difficulty": 0,
@@ -23759,6 +23849,66 @@
       "level": "10",
       "style": "single",
       "title": "birth",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "P*Light",
+      "bpm": "187",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "5",
+      "style": "single",
+      "title": "\u30d1\u30d4\u30dd\u30da\u30d4\u30d7\u30da\u30d1",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "P*Light",
+      "bpm": "187",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "9",
+      "style": "single",
+      "title": "\u30d1\u30d4\u30dd\u30da\u30d4\u30d7\u30da\u30d1",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "P*Light",
+      "bpm": "187",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "\u30d1\u30d4\u30dd\u30da\u30d4\u30d7\u30da\u30d1",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "\u304b\u3081\u308a\u3042",
+      "bpm": "228",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "9",
+      "style": "single",
+      "title": "Diastrophism",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "\u304b\u3081\u308a\u3042",
+      "bpm": "228",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "9",
+      "style": "single",
+      "title": "Diastrophism",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "\u304b\u3081\u308a\u3042",
+      "bpm": "228",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "Diastrophism",
       "version": "jubeat clan"
     },
     {

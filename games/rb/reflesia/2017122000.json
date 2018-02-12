@@ -2902,6 +2902,76 @@
       "version": "REFLEC BEAT limelight"
     },
     {
+      "artist": "Prim",
+      "bpm": "200",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "6",
+      "style": "single",
+      "title": "\u604b\u3059\u308b\u2606\u5b87\u5b99\u6226\u4e89\u3063!!",
+      "version": "REFLEC BEAT limelight"
+    },
+    {
+      "artist": "Prim",
+      "bpm": "200",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "9",
+      "style": "single",
+      "title": "\u604b\u3059\u308b\u2606\u5b87\u5b99\u6226\u4e89\u3063!!",
+      "version": "REFLEC BEAT limelight"
+    },
+    {
+      "artist": "Prim",
+      "bpm": "200",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "11",
+      "style": "single",
+      "title": "\u604b\u3059\u308b\u2606\u5b87\u5b99\u6226\u4e89\u3063!!",
+      "version": "REFLEC BEAT limelight"
+    },
+    {
+      "artist": "Ryu\u2606",
+      "bpm": "171",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "6",
+      "style": "single",
+      "title": "\u4e2d\u83ef\u6025\u884c",
+      "version": "REFLEC BEAT limelight"
+    },
+    {
+      "artist": "Ryu\u2606",
+      "bpm": "171",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "9",
+      "style": "single",
+      "title": "\u4e2d\u83ef\u6025\u884c",
+      "version": "REFLEC BEAT limelight"
+    },
+    {
+      "artist": "Ryu\u2606",
+      "bpm": "171",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "11",
+      "style": "single",
+      "title": "\u4e2d\u83ef\u6025\u884c",
+      "version": "REFLEC BEAT limelight"
+    },
+    {
+      "artist": "Ryu\u2606",
+      "bpm": "171",
+      "difficulty": 3,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "13",
+      "style": "single",
+      "title": "\u4e2d\u83ef\u6025\u884c",
+      "version": "REFLEC BEAT limelight"
+    },
+    {
       "artist": "KOTOKO",
       "bpm": "146",
       "difficulty": 0,
@@ -5722,6 +5792,36 @@
       "version": "REFLEC BEAT colette -Autumn-"
     },
     {
+      "artist": "Qrispy Joybox feat.\u6797\u3082\u3082\u3053",
+      "bpm": "177",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "3",
+      "style": "single",
+      "title": "\u30ed\u30dc\u30c3\u30c8\u2606\u30e9\u30a4\u30d5",
+      "version": "REFLEC BEAT colette -Autumn-"
+    },
+    {
+      "artist": "Qrispy Joybox feat.\u6797\u3082\u3082\u3053",
+      "bpm": "177",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "8",
+      "style": "single",
+      "title": "\u30ed\u30dc\u30c3\u30c8\u2606\u30e9\u30a4\u30d5",
+      "version": "REFLEC BEAT colette -Autumn-"
+    },
+    {
+      "artist": "Qrispy Joybox feat.\u6797\u3082\u3082\u3053",
+      "bpm": "177",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "11",
+      "style": "single",
+      "title": "\u30ed\u30dc\u30c3\u30c8\u2606\u30e9\u30a4\u30d5",
+      "version": "REFLEC BEAT colette -Autumn-"
+    },
+    {
       "artist": "\u6b4c\u7d44\u96ea\u6708\u82b1",
       "bpm": "160",
       "difficulty": 0,
@@ -6099,6 +6199,76 @@
       "level": "14",
       "style": "single",
       "title": "\u8f5f\u3051\uff01\u604b\u306e\u30d3\u30fc\u30f3\u30dc\u30fc\u30eb\uff01\uff01",
+      "version": "REFLEC BEAT colette -All Seasons-"
+    },
+    {
+      "artist": "TAG\u00d7PON",
+      "bpm": "180",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "5",
+      "style": "single",
+      "title": "PUNISHER",
+      "version": "REFLEC BEAT colette -All Seasons-"
+    },
+    {
+      "artist": "TAG\u00d7PON",
+      "bpm": "180",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "9",
+      "style": "single",
+      "title": "PUNISHER",
+      "version": "REFLEC BEAT colette -All Seasons-"
+    },
+    {
+      "artist": "TAG\u00d7PON",
+      "bpm": "180",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "11",
+      "style": "single",
+      "title": "PUNISHER",
+      "version": "REFLEC BEAT colette -All Seasons-"
+    },
+    {
+      "artist": "TAG\u00d7PON",
+      "bpm": "180",
+      "difficulty": 3,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "13",
+      "style": "single",
+      "title": "PUNISHER",
+      "version": "REFLEC BEAT colette -All Seasons-"
+    },
+    {
+      "artist": "VENUS",
+      "bpm": "170",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "5",
+      "style": "single",
+      "title": "Freedom",
+      "version": "REFLEC BEAT colette -All Seasons-"
+    },
+    {
+      "artist": "VENUS",
+      "bpm": "170",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "8",
+      "style": "single",
+      "title": "Freedom",
+      "version": "REFLEC BEAT colette -All Seasons-"
+    },
+    {
+      "artist": "VENUS",
+      "bpm": "170",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "11",
+      "style": "single",
+      "title": "Freedom",
       "version": "REFLEC BEAT colette -All Seasons-"
     },
     {
@@ -7439,6 +7609,76 @@
       "level": "13",
       "style": "single",
       "title": "Benita",
+      "version": "REFLEC BEAT groovin'!!"
+    },
+    {
+      "artist": "OSTER project",
+      "bpm": "180",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "6",
+      "style": "single",
+      "title": "WICKeD CR\u03c6SS",
+      "version": "REFLEC BEAT groovin'!!"
+    },
+    {
+      "artist": "OSTER project",
+      "bpm": "180",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "9",
+      "style": "single",
+      "title": "WICKeD CR\u03c6SS",
+      "version": "REFLEC BEAT groovin'!!"
+    },
+    {
+      "artist": "OSTER project",
+      "bpm": "180",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "14",
+      "style": "single",
+      "title": "WICKeD CR\u03c6SS",
+      "version": "REFLEC BEAT groovin'!!"
+    },
+    {
+      "artist": "OSTER project",
+      "bpm": "180",
+      "difficulty": 3,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "15",
+      "style": "single",
+      "title": "WICKeD CR\u03c6SS",
+      "version": "REFLEC BEAT groovin'!!"
+    },
+    {
+      "artist": "dj TAKA feat.AiMEE",
+      "bpm": "158",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "6",
+      "style": "single",
+      "title": "refrain",
+      "version": "REFLEC BEAT groovin'!!"
+    },
+    {
+      "artist": "dj TAKA feat.AiMEE",
+      "bpm": "158",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "refrain",
+      "version": "REFLEC BEAT groovin'!!"
+    },
+    {
+      "artist": "dj TAKA feat.AiMEE",
+      "bpm": "158",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "13",
+      "style": "single",
+      "title": "refrain",
       "version": "REFLEC BEAT groovin'!!"
     },
     {
@@ -9022,6 +9262,66 @@
       "version": "REFLEC BEAT groovin'!! Upper"
     },
     {
+      "artist": "\u5f01\u58eb\u30ab\u30f3\u30bf\u30d3\u30ec\u30aa",
+      "bpm": "210-520",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "7",
+      "style": "single",
+      "title": "\u97f3\u697d",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
+      "artist": "\u5f01\u58eb\u30ab\u30f3\u30bf\u30d3\u30ec\u30aa",
+      "bpm": "210-520",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "\u97f3\u697d",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
+      "artist": "\u5f01\u58eb\u30ab\u30f3\u30bf\u30d3\u30ec\u30aa",
+      "bpm": "210-520",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "15",
+      "style": "single",
+      "title": "\u97f3\u697d",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
+      "artist": "\u732b\u53c9Master",
+      "bpm": "165",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "7",
+      "style": "single",
+      "title": "Scars of FAUNA",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
+      "artist": "\u732b\u53c9Master",
+      "bpm": "165",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "Scars of FAUNA",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
+      "artist": "\u732b\u53c9Master",
+      "bpm": "165",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "13",
+      "style": "single",
+      "title": "Scars of FAUNA",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
       "artist": "n-buna",
       "bpm": "120",
       "difficulty": 0,
@@ -11699,6 +11999,46 @@
       "level": "14",
       "style": "single",
       "title": "Disable Mark",
+      "version": "REFLEC BEAT VOLZZA 2"
+    },
+    {
+      "artist": "xi",
+      "bpm": "191",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "7",
+      "style": "single",
+      "title": "Grand Chariot",
+      "version": "REFLEC BEAT VOLZZA 2"
+    },
+    {
+      "artist": "xi",
+      "bpm": "191",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "Grand Chariot",
+      "version": "REFLEC BEAT VOLZZA 2"
+    },
+    {
+      "artist": "xi",
+      "bpm": "191",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "12",
+      "style": "single",
+      "title": "Grand Chariot",
+      "version": "REFLEC BEAT VOLZZA 2"
+    },
+    {
+      "artist": "xi",
+      "bpm": "191",
+      "difficulty": 3,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "15",
+      "style": "single",
+      "title": "Grand Chariot",
       "version": "REFLEC BEAT VOLZZA 2"
     },
     {

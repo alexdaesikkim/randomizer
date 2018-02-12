@@ -43,7 +43,9 @@
           ],
           "current": "FINAL",
           "difficulty": {
-            "list": ["All"],
+            "list": [
+              "All"
+            ],
             "max": 0,
             "min": 0
           },

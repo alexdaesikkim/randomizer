@@ -129,19 +129,73 @@
               </tbody>
             </table>
             <p>
-              Due to few inconsistencies across games, here are few game-specific options. Please note these notes if you plan to use one of these games.
+              Due to few inconsistencies across games, here are few game-specific options. Please note if you plan to use one of these games.
             </p>
-            <div class="collapsible-header valign-wrapper">
-              crossbeats REV.
+            <ul class="collapsible" data-collapsible="accordion">
+              <li>
+                <div class="collapsible-header valign-wrapper">
+                  crossbeats REV. (all version)
+                </div>
+                <div class="collapsible-body">
+                  The return parameter "version" is blank. The sort folder used to sort the song is stored under 'genre'.
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header valign-wrapper">
+                  GROOVE COASTER (all version)
+                </div>
+                <div class="collapsible-body">
+                  The return parameter "version" is blank. The sort folder used to sort the song is stored under 'genre'.
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header valign-wrapper">
+                  Dance Evolution ARCADE
+                </div>
+                <div class="collapsible-body">
+                  Game only features one difficulty, as separate difficulties within the game does not yield different levels.
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header valign-wrapper">
+                  DanceDanceRevolution EXTREME
+                </div>
+                <div class="collapsible-body">
+                  'versions' represent the sorting folder exisitng in game; it may not necessarily reflect which version of DDR it came from.
+                </div>
+              </li>
+            </ul>
+            <div>
+              Sample API Call:
+              <pre>
+                <code>
+                  /random/iidx/25/
+                </code>
+              </pre>
             </div>
-            <div class="collapsible-body">
-              The return parameter "version" is not available.
-            </div>
-            <div class="collapsible-header valign-wrapper">
-              GROOVE COASTER
-            </div>
-            <div class="collapsible-body">
-              The return parameter "version" is not available.
+            <div>
+              Sample return json
+              <pre>
+                <code>
+                  {
+                    "id":"beatmaniaiidx25",
+                    "build":"2018012300",
+                    "version":"25",
+                    "songs":[
+                      {
+                        "artist":"Expander",
+                        "bpm":"160",
+                        "difficulty":3,
+                        "genre":"HYPER TRAP",
+                        "level":"11",
+                        "style":"double",
+                        "title":"Honey Trap",
+                        "version":"beatmania IIDX 24 SINOBUZ"
+                      }
+                    ]
+                  }
+                </code>
+              </pre>
             </div>
           </div>
         </li>
