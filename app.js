@@ -152,6 +152,8 @@ function filter_songs(array, style, d_min, d_max, l_min, l_max){
   }
 
   //filter by level, if its not the default value of 0
+  //bug with songs already scraped: they save the values as strings and not integers. look into this.
+  //currently works, but i dont want this to be something that hinders later on. possibly change data.level to int/double then compare.
   if(l_min !== 0 || l_max !== 0){
     if(l_max === 0){
       array = array.filter(function(data){

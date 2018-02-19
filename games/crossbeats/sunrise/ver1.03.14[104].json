@@ -2,223 +2,143 @@
   "id": "crossbeats_sunrise",
   "songs": [
     {
-      "artist": "MAYA AKAI",
-      "bpm": "136.0",
+      "artist": "brinq",
+      "bpm": "132.0 ",
       "difficulty": 0,
       "genre": "PICKUP",
-      "level": "11",
+      "level": "8",
       "style": "single",
-      "title": "Aqualight",
+      "title": "How True Is Your Love",
       "version": ""
     },
     {
-      "artist": "MAYA AKAI",
-      "bpm": "136.0",
+      "artist": "brinq",
+      "bpm": "132.0 ",
       "difficulty": 1,
-      "genre": "PICKUP",
-      "level": "16",
-      "style": "single",
-      "title": "Aqualight",
-      "version": ""
-    },
-    {
-      "artist": "MAYA AKAI",
-      "bpm": "136.0",
-      "difficulty": 2,
-      "genre": "PICKUP",
-      "level": "34",
-      "style": "single",
-      "title": "Aqualight",
-      "version": ""
-    },
-    {
-      "artist": "MAYA AKAI",
-      "bpm": "136.0",
-      "difficulty": 3,
-      "genre": "PICKUP",
-      "level": "58",
-      "style": "single",
-      "title": "Aqualight",
-      "version": ""
-    },
-    {
-      "artist": "\u30d2\u30b2\u30c9\u30e9\u30a4VAN",
-      "bpm": "175.0",
-      "difficulty": 0,
       "genre": "PICKUP",
       "level": "12",
       "style": "single",
-      "title": "CYBER GANG",
+      "title": "How True Is Your Love",
       "version": ""
     },
     {
-      "artist": "\u30d2\u30b2\u30c9\u30e9\u30a4VAN",
-      "bpm": "175.0",
-      "difficulty": 1,
-      "genre": "PICKUP",
-      "level": "23",
-      "style": "single",
-      "title": "CYBER GANG",
-      "version": ""
-    },
-    {
-      "artist": "\u30d2\u30b2\u30c9\u30e9\u30a4VAN",
-      "bpm": "175.0",
+      "artist": "brinq",
+      "bpm": "132.0 ",
       "difficulty": 2,
       "genre": "PICKUP",
-      "level": "35",
+      "level": "25",
       "style": "single",
-      "title": "CYBER GANG",
+      "title": "How True Is Your Love",
       "version": ""
     },
     {
-      "artist": "\u30d2\u30b2\u30c9\u30e9\u30a4VAN",
-      "bpm": "175.0",
+      "artist": "brinq",
+      "bpm": "132.0 ",
       "difficulty": 3,
       "genre": "PICKUP",
-      "level": "60",
+      "level": "53",
       "style": "single",
-      "title": "CYBER GANG",
+      "title": "How True Is Your Love",
       "version": ""
     },
     {
-      "artist": "SLAKE",
-      "bpm": "130.0",
-      "difficulty": 0,
-      "genre": "PICKUP",
-      "level": "13",
-      "style": "single",
-      "title": "Freak With Me",
-      "version": ""
-    },
-    {
-      "artist": "SLAKE",
-      "bpm": "130.0",
-      "difficulty": 1,
-      "genre": "PICKUP",
-      "level": "22",
-      "style": "single",
-      "title": "Freak With Me",
-      "version": ""
-    },
-    {
-      "artist": "SLAKE",
-      "bpm": "130.0",
-      "difficulty": 2,
-      "genre": "PICKUP",
-      "level": "42",
-      "style": "single",
-      "title": "Freak With Me",
-      "version": ""
-    },
-    {
-      "artist": "SLAKE",
-      "bpm": "130.0",
-      "difficulty": 3,
-      "genre": "PICKUP",
-      "level": "65",
-      "style": "single",
-      "title": "Freak With Me",
-      "version": ""
-    },
-    {
-      "artist": "GRATEC MOUR",
-      "bpm": "135.0 ",
-      "difficulty": 0,
-      "genre": "PICKUP",
-      "level": "14",
-      "style": "single",
-      "title": "Rising Day ft. Satan",
-      "version": ""
-    },
-    {
-      "artist": "GRATEC MOUR",
-      "bpm": "135.0 ",
-      "difficulty": 1,
-      "genre": "PICKUP",
-      "level": "23",
-      "style": "single",
-      "title": "Rising Day ft. Satan",
-      "version": ""
-    },
-    {
-      "artist": "GRATEC MOUR",
-      "bpm": "135.0 ",
-      "difficulty": 2,
-      "genre": "PICKUP",
-      "level": "38",
-      "style": "single",
-      "title": "Rising Day ft. Satan",
-      "version": ""
-    },
-    {
-      "artist": "GRATEC MOUR",
-      "bpm": "135.0 ",
-      "difficulty": 3,
-      "genre": "PICKUP",
-      "level": "66",
-      "style": "single",
-      "title": "Rising Day ft. Satan",
-      "version": ""
-    },
-    {
-      "artist": "GRATEC MOUR",
-      "bpm": "135.0 ",
+      "artist": "brinq",
+      "bpm": "132.0 ",
       "difficulty": 4,
       "genre": "PICKUP",
-      "level": "85",
+      "level": "74",
       "style": "single",
-      "title": "Rising Day ft. Satan",
+      "title": "How True Is Your Love",
       "version": ""
     },
     {
-      "artist": "LC:AZE",
-      "bpm": "175.0 ",
+      "artist": "Fierce Chain",
+      "bpm": "145.0",
       "difficulty": 0,
       "genre": "PICKUP",
-      "level": "16",
+      "level": "10",
       "style": "single",
-      "title": "DReamWorKer",
+      "title": "Music Takes Control",
       "version": ""
     },
     {
-      "artist": "LC:AZE",
-      "bpm": "175.0 ",
+      "artist": "Fierce Chain",
+      "bpm": "145.0",
       "difficulty": 1,
       "genre": "PICKUP",
-      "level": "26",
+      "level": "27",
       "style": "single",
-      "title": "DReamWorKer",
+      "title": "Music Takes Control",
       "version": ""
     },
     {
-      "artist": "LC:AZE",
-      "bpm": "175.0 ",
+      "artist": "Fierce Chain",
+      "bpm": "145.0",
       "difficulty": 2,
       "genre": "PICKUP",
       "level": "37",
       "style": "single",
-      "title": "DReamWorKer",
+      "title": "Music Takes Control",
       "version": ""
     },
     {
-      "artist": "LC:AZE",
-      "bpm": "175.0 ",
+      "artist": "Fierce Chain",
+      "bpm": "145.0",
       "difficulty": 3,
       "genre": "PICKUP",
-      "level": "62",
+      "level": "69",
       "style": "single",
-      "title": "DReamWorKer",
+      "title": "Music Takes Control",
       "version": ""
     },
     {
-      "artist": "LC:AZE",
-      "bpm": "175.0 ",
+      "artist": "\u30df\u30d5\u30e1\u30a4",
+      "bpm": "143.0 ",
+      "difficulty": 0,
+      "genre": "PICKUP",
+      "level": "18",
+      "style": "single",
+      "title": "Faraway",
+      "version": ""
+    },
+    {
+      "artist": "\u30df\u30d5\u30e1\u30a4",
+      "bpm": "143.0 ",
+      "difficulty": 1,
+      "genre": "PICKUP",
+      "level": "23",
+      "style": "single",
+      "title": "Faraway",
+      "version": ""
+    },
+    {
+      "artist": "\u30df\u30d5\u30e1\u30a4",
+      "bpm": "143.0 ",
+      "difficulty": 2,
+      "genre": "PICKUP",
+      "level": "36",
+      "style": "single",
+      "title": "Faraway",
+      "version": ""
+    },
+    {
+      "artist": "\u30df\u30d5\u30e1\u30a4",
+      "bpm": "143.0 ",
+      "difficulty": 3,
+      "genre": "PICKUP",
+      "level": "60",
+      "style": "single",
+      "title": "Faraway",
+      "version": ""
+    },
+    {
+      "artist": "\u30df\u30d5\u30e1\u30a4",
+      "bpm": "143.0 ",
       "difficulty": 4,
       "genre": "PICKUP",
-      "level": "75",
+      "level": "76",
       "style": "single",
-      "title": "DReamWorKer",
+      "title": "Faraway",
       "version": ""
     },
     {
@@ -6032,6 +5952,46 @@
       "version": ""
     },
     {
+      "artist": "MAYA AKAI",
+      "bpm": "136.0",
+      "difficulty": 0,
+      "genre": "ORIGINAL",
+      "level": "11",
+      "style": "single",
+      "title": "Aqualight",
+      "version": ""
+    },
+    {
+      "artist": "MAYA AKAI",
+      "bpm": "136.0",
+      "difficulty": 1,
+      "genre": "ORIGINAL",
+      "level": "16",
+      "style": "single",
+      "title": "Aqualight",
+      "version": ""
+    },
+    {
+      "artist": "MAYA AKAI",
+      "bpm": "136.0",
+      "difficulty": 2,
+      "genre": "ORIGINAL",
+      "level": "34",
+      "style": "single",
+      "title": "Aqualight",
+      "version": ""
+    },
+    {
+      "artist": "MAYA AKAI",
+      "bpm": "136.0",
+      "difficulty": 3,
+      "genre": "ORIGINAL",
+      "level": "58",
+      "style": "single",
+      "title": "Aqualight",
+      "version": ""
+    },
+    {
       "artist": "Monotone Rhythm feat.\u7dbe\u5ddd\u96ea\u5f25",
       "bpm": "143.0 ",
       "difficulty": 0,
@@ -7362,6 +7322,46 @@
       "version": ""
     },
     {
+      "artist": "\u30d2\u30b2\u30c9\u30e9\u30a4VAN",
+      "bpm": "175.0",
+      "difficulty": 0,
+      "genre": "ORIGINAL",
+      "level": "12",
+      "style": "single",
+      "title": "CYBER GANG",
+      "version": ""
+    },
+    {
+      "artist": "\u30d2\u30b2\u30c9\u30e9\u30a4VAN",
+      "bpm": "175.0",
+      "difficulty": 1,
+      "genre": "ORIGINAL",
+      "level": "23",
+      "style": "single",
+      "title": "CYBER GANG",
+      "version": ""
+    },
+    {
+      "artist": "\u30d2\u30b2\u30c9\u30e9\u30a4VAN",
+      "bpm": "175.0",
+      "difficulty": 2,
+      "genre": "ORIGINAL",
+      "level": "35",
+      "style": "single",
+      "title": "CYBER GANG",
+      "version": ""
+    },
+    {
+      "artist": "\u30d2\u30b2\u30c9\u30e9\u30a4VAN",
+      "bpm": "175.0",
+      "difficulty": 3,
+      "genre": "ORIGINAL",
+      "level": "60",
+      "style": "single",
+      "title": "CYBER GANG",
+      "version": ""
+    },
+    {
       "artist": "Relect",
       "bpm": "150.0 ",
       "difficulty": 0,
@@ -8132,6 +8132,46 @@
       "version": ""
     },
     {
+      "artist": "SLAKE",
+      "bpm": "130.0",
+      "difficulty": 0,
+      "genre": "ORIGINAL",
+      "level": "13",
+      "style": "single",
+      "title": "Freak With Me",
+      "version": ""
+    },
+    {
+      "artist": "SLAKE",
+      "bpm": "130.0",
+      "difficulty": 1,
+      "genre": "ORIGINAL",
+      "level": "22",
+      "style": "single",
+      "title": "Freak With Me",
+      "version": ""
+    },
+    {
+      "artist": "SLAKE",
+      "bpm": "130.0",
+      "difficulty": 2,
+      "genre": "ORIGINAL",
+      "level": "42",
+      "style": "single",
+      "title": "Freak With Me",
+      "version": ""
+    },
+    {
+      "artist": "SLAKE",
+      "bpm": "130.0",
+      "difficulty": 3,
+      "genre": "ORIGINAL",
+      "level": "65",
+      "style": "single",
+      "title": "Freak With Me",
+      "version": ""
+    },
+    {
       "artist": "Personative",
       "bpm": "180.0",
       "difficulty": 0,
@@ -8809,6 +8849,56 @@
       "level": "80",
       "style": "single",
       "title": "14th Clock",
+      "version": ""
+    },
+    {
+      "artist": "GRATEC MOUR",
+      "bpm": "135.0 ",
+      "difficulty": 0,
+      "genre": "ORIGINAL",
+      "level": "14",
+      "style": "single",
+      "title": "Rising Day ft. Satan",
+      "version": ""
+    },
+    {
+      "artist": "GRATEC MOUR",
+      "bpm": "135.0 ",
+      "difficulty": 1,
+      "genre": "ORIGINAL",
+      "level": "23",
+      "style": "single",
+      "title": "Rising Day ft. Satan",
+      "version": ""
+    },
+    {
+      "artist": "GRATEC MOUR",
+      "bpm": "135.0 ",
+      "difficulty": 2,
+      "genre": "ORIGINAL",
+      "level": "38",
+      "style": "single",
+      "title": "Rising Day ft. Satan",
+      "version": ""
+    },
+    {
+      "artist": "GRATEC MOUR",
+      "bpm": "135.0 ",
+      "difficulty": 3,
+      "genre": "ORIGINAL",
+      "level": "66",
+      "style": "single",
+      "title": "Rising Day ft. Satan",
+      "version": ""
+    },
+    {
+      "artist": "GRATEC MOUR",
+      "bpm": "135.0 ",
+      "difficulty": 4,
+      "genre": "ORIGINAL",
+      "level": "85",
+      "style": "single",
+      "title": "Rising Day ft. Satan",
       "version": ""
     },
     {
@@ -9722,6 +9812,56 @@
       "version": ""
     },
     {
+      "artist": "LC:AZE",
+      "bpm": "175.0 ",
+      "difficulty": 0,
+      "genre": "ORIGINAL",
+      "level": "16",
+      "style": "single",
+      "title": "DReamWorKer",
+      "version": ""
+    },
+    {
+      "artist": "LC:AZE",
+      "bpm": "175.0 ",
+      "difficulty": 1,
+      "genre": "ORIGINAL",
+      "level": "26",
+      "style": "single",
+      "title": "DReamWorKer",
+      "version": ""
+    },
+    {
+      "artist": "LC:AZE",
+      "bpm": "175.0 ",
+      "difficulty": 2,
+      "genre": "ORIGINAL",
+      "level": "37",
+      "style": "single",
+      "title": "DReamWorKer",
+      "version": ""
+    },
+    {
+      "artist": "LC:AZE",
+      "bpm": "175.0 ",
+      "difficulty": 3,
+      "genre": "ORIGINAL",
+      "level": "62",
+      "style": "single",
+      "title": "DReamWorKer",
+      "version": ""
+    },
+    {
+      "artist": "LC:AZE",
+      "bpm": "175.0 ",
+      "difficulty": 4,
+      "genre": "ORIGINAL",
+      "level": "75",
+      "style": "single",
+      "title": "DReamWorKer",
+      "version": ""
+    },
+    {
       "artist": "Yamajet",
       "bpm": "192.0 ",
       "difficulty": 0,
@@ -10279,56 +10419,6 @@
       "level": "86",
       "style": "single",
       "title": "Crisscrosser",
-      "version": ""
-    },
-    {
-      "artist": "\u30df\u30d5\u30e1\u30a4",
-      "bpm": "143.0 ",
-      "difficulty": 0,
-      "genre": "ORIGINAL",
-      "level": "18",
-      "style": "single",
-      "title": "Faraway",
-      "version": ""
-    },
-    {
-      "artist": "\u30df\u30d5\u30e1\u30a4",
-      "bpm": "143.0 ",
-      "difficulty": 1,
-      "genre": "ORIGINAL",
-      "level": "23",
-      "style": "single",
-      "title": "Faraway",
-      "version": ""
-    },
-    {
-      "artist": "\u30df\u30d5\u30e1\u30a4",
-      "bpm": "143.0 ",
-      "difficulty": 2,
-      "genre": "ORIGINAL",
-      "level": "36",
-      "style": "single",
-      "title": "Faraway",
-      "version": ""
-    },
-    {
-      "artist": "\u30df\u30d5\u30e1\u30a4",
-      "bpm": "143.0 ",
-      "difficulty": 3,
-      "genre": "ORIGINAL",
-      "level": "60",
-      "style": "single",
-      "title": "Faraway",
-      "version": ""
-    },
-    {
-      "artist": "\u30df\u30d5\u30e1\u30a4",
-      "bpm": "143.0 ",
-      "difficulty": 4,
-      "genre": "ORIGINAL",
-      "level": "76",
-      "style": "single",
-      "title": "Faraway",
       "version": ""
     },
     {

@@ -103,16 +103,13 @@ def parse_raw(rows, version):
                     version = version[:-4]
                 if(version.endswith(" /△")):
                     version = version[:-3]
-        if (len(cols) == 9 or len(cols) == 10 or len(cols) == 12) and cols[3].text != "BPM":
+        if (len(cols) == 9 or len(cols) == 10 or len(cols) == 12) and cols[3].text != "BPM" and cols[2].text != "":
             if not (cols[1].has_attr('style') and re.match("^background-color:gray;", cols[1]['style'])):
                 x = 0
                 genre = ''
                 if(len(cols) == 10 or len(cols) == 12):
                     genre = cols[0].text
                     x = 1
-                #basic
-                #if it ends in leggendaria, there's only another difficulty
-                #if it ends with hcn just nope
                 title = cols[0+x].text
                 artist = cols[1+x].text
                 bpm = cols[2+x].text
