@@ -20,7 +20,7 @@
 
     <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
+    <link rel="stylesheet" href="/css/api.css">
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -42,28 +42,25 @@
           <div class="nav-wrapper">
             <a href="#" class="brand-logo">Alpha Test v1.1</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="sass.html">Randomizer</a></li>
+              <li><a href="/">Randomizer</a></li>
+              <li><a href="/api.html">API Doc</a></li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
     <div class="container">
-      <h5>API Address: http://rdm-alpha.herokuapp.com/api/alpha/</h5>
+      <h5>Random Song</h5>
       <ul class="collapsible" data-collapsible="accordion">
         <li>
           <div class="collapsible-header valign-wrapper">
             <div class="chip green">
               GET
             </div>
-            Grab Random Song
+            /api/alpha/random/&#123;game&#125;/&#123;version&#125;/
           </div>
           <div class="collapsible-body">
-            <b>Entry Point:</b>
-            <br/>
-            <code>
-              GET /random/&#123;game&#125;/&#123;version&#125;/
-            </code>
+            Grabs random songs for given game/version.
             <br/>
             <br/>
             <b>Query Parameters</b> (via object):
@@ -72,7 +69,7 @@
                 <tr>
                     <th>Name</th>
                     <th>Type</th>
-                    <th>Default Value</th>
+                    <th>Default</th>
                     <th>Description</th>
                 </tr>
               </thead>
@@ -174,29 +171,102 @@
               </pre>
             </div>
             <div>
-              Sample return json
+              Sample .json return:
               <pre>
                 <code>
                   {
-                    "id":"beatmaniaiidx25",
-                    "build":"2018012300",
-                    "version":"25",
-                    "songs":[
-                      {
-                        "artist":"Expander",
-                        "bpm":"160",
-                        "difficulty":3,
-                        "genre":"HYPER TRAP",
-                        "level":"11",
-                        "style":"double",
-                        "title":"Honey Trap",
-                        "version":"beatmania IIDX 24 SINOBUZ"
-                      }
-                    ]
+                    &ensp;"id":"beatmaniaiidx25",
+                    &ensp;"build":"2018012300",
+                    &ensp;"version":"25",
+                    &ensp;"songs":[
+                    &ensp;&ensp;{
+                    &ensp;&ensp;&ensp;"artist":"Expander",
+                    &ensp;&ensp;&ensp;"bpm":"160",
+                    &ensp;&ensp;&ensp;"difficulty":3,
+                    &ensp;&ensp;&ensp;"genre":"HYPER TRAP",
+                    &ensp;&ensp;&ensp;"level":"11",
+                    &ensp;&ensp;&ensp;"style":"double",
+                    &ensp;&ensp;&ensp;"title":"Honey Trap",
+                    &ensp;&ensp;&ensp;"version":"beatmania IIDX 24 SINOBUZ"
+                    &ensp;&ensp;}
+                    &ensp;]
                   }
                 </code>
               </pre>
             </div>
+          </div>
+        </li>
+      </ul>
+      <h5>Game Information</h5>
+      <ul class="collapsible" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header valign-wrapper">
+            <div class="chip green">
+              GET
+            </div>
+            /api/alpha/info/&#123;game&#125;/&#123;version&#125;/current
+          </div>
+          <div class="collapsible-body">
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header valign-wrapper">
+            <div class="chip green">
+              GET
+            </div>
+            /api/alpha/info/&#123;game&#125;/&#123;version&#125;/builds
+          </div>
+          <div class="collapsible-body">
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header valign-wrapper">
+            <div class="chip green">
+              GET
+            </div>
+            /api/alpha/info/&#123;game&#125;/&#123;version&#125;/
+          </div>
+          <div class="collapsible-body">
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header valign-wrapper">
+            <div class="chip green">
+              GET
+            </div>
+            /api/alpha/list/&#123;game&#125;/versions
+          </div>
+          <div class="collapsible-body">
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header valign-wrapper">
+            <div class="chip green">
+              GET
+            </div>
+            /api/alpha/info/&#123;game&#125;/
+          </div>
+          <div class="collapsible-body">
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header valign-wrapper">
+            <div class="chip green">
+              GET
+            </div>
+            /api/alpha/info/&#123;game&#125;/&#123;version&#125;/builds
+          </div>
+          <div class="collapsible-body">
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header valign-wrapper">
+            <div class="chip green">
+              GET
+            </div>
+            /api/alpha/list/games
+          </div>
+          <div class="collapsible-body">
           </div>
         </li>
       </ul>

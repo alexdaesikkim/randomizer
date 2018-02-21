@@ -62,7 +62,7 @@ var Random = createReactClass({
       error: function(data){
         that.setState({
           errors:{
-            error_messages: ["Please reload the page and try again. If error persists, please contact admin (AJAX return error)"],
+            error_messages: ["Please reload the page and try again. If error persists, please contact admin (could not connect to back-end)"],
             error_class: "form-error"
           }
         })
