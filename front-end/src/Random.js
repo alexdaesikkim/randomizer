@@ -704,6 +704,7 @@ var Song = createReactClass({
     var difficulty = this.props.game === 'danevo' ? "Level " : object.diff_string + " ";
     var style =  this.props.song.style.charAt(0).toUpperCase() + this.props.song.style.slice(1)+ " ";
     var card_class = this.props.song.active ? object.class_name : "Song-card card-out"
+    var level = (this.props.song.game === 'guitar' || this.props.song.game === 'drum') ? this.props.song.level/100.00 : this.props.song.level;
     return (
       <div className={"Song-card " + card_class}>
         <h5>{this.props.song.name}</h5>
