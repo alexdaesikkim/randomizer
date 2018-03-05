@@ -1,0 +1,24 @@
+{
+  "artist": "Shoichiro Hirata",
+  "bpm": "134",
+  "difficulty": {
+    "0": -1,
+    "1": 4,
+    "2": 6,
+    "3": 9
+  },
+  "genre": "2 STEP",
+  "title": "Luv 2 Feel Your Body"
+},
+{
+  "artist": "Sota Fujimori feat. cyborg AKEMI",
+  "bpm": "155",
+  "difficulty": {
+    "0": -1,
+    "1": 5,
+    "2": 8,
+    "3": 11
+  },
+  "genre": "TECHNOTRONICA",
+  "title": "State Of The Art"
+},

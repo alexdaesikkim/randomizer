@@ -2,143 +2,83 @@
   "id": "crossbeats_sunrise",
   "songs": [
     {
-      "artist": "brinq",
-      "bpm": "132.0 ",
+      "artist": "effe",
+      "bpm": "140.0",
       "difficulty": 0,
       "genre": "PICKUP",
-      "level": "8",
+      "level": "11",
       "style": "single",
-      "title": "How True Is Your Love",
+      "title": "\u03b8 (theta) ",
       "version": ""
     },
     {
-      "artist": "brinq",
-      "bpm": "132.0 ",
+      "artist": "effe",
+      "bpm": "140.0",
       "difficulty": 1,
       "genre": "PICKUP",
-      "level": "12",
+      "level": "21",
       "style": "single",
-      "title": "How True Is Your Love",
+      "title": "\u03b8 (theta) ",
       "version": ""
     },
     {
-      "artist": "brinq",
-      "bpm": "132.0 ",
+      "artist": "effe",
+      "bpm": "140.0",
       "difficulty": 2,
+      "genre": "PICKUP",
+      "level": "34",
+      "style": "single",
+      "title": "\u03b8 (theta) ",
+      "version": ""
+    },
+    {
+      "artist": "effe",
+      "bpm": "140.0",
+      "difficulty": 3,
+      "genre": "PICKUP",
+      "level": "62",
+      "style": "single",
+      "title": "\u03b8 (theta) ",
+      "version": ""
+    },
+    {
+      "artist": "MozSound",
+      "bpm": "173.0",
+      "difficulty": 0,
+      "genre": "PICKUP",
+      "level": "14",
+      "style": "single",
+      "title": "Cthugha",
+      "version": ""
+    },
+    {
+      "artist": "MozSound",
+      "bpm": "173.0",
+      "difficulty": 1,
       "genre": "PICKUP",
       "level": "25",
       "style": "single",
-      "title": "How True Is Your Love",
+      "title": "Cthugha",
       "version": ""
     },
     {
-      "artist": "brinq",
-      "bpm": "132.0 ",
-      "difficulty": 3,
-      "genre": "PICKUP",
-      "level": "53",
-      "style": "single",
-      "title": "How True Is Your Love",
-      "version": ""
-    },
-    {
-      "artist": "brinq",
-      "bpm": "132.0 ",
-      "difficulty": 4,
-      "genre": "PICKUP",
-      "level": "74",
-      "style": "single",
-      "title": "How True Is Your Love",
-      "version": ""
-    },
-    {
-      "artist": "Fierce Chain",
-      "bpm": "145.0",
-      "difficulty": 0,
-      "genre": "PICKUP",
-      "level": "10",
-      "style": "single",
-      "title": "Music Takes Control",
-      "version": ""
-    },
-    {
-      "artist": "Fierce Chain",
-      "bpm": "145.0",
-      "difficulty": 1,
-      "genre": "PICKUP",
-      "level": "27",
-      "style": "single",
-      "title": "Music Takes Control",
-      "version": ""
-    },
-    {
-      "artist": "Fierce Chain",
-      "bpm": "145.0",
+      "artist": "MozSound",
+      "bpm": "173.0",
       "difficulty": 2,
       "genre": "PICKUP",
-      "level": "37",
+      "level": "48",
       "style": "single",
-      "title": "Music Takes Control",
+      "title": "Cthugha",
       "version": ""
     },
     {
-      "artist": "Fierce Chain",
-      "bpm": "145.0",
+      "artist": "MozSound",
+      "bpm": "173.0",
       "difficulty": 3,
       "genre": "PICKUP",
-      "level": "69",
+      "level": "73",
       "style": "single",
-      "title": "Music Takes Control",
-      "version": ""
-    },
-    {
-      "artist": "\u30df\u30d5\u30e1\u30a4",
-      "bpm": "143.0 ",
-      "difficulty": 0,
-      "genre": "PICKUP",
-      "level": "18",
-      "style": "single",
-      "title": "Faraway",
-      "version": ""
-    },
-    {
-      "artist": "\u30df\u30d5\u30e1\u30a4",
-      "bpm": "143.0 ",
-      "difficulty": 1,
-      "genre": "PICKUP",
-      "level": "23",
-      "style": "single",
-      "title": "Faraway",
-      "version": ""
-    },
-    {
-      "artist": "\u30df\u30d5\u30e1\u30a4",
-      "bpm": "143.0 ",
-      "difficulty": 2,
-      "genre": "PICKUP",
-      "level": "36",
-      "style": "single",
-      "title": "Faraway",
-      "version": ""
-    },
-    {
-      "artist": "\u30df\u30d5\u30e1\u30a4",
-      "bpm": "143.0 ",
-      "difficulty": 3,
-      "genre": "PICKUP",
-      "level": "60",
-      "style": "single",
-      "title": "Faraway",
-      "version": ""
-    },
-    {
-      "artist": "\u30df\u30d5\u30e1\u30a4",
-      "bpm": "143.0 ",
-      "difficulty": 4,
-      "genre": "PICKUP",
-      "level": "76",
-      "style": "single",
-      "title": "Faraway",
+      "title": "Cthugha",
       "version": ""
     },
     {
@@ -3852,6 +3792,56 @@
       "version": ""
     },
     {
+      "artist": "brinq",
+      "bpm": "132.0 ",
+      "difficulty": 0,
+      "genre": "ORIGINAL",
+      "level": "8",
+      "style": "single",
+      "title": "How True Is Your Love",
+      "version": ""
+    },
+    {
+      "artist": "brinq",
+      "bpm": "132.0 ",
+      "difficulty": 1,
+      "genre": "ORIGINAL",
+      "level": "12",
+      "style": "single",
+      "title": "How True Is Your Love",
+      "version": ""
+    },
+    {
+      "artist": "brinq",
+      "bpm": "132.0 ",
+      "difficulty": 2,
+      "genre": "ORIGINAL",
+      "level": "25",
+      "style": "single",
+      "title": "How True Is Your Love",
+      "version": ""
+    },
+    {
+      "artist": "brinq",
+      "bpm": "132.0 ",
+      "difficulty": 3,
+      "genre": "ORIGINAL",
+      "level": "53",
+      "style": "single",
+      "title": "How True Is Your Love",
+      "version": ""
+    },
+    {
+      "artist": "brinq",
+      "bpm": "132.0 ",
+      "difficulty": 4,
+      "genre": "ORIGINAL",
+      "level": "74",
+      "style": "single",
+      "title": "How True Is Your Love",
+      "version": ""
+    },
+    {
       "artist": "NAOKI feat. un\u221elimited",
       "bpm": "180.0 ",
       "difficulty": 0,
@@ -5899,6 +5889,46 @@
       "level": "71",
       "style": "single",
       "title": "\u3055\u3088\u306a\u3089\u6700\u7d42\u5217\u8eca",
+      "version": ""
+    },
+    {
+      "artist": "Fierce Chain",
+      "bpm": "145.0",
+      "difficulty": 0,
+      "genre": "ORIGINAL",
+      "level": "10",
+      "style": "single",
+      "title": "Music Takes Control",
+      "version": ""
+    },
+    {
+      "artist": "Fierce Chain",
+      "bpm": "145.0",
+      "difficulty": 1,
+      "genre": "ORIGINAL",
+      "level": "27",
+      "style": "single",
+      "title": "Music Takes Control",
+      "version": ""
+    },
+    {
+      "artist": "Fierce Chain",
+      "bpm": "145.0",
+      "difficulty": 2,
+      "genre": "ORIGINAL",
+      "level": "37",
+      "style": "single",
+      "title": "Music Takes Control",
+      "version": ""
+    },
+    {
+      "artist": "Fierce Chain",
+      "bpm": "145.0",
+      "difficulty": 3,
+      "genre": "ORIGINAL",
+      "level": "69",
+      "style": "single",
+      "title": "Music Takes Control",
       "version": ""
     },
     {
@@ -10419,6 +10449,56 @@
       "level": "86",
       "style": "single",
       "title": "Crisscrosser",
+      "version": ""
+    },
+    {
+      "artist": "\u30df\u30d5\u30e1\u30a4",
+      "bpm": "143.0 ",
+      "difficulty": 0,
+      "genre": "ORIGINAL",
+      "level": "18",
+      "style": "single",
+      "title": "Faraway",
+      "version": ""
+    },
+    {
+      "artist": "\u30df\u30d5\u30e1\u30a4",
+      "bpm": "143.0 ",
+      "difficulty": 1,
+      "genre": "ORIGINAL",
+      "level": "23",
+      "style": "single",
+      "title": "Faraway",
+      "version": ""
+    },
+    {
+      "artist": "\u30df\u30d5\u30e1\u30a4",
+      "bpm": "143.0 ",
+      "difficulty": 2,
+      "genre": "ORIGINAL",
+      "level": "36",
+      "style": "single",
+      "title": "Faraway",
+      "version": ""
+    },
+    {
+      "artist": "\u30df\u30d5\u30e1\u30a4",
+      "bpm": "143.0 ",
+      "difficulty": 3,
+      "genre": "ORIGINAL",
+      "level": "60",
+      "style": "single",
+      "title": "Faraway",
+      "version": ""
+    },
+    {
+      "artist": "\u30df\u30d5\u30e1\u30a4",
+      "bpm": "143.0 ",
+      "difficulty": 4,
+      "genre": "ORIGINAL",
+      "level": "76",
+      "style": "single",
+      "title": "Faraway",
       "version": ""
     },
     {
