@@ -67472,6 +67472,126 @@
       "version": "beatmania IIDX 25 CANNON BALLERS"
     },
     {
+      "artist": "\u304b\u3081\u308a\u3042",
+      "bpm": "169",
+      "difficulty": 1,
+      "genre": "MACHINEGUN PSYSTYLE",
+      "level": "7",
+      "style": "single",
+      "title": "NITROUS CANNON",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "\u304b\u3081\u308a\u3042",
+      "bpm": "169",
+      "difficulty": 2,
+      "genre": "MACHINEGUN PSYSTYLE",
+      "level": "10",
+      "style": "single",
+      "title": "NITROUS CANNON",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "\u304b\u3081\u308a\u3042",
+      "bpm": "169",
+      "difficulty": 3,
+      "genre": "MACHINEGUN PSYSTYLE",
+      "level": "12",
+      "style": "single",
+      "title": "NITROUS CANNON",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "\u304b\u3081\u308a\u3042",
+      "bpm": "169",
+      "difficulty": 1,
+      "genre": "MACHINEGUN PSYSTYLE",
+      "level": "7",
+      "style": "double",
+      "title": "NITROUS CANNON",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "\u304b\u3081\u308a\u3042",
+      "bpm": "169",
+      "difficulty": 2,
+      "genre": "MACHINEGUN PSYSTYLE",
+      "level": "10",
+      "style": "double",
+      "title": "NITROUS CANNON",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "\u304b\u3081\u308a\u3042",
+      "bpm": "169",
+      "difficulty": 3,
+      "genre": "MACHINEGUN PSYSTYLE",
+      "level": "12",
+      "style": "double",
+      "title": "NITROUS CANNON",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "MOSAIC.WAV",
+      "bpm": "188",
+      "difficulty": 1,
+      "genre": "AKIBA-POP",
+      "level": "5",
+      "style": "single",
+      "title": "\u30d1\u30e9\u30c9\u30ad\u30b7\u30ab\u30eb\u30fb\u30bf\u30a4\u30e0\u30ea\u30fc\u30d7\u30c8\u30e9\u30a4\u30a2\u30eb(Short.Ver)",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "MOSAIC.WAV",
+      "bpm": "188",
+      "difficulty": 2,
+      "genre": "AKIBA-POP",
+      "level": "9",
+      "style": "single",
+      "title": "\u30d1\u30e9\u30c9\u30ad\u30b7\u30ab\u30eb\u30fb\u30bf\u30a4\u30e0\u30ea\u30fc\u30d7\u30c8\u30e9\u30a4\u30a2\u30eb(Short.Ver)",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "MOSAIC.WAV",
+      "bpm": "188",
+      "difficulty": 3,
+      "genre": "AKIBA-POP",
+      "level": "11",
+      "style": "single",
+      "title": "\u30d1\u30e9\u30c9\u30ad\u30b7\u30ab\u30eb\u30fb\u30bf\u30a4\u30e0\u30ea\u30fc\u30d7\u30c8\u30e9\u30a4\u30a2\u30eb(Short.Ver)",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "MOSAIC.WAV",
+      "bpm": "188",
+      "difficulty": 1,
+      "genre": "AKIBA-POP",
+      "level": "5",
+      "style": "double",
+      "title": "\u30d1\u30e9\u30c9\u30ad\u30b7\u30ab\u30eb\u30fb\u30bf\u30a4\u30e0\u30ea\u30fc\u30d7\u30c8\u30e9\u30a4\u30a2\u30eb(Short.Ver)",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "MOSAIC.WAV",
+      "bpm": "188",
+      "difficulty": 2,
+      "genre": "AKIBA-POP",
+      "level": "9",
+      "style": "double",
+      "title": "\u30d1\u30e9\u30c9\u30ad\u30b7\u30ab\u30eb\u30fb\u30bf\u30a4\u30e0\u30ea\u30fc\u30d7\u30c8\u30e9\u30a4\u30a2\u30eb(Short.Ver)",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "MOSAIC.WAV",
+      "bpm": "188",
+      "difficulty": 3,
+      "genre": "AKIBA-POP",
+      "level": "11",
+      "style": "double",
+      "title": "\u30d1\u30e9\u30c9\u30ad\u30b7\u30ab\u30eb\u30fb\u30bf\u30a4\u30e0\u30ea\u30fc\u30d7\u30c8\u30e9\u30a4\u30a2\u30eb(Short.Ver)",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
       "artist": "BEMANI Sound Team \"RACER-X\"",
       "bpm": "188",
       "difficulty": 1,
@@ -68249,6 +68369,36 @@
       "level": "12",
       "style": "double",
       "title": "Persephone",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "Maozon vs. C-Show",
+      "bpm": "162",
+      "difficulty": 1,
+      "genre": "CYBERCORE",
+      "level": "6",
+      "style": "single",
+      "title": "Around the Future",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "Maozon vs. C-Show",
+      "bpm": "162",
+      "difficulty": 2,
+      "genre": "CYBERCORE",
+      "level": "9",
+      "style": "single",
+      "title": "Around the Future",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "Maozon vs. C-Show",
+      "bpm": "162",
+      "difficulty": 3,
+      "genre": "CYBERCORE",
+      "level": "11",
+      "style": "single",
+      "title": "Around the Future",
       "version": "beatmania IIDX 25 CANNON BALLERS"
     },
     {

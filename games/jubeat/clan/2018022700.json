@@ -22742,6 +22742,96 @@
       "version": "jubeat clan"
     },
     {
+      "artist": "izna",
+      "bpm": "125",
+      "difficulty": 0,
+      "genre": "\u6771\u65b9\u30a2\u30ec\u30f3\u30b8",
+      "level": "2",
+      "style": "single",
+      "title": "Spring Rouge",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "izna",
+      "bpm": "125",
+      "difficulty": 1,
+      "genre": "\u6771\u65b9\u30a2\u30ec\u30f3\u30b8",
+      "level": "6",
+      "style": "single",
+      "title": "Spring Rouge",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "izna",
+      "bpm": "125",
+      "difficulty": 2,
+      "genre": "\u6771\u65b9\u30a2\u30ec\u30f3\u30b8",
+      "level": "8",
+      "style": "single",
+      "title": "Spring Rouge",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "Petit Rabbit's with beans",
+      "bpm": "158",
+      "difficulty": 0,
+      "genre": "\u30a2\u30cb\u30e1",
+      "level": "2",
+      "style": "single",
+      "title": "\u30bb\u30ab\u30a4\u304c\u30ab\u30d5\u30a7\u306b\u306a\u3063\u3061\u3083\u3063\u305f\uff01",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "Petit Rabbit's with beans",
+      "bpm": "158",
+      "difficulty": 1,
+      "genre": "\u30a2\u30cb\u30e1",
+      "level": "6",
+      "style": "single",
+      "title": "\u30bb\u30ab\u30a4\u304c\u30ab\u30d5\u30a7\u306b\u306a\u3063\u3061\u3083\u3063\u305f\uff01",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "Petit Rabbit's with beans",
+      "bpm": "158",
+      "difficulty": 2,
+      "genre": "\u30a2\u30cb\u30e1",
+      "level": "8",
+      "style": "single",
+      "title": "\u30bb\u30ab\u30a4\u304c\u30ab\u30d5\u30a7\u306b\u306a\u3063\u3061\u3083\u3063\u305f\uff01",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "\u305d\u3089\u307e\u3075\u3046\u3089\u3055\u304b",
+      "bpm": "162",
+      "difficulty": 0,
+      "genre": "\u30bd\u30fc\u30b7\u30e3\u30eb",
+      "level": "3",
+      "style": "single",
+      "title": "\u30ed\u30fc\u30eb\u30d7\u30ec\u30a4\u30f3\u30b0\u30b2\u30fc\u30e0",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "\u305d\u3089\u307e\u3075\u3046\u3089\u3055\u304b",
+      "bpm": "162",
+      "difficulty": 1,
+      "genre": "\u30bd\u30fc\u30b7\u30e3\u30eb",
+      "level": "6",
+      "style": "single",
+      "title": "\u30ed\u30fc\u30eb\u30d7\u30ec\u30a4\u30f3\u30b0\u30b2\u30fc\u30e0",
+      "version": "jubeat clan"
+    },
+    {
+      "artist": "\u305d\u3089\u307e\u3075\u3046\u3089\u3055\u304b",
+      "bpm": "162",
+      "difficulty": 2,
+      "genre": "\u30bd\u30fc\u30b7\u30e3\u30eb",
+      "level": "9",
+      "style": "single",
+      "title": "\u30ed\u30fc\u30eb\u30d7\u30ec\u30a4\u30f3\u30b0\u30b2\u30fc\u30e0",
+      "version": "jubeat clan"
+    },
+    {
       "artist": "OSTER project",
       "bpm": "170",
       "difficulty": 0,
