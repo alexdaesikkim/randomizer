@@ -185,7 +185,7 @@ app.get('/api/alpha/random/:game/:version/', function(req, res, next){
   var max_difficulty = req.query.max_difficulty != null ? req.query.max_difficulty : -1;
   var min_level = req.query.min_level != null ? req.query.min_level : 0;
   var max_level = req.query.max_level != null ? req.query.max_level : 0;
-  var build = req.query.build != null ? req.query.build : "";
+  var build = req.query.build != null ? req.query.build : "latest";
   var style = req.query.style != null ? req.query.style : "all";
   var north_america = req.query.north_america != null ? req.query.north_america : false;
   var game = req.params.game;
@@ -224,7 +224,7 @@ app.get('/api/alpha/random/:game/:version/', function(req, res, next){
     return;
   }
 
-  if(!build) build = game_data.games[game].versions[version].current;
+  if(build === "latest") build = game_data.games[game].versions[version].current;
 
   else{
     builds = game_data.games[game].versions[version].builds
@@ -274,13 +274,13 @@ app.get('/api/alpha/random/:game/:version/', function(req, res, next){
 
   obj = {
     id: song_obj.id,
+    build: build,
     version: version,
     songs: []
   }
 
 
   for(var i = 0; i < count; i++){
-
     obj.songs.push(songs[i]);
   }
 
@@ -374,7 +374,8 @@ app.get('/api/alpha/list/games/', function(req, res, next){
 });
 
 app.get('*', function(req, res){
-  res.send('Page not found', 404);
+  res.send('Invalid address');
+  res.status(404)
   res.end();
 });
 

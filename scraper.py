@@ -13,43 +13,38 @@ if os.name == 'nt':
 #IMPORTANT: This is using cmd to scrape the page. Problem here is that it won't be specific here, so there needs to be a better way to do this.
 print("Starting")
 
-print("IIDX")
-
+print("IIDX Current:")
 print("CANNON BALLERS")
 subprocess.call([name, "iidx_cannonballers.py"], cwd="scripts")
 
-print("DDR")
-
-print("2014")
-subprocess.call([name, "ddr_2014.py"], cwd="scripts")
-
+print("DDR Current:")
 print("Ace")
 subprocess.call([name, "ddr_ace.py"], cwd="scripts")
 
-print("POP'N MUSIC")
+print("POP'N MUSIC Current:")
 print("Usaneko")
 subprocess.call([name, "popn_usaneko.py"], cwd="scripts")
 
-print("JUBEAT")
+print("JUBEAT Current:")
 print("clan")
 subprocess.call([name, "jubeat_clan.py"], cwd="scripts")
 
-print("REFLEC BEAT")
+print("REFLEC BEAT Current:")
 print("Reflesia")
 subprocess.call([name, "reflec_reflesia.py"], cwd="scripts")
 
-print("SDVX")
+print("SDVX Current:")
 print("Heavenly Haven")
 subprocess.call([name, "sdvx_hh.py"], cwd="scripts")
 
-print("MUSECA")
+print("MUSECA Current:")
 print("1+1/2")
 subprocess.call([name, "museca_half.py"], cwd="scripts")
 
-print("GROOVE COASTER")
+print("GROOVE COASTER Current:")
 print("3EX")
 subprocess.call([name, "gc_3ex.py"], cwd="scripts")
 
-print("crossbeats REV.")
+print("crossbeats REV. Current:")
 print("SUNRISE")
 subprocess.call([name, "crossbeats_sunrise.py"], cwd="scripts")

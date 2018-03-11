@@ -62,7 +62,7 @@ var Random = createReactClass({
       error: function(data){
         that.setState({
           errors:{
-            error_messages: ["Please reload the page and try again. If error persists, please contact admin (AJAX return error)"],
+            error_messages: ["Please reload the page and try again. If error persists, please contact admin (could not connect to back-end)"],
             error_class: "form-error"
           }
         })
@@ -613,10 +613,6 @@ var Random = createReactClass({
       }
   },
 
-  warningPanel(){
-
-  },
-
   banPanel(){
       return(
             <div className={(this.state.songs.length > 0 && this.state.card_draw_panel) ? "Ban-panel" : "Ban-panel-out"}>
@@ -686,7 +682,7 @@ var Song = createReactClass({
   },
 
   card_ban(){
-    var url = "https://www.google.com/search?q=" + this.props.song.name + "+" + this.props.song.version
+    var url = "https://www.google.com/search?q=" + this.props.song.name + "+" + this.props.song.version + "+" + this.props.game
     if(this.props.card_draw_panel){
       return(
         <div>
@@ -707,8 +703,8 @@ var Song = createReactClass({
     var object = this.diff_return(this.props.song.difficulty);
     var difficulty = this.props.game === 'danevo' ? "Level " : object.diff_string + " ";
     var style =  this.props.song.style.charAt(0).toUpperCase() + this.props.song.style.slice(1)+ " ";
-
     var card_class = this.props.song.active ? object.class_name : "Song-card card-out"
+    var level = (this.props.song.game === 'guitar' || this.props.song.game === 'drum') ? this.props.song.level/100.00 : this.props.song.level;
     return (
       <div className={"Song-card " + card_class}>
         <h5>{this.props.song.name}</h5>
