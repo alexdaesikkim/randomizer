@@ -1512,6 +1512,36 @@
       "version": "REFLEC BEAT"
     },
     {
+      "artist": "DJ YOSHITAKA",
+      "bpm": "185",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "7",
+      "style": "single",
+      "title": "Elisha",
+      "version": "REFLEC BEAT"
+    },
+    {
+      "artist": "DJ YOSHITAKA",
+      "bpm": "185",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "Elisha",
+      "version": "REFLEC BEAT"
+    },
+    {
+      "artist": "DJ YOSHITAKA",
+      "bpm": "185",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "11",
+      "style": "single",
+      "title": "Elisha",
+      "version": "REFLEC BEAT"
+    },
+    {
       "artist": "Rb.Conductor",
       "bpm": "104",
       "difficulty": 0,
@@ -3009,6 +3039,66 @@
       "level": "13",
       "style": "single",
       "title": "\u9b5a\u6c37\u306b\u4e0a\u308a \u8000\u3088\u3072\u3066",
+      "version": "REFLEC BEAT limelight"
+    },
+    {
+      "artist": "Qrispy Joybox",
+      "bpm": "182",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "6",
+      "style": "single",
+      "title": "cloche",
+      "version": "REFLEC BEAT limelight"
+    },
+    {
+      "artist": "Qrispy Joybox",
+      "bpm": "182",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "8",
+      "style": "single",
+      "title": "cloche",
+      "version": "REFLEC BEAT limelight"
+    },
+    {
+      "artist": "Qrispy Joybox",
+      "bpm": "182",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "12",
+      "style": "single",
+      "title": "cloche",
+      "version": "REFLEC BEAT limelight"
+    },
+    {
+      "artist": "\u732b\u53c9Master",
+      "bpm": "108",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "2",
+      "style": "single",
+      "title": "Last Hometown",
+      "version": "REFLEC BEAT limelight"
+    },
+    {
+      "artist": "\u732b\u53c9Master",
+      "bpm": "108",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "7",
+      "style": "single",
+      "title": "Last Hometown",
+      "version": "REFLEC BEAT limelight"
+    },
+    {
+      "artist": "\u732b\u53c9Master",
+      "bpm": "108",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "9",
+      "style": "single",
+      "title": "Last Hometown",
       "version": "REFLEC BEAT limelight"
     },
     {
@@ -3682,6 +3772,36 @@
       "version": "REFLEC BEAT colette -Winter-"
     },
     {
+      "artist": "L.E.D.",
+      "bpm": "165",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "6",
+      "style": "single",
+      "title": "WONDER WALKER",
+      "version": "REFLEC BEAT colette -Winter-"
+    },
+    {
+      "artist": "L.E.D.",
+      "bpm": "165",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "WONDER WALKER",
+      "version": "REFLEC BEAT colette -Winter-"
+    },
+    {
+      "artist": "L.E.D.",
+      "bpm": "165",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "13",
+      "style": "single",
+      "title": "WONDER WALKER",
+      "version": "REFLEC BEAT colette -Winter-"
+    },
+    {
       "artist": "TAG",
       "bpm": "144",
       "difficulty": 0,
@@ -7879,6 +7999,36 @@
       "level": "13",
       "style": "single",
       "title": "Chronoxia",
+      "version": "REFLEC BEAT groovin'!!"
+    },
+    {
+      "artist": "Five Hammer",
+      "bpm": "138",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "6",
+      "style": "single",
+      "title": "\u0192\u0192\u0192\u0192\u0192",
+      "version": "REFLEC BEAT groovin'!!"
+    },
+    {
+      "artist": "Five Hammer",
+      "bpm": "138",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "\u0192\u0192\u0192\u0192\u0192",
+      "version": "REFLEC BEAT groovin'!!"
+    },
+    {
+      "artist": "Five Hammer",
+      "bpm": "138",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "14",
+      "style": "single",
+      "title": "\u0192\u0192\u0192\u0192\u0192",
       "version": "REFLEC BEAT groovin'!!"
     },
     {
@@ -9552,6 +9702,106 @@
       "version": "REFLEC BEAT groovin'!! Upper"
     },
     {
+      "artist": "ADULTIC TEACHERS",
+      "bpm": "184",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "6",
+      "style": "single",
+      "title": "Air Reading Power",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
+      "artist": "ADULTIC TEACHERS",
+      "bpm": "184",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "Air Reading Power",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
+      "artist": "ADULTIC TEACHERS",
+      "bpm": "184",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "12",
+      "style": "single",
+      "title": "Air Reading Power",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
+      "artist": "ADULTIC TEACHERS",
+      "bpm": "184",
+      "difficulty": 3,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "15",
+      "style": "single",
+      "title": "Air Reading Power",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
+      "artist": "t\u016bmahaB",
+      "bpm": "199",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "7",
+      "style": "single",
+      "title": "Eclipse Zero",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
+      "artist": "t\u016bmahaB",
+      "bpm": "199",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "Eclipse Zero",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
+      "artist": "t\u016bmahaB",
+      "bpm": "199",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "15",
+      "style": "single",
+      "title": "Eclipse Zero",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
+      "artist": "L.E.D.LIGHT-G",
+      "bpm": "190-200",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "7",
+      "style": "single",
+      "title": "HELL SCAPER",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
+      "artist": "L.E.D.LIGHT-G",
+      "bpm": "190-200",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "HELL SCAPER",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
+      "artist": "L.E.D.LIGHT-G",
+      "bpm": "190-200",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "12",
+      "style": "single",
+      "title": "HELL SCAPER",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
       "artist": "n-buna",
       "bpm": "120",
       "difficulty": 0,
@@ -10859,6 +11109,36 @@
       "level": "12",
       "style": "single",
       "title": "Crazy Jackpot",
+      "version": "REFLEC BEAT VOLZZA"
+    },
+    {
+      "artist": "HEXA",
+      "bpm": "145",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "7",
+      "style": "single",
+      "title": "CODE:1",
+      "version": "REFLEC BEAT VOLZZA"
+    },
+    {
+      "artist": "HEXA",
+      "bpm": "145",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "CODE:1",
+      "version": "REFLEC BEAT VOLZZA"
+    },
+    {
+      "artist": "HEXA",
+      "bpm": "145",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "13",
+      "style": "single",
+      "title": "CODE:1",
       "version": "REFLEC BEAT VOLZZA"
     },
     {
@@ -12389,6 +12669,46 @@
       "level": "15",
       "style": "single",
       "title": "Triple Counter",
+      "version": "REFLEC BEAT VOLZZA 2"
+    },
+    {
+      "artist": "\u5e38\u76e4\u3086\u3046",
+      "bpm": "168",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "2",
+      "style": "single",
+      "title": "\u30ab\u30e2\u30df\u30fc\u30eb\u30fb\u30d0\u30b9\u30eb\u30fc\u30e0",
+      "version": "REFLEC BEAT VOLZZA 2"
+    },
+    {
+      "artist": "\u5e38\u76e4\u3086\u3046",
+      "bpm": "168",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "8",
+      "style": "single",
+      "title": "\u30ab\u30e2\u30df\u30fc\u30eb\u30fb\u30d0\u30b9\u30eb\u30fc\u30e0",
+      "version": "REFLEC BEAT VOLZZA 2"
+    },
+    {
+      "artist": "\u5e38\u76e4\u3086\u3046",
+      "bpm": "168",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "\u30ab\u30e2\u30df\u30fc\u30eb\u30fb\u30d0\u30b9\u30eb\u30fc\u30e0",
+      "version": "REFLEC BEAT VOLZZA 2"
+    },
+    {
+      "artist": "\u5e38\u76e4\u3086\u3046",
+      "bpm": "168",
+      "difficulty": 3,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "11",
+      "style": "single",
+      "title": "\u30ab\u30e2\u30df\u30fc\u30eb\u30fb\u30d0\u30b9\u30eb\u30fc\u30e0",
       "version": "REFLEC BEAT VOLZZA 2"
     },
     {

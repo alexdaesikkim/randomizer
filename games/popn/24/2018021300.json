@@ -42902,6 +42902,126 @@
       "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
     },
     {
+      "artist": "A\u5fdcP",
+      "bpm": "162",
+      "difficulty": 0,
+      "genre": "",
+      "level": "6",
+      "style": "single",
+      "title": "\u541b\u6c0f\u5371\u3046\u304f\u3082\u8fd1\u3046\u3088\u308c",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "A\u5fdcP",
+      "bpm": "162",
+      "difficulty": 1,
+      "genre": "",
+      "level": "23",
+      "style": "single",
+      "title": "\u541b\u6c0f\u5371\u3046\u304f\u3082\u8fd1\u3046\u3088\u308c",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "A\u5fdcP",
+      "bpm": "162",
+      "difficulty": 2,
+      "genre": "",
+      "level": "33",
+      "style": "single",
+      "title": "\u541b\u6c0f\u5371\u3046\u304f\u3082\u8fd1\u3046\u3088\u308c",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "A\u5fdcP",
+      "bpm": "162",
+      "difficulty": 3,
+      "genre": "",
+      "level": "40",
+      "style": "single",
+      "title": "\u541b\u6c0f\u5371\u3046\u304f\u3082\u8fd1\u3046\u3088\u308c",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "A\u5fdcP",
+      "bpm": "141",
+      "difficulty": 0,
+      "genre": "",
+      "level": "5",
+      "style": "single",
+      "title": "\u307e\u307c\u308d\u3057\u30a6\u30a4\u30f3\u30af",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "A\u5fdcP",
+      "bpm": "141",
+      "difficulty": 1,
+      "genre": "",
+      "level": "20",
+      "style": "single",
+      "title": "\u307e\u307c\u308d\u3057\u30a6\u30a4\u30f3\u30af",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "A\u5fdcP",
+      "bpm": "141",
+      "difficulty": 2,
+      "genre": "",
+      "level": "32",
+      "style": "single",
+      "title": "\u307e\u307c\u308d\u3057\u30a6\u30a4\u30f3\u30af",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "A\u5fdcP",
+      "bpm": "141",
+      "difficulty": 3,
+      "genre": "",
+      "level": "39",
+      "style": "single",
+      "title": "\u307e\u307c\u308d\u3057\u30a6\u30a4\u30f3\u30af",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "\u305d\u3089\u307e\u3075\u3046\u3089\u3055\u304b",
+      "bpm": "162",
+      "difficulty": 0,
+      "genre": "",
+      "level": "7",
+      "style": "single",
+      "title": "\u30ed\u30fc\u30eb\u30d7\u30ec\u30a4\u30f3\u30b0\u30b2\u30fc\u30e0",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "\u305d\u3089\u307e\u3075\u3046\u3089\u3055\u304b",
+      "bpm": "162",
+      "difficulty": 1,
+      "genre": "",
+      "level": "22",
+      "style": "single",
+      "title": "\u30ed\u30fc\u30eb\u30d7\u30ec\u30a4\u30f3\u30b0\u30b2\u30fc\u30e0",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "\u305d\u3089\u307e\u3075\u3046\u3089\u3055\u304b",
+      "bpm": "162",
+      "difficulty": 2,
+      "genre": "",
+      "level": "38",
+      "style": "single",
+      "title": "\u30ed\u30fc\u30eb\u30d7\u30ec\u30a4\u30f3\u30b0\u30b2\u30fc\u30e0",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "\u305d\u3089\u307e\u3075\u3046\u3089\u3055\u304b",
+      "bpm": "162",
+      "difficulty": 3,
+      "genre": "",
+      "level": "43",
+      "style": "single",
+      "title": "\u30ed\u30fc\u30eb\u30d7\u30ec\u30a4\u30f3\u30b0\u30b2\u30fc\u30e0",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
       "artist": "\u6e9f\u6d77\u30be\u30c7\u30a3\u30a2\u30c3\u30af",
       "bpm": "200",
       "difficulty": 0,
@@ -47179,6 +47299,126 @@
       "level": "49",
       "style": "single",
       "title": "K\u2200MUY",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "Xceon",
+      "bpm": "163",
+      "difficulty": 0,
+      "genre": "",
+      "level": "9",
+      "style": "single",
+      "title": "\u30b4\u30fc\u30eb\u30c7\u30f3\u30cf\u30fc\u30c8 ft. Kimberley Nutbey",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "Xceon",
+      "bpm": "163",
+      "difficulty": 1,
+      "genre": "",
+      "level": "26",
+      "style": "single",
+      "title": "\u30b4\u30fc\u30eb\u30c7\u30f3\u30cf\u30fc\u30c8 ft. Kimberley Nutbey",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "Xceon",
+      "bpm": "163",
+      "difficulty": 2,
+      "genre": "",
+      "level": "39",
+      "style": "single",
+      "title": "\u30b4\u30fc\u30eb\u30c7\u30f3\u30cf\u30fc\u30c8 ft. Kimberley Nutbey",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "Xceon",
+      "bpm": "163",
+      "difficulty": 3,
+      "genre": "",
+      "level": "46",
+      "style": "single",
+      "title": "\u30b4\u30fc\u30eb\u30c7\u30f3\u30cf\u30fc\u30c8 ft. Kimberley Nutbey",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "dj REMO-CON VS dj TAKA",
+      "bpm": "150",
+      "difficulty": 0,
+      "genre": "",
+      "level": "13",
+      "style": "single",
+      "title": "GOLDEN CROSS",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "dj REMO-CON VS dj TAKA",
+      "bpm": "150",
+      "difficulty": 1,
+      "genre": "",
+      "level": "30",
+      "style": "single",
+      "title": "GOLDEN CROSS",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "dj REMO-CON VS dj TAKA",
+      "bpm": "150",
+      "difficulty": 2,
+      "genre": "",
+      "level": "41",
+      "style": "single",
+      "title": "GOLDEN CROSS",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "dj REMO-CON VS dj TAKA",
+      "bpm": "150",
+      "difficulty": 3,
+      "genre": "",
+      "level": "48",
+      "style": "single",
+      "title": "GOLDEN CROSS",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "BlackY",
+      "bpm": "176",
+      "difficulty": 0,
+      "genre": "",
+      "level": "11",
+      "style": "single",
+      "title": "BILLION MONEY BAZOOKA",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "BlackY",
+      "bpm": "176",
+      "difficulty": 1,
+      "genre": "",
+      "level": "29",
+      "style": "single",
+      "title": "BILLION MONEY BAZOOKA",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "BlackY",
+      "bpm": "176",
+      "difficulty": 2,
+      "genre": "",
+      "level": "40",
+      "style": "single",
+      "title": "BILLION MONEY BAZOOKA",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "BlackY",
+      "bpm": "176",
+      "difficulty": 3,
+      "genre": "",
+      "level": "47",
+      "style": "single",
+      "title": "BILLION MONEY BAZOOKA",
       "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
     },
     {
