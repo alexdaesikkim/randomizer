@@ -13,7 +13,8 @@ from bs4 import BeautifulSoup
 version_url = "http://www.wikihouse.com/groove/index.php?Groove%20Coaster%A1%CAAC%C8%C7%A1%CB%2F%BC%FD%CF%BF%B6%CA%A5%EA%A5%B9%A5%C8#VARIETY"
 main_page = urlopen(version_url)
 side_bar = BeautifulSoup(main_page, "html5lib").find('div', class_='span3 hidden-phone')
-text = side_bar.find_all('p')[1].text.split("(")[1]
+text = side_bar.find_all('p')[1].text.split("\n")[0].split("(")[1] #this is due to new version coming out soon. might have to rever to split[1] only after 4 comes out
+
 text = text[:-1]
 version_name = text
 

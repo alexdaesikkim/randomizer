@@ -6042,6 +6042,36 @@
       "version": ""
     },
     {
+      "artist": "RD-Sounds\u300c\u6771\u65b9\u795e\u970a\u5edf\u300d\u30a2\u30ec\u30f3\u30b8",
+      "bpm": "156",
+      "difficulty": 0,
+      "genre": "\u6771\u65b9\u30a2\u30ec\u30f3\u30b8",
+      "level": "2",
+      "style": "single",
+      "title": "\u30a4\u30cb\u30b7\u30e3\u30eb\u30a4\u30cb\u30b7\u30e3\u30eb\u30a8\u30b3\u30fc\u30a8\u30b4\u30fc",
+      "version": ""
+    },
+    {
+      "artist": "RD-Sounds\u300c\u6771\u65b9\u795e\u970a\u5edf\u300d\u30a2\u30ec\u30f3\u30b8",
+      "bpm": "156",
+      "difficulty": 1,
+      "genre": "\u6771\u65b9\u30a2\u30ec\u30f3\u30b8",
+      "level": "4",
+      "style": "single",
+      "title": "\u30a4\u30cb\u30b7\u30e3\u30eb\u30a4\u30cb\u30b7\u30e3\u30eb\u30a8\u30b3\u30fc\u30a8\u30b4\u30fc",
+      "version": ""
+    },
+    {
+      "artist": "RD-Sounds\u300c\u6771\u65b9\u795e\u970a\u5edf\u300d\u30a2\u30ec\u30f3\u30b8",
+      "bpm": "156",
+      "difficulty": 2,
+      "genre": "\u6771\u65b9\u30a2\u30ec\u30f3\u30b8",
+      "level": "7",
+      "style": "single",
+      "title": "\u30a4\u30cb\u30b7\u30e3\u30eb\u30a4\u30cb\u30b7\u30e3\u30eb\u30a8\u30b3\u30fc\u30a8\u30b4\u30fc",
+      "version": ""
+    },
+    {
       "artist": "A-One\u300c\u6771\u65b9\u661f\u84ee\u8239\u300d\u30a2\u30ec\u30f3\u30b8",
       "bpm": "163",
       "difficulty": 0,
@@ -16655,6 +16685,16 @@
       "artist": "xi",
       "bpm": "200",
       "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "Solar Storm",
+      "version": ""
+    },
+    {
+      "artist": "xi",
+      "bpm": "200",
+      "difficulty": 3,
       "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
       "level": "10",
       "style": "single",
