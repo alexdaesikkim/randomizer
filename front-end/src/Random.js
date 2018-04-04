@@ -40,6 +40,9 @@ var Random = createReactClass({
       cd_curr_num: 0,
       songs: [],
       undo_bans: [],
+      weight: false,
+      weight_lvl: 0,
+      weight_dist: [],
       errors:{
         error_messages: [],
         error_class: "no-error"
@@ -68,6 +71,22 @@ var Random = createReactClass({
         })
       }
     })
+  },
+
+  //weight_form
+
+  weightCalculation(){
+    var weights = this.state.weight_dist
+    var total = 0;
+    for(var x = 0; x < weights.length(); x++){
+      total += weights[x];
+    }
+    var random_num = Math.floor(Math.random() * total);
+    for(var y = 0; y < weights.length(); y++){
+      if(random_num < 0){
+        return y;
+      }
+    }
   },
 
   changeGame(event){
@@ -113,7 +132,8 @@ var Random = createReactClass({
             cd_form_num: 1,
             song_num: 1,
             versions: version_list,
-            songs: []
+            songs: [],
+            weights: false
           })
         }
       }
@@ -150,7 +170,10 @@ var Random = createReactClass({
           diff_list: diff_list,
           max_diff: this.state.game_data.games[this.state.game_name].versions[v].difficulty.max,
           na_option: this.state.game_data.games[this.state.game_name].versions[v].na_option,
+          weight: false,
           panel: true
+        }, function(){
+          this.changeWeightLimits()
         })
       }
     }
@@ -203,6 +226,19 @@ var Random = createReactClass({
 
   },
 
+  changeWeightLimits(){
+    var array_size = 1 + (this.state.max_level - this.state.min_level)
+    var array = []
+    for(var x = 0; x < array_size; x++){
+      array.push(10);
+    }
+    this.setState({
+      weight: false,
+      weight_dist: array
+    })
+    console.log(array);
+  },
+
   changeBuild(event){
     var build = event.target.value;
     this.setState({
@@ -220,13 +256,18 @@ var Random = createReactClass({
   changeMinLevel(event){
     this.setState({
       min_level: parseInt(event.target.value, 10)
+    }, function(){
+      this.changeWeightLimits()
     })
   },
 
   changeMaxLevel(event){
     this.setState({
       max_level: parseInt(event.target.value, 10)
+    }, function(){
+      this.changeWeightLimits()
     })
+    //change the weight here
   },
 
   changeMinDifficulty(event){
@@ -447,6 +488,28 @@ var Random = createReactClass({
     else return(
       <Input s={6} l={2} name='cd_num' type='number' defaultValue={1} label='# to Play' disabled></Input>
     )
+  },
+
+  changeWeight(index, value){
+    var array = this.state.weight_dist;
+    array[index] = value;
+    this.setState({
+      weight_dist: array
+    })
+  },
+
+  displayWeightForm(){
+    if(this.state.weight){
+      var forms = this.state.weight_dist.length;
+      var array = this.state.weight_dist;
+      var that = this;
+      var forms = array.map(function(value, index){
+        return(
+          <Input s={1} name={'weight_'+index} id={index} label={index + that.state.min_level} defaultValue={value}></Input>
+        )
+      })
+    }
+    else return null;
   },
 
   displayLevelForm(){
