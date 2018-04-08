@@ -646,7 +646,7 @@
       "bpm": "175",
       "difficulty": 6,
       "genre": "",
-      "level": "?",
+      "level": "16",
       "style": "single",
       "title": "Ray",
       "version": "SOUND VOLTEX BOOTH"
@@ -4416,7 +4416,7 @@
       "bpm": "136",
       "difficulty": 6,
       "genre": "",
-      "level": "?",
+      "level": "17",
       "style": "single",
       "title": "Wheel",
       "version": "SOUND VOLTEX BOOTH"
@@ -5486,7 +5486,7 @@
       "bpm": "190",
       "difficulty": 6,
       "genre": "",
-      "level": "?",
+      "level": "18",
       "style": "single",
       "title": "\u5b64\u72ec\u306e\u756a\u4eba",
       "version": "SOUND VOLTEX BOOTH"
@@ -35029,6 +35029,326 @@
       "level": "19",
       "style": "single",
       "title": "Last Resort",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "technoplanet",
+      "bpm": "208",
+      "difficulty": 0,
+      "genre": "",
+      "level": "7",
+      "style": "single",
+      "title": "Awakening",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "technoplanet",
+      "bpm": "208",
+      "difficulty": 1,
+      "genre": "",
+      "level": "14",
+      "style": "single",
+      "title": "Awakening",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "technoplanet",
+      "bpm": "208",
+      "difficulty": 2,
+      "genre": "",
+      "level": "17",
+      "style": "single",
+      "title": "Awakening",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "technoplanet",
+      "bpm": "208",
+      "difficulty": 3,
+      "genre": "",
+      "level": "19",
+      "style": "single",
+      "title": "Awakening",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "\u304b\u3081\u308a\u3042",
+      "bpm": "301",
+      "difficulty": 0,
+      "genre": "",
+      "level": "7",
+      "style": "single",
+      "title": "X\u00e9roa",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "\u304b\u3081\u308a\u3042",
+      "bpm": "301",
+      "difficulty": 1,
+      "genre": "",
+      "level": "14",
+      "style": "single",
+      "title": "X\u00e9roa",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "\u304b\u3081\u308a\u3042",
+      "bpm": "301",
+      "difficulty": 2,
+      "genre": "",
+      "level": "17",
+      "style": "single",
+      "title": "X\u00e9roa",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "\u304b\u3081\u308a\u3042",
+      "bpm": "301",
+      "difficulty": 3,
+      "genre": "",
+      "level": "19",
+      "style": "single",
+      "title": "X\u00e9roa",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "\u307a\u306e\u308c\u308a",
+      "bpm": "234",
+      "difficulty": 0,
+      "genre": "",
+      "level": "6",
+      "style": "single",
+      "title": "crossing blue",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "\u307a\u306e\u308c\u308a",
+      "bpm": "234",
+      "difficulty": 1,
+      "genre": "",
+      "level": "13",
+      "style": "single",
+      "title": "crossing blue",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "\u307a\u306e\u308c\u308a",
+      "bpm": "234",
+      "difficulty": 2,
+      "genre": "",
+      "level": "16",
+      "style": "single",
+      "title": "crossing blue",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "\u307a\u306e\u308c\u308a",
+      "bpm": "234",
+      "difficulty": 3,
+      "genre": "",
+      "level": "18",
+      "style": "single",
+      "title": "crossing blue",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "\u3046\u3055\u304e\u611b\u597d\u4f1a(cosMo\u00d7syuri22)",
+      "bpm": "235",
+      "difficulty": 0,
+      "genre": "",
+      "level": "6",
+      "style": "single",
+      "title": "BlueMoon Princess",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "\u3046\u3055\u304e\u611b\u597d\u4f1a(cosMo\u00d7syuri22)",
+      "bpm": "235",
+      "difficulty": 1,
+      "genre": "",
+      "level": "13",
+      "style": "single",
+      "title": "BlueMoon Princess",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "\u3046\u3055\u304e\u611b\u597d\u4f1a(cosMo\u00d7syuri22)",
+      "bpm": "235",
+      "difficulty": 2,
+      "genre": "",
+      "level": "16",
+      "style": "single",
+      "title": "BlueMoon Princess",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "\u3046\u3055\u304e\u611b\u597d\u4f1a(cosMo\u00d7syuri22)",
+      "bpm": "235",
+      "difficulty": 3,
+      "genre": "",
+      "level": "18",
+      "style": "single",
+      "title": "BlueMoon Princess",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "\u304b\u3089\u3068P feat.\u30ea\u305f\u2606",
+      "bpm": "250",
+      "difficulty": 0,
+      "genre": "",
+      "level": "6",
+      "style": "single",
+      "title": "\u042fe's NoV\u01e2",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "\u304b\u3089\u3068P feat.\u30ea\u305f\u2606",
+      "bpm": "250",
+      "difficulty": 1,
+      "genre": "",
+      "level": "12",
+      "style": "single",
+      "title": "\u042fe's NoV\u01e2",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "\u304b\u3089\u3068P feat.\u30ea\u305f\u2606",
+      "bpm": "250",
+      "difficulty": 2,
+      "genre": "",
+      "level": "15",
+      "style": "single",
+      "title": "\u042fe's NoV\u01e2",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "\u304b\u3089\u3068P feat.\u30ea\u305f\u2606",
+      "bpm": "250",
+      "difficulty": 3,
+      "genre": "",
+      "level": "18",
+      "style": "single",
+      "title": "\u042fe's NoV\u01e2",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "Crawk \u00d7 Capchii",
+      "bpm": "225",
+      "difficulty": 0,
+      "genre": "",
+      "level": "6",
+      "style": "single",
+      "title": "Wings of Glory",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "Crawk \u00d7 Capchii",
+      "bpm": "225",
+      "difficulty": 1,
+      "genre": "",
+      "level": "12",
+      "style": "single",
+      "title": "Wings of Glory",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "Crawk \u00d7 Capchii",
+      "bpm": "225",
+      "difficulty": 2,
+      "genre": "",
+      "level": "15",
+      "style": "single",
+      "title": "Wings of Glory",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "Crawk \u00d7 Capchii",
+      "bpm": "225",
+      "difficulty": 3,
+      "genre": "",
+      "level": "18",
+      "style": "single",
+      "title": "Wings of Glory",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "\u306f\u308b\u306a\u3070 with \u3059\u305a\u3057\u308d&\u6843\u7bb1",
+      "bpm": "188",
+      "difficulty": 0,
+      "genre": "",
+      "level": "5",
+      "style": "single",
+      "title": "\u30e1\u30eb\u30d8\u30f3\u98a8\u7d00\u59d4\u54e1\u4f1a",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "\u306f\u308b\u306a\u3070 with \u3059\u305a\u3057\u308d&\u6843\u7bb1",
+      "bpm": "188",
+      "difficulty": 1,
+      "genre": "",
+      "level": "11",
+      "style": "single",
+      "title": "\u30e1\u30eb\u30d8\u30f3\u98a8\u7d00\u59d4\u54e1\u4f1a",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "\u306f\u308b\u306a\u3070 with \u3059\u305a\u3057\u308d&\u6843\u7bb1",
+      "bpm": "188",
+      "difficulty": 2,
+      "genre": "",
+      "level": "14",
+      "style": "single",
+      "title": "\u30e1\u30eb\u30d8\u30f3\u98a8\u7d00\u59d4\u54e1\u4f1a",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "\u306f\u308b\u306a\u3070 with \u3059\u305a\u3057\u308d&\u6843\u7bb1",
+      "bpm": "188",
+      "difficulty": 3,
+      "genre": "",
+      "level": "17",
+      "style": "single",
+      "title": "\u30e1\u30eb\u30d8\u30f3\u98a8\u7d00\u59d4\u54e1\u4f1a",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "U-ske feat.\u68d7\u3044\u3064\u304d",
+      "bpm": "140",
+      "difficulty": 0,
+      "genre": "",
+      "level": "5",
+      "style": "single",
+      "title": "\u30d7\u30e9\u30cd\u30bf\u30b8\u30e3\u30fc\u30cb\u30fc",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "U-ske feat.\u68d7\u3044\u3064\u304d",
+      "bpm": "140",
+      "difficulty": 1,
+      "genre": "",
+      "level": "11",
+      "style": "single",
+      "title": "\u30d7\u30e9\u30cd\u30bf\u30b8\u30e3\u30fc\u30cb\u30fc",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "U-ske feat.\u68d7\u3044\u3064\u304d",
+      "bpm": "140",
+      "difficulty": 2,
+      "genre": "",
+      "level": "14",
+      "style": "single",
+      "title": "\u30d7\u30e9\u30cd\u30bf\u30b8\u30e3\u30fc\u30cb\u30fc",
+      "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
+    },
+    {
+      "artist": "U-ske feat.\u68d7\u3044\u3064\u304d",
+      "bpm": "140",
+      "difficulty": 3,
+      "genre": "",
+      "level": "17",
+      "style": "single",
+      "title": "\u30d7\u30e9\u30cd\u30bf\u30b8\u30e3\u30fc\u30cb\u30fc",
       "version": "SOUND VOLTEX IV HEAVENLY HAVEN"
     },
     {

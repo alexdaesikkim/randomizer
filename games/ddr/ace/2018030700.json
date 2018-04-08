@@ -50877,83 +50877,6 @@
       "version": "DanceDanceRevolution (2014)"
     },
     {
-      "artist": "colate",
-      "bpm": "190",
-      "difficulty": 0,
-      "level": "3",
-      "north_america": true,
-      "source": "SDVX FLOOR",
-      "style": "single",
-      "title": "Strobe\u2661Girl",
-      "version": "DanceDanceRevolution (2014)"
-    },
-    {
-      "artist": "colate",
-      "bpm": "190",
-      "difficulty": 1,
-      "level": "7",
-      "north_america": true,
-      "source": "SDVX FLOOR",
-      "style": "single",
-      "title": "Strobe\u2661Girl",
-      "version": "DanceDanceRevolution (2014)"
-    },
-    {
-      "artist": "colate",
-      "bpm": "190",
-      "difficulty": 2,
-      "level": "10",
-      "north_america": true,
-      "source": "SDVX FLOOR",
-      "style": "single",
-      "title": "Strobe\u2661Girl",
-      "version": "DanceDanceRevolution (2014)"
-    },
-    {
-      "artist": "colate",
-      "bpm": "190",
-      "difficulty": 3,
-      "level": "14",
-      "north_america": true,
-      "source": "SDVX FLOOR",
-      "style": "single",
-      "title": "Strobe\u2661Girl",
-      "version": "DanceDanceRevolution (2014)"
-    },
-    {
-      "artist": "colate",
-      "bpm": "190",
-      "difficulty": 1,
-      "level": "8",
-      "north_america": true,
-      "source": "SDVX FLOOR",
-      "style": "double",
-      "title": "Strobe\u2661Girl",
-      "version": "DanceDanceRevolution (2014)"
-    },
-    {
-      "artist": "colate",
-      "bpm": "190",
-      "difficulty": 2,
-      "level": "11",
-      "north_america": true,
-      "source": "SDVX FLOOR",
-      "style": "double",
-      "title": "Strobe\u2661Girl",
-      "version": "DanceDanceRevolution (2014)"
-    },
-    {
-      "artist": "colate",
-      "bpm": "190",
-      "difficulty": 3,
-      "level": "15",
-      "north_america": true,
-      "source": "SDVX FLOOR",
-      "style": "double",
-      "title": "Strobe\u2661Girl",
-      "version": "DanceDanceRevolution (2014)"
-    },
-    {
       "artist": "Masayoshi Minoshima(ALR)",
       "bpm": "180",
       "difficulty": 0,
@@ -51204,6 +51127,83 @@
       "source": "DDR HOTTEST PARTY 2\uff0f\u30d5\u30eb\u30d5\u30eb\u266a\u30d1\u30fc\u30c6\u30a3\u30fc",
       "style": "double",
       "title": "SUPER HERO",
+      "version": "DanceDanceRevolution (2014)"
+    },
+    {
+      "artist": "VENUS",
+      "bpm": "220",
+      "difficulty": 0,
+      "level": "3",
+      "north_america": true,
+      "source": "VENUS\u30af\u30ea\u30b9\u30de\u30b9\u30d7\u30ec\u30bc\u30f3\u30c8",
+      "style": "single",
+      "title": "Thank You Merry Christmas",
+      "version": "DanceDanceRevolution (2014)"
+    },
+    {
+      "artist": "VENUS",
+      "bpm": "220",
+      "difficulty": 1,
+      "level": "5",
+      "north_america": true,
+      "source": "VENUS\u30af\u30ea\u30b9\u30de\u30b9\u30d7\u30ec\u30bc\u30f3\u30c8",
+      "style": "single",
+      "title": "Thank You Merry Christmas",
+      "version": "DanceDanceRevolution (2014)"
+    },
+    {
+      "artist": "VENUS",
+      "bpm": "220",
+      "difficulty": 2,
+      "level": "9",
+      "north_america": true,
+      "source": "VENUS\u30af\u30ea\u30b9\u30de\u30b9\u30d7\u30ec\u30bc\u30f3\u30c8",
+      "style": "single",
+      "title": "Thank You Merry Christmas",
+      "version": "DanceDanceRevolution (2014)"
+    },
+    {
+      "artist": "VENUS",
+      "bpm": "220",
+      "difficulty": 3,
+      "level": "12",
+      "north_america": true,
+      "source": "VENUS\u30af\u30ea\u30b9\u30de\u30b9\u30d7\u30ec\u30bc\u30f3\u30c8",
+      "style": "single",
+      "title": "Thank You Merry Christmas",
+      "version": "DanceDanceRevolution (2014)"
+    },
+    {
+      "artist": "VENUS",
+      "bpm": "220",
+      "difficulty": 1,
+      "level": "5",
+      "north_america": true,
+      "source": "VENUS\u30af\u30ea\u30b9\u30de\u30b9\u30d7\u30ec\u30bc\u30f3\u30c8",
+      "style": "double",
+      "title": "Thank You Merry Christmas",
+      "version": "DanceDanceRevolution (2014)"
+    },
+    {
+      "artist": "VENUS",
+      "bpm": "220",
+      "difficulty": 2,
+      "level": "9",
+      "north_america": true,
+      "source": "VENUS\u30af\u30ea\u30b9\u30de\u30b9\u30d7\u30ec\u30bc\u30f3\u30c8",
+      "style": "double",
+      "title": "Thank You Merry Christmas",
+      "version": "DanceDanceRevolution (2014)"
+    },
+    {
+      "artist": "VENUS",
+      "bpm": "220",
+      "difficulty": 3,
+      "level": "13",
+      "north_america": true,
+      "source": "VENUS\u30af\u30ea\u30b9\u30de\u30b9\u30d7\u30ec\u30bc\u30f3\u30c8",
+      "style": "double",
+      "title": "Thank You Merry Christmas",
       "version": "DanceDanceRevolution (2014)"
     },
     {

@@ -2,83 +2,353 @@
   "id": "crossbeats_sunrise",
   "songs": [
     {
-      "artist": "effe",
+      "artist": "\u6681Records",
       "bpm": "140.0",
       "difficulty": 0,
       "genre": "PICKUP",
-      "level": "11",
+      "level": "9",
       "style": "single",
-      "title": "\u03b8 (theta) ",
+      "title": "\u30c8\u30ec\u30a4\u30b9\u30fb\u30a8\u30b4\u30a4\u30ba\u30e0",
       "version": ""
     },
     {
-      "artist": "effe",
+      "artist": "\u6681Records",
       "bpm": "140.0",
       "difficulty": 1,
       "genre": "PICKUP",
-      "level": "21",
+      "level": "19",
       "style": "single",
-      "title": "\u03b8 (theta) ",
+      "title": "\u30c8\u30ec\u30a4\u30b9\u30fb\u30a8\u30b4\u30a4\u30ba\u30e0",
       "version": ""
     },
     {
-      "artist": "effe",
+      "artist": "\u6681Records",
       "bpm": "140.0",
+      "difficulty": 2,
+      "genre": "PICKUP",
+      "level": "31",
+      "style": "single",
+      "title": "\u30c8\u30ec\u30a4\u30b9\u30fb\u30a8\u30b4\u30a4\u30ba\u30e0",
+      "version": ""
+    },
+    {
+      "artist": "\u6681Records",
+      "bpm": "140.0",
+      "difficulty": 3,
+      "genre": "PICKUP",
+      "level": "49",
+      "style": "single",
+      "title": "\u30c8\u30ec\u30a4\u30b9\u30fb\u30a8\u30b4\u30a4\u30ba\u30e0",
+      "version": ""
+    },
+    {
+      "artist": "\u6681Records",
+      "bpm": "140.0",
+      "difficulty": 4,
+      "genre": "PICKUP",
+      "level": "65",
+      "style": "single",
+      "title": "\u30c8\u30ec\u30a4\u30b9\u30fb\u30a8\u30b4\u30a4\u30ba\u30e0",
+      "version": ""
+    },
+    {
+      "artist": "",
+      "bpm": "125.0-150.0",
+      "difficulty": 0,
+      "genre": "PICKUP",
+      "level": "10",
+      "style": "single",
+      "title": "\u30cd\u30b3\u3075\u3093\u3058\u3083\u3063\u305f\u2606 (\u30af\u30ed\u30fc\u30cb\u30e3STYLE)",
+      "version": ""
+    },
+    {
+      "artist": "",
+      "bpm": "125.0-150.0",
+      "difficulty": 1,
+      "genre": "PICKUP",
+      "level": "22",
+      "style": "single",
+      "title": "\u30cd\u30b3\u3075\u3093\u3058\u3083\u3063\u305f\u2606 (\u30af\u30ed\u30fc\u30cb\u30e3STYLE)",
+      "version": ""
+    },
+    {
+      "artist": "",
+      "bpm": "125.0-150.0",
       "difficulty": 2,
       "genre": "PICKUP",
       "level": "34",
       "style": "single",
-      "title": "\u03b8 (theta) ",
+      "title": "\u30cd\u30b3\u3075\u3093\u3058\u3083\u3063\u305f\u2606 (\u30af\u30ed\u30fc\u30cb\u30e3STYLE)",
       "version": ""
     },
     {
-      "artist": "effe",
-      "bpm": "140.0",
+      "artist": "",
+      "bpm": "125.0-150.0",
+      "difficulty": 3,
+      "genre": "PICKUP",
+      "level": "57",
+      "style": "single",
+      "title": "\u30cd\u30b3\u3075\u3093\u3058\u3083\u3063\u305f\u2606 (\u30af\u30ed\u30fc\u30cb\u30e3STYLE)",
+      "version": ""
+    },
+    {
+      "artist": "",
+      "bpm": "125.0-150.0",
+      "difficulty": 4,
+      "genre": "PICKUP",
+      "level": "80",
+      "style": "single",
+      "title": "\u30cd\u30b3\u3075\u3093\u3058\u3083\u3063\u305f\u2606 (\u30af\u30ed\u30fc\u30cb\u30e3STYLE)",
+      "version": ""
+    },
+    {
+      "artist": "orangentle",
+      "bpm": "130.0",
+      "difficulty": 0,
+      "genre": "PICKUP",
+      "level": "13",
+      "style": "single",
+      "title": "Minestrone",
+      "version": ""
+    },
+    {
+      "artist": "orangentle",
+      "bpm": "130.0",
+      "difficulty": 1,
+      "genre": "PICKUP",
+      "level": "21",
+      "style": "single",
+      "title": "Minestrone",
+      "version": ""
+    },
+    {
+      "artist": "orangentle",
+      "bpm": "130.0",
+      "difficulty": 2,
+      "genre": "PICKUP",
+      "level": "39",
+      "style": "single",
+      "title": "Minestrone",
+      "version": ""
+    },
+    {
+      "artist": "orangentle",
+      "bpm": "130.0",
       "difficulty": 3,
       "genre": "PICKUP",
       "level": "62",
       "style": "single",
-      "title": "\u03b8 (theta) ",
+      "title": "Minestrone",
       "version": ""
     },
     {
-      "artist": "MozSound",
-      "bpm": "173.0",
+      "artist": "orangentle",
+      "bpm": "130.0",
+      "difficulty": 4,
+      "genre": "PICKUP",
+      "level": "76",
+      "style": "single",
+      "title": "Minestrone",
+      "version": ""
+    },
+    {
+      "artist": "\u6751\u702c\u60a0\u592a",
+      "bpm": "186.0 ",
       "difficulty": 0,
       "genre": "PICKUP",
-      "level": "14",
+      "level": "15",
       "style": "single",
-      "title": "Cthugha",
+      "title": "Crocus",
       "version": ""
     },
     {
-      "artist": "MozSound",
-      "bpm": "173.0",
+      "artist": "\u6751\u702c\u60a0\u592a",
+      "bpm": "186.0 ",
+      "difficulty": 1,
+      "genre": "PICKUP",
+      "level": "26",
+      "style": "single",
+      "title": "Crocus",
+      "version": ""
+    },
+    {
+      "artist": "\u6751\u702c\u60a0\u592a",
+      "bpm": "186.0 ",
+      "difficulty": 2,
+      "genre": "PICKUP",
+      "level": "37",
+      "style": "single",
+      "title": "Crocus",
+      "version": ""
+    },
+    {
+      "artist": "\u6751\u702c\u60a0\u592a",
+      "bpm": "186.0 ",
+      "difficulty": 3,
+      "genre": "PICKUP",
+      "level": "60",
+      "style": "single",
+      "title": "Crocus",
+      "version": ""
+    },
+    {
+      "artist": "\u6751\u702c\u60a0\u592a",
+      "bpm": "186.0 ",
+      "difficulty": 4,
+      "genre": "PICKUP",
+      "level": "72",
+      "style": "single",
+      "title": "Crocus",
+      "version": ""
+    },
+    {
+      "artist": "yaseta feat. chip_Notch",
+      "bpm": "155.0",
+      "difficulty": 0,
+      "genre": "PICKUP",
+      "level": "16",
+      "style": "single",
+      "title": "Chip Notch Educ@tion",
+      "version": ""
+    },
+    {
+      "artist": "yaseta feat. chip_Notch",
+      "bpm": "155.0",
+      "difficulty": 1,
+      "genre": "PICKUP",
+      "level": "27",
+      "style": "single",
+      "title": "Chip Notch Educ@tion",
+      "version": ""
+    },
+    {
+      "artist": "yaseta feat. chip_Notch",
+      "bpm": "155.0",
+      "difficulty": 2,
+      "genre": "PICKUP",
+      "level": "34",
+      "style": "single",
+      "title": "Chip Notch Educ@tion",
+      "version": ""
+    },
+    {
+      "artist": "yaseta feat. chip_Notch",
+      "bpm": "155.0",
+      "difficulty": 3,
+      "genre": "PICKUP",
+      "level": "61",
+      "style": "single",
+      "title": "Chip Notch Educ@tion",
+      "version": ""
+    },
+    {
+      "artist": "yaseta feat. chip_Notch",
+      "bpm": "155.0",
+      "difficulty": 4,
+      "genre": "PICKUP",
+      "level": "79",
+      "style": "single",
+      "title": "Chip Notch Educ@tion",
+      "version": ""
+    },
+    {
+      "artist": "VILA",
+      "bpm": "157.0 ",
+      "difficulty": 0,
+      "genre": "PICKUP",
+      "level": "18",
+      "style": "single",
+      "title": "La vie en Fleurs",
+      "version": ""
+    },
+    {
+      "artist": "VILA",
+      "bpm": "157.0 ",
+      "difficulty": 1,
+      "genre": "PICKUP",
+      "level": "27",
+      "style": "single",
+      "title": "La vie en Fleurs",
+      "version": ""
+    },
+    {
+      "artist": "VILA",
+      "bpm": "157.0 ",
+      "difficulty": 2,
+      "genre": "PICKUP",
+      "level": "41",
+      "style": "single",
+      "title": "La vie en Fleurs",
+      "version": ""
+    },
+    {
+      "artist": "VILA",
+      "bpm": "157.0 ",
+      "difficulty": 3,
+      "genre": "PICKUP",
+      "level": "71",
+      "style": "single",
+      "title": "La vie en Fleurs",
+      "version": ""
+    },
+    {
+      "artist": "VILA",
+      "bpm": "157.0 ",
+      "difficulty": 4,
+      "genre": "PICKUP",
+      "level": "80",
+      "style": "single",
+      "title": "La vie en Fleurs",
+      "version": ""
+    },
+    {
+      "artist": "orangentle",
+      "bpm": "162.0",
+      "difficulty": 0,
+      "genre": "PICKUP",
+      "level": "19",
+      "style": "single",
+      "title": "Ordine",
+      "version": ""
+    },
+    {
+      "artist": "orangentle",
+      "bpm": "162.0",
       "difficulty": 1,
       "genre": "PICKUP",
       "level": "25",
       "style": "single",
-      "title": "Cthugha",
+      "title": "Ordine",
       "version": ""
     },
     {
-      "artist": "MozSound",
-      "bpm": "173.0",
+      "artist": "orangentle",
+      "bpm": "162.0",
       "difficulty": 2,
       "genre": "PICKUP",
-      "level": "48",
+      "level": "43",
       "style": "single",
-      "title": "Cthugha",
+      "title": "Ordine",
       "version": ""
     },
     {
-      "artist": "MozSound",
-      "bpm": "173.0",
+      "artist": "orangentle",
+      "bpm": "162.0",
       "difficulty": 3,
       "genre": "PICKUP",
       "level": "73",
       "style": "single",
-      "title": "Cthugha",
+      "title": "Ordine",
+      "version": ""
+    },
+    {
+      "artist": "orangentle",
+      "bpm": "162.0",
+      "difficulty": 4,
+      "genre": "PICKUP",
+      "level": "82",
+      "style": "single",
+      "title": "Ordine",
       "version": ""
     },
     {
@@ -2252,56 +2522,6 @@
       "version": ""
     },
     {
-      "artist": "\u6681Records",
-      "bpm": "140.0",
-      "difficulty": 0,
-      "genre": "\u6771\u65b9Project",
-      "level": "9",
-      "style": "single",
-      "title": "\u30c8\u30ec\u30a4\u30b9\u30fb\u30a8\u30b4\u30a4\u30ba\u30e0",
-      "version": ""
-    },
-    {
-      "artist": "\u6681Records",
-      "bpm": "140.0",
-      "difficulty": 1,
-      "genre": "\u6771\u65b9Project",
-      "level": "19",
-      "style": "single",
-      "title": "\u30c8\u30ec\u30a4\u30b9\u30fb\u30a8\u30b4\u30a4\u30ba\u30e0",
-      "version": ""
-    },
-    {
-      "artist": "\u6681Records",
-      "bpm": "140.0",
-      "difficulty": 2,
-      "genre": "\u6771\u65b9Project",
-      "level": "31",
-      "style": "single",
-      "title": "\u30c8\u30ec\u30a4\u30b9\u30fb\u30a8\u30b4\u30a4\u30ba\u30e0",
-      "version": ""
-    },
-    {
-      "artist": "\u6681Records",
-      "bpm": "140.0",
-      "difficulty": 3,
-      "genre": "\u6771\u65b9Project",
-      "level": "49",
-      "style": "single",
-      "title": "\u30c8\u30ec\u30a4\u30b9\u30fb\u30a8\u30b4\u30a4\u30ba\u30e0",
-      "version": ""
-    },
-    {
-      "artist": "\u6681Records",
-      "bpm": "140.0",
-      "difficulty": 4,
-      "genre": "\u6771\u65b9Project",
-      "level": "65",
-      "style": "single",
-      "title": "\u30c8\u30ec\u30a4\u30b9\u30fb\u30a8\u30b4\u30a4\u30ba\u30e0",
-      "version": ""
-    },
-    {
       "artist": "\u30b3\u30f3\u30d7(\u8c5a\u4e59\u5973) \u00d7 ichigo(\u5cb8\u7530\u6559\u56e3 \uff06 THE\u660e\u661f\u30ed\u30b1\u30c3\u30c4)",
       "bpm": "180.0 ",
       "difficulty": 0,
@@ -6112,6 +6332,46 @@
       "version": ""
     },
     {
+      "artist": "effe",
+      "bpm": "140.0",
+      "difficulty": 0,
+      "genre": "ORIGINAL",
+      "level": "11",
+      "style": "single",
+      "title": "\u03b8 (theta) ",
+      "version": ""
+    },
+    {
+      "artist": "effe",
+      "bpm": "140.0",
+      "difficulty": 1,
+      "genre": "ORIGINAL",
+      "level": "21",
+      "style": "single",
+      "title": "\u03b8 (theta) ",
+      "version": ""
+    },
+    {
+      "artist": "effe",
+      "bpm": "140.0",
+      "difficulty": 2,
+      "genre": "ORIGINAL",
+      "level": "34",
+      "style": "single",
+      "title": "\u03b8 (theta) ",
+      "version": ""
+    },
+    {
+      "artist": "effe",
+      "bpm": "140.0",
+      "difficulty": 3,
+      "genre": "ORIGINAL",
+      "level": "62",
+      "style": "single",
+      "title": "\u03b8 (theta) ",
+      "version": ""
+    },
+    {
       "artist": "Yamajet feat. \u3072\u3046\u3089\u307e\u3055\u3053",
       "bpm": "180.0 ",
       "difficulty": 0,
@@ -8022,56 +8282,6 @@
       "version": ""
     },
     {
-      "artist": "orangentle",
-      "bpm": "130.0",
-      "difficulty": 0,
-      "genre": "ORIGINAL",
-      "level": "13",
-      "style": "single",
-      "title": "Minestrone",
-      "version": ""
-    },
-    {
-      "artist": "orangentle",
-      "bpm": "130.0",
-      "difficulty": 1,
-      "genre": "ORIGINAL",
-      "level": "21",
-      "style": "single",
-      "title": "Minestrone",
-      "version": ""
-    },
-    {
-      "artist": "orangentle",
-      "bpm": "130.0",
-      "difficulty": 2,
-      "genre": "ORIGINAL",
-      "level": "39",
-      "style": "single",
-      "title": "Minestrone",
-      "version": ""
-    },
-    {
-      "artist": "orangentle",
-      "bpm": "130.0",
-      "difficulty": 3,
-      "genre": "ORIGINAL",
-      "level": "62",
-      "style": "single",
-      "title": "Minestrone",
-      "version": ""
-    },
-    {
-      "artist": "orangentle",
-      "bpm": "130.0",
-      "difficulty": 4,
-      "genre": "ORIGINAL",
-      "level": "76",
-      "style": "single",
-      "title": "Minestrone",
-      "version": ""
-    },
-    {
       "artist": "Sakuzyo",
       "bpm": "155.0",
       "difficulty": 0,
@@ -9172,6 +9382,46 @@
       "version": ""
     },
     {
+      "artist": "MozSound",
+      "bpm": "173.0",
+      "difficulty": 0,
+      "genre": "ORIGINAL",
+      "level": "14",
+      "style": "single",
+      "title": "Cthugha",
+      "version": ""
+    },
+    {
+      "artist": "MozSound",
+      "bpm": "173.0",
+      "difficulty": 1,
+      "genre": "ORIGINAL",
+      "level": "25",
+      "style": "single",
+      "title": "Cthugha",
+      "version": ""
+    },
+    {
+      "artist": "MozSound",
+      "bpm": "173.0",
+      "difficulty": 2,
+      "genre": "ORIGINAL",
+      "level": "48",
+      "style": "single",
+      "title": "Cthugha",
+      "version": ""
+    },
+    {
+      "artist": "MozSound",
+      "bpm": "173.0",
+      "difficulty": 3,
+      "genre": "ORIGINAL",
+      "level": "73",
+      "style": "single",
+      "title": "Cthugha",
+      "version": ""
+    },
+    {
       "artist": "SPARKER",
       "bpm": "175.0",
       "difficulty": 0,
@@ -9419,56 +9669,6 @@
       "level": "77",
       "style": "single",
       "title": "Anomie",
-      "version": ""
-    },
-    {
-      "artist": "\u6751\u702c\u60a0\u592a",
-      "bpm": "186.0 ",
-      "difficulty": 0,
-      "genre": "ORIGINAL",
-      "level": "15",
-      "style": "single",
-      "title": "Crocus",
-      "version": ""
-    },
-    {
-      "artist": "\u6751\u702c\u60a0\u592a",
-      "bpm": "186.0 ",
-      "difficulty": 1,
-      "genre": "ORIGINAL",
-      "level": "26",
-      "style": "single",
-      "title": "Crocus",
-      "version": ""
-    },
-    {
-      "artist": "\u6751\u702c\u60a0\u592a",
-      "bpm": "186.0 ",
-      "difficulty": 2,
-      "genre": "ORIGINAL",
-      "level": "37",
-      "style": "single",
-      "title": "Crocus",
-      "version": ""
-    },
-    {
-      "artist": "\u6751\u702c\u60a0\u592a",
-      "bpm": "186.0 ",
-      "difficulty": 3,
-      "genre": "ORIGINAL",
-      "level": "60",
-      "style": "single",
-      "title": "Crocus",
-      "version": ""
-    },
-    {
-      "artist": "\u6751\u702c\u60a0\u592a",
-      "bpm": "186.0 ",
-      "difficulty": 4,
-      "genre": "ORIGINAL",
-      "level": "72",
-      "style": "single",
-      "title": "Crocus",
       "version": ""
     },
     {
@@ -9939,56 +10139,6 @@
       "level": "78",
       "style": "single",
       "title": "\u4e16\u754c\u306e\u679c\u3066",
-      "version": ""
-    },
-    {
-      "artist": "yaseta feat. chip_Notch",
-      "bpm": "155.0",
-      "difficulty": 0,
-      "genre": "ORIGINAL",
-      "level": "16",
-      "style": "single",
-      "title": "Chip Notch Educ@tion",
-      "version": ""
-    },
-    {
-      "artist": "yaseta feat. chip_Notch",
-      "bpm": "155.0",
-      "difficulty": 1,
-      "genre": "ORIGINAL",
-      "level": "27",
-      "style": "single",
-      "title": "Chip Notch Educ@tion",
-      "version": ""
-    },
-    {
-      "artist": "yaseta feat. chip_Notch",
-      "bpm": "155.0",
-      "difficulty": 2,
-      "genre": "ORIGINAL",
-      "level": "34",
-      "style": "single",
-      "title": "Chip Notch Educ@tion",
-      "version": ""
-    },
-    {
-      "artist": "yaseta feat. chip_Notch",
-      "bpm": "155.0",
-      "difficulty": 3,
-      "genre": "ORIGINAL",
-      "level": "61",
-      "style": "single",
-      "title": "Chip Notch Educ@tion",
-      "version": ""
-    },
-    {
-      "artist": "yaseta feat. chip_Notch",
-      "bpm": "155.0",
-      "difficulty": 4,
-      "genre": "ORIGINAL",
-      "level": "79",
-      "style": "single",
-      "title": "Chip Notch Educ@tion",
       "version": ""
     },
     {
@@ -10502,46 +10652,6 @@
       "version": ""
     },
     {
-      "artist": "VILA",
-      "bpm": "157.0 ",
-      "difficulty": 0,
-      "genre": "ORIGINAL",
-      "level": "18",
-      "style": "single",
-      "title": "La vie en Fleurs",
-      "version": ""
-    },
-    {
-      "artist": "VILA",
-      "bpm": "157.0 ",
-      "difficulty": 1,
-      "genre": "ORIGINAL",
-      "level": "27",
-      "style": "single",
-      "title": "La vie en Fleurs",
-      "version": ""
-    },
-    {
-      "artist": "VILA",
-      "bpm": "157.0 ",
-      "difficulty": 2,
-      "genre": "ORIGINAL",
-      "level": "41",
-      "style": "single",
-      "title": "La vie en Fleurs",
-      "version": ""
-    },
-    {
-      "artist": "VILA",
-      "bpm": "157.0 ",
-      "difficulty": 3,
-      "genre": "ORIGINAL",
-      "level": "71",
-      "style": "single",
-      "title": "La vie en Fleurs",
-      "version": ""
-    },
-    {
       "artist": "INNOCENT NOIZE",
       "bpm": "170.0 ",
       "difficulty": 0,
@@ -10669,56 +10779,6 @@
       "level": "80",
       "style": "single",
       "title": "Ascendanz",
-      "version": ""
-    },
-    {
-      "artist": "orangentle",
-      "bpm": "162.0",
-      "difficulty": 0,
-      "genre": "ORIGINAL",
-      "level": "19",
-      "style": "single",
-      "title": "Ordine",
-      "version": ""
-    },
-    {
-      "artist": "orangentle",
-      "bpm": "162.0",
-      "difficulty": 1,
-      "genre": "ORIGINAL",
-      "level": "25",
-      "style": "single",
-      "title": "Ordine",
-      "version": ""
-    },
-    {
-      "artist": "orangentle",
-      "bpm": "162.0",
-      "difficulty": 2,
-      "genre": "ORIGINAL",
-      "level": "43",
-      "style": "single",
-      "title": "Ordine",
-      "version": ""
-    },
-    {
-      "artist": "orangentle",
-      "bpm": "162.0",
-      "difficulty": 3,
-      "genre": "ORIGINAL",
-      "level": "73",
-      "style": "single",
-      "title": "Ordine",
-      "version": ""
-    },
-    {
-      "artist": "orangentle",
-      "bpm": "162.0",
-      "difficulty": 4,
-      "genre": "ORIGINAL",
-      "level": "82",
-      "style": "single",
-      "title": "Ordine",
       "version": ""
     },
     {
