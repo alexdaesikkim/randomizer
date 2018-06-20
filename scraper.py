@@ -46,5 +46,4 @@ print("3EX")
 subprocess.call([name, "gc_3ex.py"], cwd="scripts")
 
 print("crossbeats REV. Current:")
-print("SUNRISE")
-subprocess.call([name, "crossbeats_sunrise.py"], cwd="scripts")
+print("REST IN PEACE")

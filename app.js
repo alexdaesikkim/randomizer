@@ -134,6 +134,25 @@ function shuffle(array, size){
 //if this was purely json data and pulling data from it, i can use randomizer with ease
 //todo later: make mental note somewhere else
 
+//functions for weighted version
+function gcd(x, y){
+  if(x == y){
+    if(x == 0) return 0;
+    else return x;
+  }
+  else if(x < y){
+    return gcd(x, y-x);
+  }
+  else return gcd(x-y, y);
+}
+
+function gcd_mult(array){
+  var ans = array[0];
+  for(var i = 1; i < array.length; i++){
+    ans = gcd(ans, array[i]);
+  }
+  return ans;
+}
 
 //todo: error check function and route everything to that.
 function filter_songs(array, style, d_min, d_max, l_min, l_max){
