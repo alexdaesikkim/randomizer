@@ -3162,6 +3162,66 @@
       "version": "REFLEC BEAT limelight"
     },
     {
+      "artist": "Ryu\u2606",
+      "bpm": "181",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "6",
+      "style": "single",
+      "title": "Sakura Sunrise",
+      "version": "REFLEC BEAT limelight"
+    },
+    {
+      "artist": "Ryu\u2606",
+      "bpm": "181",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "9",
+      "style": "single",
+      "title": "Sakura Sunrise",
+      "version": "REFLEC BEAT limelight"
+    },
+    {
+      "artist": "Ryu\u2606",
+      "bpm": "181",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "11",
+      "style": "single",
+      "title": "Sakura Sunrise",
+      "version": "REFLEC BEAT limelight"
+    },
+    {
+      "artist": "Lucky Vacuum",
+      "bpm": "196",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "6",
+      "style": "single",
+      "title": "\u30d3\u30e5\u30fc\u30c6\u30a3\u30d5\u30eb \u30ec\u30b7\u30fc\u30c8",
+      "version": "REFLEC BEAT limelight"
+    },
+    {
+      "artist": "Lucky Vacuum",
+      "bpm": "196",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "9",
+      "style": "single",
+      "title": "\u30d3\u30e5\u30fc\u30c6\u30a3\u30d5\u30eb \u30ec\u30b7\u30fc\u30c8",
+      "version": "REFLEC BEAT limelight"
+    },
+    {
+      "artist": "Lucky Vacuum",
+      "bpm": "196",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "12",
+      "style": "single",
+      "title": "\u30d3\u30e5\u30fc\u30c6\u30a3\u30d5\u30eb \u30ec\u30b7\u30fc\u30c8",
+      "version": "REFLEC BEAT limelight"
+    },
+    {
       "artist": "KOTOKO",
       "bpm": "146",
       "difficulty": 0,
@@ -5062,6 +5122,66 @@
       "version": "REFLEC BEAT colette -Spring-"
     },
     {
+      "artist": "SOUND HOLIC feat. Nana Takahashi",
+      "bpm": "150",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "5",
+      "style": "single",
+      "title": "Ha\u30fblle\u30fblu\u30fbjah",
+      "version": "REFLEC BEAT colette -Spring-"
+    },
+    {
+      "artist": "SOUND HOLIC feat. Nana Takahashi",
+      "bpm": "150",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "8",
+      "style": "single",
+      "title": "Ha\u30fblle\u30fblu\u30fbjah",
+      "version": "REFLEC BEAT colette -Spring-"
+    },
+    {
+      "artist": "SOUND HOLIC feat. Nana Takahashi",
+      "bpm": "150",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "11",
+      "style": "single",
+      "title": "Ha\u30fblle\u30fblu\u30fbjah",
+      "version": "REFLEC BEAT colette -Spring-"
+    },
+    {
+      "artist": "Qrispy Joybox",
+      "bpm": "168",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "5",
+      "style": "single",
+      "title": "printemps",
+      "version": "REFLEC BEAT colette -Spring-"
+    },
+    {
+      "artist": "Qrispy Joybox",
+      "bpm": "168",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "9",
+      "style": "single",
+      "title": "printemps",
+      "version": "REFLEC BEAT colette -Spring-"
+    },
+    {
+      "artist": "Qrispy Joybox",
+      "bpm": "168",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "11",
+      "style": "single",
+      "title": "printemps",
+      "version": "REFLEC BEAT colette -Spring-"
+    },
+    {
       "artist": "fripSide",
       "bpm": "144",
       "difficulty": 0,
@@ -5169,36 +5289,6 @@
       "level": "12",
       "style": "single",
       "title": "\u30e9\u30af\u30ac\u30ad\u30b9\u30c8",
-      "version": "REFLEC BEAT colette -Summer-"
-    },
-    {
-      "artist": "\u5b9f\u8c37\u306a\u306a",
-      "bpm": "160",
-      "difficulty": 0,
-      "genre": "\u30d0\u30e9\u30a8\u30c6\u30a3",
-      "level": "5",
-      "style": "single",
-      "title": "\u30eb\u30ab\u30eb\u30ab\u2605\u30ca\u30a4\u30c8\u30d5\u30a3\u30fc\u30d0\u30fc",
-      "version": "REFLEC BEAT colette -Summer-"
-    },
-    {
-      "artist": "\u5b9f\u8c37\u306a\u306a",
-      "bpm": "160",
-      "difficulty": 1,
-      "genre": "\u30d0\u30e9\u30a8\u30c6\u30a3",
-      "level": "8",
-      "style": "single",
-      "title": "\u30eb\u30ab\u30eb\u30ab\u2605\u30ca\u30a4\u30c8\u30d5\u30a3\u30fc\u30d0\u30fc",
-      "version": "REFLEC BEAT colette -Summer-"
-    },
-    {
-      "artist": "\u5b9f\u8c37\u306a\u306a",
-      "bpm": "160",
-      "difficulty": 2,
-      "genre": "\u30d0\u30e9\u30a8\u30c6\u30a3",
-      "level": "11",
-      "style": "single",
-      "title": "\u30eb\u30ab\u30eb\u30ab\u2605\u30ca\u30a4\u30c8\u30d5\u30a3\u30fc\u30d0\u30fc",
       "version": "REFLEC BEAT colette -Summer-"
     },
     {
@@ -6359,6 +6449,66 @@
       "level": "11",
       "style": "single",
       "title": "\u5c11\u5e74\u30ea\u30c3\u30d7\u30eb\u30ba",
+      "version": "REFLEC BEAT colette -Autumn-"
+    },
+    {
+      "artist": "kors k",
+      "bpm": "200",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "7",
+      "style": "single",
+      "title": "Ground Shake",
+      "version": "REFLEC BEAT colette -Autumn-"
+    },
+    {
+      "artist": "kors k",
+      "bpm": "200",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "Ground Shake",
+      "version": "REFLEC BEAT colette -Autumn-"
+    },
+    {
+      "artist": "kors k",
+      "bpm": "200",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "13",
+      "style": "single",
+      "title": "Ground Shake",
+      "version": "REFLEC BEAT colette -Autumn-"
+    },
+    {
+      "artist": "\u732b\u53c9Master+",
+      "bpm": "190",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "5",
+      "style": "single",
+      "title": "nightbird lost wing",
+      "version": "REFLEC BEAT colette -Autumn-"
+    },
+    {
+      "artist": "\u732b\u53c9Master+",
+      "bpm": "190",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "8",
+      "style": "single",
+      "title": "nightbird lost wing",
+      "version": "REFLEC BEAT colette -Autumn-"
+    },
+    {
+      "artist": "\u732b\u53c9Master+",
+      "bpm": "190",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "11",
+      "style": "single",
+      "title": "nightbird lost wing",
       "version": "REFLEC BEAT colette -Autumn-"
     },
     {
@@ -10302,6 +10452,66 @@
       "version": "REFLEC BEAT groovin'!! Upper"
     },
     {
+      "artist": "\u30d2\u30b2\u30c9\u30e9\u30a4\u30d0\u30fc join. shully & Nimo",
+      "bpm": "160",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "5",
+      "style": "single",
+      "title": "\u30d1\u2192\u30d4\u2192\u30d7\u2192Yeah!",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
+      "artist": "\u30d2\u30b2\u30c9\u30e9\u30a4\u30d0\u30fc join. shully & Nimo",
+      "bpm": "160",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "8",
+      "style": "single",
+      "title": "\u30d1\u2192\u30d4\u2192\u30d7\u2192Yeah!",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
+      "artist": "\u30d2\u30b2\u30c9\u30e9\u30a4\u30d0\u30fc join. shully & Nimo",
+      "bpm": "160",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "11",
+      "style": "single",
+      "title": "\u30d1\u2192\u30d4\u2192\u30d7\u2192Yeah!",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
+      "artist": "MAX MAXIMIZER",
+      "bpm": "184",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "7",
+      "style": "single",
+      "title": "Miseria",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
+      "artist": "MAX MAXIMIZER",
+      "bpm": "184",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "Miseria",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
+      "artist": "MAX MAXIMIZER",
+      "bpm": "184",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "15",
+      "style": "single",
+      "title": "Miseria",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
       "artist": "n-buna",
       "bpm": "120",
       "difficulty": 0,
@@ -13369,6 +13579,86 @@
       "level": "14",
       "style": "single",
       "title": "Mathematical Love",
+      "version": "REFLEC BEAT VOLZZA 2"
+    },
+    {
+      "artist": "DJ Scratch & Bend",
+      "bpm": "172",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "7",
+      "style": "single",
+      "title": "Blue Spring Express",
+      "version": "REFLEC BEAT VOLZZA 2"
+    },
+    {
+      "artist": "DJ Scratch & Bend",
+      "bpm": "172",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "Blue Spring Express",
+      "version": "REFLEC BEAT VOLZZA 2"
+    },
+    {
+      "artist": "DJ Scratch & Bend",
+      "bpm": "172",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "12",
+      "style": "single",
+      "title": "Blue Spring Express",
+      "version": "REFLEC BEAT VOLZZA 2"
+    },
+    {
+      "artist": "DJ Scratch & Bend",
+      "bpm": "172",
+      "difficulty": 3,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "14",
+      "style": "single",
+      "title": "Blue Spring Express",
+      "version": "REFLEC BEAT VOLZZA 2"
+    },
+    {
+      "artist": "DJ TOTTO feat.\u3048\u306a\u3053",
+      "bpm": "178",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "5",
+      "style": "single",
+      "title": "Precious \u2606 Star",
+      "version": "REFLEC BEAT VOLZZA 2"
+    },
+    {
+      "artist": "DJ TOTTO feat.\u3048\u306a\u3053",
+      "bpm": "178",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "7",
+      "style": "single",
+      "title": "Precious \u2606 Star",
+      "version": "REFLEC BEAT VOLZZA 2"
+    },
+    {
+      "artist": "DJ TOTTO feat.\u3048\u306a\u3053",
+      "bpm": "178",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "11",
+      "style": "single",
+      "title": "Precious \u2606 Star",
+      "version": "REFLEC BEAT VOLZZA 2"
+    },
+    {
+      "artist": "DJ TOTTO feat.\u3048\u306a\u3053",
+      "bpm": "178",
+      "difficulty": 3,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "12",
+      "style": "single",
+      "title": "Precious \u2606 Star",
       "version": "REFLEC BEAT VOLZZA 2"
     },
     {
