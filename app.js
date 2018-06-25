@@ -180,17 +180,22 @@ function weight_binary(array, value, low, high){
 }
 
 //first make working function then work on cachin the results.
-function weight_random(array, count){
+function weight_random(array, count, min_level){
   var calcd_array = sum_weights(array);
   var total = calcd_array[array.length-1];
   var return_array = [];
   for(var i = 0; i < count; i++){
     var random_value = Math.floor(Math.random() * total);
     var index = weight_binary(calcd_array, random_value, 0, array.length)
-    return_array.push(index);
+    return_array.push(index+min_level);
   }
+  //return_array is the levels to be grabbed
   return return_array;
 }
+
+//format for weighted randoms:
+//1. get the array then formulate the weight_random as above. the levels will be constructed automatically
+//2. grab the song x times. how to do this is in the weighted notes
 
 //todo: error check function and route everything to that.
 function filter_songs(array, style, d_min, d_max, l_min, l_max){
