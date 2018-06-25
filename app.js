@@ -135,9 +135,14 @@ function shuffle(array, size){
 //todo later: make mental note somewhere else
 
 //functions for weighted version
+//for some reason, thought that total sum could overflow but seems like
+//that will never be the case. worst case is 100*50 which is 5000.
+
+//keeping the gcd function for future reference though, was kinda cool to see
+//this in action
 function gcd(x, y){
-  if(x == y){
-    if(x == 0) return 0;
+  if(x === y){
+    if(x === 0) return 0;
     else return x;
   }
   else if(x < y){
@@ -152,6 +157,39 @@ function gcd_mult(array){
     ans = gcd(ans, array[i]);
   }
   return ans;
+}
+
+function sum_weights(array){
+  var new_arr = [];
+  var total = 0;
+  for(var x = 0; x < array.length; x++){
+    total += array[x];
+    new_arr.push(total);
+  }
+  return new_arr;
+}
+
+function weight_binary(array, value, low, high){
+  if(high - low === 1){
+    if(array[low] <= value) return high;
+    else return low;
+  }
+  var index = Math.floor((high+low)/2);
+  if(value < array[index]) return weight_binary(array, value, low, index);
+  else return weight_binary(array, value, index, high);
+}
+
+//first make working function then work on cachin the results.
+function weight_random(array, count){
+  var calcd_array = sum_weights(array);
+  var total = calcd_array[array.length-1];
+  var return_array = [];
+  for(var i = 0; i < count; i++){
+    var random_value = Math.floor(Math.random() * total);
+    var index = weight_binary(calcd_array, random_value, 0, array.length)
+    return_array.push(index);
+  }
+  return return_array;
 }
 
 //todo: error check function and route everything to that.
