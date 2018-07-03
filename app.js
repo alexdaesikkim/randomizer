@@ -140,6 +140,8 @@ function shuffle(array, size){
 
 //keeping the gcd function for future reference though, was kinda cool to see
 //this in action
+
+//begin useless section
 function gcd(x, y){
   if(x === y){
     if(x === 0) return 0;
@@ -158,6 +160,7 @@ function gcd_mult(array){
   }
   return ans;
 }
+//end useless secion
 
 function sum_weights(array){
   var new_arr = [];
@@ -184,18 +187,22 @@ function weight_random(array, count, min_level){
   var calcd_array = sum_weights(array);
   var total = calcd_array[array.length-1];
   var return_array = [];
+  var levels = {}
   for(var i = 0; i < count; i++){
     var random_value = Math.floor(Math.random() * total);
-    var index = weight_binary(calcd_array, random_value, 0, array.length)
-    return_array.push(index+min_level);
+    var index = (weight_binary(calcd_array, random_value, 0, array.length)+1).toString();
+    if(index in levels){
+      var count = levels[index];
+      levels[index] = count+1;
+    }
+    else{
+      levels[index] = 1;
+    }
   }
-  //return_array is the levels to be grabbed
-  return return_array;
+  return levels;
 }
 
-//format for weighted randoms:
-//1. get the array then formulate the weight_random as above. the levels will be constructed automatically
-//2. grab the song x times. how to do this is in the weighted notes
+//todo: grab x amount of songs and subtract from the map if the lvl requirement fits
 
 //todo: error check function and route everything to that.
 function filter_songs(array, style, d_min, d_max, l_min, l_max){
@@ -251,7 +258,9 @@ app.get('/api/alpha/random/:game/:version/', function(req, res, next){
   var style = req.query.style != null ? req.query.style : "all";
   var north_america = req.query.north_america != null ? req.query.north_america : false;
   var game = req.params.game;
-  var version = req.params.version;
+  var version = req.params.version
+  var weights = req.query.weights != null ? req.query.weights : [];
+  console.log(weights);
   var obj = {};
   var song_obj = {};
 
@@ -341,9 +350,28 @@ app.get('/api/alpha/random/:game/:version/', function(req, res, next){
     songs: []
   }
 
-
-  for(var i = 0; i < count; i++){
-    obj.songs.push(songs[i]);
+  //weighted version
+  //if weighted, use map
+  if(weights.length !== 0){
+    console.log(weights.length);
+    var calculated_weights = weight_random(weights, count, min_level);
+    var index = 0;
+    while(count > 0){
+      //read the first song
+      var curr_level = (songs[index].level).toString();
+      //if the level count is ok, push
+      if(calculated_weights[curr_level] > 0){
+        obj.songs.push(songs[index]);
+        calculated_weights[curr_level] = calculated_weights[curr_level] - 1;
+        count--;
+      }
+      index++;
+    }
+  }
+  else{
+    for(var i = 0; i < count; i++){
+      obj.songs.push(songs[i]);
+    }
   }
 
   res.json(obj);

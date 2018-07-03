@@ -67842,6 +67842,66 @@
       "version": "beatmania IIDX 25 CANNON BALLERS"
     },
     {
+      "artist": "maras k/marasy\u00d7kors k",
+      "bpm": "129-220",
+      "difficulty": 1,
+      "genre": "BEAT PIANO MUSIC",
+      "level": "6",
+      "style": "single",
+      "title": "2 Player",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "maras k/marasy\u00d7kors k",
+      "bpm": "129-220",
+      "difficulty": 2,
+      "genre": "BEAT PIANO MUSIC",
+      "level": "9",
+      "style": "single",
+      "title": "2 Player",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "maras k/marasy\u00d7kors k",
+      "bpm": "129-220",
+      "difficulty": 3,
+      "genre": "BEAT PIANO MUSIC",
+      "level": "10",
+      "style": "single",
+      "title": "2 Player",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "maras k/marasy\u00d7kors k",
+      "bpm": "129-220",
+      "difficulty": 1,
+      "genre": "BEAT PIANO MUSIC",
+      "level": "6",
+      "style": "double",
+      "title": "2 Player",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "maras k/marasy\u00d7kors k",
+      "bpm": "129-220",
+      "difficulty": 2,
+      "genre": "BEAT PIANO MUSIC",
+      "level": "9",
+      "style": "double",
+      "title": "2 Player",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "maras k/marasy\u00d7kors k",
+      "bpm": "129-220",
+      "difficulty": 3,
+      "genre": "BEAT PIANO MUSIC",
+      "level": "10",
+      "style": "double",
+      "title": "2 Player",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
       "artist": "BEMANI Sound Team \"RACER-X\"",
       "bpm": "188",
       "difficulty": 1,
@@ -69282,7 +69342,7 @@
       "version": "beatmania IIDX 25 CANNON BALLERS"
     },
     {
-      "artist": "BEMANI Sound Team \"Hu\u03a3eR vs dj Helix\"",
+      "artist": "BEMANI Sound Team \"Hu\u03a3eR vs dj Hellix\"",
       "bpm": "88-176",
       "difficulty": 3,
       "genre": "IRREGULAR DJENT STEP",
@@ -69292,7 +69352,7 @@
       "version": "beatmania IIDX 25 CANNON BALLERS"
     },
     {
-      "artist": "BEMANI Sound Team \"Hu\u03a3eR vs dj Helix\"",
+      "artist": "BEMANI Sound Team \"Hu\u03a3eR vs dj Hellix\"",
       "bpm": "88-176",
       "difficulty": 3,
       "genre": "IRREGULAR DJENT STEP",
@@ -69539,6 +69599,126 @@
       "level": "10",
       "style": "double",
       "title": "madrugada",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "lapix",
+      "bpm": "145",
+      "difficulty": 1,
+      "genre": "EMO BREAKS",
+      "level": "4",
+      "style": "single",
+      "title": "LIGHTS ft. EVO+",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "lapix",
+      "bpm": "145",
+      "difficulty": 2,
+      "genre": "EMO BREAKS",
+      "level": "7",
+      "style": "single",
+      "title": "LIGHTS ft. EVO+",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "lapix",
+      "bpm": "145",
+      "difficulty": 3,
+      "genre": "EMO BREAKS",
+      "level": "10",
+      "style": "single",
+      "title": "LIGHTS ft. EVO+",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "lapix",
+      "bpm": "145",
+      "difficulty": 1,
+      "genre": "EMO BREAKS",
+      "level": "4",
+      "style": "double",
+      "title": "LIGHTS ft. EVO+",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "lapix",
+      "bpm": "145",
+      "difficulty": 2,
+      "genre": "EMO BREAKS",
+      "level": "7",
+      "style": "double",
+      "title": "LIGHTS ft. EVO+",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "lapix",
+      "bpm": "145",
+      "difficulty": 3,
+      "genre": "EMO BREAKS",
+      "level": "10",
+      "style": "double",
+      "title": "LIGHTS ft. EVO+",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "\u65e5\u9f8d",
+      "bpm": "170",
+      "difficulty": 1,
+      "genre": "TRANCE SPEED",
+      "level": "7",
+      "style": "single",
+      "title": "SUNLiGHT (IIDX Mix)",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "\u65e5\u9f8d",
+      "bpm": "170",
+      "difficulty": 2,
+      "genre": "TRANCE SPEED",
+      "level": "9",
+      "style": "single",
+      "title": "SUNLiGHT (IIDX Mix)",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "\u65e5\u9f8d",
+      "bpm": "170",
+      "difficulty": 3,
+      "genre": "TRANCE SPEED",
+      "level": "11",
+      "style": "single",
+      "title": "SUNLiGHT (IIDX Mix)",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "\u65e5\u9f8d",
+      "bpm": "170",
+      "difficulty": 1,
+      "genre": "TRANCE SPEED",
+      "level": "6",
+      "style": "double",
+      "title": "SUNLiGHT (IIDX Mix)",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "\u65e5\u9f8d",
+      "bpm": "170",
+      "difficulty": 2,
+      "genre": "TRANCE SPEED",
+      "level": "9",
+      "style": "double",
+      "title": "SUNLiGHT (IIDX Mix)",
+      "version": "beatmania IIDX 25 CANNON BALLERS"
+    },
+    {
+      "artist": "\u65e5\u9f8d",
+      "bpm": "170",
+      "difficulty": 3,
+      "genre": "TRANCE SPEED",
+      "level": "11",
+      "style": "double",
+      "title": "SUNLiGHT (IIDX Mix)",
       "version": "beatmania IIDX 25 CANNON BALLERS"
     },
     {
