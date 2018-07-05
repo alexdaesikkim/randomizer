@@ -233,10 +233,17 @@ var Random = createReactClass({
       array.push(10);
     }
     this.setState({
-      weight: false,
       weight_dist: array
     })
-    console.log(array);
+  },
+
+  //will need to grab index, maybe by its id?
+  changeWeight(index, value){
+    var array = this.state.weight_dist;
+    array[index] = value;
+    this.setState({
+      weight_dist: array
+    })
   },
 
   changeBuild(event){
@@ -313,6 +320,7 @@ var Random = createReactClass({
       if(build.endsWith("(Current)")){
         build = build.slice(0,-9);
       }
+      var array = this.state.weight ? this.state.weight_dist : []
       var query = {
         count: that.state.song_num,
         build: build,
@@ -322,6 +330,7 @@ var Random = createReactClass({
         max_level: that.state.max_level,
         style: that.state.style,
         north_america: that.state.north_america,
+        weights: array
       }
       $.ajax({
         url: '/api/alpha/random/' + that.state.game_name + "/" + that.state.version_name + "/",
@@ -490,9 +499,10 @@ var Random = createReactClass({
     )
   },
 
-  changeWeight(index, value){
+  changeWeight(event){
     var array = this.state.weight_dist;
-    array[index] = value;
+    console.log(event.target.id)
+    array[parseInt(event.target.id)] = parseInt(event.target.value);
     this.setState({
       weight_dist: array
     })
@@ -505,11 +515,18 @@ var Random = createReactClass({
       var that = this;
       var forms = array.map(function(value, index){
         return(
-          <Input s={1} name={'weight_'+index} id={index} label={index + that.state.min_level} defaultValue={value}></Input>
+          <Input s={1} name={'weight_'+index} key={'key_'+index} id={index.toString()} label={"Lvl " + (index + that.state.min_level).toString()} onChange={that.changeWeight} defaultValue={value}></Input>
         )
       })
+      return forms;
     }
     else return null;
+  },
+
+  changeWeightSettings(){
+    this.setState({
+      weight: !this.state.weight
+    })
   },
 
   displayLevelForm(){
@@ -576,10 +593,15 @@ var Random = createReactClass({
             <div className="row">
               <div className="center-forms">
                 <Input name='cd_option' type='checkbox' label='Card Draw' checked={this.state.card_draw} onChange={this.changeCardDrawSettings}></Input>
+                <Input name='weight_option' type='checkbox' label='Use Weights' checked={this.state.weight} onChange={this.changeWeightSettings}></Input>
                 {this.displayNATab()}
               </div>
             </div>
-            <br/>
+            <div className="row">
+              <div className="center-forms">
+                {this.displayWeightForm()}
+              </div>
+            </div>
             <div className="row">
               {this.displaySubmitButton()}
             </div>

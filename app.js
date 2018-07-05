@@ -166,7 +166,7 @@ function sum_weights(array){
   var new_arr = [];
   var total = 0;
   for(var x = 0; x < array.length; x++){
-    total += array[x];
+    total += parseInt(array[x]);
     new_arr.push(total);
   }
   return new_arr;
@@ -190,10 +190,10 @@ function weight_random(array, count, min_level){
   var levels = {}
   for(var i = 0; i < count; i++){
     var random_value = Math.floor(Math.random() * total);
-    var index = (weight_binary(calcd_array, random_value, 0, array.length)+1).toString();
+    var index = (weight_binary(calcd_array, random_value, 0, array.length)+min_level).toString();
     if(index in levels){
-      var count = levels[index];
-      levels[index] = count+1;
+      var curr_value = levels[index];
+      levels[index] = curr_value+1;
     }
     else{
       levels[index] = 1;
@@ -354,13 +354,17 @@ app.get('/api/alpha/random/:game/:version/', function(req, res, next){
   //if weighted, use map
   if(weights.length !== 0){
     console.log(weights.length);
+    console.log(songs[0]);
     var calculated_weights = weight_random(weights, count, min_level);
     var index = 0;
+    console.log(calculated_weights)
     while(count > 0){
       //read the first song
       var curr_level = (songs[index].level).toString();
+      //console.log(calculated_weights[curr_level]);
       //if the level count is ok, push
       if(calculated_weights[curr_level] > 0){
+        console.log("found");
         obj.songs.push(songs[index]);
         calculated_weights[curr_level] = calculated_weights[curr_level] - 1;
         count--;
