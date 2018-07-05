@@ -92,7 +92,6 @@ function grab_data_cache(game, version, build){
   else{
     if(game_cache.size == game_cache.lfu_check._size){
       var remove_key = game_cache.lfu_check.remove_last_used()
-      console.log(remove_key);
       delete game_cache.songs[remove_key];
     }
     var node = game_cache.lfu_check.add(key);
@@ -260,7 +259,6 @@ app.get('/api/alpha/random/:game/:version/', function(req, res, next){
   var game = req.params.game;
   var version = req.params.version
   var weights = req.query.weights != null ? req.query.weights : [];
-  console.log(weights);
   var obj = {};
   var song_obj = {};
 
@@ -353,18 +351,12 @@ app.get('/api/alpha/random/:game/:version/', function(req, res, next){
   //weighted version
   //if weighted, use map
   if(weights.length !== 0){
-    console.log(weights.length);
-    console.log(songs[0]);
     var calculated_weights = weight_random(weights, count, min_level);
     var index = 0;
-    console.log(calculated_weights)
     while(count > 0){
       //read the first song
       var curr_level = (songs[index].level).toString();
-      //console.log(calculated_weights[curr_level]);
-      //if the level count is ok, push
       if(calculated_weights[curr_level] > 0){
-        console.log("found");
         obj.songs.push(songs[index]);
         calculated_weights[curr_level] = calculated_weights[curr_level] - 1;
         count--;
