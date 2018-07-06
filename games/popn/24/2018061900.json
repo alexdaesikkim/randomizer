@@ -1198,7 +1198,7 @@
       "genre": "\u30d5\u30ec\u30f3\u30c1\u30dd\u30c3\u30d7J",
       "level": "22",
       "style": "single",
-      "title": "une fille dans la pluie",
+      "title": "une fille dans la pluie(\u65e5\u672c\u8a9e\u7248)",
       "version": "pop'n music 5"
     },
     {
@@ -1208,7 +1208,7 @@
       "genre": "\u30d5\u30ec\u30f3\u30c1\u30dd\u30c3\u30d7J",
       "level": "24",
       "style": "single",
-      "title": "une fille dans la pluie",
+      "title": "une fille dans la pluie(\u65e5\u672c\u8a9e\u7248)",
       "version": "pop'n music 5"
     },
     {
@@ -1218,7 +1218,7 @@
       "genre": "\u30d5\u30ec\u30f3\u30c1\u30dd\u30c3\u30d7J",
       "level": "32",
       "style": "single",
-      "title": "une fille dans la pluie",
+      "title": "une fille dans la pluie(\u65e5\u672c\u8a9e\u7248)",
       "version": "pop'n music 5"
     },
     {
@@ -2843,7 +2843,7 @@
     },
     {
       "artist": "Orange Lounge",
-      "bpm": "178?\u203b",
+      "bpm": "178\uff1f\u203b",
       "difficulty": 1,
       "genre": "\u30b9\u30da\u30b7\u30e3\u30eb\u30af\u30c3\u30ad\u30f3\u30b0",
       "level": "30",
@@ -2853,7 +2853,7 @@
     },
     {
       "artist": "Orange Lounge",
-      "bpm": "178?\u203b",
+      "bpm": "178\uff1f\u203b",
       "difficulty": 2,
       "genre": "\u30b9\u30da\u30b7\u30e3\u30eb\u30af\u30c3\u30ad\u30f3\u30b0",
       "level": "42",
@@ -3968,7 +3968,7 @@
       "genre": "\u30b7\u30e7\u30a6\u30ef\u30ab\u30e8\u30a6REMIX",
       "level": "29",
       "style": "single",
-      "title": "\u6797\u6a8e\u3068\u8702\u871c\uff08\u7f8e\u5473\u3057\u3055\u500d\u5897MIX)",
+      "title": "\u6797\u6a8e\u3068\u8702\u871c(\u7f8e\u5473\u3057\u3055\u500d\u5897MIX)",
       "version": "pop'n music 9"
     },
     {
@@ -3978,7 +3978,7 @@
       "genre": "\u30b7\u30e7\u30a6\u30ef\u30ab\u30e8\u30a6REMIX",
       "level": "41",
       "style": "single",
-      "title": "\u6797\u6a8e\u3068\u8702\u871c\uff08\u7f8e\u5473\u3057\u3055\u500d\u5897MIX)",
+      "title": "\u6797\u6a8e\u3068\u8702\u871c(\u7f8e\u5473\u3057\u3055\u500d\u5897MIX)",
       "version": "pop'n music 9"
     },
     {
@@ -5273,7 +5273,7 @@
     },
     {
       "artist": "\u3059\u308f\u30d1\u30f3\u30c1\u3068\u30ae\u30bf\u30fc\u306e\u4eba",
-      "bpm": "175?\u203b",
+      "bpm": "175\uff1f\u203b",
       "difficulty": 1,
       "genre": "\u30dd\u30c3\u30d7\u30f3\u4f53\u64cd",
       "level": "25",
@@ -5283,7 +5283,7 @@
     },
     {
       "artist": "\u3059\u308f\u30d1\u30f3\u30c1\u3068\u30ae\u30bf\u30fc\u306e\u4eba",
-      "bpm": "175?\u203b",
+      "bpm": "175\uff1f\u203b",
       "difficulty": 2,
       "genre": "\u30dd\u30c3\u30d7\u30f3\u4f53\u64cd",
       "level": "35",
@@ -5293,7 +5293,7 @@
     },
     {
       "artist": "\u3059\u308f\u30d1\u30f3\u30c1\u3068\u30ae\u30bf\u30fc\u306e\u4eba",
-      "bpm": "175?\u203b",
+      "bpm": "175\uff1f\u203b",
       "difficulty": 3,
       "genre": "\u30dd\u30c3\u30d7\u30f3\u4f53\u64cd",
       "level": "45",
@@ -7298,7 +7298,7 @@
       "genre": "\u3072\u306a\u307e\u3064\u308a",
       "level": "21",
       "style": "single",
-      "title": "La Peche du Pierrot",
+      "title": "La P\u00eache du Pierrot",
       "version": "pop'n music 12 \u3044\u308d\u306f"
     },
     {
@@ -7308,7 +7308,7 @@
       "genre": "\u3072\u306a\u307e\u3064\u308a",
       "level": "33",
       "style": "single",
-      "title": "La Peche du Pierrot",
+      "title": "La P\u00eache du Pierrot",
       "version": "pop'n music 12 \u3044\u308d\u306f"
     },
     {
@@ -9873,7 +9873,7 @@
     },
     {
       "artist": "\u30c8\u30b8\u30fc\u30f3",
-      "bpm": "158?(158-316)",
+      "bpm": "158\uff1f(158-316)",
       "difficulty": 1,
       "genre": "\u30d5\u30a3\u30fc\u30d0\u30fc\u30d2\u30fc\u30ed\u30fc",
       "level": "26",
@@ -9883,7 +9883,7 @@
     },
     {
       "artist": "\u30c8\u30b8\u30fc\u30f3",
-      "bpm": "158?(158-316)",
+      "bpm": "158\uff1f(158-316)",
       "difficulty": 2,
       "genre": "\u30d5\u30a3\u30fc\u30d0\u30fc\u30d2\u30fc\u30ed\u30fc",
       "level": "40",
@@ -9893,7 +9893,7 @@
     },
     {
       "artist": "\u30c8\u30b8\u30fc\u30f3",
-      "bpm": "158?(158-316)",
+      "bpm": "158\uff1f(158-316)",
       "difficulty": 3,
       "genre": "\u30d5\u30a3\u30fc\u30d0\u30fc\u30d2\u30fc\u30ed\u30fc",
       "level": "44",
@@ -9903,7 +9903,7 @@
     },
     {
       "artist": "\u65b0\u8c37\u3055\u306a\u3048",
-      "bpm": "148?(148-296)",
+      "bpm": "148\uff1f(148-296)",
       "difficulty": 1,
       "genre": "\u30d5\u30a3\u30fc\u30d0\u30fc\u30d2\u30fc\u30ed\u30fc\u30a8\u30f3\u30c7\u30a3\u30f3\u30b0",
       "level": "24",
@@ -9913,7 +9913,7 @@
     },
     {
       "artist": "\u65b0\u8c37\u3055\u306a\u3048",
-      "bpm": "148?(148-296)",
+      "bpm": "148\uff1f(148-296)",
       "difficulty": 2,
       "genre": "\u30d5\u30a3\u30fc\u30d0\u30fc\u30d2\u30fc\u30ed\u30fc\u30a8\u30f3\u30c7\u30a3\u30f3\u30b0",
       "level": "33",
@@ -9923,7 +9923,7 @@
     },
     {
       "artist": "\u65b0\u8c37\u3055\u306a\u3048",
-      "bpm": "148?(148-296)",
+      "bpm": "148\uff1f(148-296)",
       "difficulty": 3,
       "genre": "\u30d5\u30a3\u30fc\u30d0\u30fc\u30d2\u30fc\u30ed\u30fc\u30a8\u30f3\u30c7\u30a3\u30f3\u30b0",
       "level": "42",
@@ -10878,7 +10878,7 @@
       "genre": "\u30ad\u30e5\u30a2\u30fc",
       "level": "17",
       "style": "single",
-      "title": "\ufffd\u50c2\u826f\ufffd",
+      "title": "\u7dd1*14\u306e\u98a8",
       "version": "pop'n music 15 ADVENTURE"
     },
     {
@@ -10888,7 +10888,7 @@
       "genre": "\u30ad\u30e5\u30a2\u30fc",
       "level": "25",
       "style": "single",
-      "title": "\ufffd\u50c2\u826f\ufffd",
+      "title": "\u7dd1*14\u306e\u98a8",
       "version": "pop'n music 15 ADVENTURE"
     },
     {
@@ -10898,7 +10898,7 @@
       "genre": "\u30ad\u30e5\u30a2\u30fc",
       "level": "30",
       "style": "single",
-      "title": "\ufffd\u50c2\u826f\ufffd",
+      "title": "\u7dd1*14\u306e\u98a8",
       "version": "pop'n music 15 ADVENTURE"
     },
     {
@@ -11433,7 +11433,7 @@
     },
     {
       "artist": "\u30b5\u30a4\u30e2\u30f3\u30de\u30f3",
-      "bpm": "124?(62-400)",
+      "bpm": "124\uff1f(62-400)",
       "difficulty": 1,
       "genre": "\u30d1\u30fc\u30ab\u30c3\u30b7\u30f42",
       "level": "31",
@@ -11443,7 +11443,7 @@
     },
     {
       "artist": "\u30b5\u30a4\u30e2\u30f3\u30de\u30f3",
-      "bpm": "124?(62-400)",
+      "bpm": "124\uff1f(62-400)",
       "difficulty": 2,
       "genre": "\u30d1\u30fc\u30ab\u30c3\u30b7\u30f42",
       "level": "39",
@@ -11453,7 +11453,7 @@
     },
     {
       "artist": "\u30b5\u30a4\u30e2\u30f3\u30de\u30f3",
-      "bpm": "124?(62-400)",
+      "bpm": "124\uff1f(62-400)",
       "difficulty": 3,
       "genre": "\u30d1\u30fc\u30ab\u30c3\u30b7\u30f42",
       "level": "46",
@@ -11583,7 +11583,7 @@
     },
     {
       "artist": "DJ SIMON",
-      "bpm": "147?(147-296)",
+      "bpm": "147\uff1f(147-296)",
       "difficulty": 1,
       "genre": "\u30d7\u30ed\u30dd\u30fc\u30baREMIX",
       "level": "23",
@@ -11593,7 +11593,7 @@
     },
     {
       "artist": "DJ SIMON",
-      "bpm": "147?(147-296)",
+      "bpm": "147\uff1f(147-296)",
       "difficulty": 2,
       "genre": "\u30d7\u30ed\u30dd\u30fc\u30baREMIX",
       "level": "31",
@@ -11603,7 +11603,7 @@
     },
     {
       "artist": "DJ SIMON",
-      "bpm": "147?(147-296)",
+      "bpm": "147\uff1f(147-296)",
       "difficulty": 3,
       "genre": "\u30d7\u30ed\u30dd\u30fc\u30baREMIX",
       "level": "43",
@@ -14035,7 +14035,7 @@
       "artist": "\u732b\u53c9Master",
       "bpm": "100",
       "difficulty": 1,
-      "genre": "\u30b3\u30f3\u30c6\u30f3\u30dd\u30e9\u30ea\u30fc\u30cd\u30a4\u30b7\u30e7\u30f3\uff14",
+      "genre": "\u30b3\u30f3\u30c6\u30f3\u30dd\u30e9\u30ea\u30fc\u30cd\u30a4\u30b7\u30e7\u30f34",
       "level": "24",
       "style": "single",
       "title": "Tree in Lake\u301c\u6d88\u3048\u305f\u30c1\u30c1\u30ab\u30ab\u306e\u6728\u301c",
@@ -14045,7 +14045,7 @@
       "artist": "\u732b\u53c9Master",
       "bpm": "100",
       "difficulty": 2,
-      "genre": "\u30b3\u30f3\u30c6\u30f3\u30dd\u30e9\u30ea\u30fc\u30cd\u30a4\u30b7\u30e7\u30f3\uff14",
+      "genre": "\u30b3\u30f3\u30c6\u30f3\u30dd\u30e9\u30ea\u30fc\u30cd\u30a4\u30b7\u30e7\u30f34",
       "level": "37",
       "style": "single",
       "title": "Tree in Lake\u301c\u6d88\u3048\u305f\u30c1\u30c1\u30ab\u30ab\u306e\u6728\u301c",
@@ -14055,7 +14055,7 @@
       "artist": "\u732b\u53c9Master",
       "bpm": "100",
       "difficulty": 3,
-      "genre": "\u30b3\u30f3\u30c6\u30f3\u30dd\u30e9\u30ea\u30fc\u30cd\u30a4\u30b7\u30e7\u30f3\uff14",
+      "genre": "\u30b3\u30f3\u30c6\u30f3\u30dd\u30e9\u30ea\u30fc\u30cd\u30a4\u30b7\u30e7\u30f34",
       "level": "45",
       "style": "single",
       "title": "Tree in Lake\u301c\u6d88\u3048\u305f\u30c1\u30c1\u30ab\u30ab\u306e\u6728\u301c",
@@ -15993,7 +15993,7 @@
     },
     {
       "artist": "T\u0401\u042fRA",
-      "bpm": "170?(85-170)",
+      "bpm": "170\uff1f(85-170)",
       "difficulty": 1,
       "genre": "\u30cf\u30a4\u30d1\u30fc\u30b8\u30e3\u30d1\u30cd\u30b9\u30af3",
       "level": "26",
@@ -16003,7 +16003,7 @@
     },
     {
       "artist": "T\u0401\u042fRA",
-      "bpm": "170?(85-170)",
+      "bpm": "170\uff1f(85-170)",
       "difficulty": 2,
       "genre": "\u30cf\u30a4\u30d1\u30fc\u30b8\u30e3\u30d1\u30cd\u30b9\u30af3",
       "level": "40",
@@ -16013,7 +16013,7 @@
     },
     {
       "artist": "T\u0401\u042fRA",
-      "bpm": "170?(85-170)",
+      "bpm": "170\uff1f(85-170)",
       "difficulty": 3,
       "genre": "\u30cf\u30a4\u30d1\u30fc\u30b8\u30e3\u30d1\u30cd\u30b9\u30af3",
       "level": "45",
@@ -18448,7 +18448,7 @@
       "genre": "80's\u30d7\u30ea\u30c6\u30a3\u30dd\u30c3\u30d7",
       "level": "22",
       "style": "single",
-      "title": "So good!",
+      "title": "So good!!",
       "version": "pop'n music 19 TUNE STREET"
     },
     {
@@ -18458,7 +18458,7 @@
       "genre": "80's\u30d7\u30ea\u30c6\u30a3\u30dd\u30c3\u30d7",
       "level": "32",
       "style": "single",
-      "title": "So good!",
+      "title": "So good!!",
       "version": "pop'n music 19 TUNE STREET"
     },
     {
@@ -18468,7 +18468,7 @@
       "genre": "80's\u30d7\u30ea\u30c6\u30a3\u30dd\u30c3\u30d7",
       "level": "40",
       "style": "single",
-      "title": "So good!",
+      "title": "So good!!",
       "version": "pop'n music 19 TUNE STREET"
     },
     {
@@ -27862,7 +27862,7 @@
       "version": "pop'n music \u30e9\u30d4\u30b9\u30c8\u30ea\u30a2"
     },
     {
-      "artist": "cosMo\uff20\u66b4\u8d70P",
+      "artist": "cosMo@\u66b4\u8d70P",
       "bpm": "208",
       "difficulty": 0,
       "genre": "",
@@ -27872,7 +27872,7 @@
       "version": "pop'n music \u30e9\u30d4\u30b9\u30c8\u30ea\u30a2"
     },
     {
-      "artist": "cosMo\uff20\u66b4\u8d70P",
+      "artist": "cosMo@\u66b4\u8d70P",
       "bpm": "208",
       "difficulty": 1,
       "genre": "",
@@ -27882,7 +27882,7 @@
       "version": "pop'n music \u30e9\u30d4\u30b9\u30c8\u30ea\u30a2"
     },
     {
-      "artist": "cosMo\uff20\u66b4\u8d70P",
+      "artist": "cosMo@\u66b4\u8d70P",
       "bpm": "208",
       "difficulty": 2,
       "genre": "",
@@ -27892,7 +27892,7 @@
       "version": "pop'n music \u30e9\u30d4\u30b9\u30c8\u30ea\u30a2"
     },
     {
-      "artist": "cosMo\uff20\u66b4\u8d70P",
+      "artist": "cosMo@\u66b4\u8d70P",
       "bpm": "208",
       "difficulty": 3,
       "genre": "",
@@ -28143,7 +28143,7 @@
     },
     {
       "artist": "\u98a8\u7d00\u59d4\u54e1 \u6850\u751f",
-      "bpm": "220?(190-250)",
+      "bpm": "220\uff1f(190-250)",
       "difficulty": 0,
       "genre": "",
       "level": "7",
@@ -28153,7 +28153,7 @@
     },
     {
       "artist": "\u98a8\u7d00\u59d4\u54e1 \u6850\u751f",
-      "bpm": "220?(190-250)",
+      "bpm": "220\uff1f(190-250)",
       "difficulty": 1,
       "genre": "",
       "level": "26",
@@ -28163,7 +28163,7 @@
     },
     {
       "artist": "\u98a8\u7d00\u59d4\u54e1 \u6850\u751f",
-      "bpm": "220?(190-250)",
+      "bpm": "220\uff1f(190-250)",
       "difficulty": 2,
       "genre": "",
       "level": "39",
@@ -28173,7 +28173,7 @@
     },
     {
       "artist": "\u98a8\u7d00\u59d4\u54e1 \u6850\u751f",
-      "bpm": "220?(190-250)",
+      "bpm": "220\uff1f(190-250)",
       "difficulty": 3,
       "genre": "",
       "level": "46",
@@ -31343,7 +31343,7 @@
     },
     {
       "artist": "Flying Kite feat.\u5c0f\u91ce\u702c\u65ed",
-      "bpm": "270?(160-280)",
+      "bpm": "270\uff1f(160-280)",
       "difficulty": 0,
       "genre": "",
       "level": "13",
@@ -31353,7 +31353,7 @@
     },
     {
       "artist": "Flying Kite feat.\u5c0f\u91ce\u702c\u65ed",
-      "bpm": "270?(160-280)",
+      "bpm": "270\uff1f(160-280)",
       "difficulty": 1,
       "genre": "",
       "level": "28",
@@ -31363,7 +31363,7 @@
     },
     {
       "artist": "Flying Kite feat.\u5c0f\u91ce\u702c\u65ed",
-      "bpm": "270?(160-280)",
+      "bpm": "270\uff1f(160-280)",
       "difficulty": 2,
       "genre": "",
       "level": "40",
@@ -31373,7 +31373,7 @@
     },
     {
       "artist": "Flying Kite feat.\u5c0f\u91ce\u702c\u65ed",
-      "bpm": "270?(160-280)",
+      "bpm": "270\uff1f(160-280)",
       "difficulty": 3,
       "genre": "",
       "level": "48",
@@ -32543,7 +32543,7 @@
     },
     {
       "artist": "\u6885\u5e72\u8336\u6f2c\u3051",
-      "bpm": "230?(180-230)",
+      "bpm": "230\uff1f(180-230)",
       "difficulty": 0,
       "genre": "",
       "level": "5",
@@ -32553,7 +32553,7 @@
     },
     {
       "artist": "\u6885\u5e72\u8336\u6f2c\u3051",
-      "bpm": "230?(180-230)",
+      "bpm": "230\uff1f(180-230)",
       "difficulty": 1,
       "genre": "",
       "level": "27",
@@ -32563,7 +32563,7 @@
     },
     {
       "artist": "\u6885\u5e72\u8336\u6f2c\u3051",
-      "bpm": "230?(180-230)",
+      "bpm": "230\uff1f(180-230)",
       "difficulty": 2,
       "genre": "",
       "level": "38",
@@ -32573,7 +32573,7 @@
     },
     {
       "artist": "\u6885\u5e72\u8336\u6f2c\u3051",
-      "bpm": "230?(180-230)",
+      "bpm": "230\uff1f(180-230)",
       "difficulty": 3,
       "genre": "",
       "level": "45",
@@ -34102,7 +34102,7 @@
       "version": "pop'n music \u00e9clale"
     },
     {
-      "artist": "cosMo\uff20\u66b4\u8d70Ultimate",
+      "artist": "cosMo@\u66b4\u8d70Ultimate",
       "bpm": "240-300",
       "difficulty": 0,
       "genre": "",
@@ -34112,7 +34112,7 @@
       "version": "pop'n music \u00e9clale"
     },
     {
-      "artist": "cosMo\uff20\u66b4\u8d70Ultimate",
+      "artist": "cosMo@\u66b4\u8d70Ultimate",
       "bpm": "240-300",
       "difficulty": 1,
       "genre": "",
@@ -34122,7 +34122,7 @@
       "version": "pop'n music \u00e9clale"
     },
     {
-      "artist": "cosMo\uff20\u66b4\u8d70Ultimate",
+      "artist": "cosMo@\u66b4\u8d70Ultimate",
       "bpm": "240-300",
       "difficulty": 2,
       "genre": "",
@@ -34132,7 +34132,7 @@
       "version": "pop'n music \u00e9clale"
     },
     {
-      "artist": "cosMo\uff20\u66b4\u8d70Ultimate",
+      "artist": "cosMo@\u66b4\u8d70Ultimate",
       "bpm": "240-300",
       "difficulty": 3,
       "genre": "",
@@ -34948,7 +34948,7 @@
       "genre": "",
       "level": "9",
       "style": "single",
-      "title": "Thank You Merry Christmas",
+      "title": "Thank You Merry Christmas*39",
       "version": "pop'n music \u00e9clale"
     },
     {
@@ -34958,7 +34958,7 @@
       "genre": "",
       "level": "25",
       "style": "single",
-      "title": "Thank You Merry Christmas",
+      "title": "Thank You Merry Christmas*39",
       "version": "pop'n music \u00e9clale"
     },
     {
@@ -34968,7 +34968,7 @@
       "genre": "",
       "level": "36",
       "style": "single",
-      "title": "Thank You Merry Christmas",
+      "title": "Thank You Merry Christmas*39",
       "version": "pop'n music \u00e9clale"
     },
     {
@@ -34978,7 +34978,7 @@
       "genre": "",
       "level": "41",
       "style": "single",
-      "title": "Thank You Merry Christmas",
+      "title": "Thank You Merry Christmas*39",
       "version": "pop'n music \u00e9clale"
     },
     {
@@ -35772,7 +35772,7 @@
       "version": "pop'n music \u5bb6\u5ead\u7528"
     },
     {
-      "artist": "Haya-P\uff06Maru",
+      "artist": "Haya-P & Maru",
       "bpm": "130",
       "difficulty": 1,
       "genre": "\u30ad\u30e3\u30f3\u30c7\u30a3\u30dd\u30c3\u30d7",
@@ -35782,7 +35782,7 @@
       "version": "pop'n music \u5bb6\u5ead\u7528"
     },
     {
-      "artist": "Haya-P\uff06Maru",
+      "artist": "Haya-P & Maru",
       "bpm": "130",
       "difficulty": 2,
       "genre": "\u30ad\u30e3\u30f3\u30c7\u30a3\u30dd\u30c3\u30d7",
@@ -36225,7 +36225,7 @@
       "artist": "\u732b\u53c9Master",
       "bpm": "95",
       "difficulty": 1,
-      "genre": "\u5e7b\u60f3\u6c34\u6ef8\u4f1d\uff36",
+      "genre": "\u5e7b\u60f3\u6c34\u6ef8\u4f1dV",
       "level": "25",
       "style": "single",
       "title": "\u5973\u738b\u9a0e\u58eb",
@@ -36235,7 +36235,7 @@
       "artist": "\u732b\u53c9Master",
       "bpm": "95",
       "difficulty": 2,
-      "genre": "\u5e7b\u60f3\u6c34\u6ef8\u4f1d\uff36",
+      "genre": "\u5e7b\u60f3\u6c34\u6ef8\u4f1dV",
       "level": "32",
       "style": "single",
       "title": "\u5973\u738b\u9a0e\u58eb",
@@ -36245,7 +36245,7 @@
       "artist": "\u732b\u53c9Master",
       "bpm": "95",
       "difficulty": 3,
-      "genre": "\u5e7b\u60f3\u6c34\u6ef8\u4f1d\uff36",
+      "genre": "\u5e7b\u60f3\u6c34\u6ef8\u4f1dV",
       "level": "41",
       "style": "single",
       "title": "\u5973\u738b\u9a0e\u58eb",
@@ -39442,7 +39442,7 @@
       "version": "TV\u30fbJ-\u30dd\u30c3\u30d7 (\u30e9\u30a4\u30bb\u30f3\u30b9\u66f2)"
     },
     {
-      "artist": "cosMo\uff20\u66b4\u8d70P",
+      "artist": "cosMo@\u66b4\u8d70P",
       "bpm": "208",
       "difficulty": 0,
       "genre": "",
@@ -39452,7 +39452,7 @@
       "version": "TV\u30fbJ-\u30dd\u30c3\u30d7 (\u30e9\u30a4\u30bb\u30f3\u30b9\u66f2)"
     },
     {
-      "artist": "cosMo\uff20\u66b4\u8d70P",
+      "artist": "cosMo@\u66b4\u8d70P",
       "bpm": "208",
       "difficulty": 1,
       "genre": "",
@@ -39462,7 +39462,7 @@
       "version": "TV\u30fbJ-\u30dd\u30c3\u30d7 (\u30e9\u30a4\u30bb\u30f3\u30b9\u66f2)"
     },
     {
-      "artist": "cosMo\uff20\u66b4\u8d70P",
+      "artist": "cosMo@\u66b4\u8d70P",
       "bpm": "208",
       "difficulty": 2,
       "genre": "",
@@ -39472,7 +39472,7 @@
       "version": "TV\u30fbJ-\u30dd\u30c3\u30d7 (\u30e9\u30a4\u30bb\u30f3\u30b9\u66f2)"
     },
     {
-      "artist": "cosMo\uff20\u66b4\u8d70P",
+      "artist": "cosMo@\u66b4\u8d70P",
       "bpm": "208",
       "difficulty": 3,
       "genre": "",
@@ -41988,7 +41988,7 @@
       "genre": "\u30e6\u30fc\u30ed\u30d3\u30fc\u30c8",
       "level": "22",
       "style": "single",
-      "title": "Twin Bee \u301cGeneration X\u301c",
+      "title": "Twin bee \u301cGeneration X\u301c",
       "version": "ee'MALL 2nd avenue"
     },
     {
@@ -41998,7 +41998,7 @@
       "genre": "\u30e6\u30fc\u30ed\u30d3\u30fc\u30c8",
       "level": "31",
       "style": "single",
-      "title": "Twin Bee \u301cGeneration X\u301c",
+      "title": "Twin bee \u301cGeneration X\u301c",
       "version": "ee'MALL 2nd avenue"
     },
     {
@@ -42008,7 +42008,7 @@
       "genre": "\u30e6\u30fc\u30ed\u30d3\u30fc\u30c8",
       "level": "39",
       "style": "single",
-      "title": "Twin Bee \u301cGeneration X\u301c",
+      "title": "Twin bee \u301cGeneration X\u301c",
       "version": "ee'MALL 2nd avenue"
     },
     {
@@ -42142,6 +42142,36 @@
       "version": "ee'MALL 2nd avenue"
     },
     {
+      "artist": "PLATINUM-EDEN",
+      "bpm": "170",
+      "difficulty": 1,
+      "genre": "JV-ROCK",
+      "level": "24",
+      "style": "single",
+      "title": "\u6d1f\u30fb\u6708\u30fb\u5947\u8e5f",
+      "version": "ee'MALL 2nd avenue"
+    },
+    {
+      "artist": "PLATINUM-EDEN",
+      "bpm": "170",
+      "difficulty": 2,
+      "genre": "JV-ROCK",
+      "level": "42",
+      "style": "single",
+      "title": "\u6d1f\u30fb\u6708\u30fb\u5947\u8e5f",
+      "version": "ee'MALL 2nd avenue"
+    },
+    {
+      "artist": "PLATINUM-EDEN",
+      "bpm": "170",
+      "difficulty": 3,
+      "genre": "JV-ROCK",
+      "level": "46",
+      "style": "single",
+      "title": "\u6d1f\u30fb\u6708\u30fb\u5947\u8e5f",
+      "version": "ee'MALL 2nd avenue"
+    },
+    {
       "artist": "\u304f\u306b\u305f\u3051\u307f\u3086\u304d",
       "bpm": "170",
       "difficulty": 1,
@@ -42229,36 +42259,6 @@
       "level": "38",
       "style": "single",
       "title": "ALONE",
-      "version": "ee'MALL 2nd avenue"
-    },
-    {
-      "artist": "PLATINUM-EDEN",
-      "bpm": "170",
-      "difficulty": 1,
-      "genre": "JV-ROCK",
-      "level": "24",
-      "style": "single",
-      "title": "\u6d1f\u30fb\u6708\u30fb\u5947\u8e5f",
-      "version": "ee'MALL 2nd avenue"
-    },
-    {
-      "artist": "PLATINUM-EDEN",
-      "bpm": "170",
-      "difficulty": 2,
-      "genre": "JV-ROCK",
-      "level": "42",
-      "style": "single",
-      "title": "\u6d1f\u30fb\u6708\u30fb\u5947\u8e5f",
-      "version": "ee'MALL 2nd avenue"
-    },
-    {
-      "artist": "PLATINUM-EDEN",
-      "bpm": "170",
-      "difficulty": 3,
-      "genre": "JV-ROCK",
-      "level": "46",
-      "style": "single",
-      "title": "\u6d1f\u30fb\u6708\u30fb\u5947\u8e5f",
       "version": "ee'MALL 2nd avenue"
     },
     {
@@ -43348,7 +43348,7 @@
       "genre": "",
       "level": "7",
       "style": "single",
-      "title": "LEAD Gravity\uff08M\uff09",
+      "title": "LEAD Gravity(M)",
       "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
     },
     {
@@ -43358,7 +43358,7 @@
       "genre": "",
       "level": "28",
       "style": "single",
-      "title": "LEAD Gravity\uff08M\uff09",
+      "title": "LEAD Gravity(M)",
       "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
     },
     {
@@ -43368,7 +43368,7 @@
       "genre": "",
       "level": "41",
       "style": "single",
-      "title": "LEAD Gravity\uff08M\uff09",
+      "title": "LEAD Gravity(M)",
       "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
     },
     {
@@ -43378,7 +43378,7 @@
       "genre": "",
       "level": "48",
       "style": "single",
-      "title": "LEAD Gravity\uff08M\uff09",
+      "title": "LEAD Gravity(M)",
       "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
     },
     {
@@ -45508,7 +45508,7 @@
       "genre": "",
       "level": "7",
       "style": "single",
-      "title": "\u30ed\u30f3\u30ed\u30f3\u3078\u3000\u30e9\u30a4\u30e9\u30a4\u30e9\u30a4\uff01",
+      "title": "\u30ed\u30f3\u30ed\u30f3\u3078 \u30e9\u30a4\u30e9\u30a4\u30e9\u30a4\uff01",
       "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
     },
     {
@@ -45518,7 +45518,7 @@
       "genre": "",
       "level": "26",
       "style": "single",
-      "title": "\u30ed\u30f3\u30ed\u30f3\u3078\u3000\u30e9\u30a4\u30e9\u30a4\u30e9\u30a4\uff01",
+      "title": "\u30ed\u30f3\u30ed\u30f3\u3078 \u30e9\u30a4\u30e9\u30a4\u30e9\u30a4\uff01",
       "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
     },
     {
@@ -45528,7 +45528,7 @@
       "genre": "",
       "level": "37",
       "style": "single",
-      "title": "\u30ed\u30f3\u30ed\u30f3\u3078\u3000\u30e9\u30a4\u30e9\u30a4\u30e9\u30a4\uff01",
+      "title": "\u30ed\u30f3\u30ed\u30f3\u3078 \u30e9\u30a4\u30e9\u30a4\u30e9\u30a4\uff01",
       "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
     },
     {
@@ -45538,7 +45538,7 @@
       "genre": "",
       "level": "45",
       "style": "single",
-      "title": "\u30ed\u30f3\u30ed\u30f3\u3078\u3000\u30e9\u30a4\u30e9\u30a4\u30e9\u30a4\uff01",
+      "title": "\u30ed\u30f3\u30ed\u30f3\u3078 \u30e9\u30a4\u30e9\u30a4\u30e9\u30a4\uff01",
       "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
     },
     {
@@ -47382,6 +47382,406 @@
       "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
     },
     {
+      "artist": "SOUND HOLIC feat. Nana Takahashi",
+      "bpm": "170",
+      "difficulty": 0,
+      "genre": "",
+      "level": "6",
+      "style": "single",
+      "title": "CARNIVOROUS",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "SOUND HOLIC feat. Nana Takahashi",
+      "bpm": "170",
+      "difficulty": 1,
+      "genre": "",
+      "level": "27",
+      "style": "single",
+      "title": "CARNIVOROUS",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "SOUND HOLIC feat. Nana Takahashi",
+      "bpm": "170",
+      "difficulty": 2,
+      "genre": "",
+      "level": "39",
+      "style": "single",
+      "title": "CARNIVOROUS",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "SOUND HOLIC feat. Nana Takahashi",
+      "bpm": "170",
+      "difficulty": 3,
+      "genre": "",
+      "level": "46",
+      "style": "single",
+      "title": "CARNIVOROUS",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "Sota Fujimori 2nd Season",
+      "bpm": "185",
+      "difficulty": 0,
+      "genre": "",
+      "level": "13",
+      "style": "single",
+      "title": "Phlox",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "Sota Fujimori 2nd Season",
+      "bpm": "185",
+      "difficulty": 1,
+      "genre": "",
+      "level": "30",
+      "style": "single",
+      "title": "Phlox",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "Sota Fujimori 2nd Season",
+      "bpm": "185",
+      "difficulty": 2,
+      "genre": "",
+      "level": "42",
+      "style": "single",
+      "title": "Phlox",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "Sota Fujimori 2nd Season",
+      "bpm": "185",
+      "difficulty": 3,
+      "genre": "",
+      "level": "47",
+      "style": "single",
+      "title": "Phlox",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "\u3068\u304d\u3081\u304d\u30a2\u30a4\u30c9\u30eb project",
+      "bpm": "160",
+      "difficulty": 0,
+      "genre": "",
+      "level": "7",
+      "style": "single",
+      "title": "Twin memories W",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "\u3068\u304d\u3081\u304d\u30a2\u30a4\u30c9\u30eb project",
+      "bpm": "160",
+      "difficulty": 1,
+      "genre": "",
+      "level": "23",
+      "style": "single",
+      "title": "Twin memories W",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "\u3068\u304d\u3081\u304d\u30a2\u30a4\u30c9\u30eb project",
+      "bpm": "160",
+      "difficulty": 2,
+      "genre": "",
+      "level": "37",
+      "style": "single",
+      "title": "Twin memories W",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "\u3068\u304d\u3081\u304d\u30a2\u30a4\u30c9\u30eb project",
+      "bpm": "160",
+      "difficulty": 3,
+      "genre": "",
+      "level": "41",
+      "style": "single",
+      "title": "Twin memories W",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "\u3068\u304d\u3081\u304d\u30a2\u30a4\u30c9\u30eb project",
+      "bpm": "185",
+      "difficulty": 0,
+      "genre": "",
+      "level": "9",
+      "style": "single",
+      "title": "\u604b\u6642\u96e8",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "\u3068\u304d\u3081\u304d\u30a2\u30a4\u30c9\u30eb project",
+      "bpm": "185",
+      "difficulty": 1,
+      "genre": "",
+      "level": "22",
+      "style": "single",
+      "title": "\u604b\u6642\u96e8",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "\u3068\u304d\u3081\u304d\u30a2\u30a4\u30c9\u30eb project",
+      "bpm": "185",
+      "difficulty": 2,
+      "genre": "",
+      "level": "36",
+      "style": "single",
+      "title": "\u604b\u6642\u96e8",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "\u3068\u304d\u3081\u304d\u30a2\u30a4\u30c9\u30eb project",
+      "bpm": "185",
+      "difficulty": 3,
+      "genre": "",
+      "level": "44",
+      "style": "single",
+      "title": "\u604b\u6642\u96e8",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "\u65e5\u5411\u7f8e\u30d3\u30bf\u30fc\u30b9\u30a4\u30fc\u30c4\u266a",
+      "bpm": "50-85",
+      "difficulty": 0,
+      "genre": "",
+      "level": "5",
+      "style": "single",
+      "title": "\u82b1\u306e\u3084\u304f\u305d\u304f",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "\u65e5\u5411\u7f8e\u30d3\u30bf\u30fc\u30b9\u30a4\u30fc\u30c4\u266a",
+      "bpm": "50-85",
+      "difficulty": 1,
+      "genre": "",
+      "level": "20",
+      "style": "single",
+      "title": "\u82b1\u306e\u3084\u304f\u305d\u304f",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "\u65e5\u5411\u7f8e\u30d3\u30bf\u30fc\u30b9\u30a4\u30fc\u30c4\u266a",
+      "bpm": "50-85",
+      "difficulty": 2,
+      "genre": "",
+      "level": "32",
+      "style": "single",
+      "title": "\u82b1\u306e\u3084\u304f\u305d\u304f",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "\u65e5\u5411\u7f8e\u30d3\u30bf\u30fc\u30b9\u30a4\u30fc\u30c4\u266a",
+      "bpm": "50-85",
+      "difficulty": 3,
+      "genre": "",
+      "level": "38",
+      "style": "single",
+      "title": "\u82b1\u306e\u3084\u304f\u305d\u304f",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "\u677e\u5c71\u3042\u304a\u3044",
+      "bpm": "165",
+      "difficulty": 0,
+      "genre": "",
+      "level": "8",
+      "style": "single",
+      "title": "\u304a\u3044\u304b\u3051\u3063\u3053\u30ef\u30fc\u30eb\u30c9",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "\u677e\u5c71\u3042\u304a\u3044",
+      "bpm": "165",
+      "difficulty": 1,
+      "genre": "",
+      "level": "25",
+      "style": "single",
+      "title": "\u304a\u3044\u304b\u3051\u3063\u3053\u30ef\u30fc\u30eb\u30c9",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "\u677e\u5c71\u3042\u304a\u3044",
+      "bpm": "165",
+      "difficulty": 2,
+      "genre": "",
+      "level": "38",
+      "style": "single",
+      "title": "\u304a\u3044\u304b\u3051\u3063\u3053\u30ef\u30fc\u30eb\u30c9",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "\u677e\u5c71\u3042\u304a\u3044",
+      "bpm": "165",
+      "difficulty": 3,
+      "genre": "",
+      "level": "45",
+      "style": "single",
+      "title": "\u304a\u3044\u304b\u3051\u3063\u3053\u30ef\u30fc\u30eb\u30c9",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "\u6d77\u5f13\u30b7\u30e5\u30ea",
+      "bpm": "172",
+      "difficulty": 0,
+      "genre": "",
+      "level": "10",
+      "style": "single",
+      "title": "badass girl",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "\u6d77\u5f13\u30b7\u30e5\u30ea",
+      "bpm": "172",
+      "difficulty": 1,
+      "genre": "",
+      "level": "28",
+      "style": "single",
+      "title": "badass girl",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "\u6d77\u5f13\u30b7\u30e5\u30ea",
+      "bpm": "172",
+      "difficulty": 2,
+      "genre": "",
+      "level": "40",
+      "style": "single",
+      "title": "badass girl",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "\u6d77\u5f13\u30b7\u30e5\u30ea",
+      "bpm": "172",
+      "difficulty": 3,
+      "genre": "",
+      "level": "46",
+      "style": "single",
+      "title": "badass girl",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "OSTER project feat. \u305d\u3089\u3053",
+      "bpm": "196",
+      "difficulty": 0,
+      "genre": "",
+      "level": "8",
+      "style": "single",
+      "title": "\u7f8a\u76ae\u7d19\u306e\u4e0a\u306e\u9280\u6cb3",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "OSTER project feat. \u305d\u3089\u3053",
+      "bpm": "196",
+      "difficulty": 1,
+      "genre": "",
+      "level": "26",
+      "style": "single",
+      "title": "\u7f8a\u76ae\u7d19\u306e\u4e0a\u306e\u9280\u6cb3",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "OSTER project feat. \u305d\u3089\u3053",
+      "bpm": "196",
+      "difficulty": 2,
+      "genre": "",
+      "level": "38",
+      "style": "single",
+      "title": "\u7f8a\u76ae\u7d19\u306e\u4e0a\u306e\u9280\u6cb3",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "OSTER project feat. \u305d\u3089\u3053",
+      "bpm": "196",
+      "difficulty": 3,
+      "genre": "",
+      "level": "44",
+      "style": "single",
+      "title": "\u7f8a\u76ae\u7d19\u306e\u4e0a\u306e\u9280\u6cb3",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "Setaria Virtuoso",
+      "bpm": "86-144",
+      "difficulty": 0,
+      "genre": "",
+      "level": "11",
+      "style": "single",
+      "title": "nostos",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "Setaria Virtuoso",
+      "bpm": "86-144",
+      "difficulty": 1,
+      "genre": "",
+      "level": "27",
+      "style": "single",
+      "title": "nostos",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "Setaria Virtuoso",
+      "bpm": "86-144",
+      "difficulty": 2,
+      "genre": "",
+      "level": "39",
+      "style": "single",
+      "title": "nostos",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "Setaria Virtuoso",
+      "bpm": "86-144",
+      "difficulty": 3,
+      "genre": "",
+      "level": "47",
+      "style": "single",
+      "title": "nostos",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "BEMANI Sound Team \"PON\"",
+      "bpm": "190-241",
+      "difficulty": 0,
+      "genre": "",
+      "level": "13",
+      "style": "single",
+      "title": "La fame di Adria",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "BEMANI Sound Team \"PON\"",
+      "bpm": "190-241",
+      "difficulty": 1,
+      "genre": "",
+      "level": "30",
+      "style": "single",
+      "title": "La fame di Adria",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "BEMANI Sound Team \"PON\"",
+      "bpm": "190-241",
+      "difficulty": 2,
+      "genre": "",
+      "level": "40",
+      "style": "single",
+      "title": "La fame di Adria",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "BEMANI Sound Team \"PON\"",
+      "bpm": "190-241",
+      "difficulty": 3,
+      "genre": "",
+      "level": "48",
+      "style": "single",
+      "title": "La fame di Adria",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
       "artist": "\u4e2d\u5cf6\u7531\u8cb4",
       "bpm": "190",
       "difficulty": 0,
@@ -47459,6 +47859,46 @@
       "level": "46",
       "style": "single",
       "title": "nalca",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "Zutt",
+      "bpm": "121",
+      "difficulty": 0,
+      "genre": "",
+      "level": "10",
+      "style": "single",
+      "title": "TRUTH behind U",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "Zutt",
+      "bpm": "121",
+      "difficulty": 1,
+      "genre": "",
+      "level": "28",
+      "style": "single",
+      "title": "TRUTH behind U",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "Zutt",
+      "bpm": "121",
+      "difficulty": 2,
+      "genre": "",
+      "level": "42",
+      "style": "single",
+      "title": "TRUTH behind U",
+      "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
+    },
+    {
+      "artist": "Zutt",
+      "bpm": "121",
+      "difficulty": 3,
+      "genre": "",
+      "level": "47",
+      "style": "single",
+      "title": "TRUTH behind U",
       "version": "pop'n music \u3046\u3055\u304e\u3068\u732b\u3068\u5c11\u5e74\u306e\u5922"
     }
   ]

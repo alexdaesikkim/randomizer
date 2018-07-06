@@ -92,7 +92,6 @@ function grab_data_cache(game, version, build){
   else{
     if(game_cache.size == game_cache.lfu_check._size){
       var remove_key = game_cache.lfu_check.remove_last_used()
-      console.log(remove_key);
       delete game_cache.songs[remove_key];
     }
     var node = game_cache.lfu_check.add(key);
@@ -134,6 +133,75 @@ function shuffle(array, size){
 //if this was purely json data and pulling data from it, i can use randomizer with ease
 //todo later: make mental note somewhere else
 
+//functions for weighted version
+//for some reason, thought that total sum could overflow but seems like
+//that will never be the case. worst case is 100*50 which is 5000.
+
+//keeping the gcd function for future reference though, was kinda cool to see
+//this in action
+
+//begin useless section
+function gcd(x, y){
+  if(x === y){
+    if(x === 0) return 0;
+    else return x;
+  }
+  else if(x < y){
+    return gcd(x, y-x);
+  }
+  else return gcd(x-y, y);
+}
+
+function gcd_mult(array){
+  var ans = array[0];
+  for(var i = 1; i < array.length; i++){
+    ans = gcd(ans, array[i]);
+  }
+  return ans;
+}
+//end useless secion
+
+function sum_weights(array){
+  var new_arr = [];
+  var total = 0;
+  for(var x = 0; x < array.length; x++){
+    total += parseInt(array[x]);
+    new_arr.push(total);
+  }
+  return new_arr;
+}
+
+function weight_binary(array, value, low, high){
+  if(high - low === 1){
+    if(array[low] <= value) return high;
+    else return low;
+  }
+  var index = Math.floor((high+low)/2);
+  if(value < array[index]) return weight_binary(array, value, low, index);
+  else return weight_binary(array, value, index, high);
+}
+
+//first make working function then work on cachin the results.
+function weight_random(array, count, min_level){
+  var calcd_array = sum_weights(array);
+  var total = calcd_array[array.length-1];
+  var return_array = [];
+  var levels = {}
+  for(var i = 0; i < count; i++){
+    var random_value = Math.floor(Math.random() * total);
+    var index = (weight_binary(calcd_array, random_value, 0, array.length)+min_level).toString();
+    if(index in levels){
+      var curr_value = levels[index];
+      levels[index] = curr_value+1;
+    }
+    else{
+      levels[index] = 1;
+    }
+  }
+  return levels;
+}
+
+//todo: grab x amount of songs and subtract from the map if the lvl requirement fits
 
 //todo: error check function and route everything to that.
 function filter_songs(array, style, d_min, d_max, l_min, l_max){
@@ -189,7 +257,8 @@ app.get('/api/alpha/random/:game/:version/', function(req, res, next){
   var style = req.query.style != null ? req.query.style : "all";
   var north_america = req.query.north_america != null ? req.query.north_america : false;
   var game = req.params.game;
-  var version = req.params.version;
+  var version = req.params.version
+  var weights = req.query.weights != null ? req.query.weights : [];
   var obj = {};
   var song_obj = {};
 
@@ -279,9 +348,26 @@ app.get('/api/alpha/random/:game/:version/', function(req, res, next){
     songs: []
   }
 
-
-  for(var i = 0; i < count; i++){
-    obj.songs.push(songs[i]);
+  //weighted version
+  //if weighted, use map
+  if(weights.length !== 0){
+    var calculated_weights = weight_random(weights, count, min_level);
+    var index = 0;
+    while(count > 0){
+      //read the first song
+      var curr_level = (songs[index].level).toString();
+      if(calculated_weights[curr_level] > 0){
+        obj.songs.push(songs[index]);
+        calculated_weights[curr_level] = calculated_weights[curr_level] - 1;
+        count--;
+      }
+      index++;
+    }
+  }
+  else{
+    for(var i = 0; i < count; i++){
+      obj.songs.push(songs[i]);
+    }
   }
 
   res.json(obj);
