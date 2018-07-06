@@ -237,15 +237,6 @@ var Random = createReactClass({
     })
   },
 
-  //will need to grab index, maybe by its id?
-  changeWeight(index, value){
-    var array = this.state.weight_dist;
-    array[index] = value;
-    this.setState({
-      weight_dist: array
-    })
-  },
-
   changeBuild(event){
     var build = event.target.value;
     this.setState({
@@ -515,7 +506,7 @@ var Random = createReactClass({
       var that = this;
       var forms = array.map(function(value, index){
         return(
-          <Input s={1} name={'weight_'+index} key={'key_'+index} id={index.toString()} label={"Lvl " + (index + that.state.min_level).toString()} onChange={that.changeWeight} defaultValue={value}></Input>
+          <Input s={2} m={1} name={'weight_'+index} key={'key_'+index} id={index.toString()} label={"Lvl " + (index + that.state.min_level).toString()} onChange={that.changeWeight} defaultValue={value}></Input>
         )
       })
       return forms;
@@ -598,9 +589,7 @@ var Random = createReactClass({
               </div>
             </div>
             <div className="row">
-              <div className="center-forms">
-                {this.displayWeightForm()}
-              </div>
+              {this.displayWeightForm()}
             </div>
             <div className="row">
               {this.displaySubmitButton()}

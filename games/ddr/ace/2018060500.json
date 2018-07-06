@@ -53398,6 +53398,17 @@
     {
       "artist": "kemu feat. IA",
       "bpm": "186",
+      "difficulty": 4,
+      "level": "16",
+      "north_america": false,
+      "source": "Vocaloconnection feat. \u521d\u97f3\u30df\u30af",
+      "style": "single",
+      "title": "\u516d\u5146\u5e74\u3068\u4e00\u591c\u7269\u8a9e",
+      "version": "DanceDanceRevolution A"
+    },
+    {
+      "artist": "kemu feat. IA",
+      "bpm": "186",
       "difficulty": 1,
       "level": "6",
       "north_america": false,
@@ -53422,6 +53433,17 @@
       "bpm": "186",
       "difficulty": 3,
       "level": "12",
+      "north_america": false,
+      "source": "Vocaloconnection feat. \u521d\u97f3\u30df\u30af",
+      "style": "double",
+      "title": "\u516d\u5146\u5e74\u3068\u4e00\u591c\u7269\u8a9e",
+      "version": "DanceDanceRevolution A"
+    },
+    {
+      "artist": "kemu feat. IA",
+      "bpm": "186",
+      "difficulty": 4,
+      "level": "16",
       "north_america": false,
       "source": "Vocaloconnection feat. \u521d\u97f3\u30df\u30af",
       "style": "double",
@@ -53475,6 +53497,17 @@
     {
       "artist": "Neru",
       "bpm": "162",
+      "difficulty": 4,
+      "level": "15",
+      "north_america": false,
+      "source": "Neru\u300c\u4e16\u754c\u5f81\u670d\u300d",
+      "style": "single",
+      "title": "\u30ed\u30b9\u30c8\u30ef\u30f3\u306e\u53f7\u54ed",
+      "version": "DanceDanceRevolution A"
+    },
+    {
+      "artist": "Neru",
+      "bpm": "162",
       "difficulty": 1,
       "level": "7",
       "north_america": false,
@@ -53499,6 +53532,17 @@
       "bpm": "162",
       "difficulty": 3,
       "level": "13",
+      "north_america": false,
+      "source": "Neru\u300c\u4e16\u754c\u5f81\u670d\u300d",
+      "style": "double",
+      "title": "\u30ed\u30b9\u30c8\u30ef\u30f3\u306e\u53f7\u54ed",
+      "version": "DanceDanceRevolution A"
+    },
+    {
+      "artist": "Neru",
+      "bpm": "162",
+      "difficulty": 4,
+      "level": "15",
       "north_america": false,
       "source": "Neru\u300c\u4e16\u754c\u5f81\u670d\u300d",
       "style": "double",
@@ -59146,6 +59190,83 @@
       "source": "DDR A",
       "style": "double",
       "title": "IN BETWEEN",
+      "version": "DanceDanceRevolution A"
+    },
+    {
+      "artist": "BEMANI Sound Team \u201cSota F.\u201d",
+      "bpm": "(175?)",
+      "difficulty": 0,
+      "level": "3",
+      "north_america": true,
+      "source": "DDR A",
+      "style": "single",
+      "title": "Love You More",
+      "version": "DanceDanceRevolution A"
+    },
+    {
+      "artist": "BEMANI Sound Team \u201cSota F.\u201d",
+      "bpm": "(175?)",
+      "difficulty": 1,
+      "level": "9",
+      "north_america": true,
+      "source": "DDR A",
+      "style": "single",
+      "title": "Love You More",
+      "version": "DanceDanceRevolution A"
+    },
+    {
+      "artist": "BEMANI Sound Team \u201cSota F.\u201d",
+      "bpm": "(175?)",
+      "difficulty": 2,
+      "level": "12",
+      "north_america": true,
+      "source": "DDR A",
+      "style": "single",
+      "title": "Love You More",
+      "version": "DanceDanceRevolution A"
+    },
+    {
+      "artist": "BEMANI Sound Team \u201cSota F.\u201d",
+      "bpm": "(175?)",
+      "difficulty": 3,
+      "level": "16",
+      "north_america": true,
+      "source": "DDR A",
+      "style": "single",
+      "title": "Love You More",
+      "version": "DanceDanceRevolution A"
+    },
+    {
+      "artist": "BEMANI Sound Team \u201cSota F.\u201d",
+      "bpm": "(175?)",
+      "difficulty": 1,
+      "level": "9",
+      "north_america": true,
+      "source": "DDR A",
+      "style": "double",
+      "title": "Love You More",
+      "version": "DanceDanceRevolution A"
+    },
+    {
+      "artist": "BEMANI Sound Team \u201cSota F.\u201d",
+      "bpm": "(175?)",
+      "difficulty": 2,
+      "level": "12",
+      "north_america": true,
+      "source": "DDR A",
+      "style": "double",
+      "title": "Love You More",
+      "version": "DanceDanceRevolution A"
+    },
+    {
+      "artist": "BEMANI Sound Team \u201cSota F.\u201d",
+      "bpm": "(175?)",
+      "difficulty": 3,
+      "level": "16",
+      "north_america": true,
+      "source": "DDR A",
+      "style": "double",
+      "title": "Love You More",
       "version": "DanceDanceRevolution A"
     },
     {

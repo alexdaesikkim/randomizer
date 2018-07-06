@@ -151,9 +151,10 @@
             "Ver3.58",
             "Ver3.59",
             "Ver4.00",
-            "Ver4.01"
+            "Ver4.01",
+            "Ver4.02"
           ],
-          "current": "Ver4.01",
+          "current": "Ver4.02",
           "difficulty": {
             "list": [
               "Simple",
