@@ -7,6 +7,13 @@ var createReactClass = require('create-react-class');
 
 var Random = createReactClass({
   getInitialState(){
+    /*
+      things needed for next beta:
+      1. weighted selection
+      2. custom selection
+      this.state.weight_list: list of weights. if option is true, this is used to select the diff first.
+      this.state.weight_option: true if yes, false if no
+    */
     return{
       game_data: [],
       panel: true,
@@ -40,6 +47,9 @@ var Random = createReactClass({
       cd_curr_num: 0,
       songs: [],
       undo_bans: [],
+      weight_list: [],
+      per_list: [],
+      weight_option: false,
       errors:{
         error_messages: [],
         error_class: "no-error"
@@ -69,7 +79,26 @@ var Random = createReactClass({
       }
     })
   },
-
+  /*
+  weight_calc(){
+    var per_weights = this.state.weight_list;
+    var total = 0.0;
+    for(var x = 0; x < weights.length; x++){
+      total += weights[x];
+    }
+    per_weights.map(function(num){
+      return num/total;
+    })
+    this.setState({
+      per_list: per_weights
+    })
+  }
+  */
+  
+  weight_level(){
+    var num = Math.floor((Math.random() * (100.0-0.0)));
+  }
+  
   changeGame(event){
     var game = event.target.value;
     if(game !== ''){
