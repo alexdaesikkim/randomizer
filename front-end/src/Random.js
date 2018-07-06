@@ -47,15 +47,9 @@ var Random = createReactClass({
       cd_curr_num: 0,
       songs: [],
       undo_bans: [],
-<<<<<<< HEAD
-      weight_list: [],
-      per_list: [],
-      weight_option: false,
-=======
       weight: false,
       weight_lvl: 0,
       weight_dist: [],
->>>>>>> 23706a5d260fdc9e37c04b39fc91c341edc1a263
       errors:{
         error_messages: [],
         error_class: "no-error"
@@ -85,28 +79,6 @@ var Random = createReactClass({
       }
     })
   },
-<<<<<<< HEAD
-  /*
-  weight_calc(){
-    var per_weights = this.state.weight_list;
-    var total = 0.0;
-    for(var x = 0; x < weights.length; x++){
-      total += weights[x];
-    }
-    per_weights.map(function(num){
-      return num/total;
-    })
-    this.setState({
-      per_list: per_weights
-    })
-  }
-  */
-  
-  weight_level(){
-    var num = Math.floor((Math.random() * (100.0-0.0)));
-  }
-  
-=======
 
   //weight_form
 
@@ -124,7 +96,6 @@ var Random = createReactClass({
     }
   },
 
->>>>>>> 23706a5d260fdc9e37c04b39fc91c341edc1a263
   changeGame(event){
     var game = event.target.value;
     if(game !== ''){
