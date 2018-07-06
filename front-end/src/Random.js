@@ -140,7 +140,7 @@ var Random = createReactClass({
             song_num: 1,
             versions: version_list,
             songs: [],
-            weights: false
+            weight: false
           })
         }
       }
@@ -177,7 +177,6 @@ var Random = createReactClass({
           diff_list: diff_list,
           max_diff: this.state.game_data.games[this.state.game_name].versions[v].difficulty.max,
           na_option: this.state.game_data.games[this.state.game_name].versions[v].na_option,
-          weight: false,
           panel: true
         }, function(){
           this.changeWeightLimits()
