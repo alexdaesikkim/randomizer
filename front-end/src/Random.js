@@ -1,7 +1,7 @@
 import React from 'react';
 import './Random.css';
 import $ from 'jquery';
-import {Input, Button} from 'react-materialize';
+import {Input, Button, Modal} from 'react-materialize';
 
 var createReactClass = require('create-react-class');
 
@@ -457,6 +457,47 @@ var Random = createReactClass({
 
   },
 
+  displayDetailedOptionModal(){
+    return(
+      <Modal header='Advanced Options' trigger={<Button>Advanced Options</Button>}>
+        <div className="row">
+          <Input name='cd_option' type='checkbox' label='Card Draw' checked={this.state.card_draw} onChange={this.changeCardDrawSettings}></Input>
+          <Input name='weight_option' type='checkbox' label='Use Weights' checked={this.state.weight} onChange={this.changeWeightSettings}></Input>
+          {this.displayNATab()}
+        </div>
+        <div className="row">
+          <Input s={6} l={2} type='number' label="# to Grab" defaultValue={this.state.song_num} onChange={this.changeSongNum}></Input>
+          {this.displayCardDraw()}
+        </div>
+        <div className="row">
+          {this.displayWeightForm()}
+        </div>
+      </Modal>
+    )
+  },
+
+  displayWeightForm(){
+    var forms = this.state.weight_dist.length;
+    var array = this.state.weight_dist;
+    var that = this;
+    if(this.state.weight){
+      var forms = array.map(function(value, index){
+        return(
+          <Input s={2} m={1} name={'weight_'+index} key={'key_'+index} id={index.toString()} label={"Lvl " + (index + that.state.min_level).toString()} onChange={that.changeWeight} defaultValue={value}></Input>
+        )
+      })
+      return forms;
+    }
+    else{
+      var forms = array.map(function(value, index){
+        return(
+            <Input s={2} m={1} name={'weight_'+index} key={'key_'+index} id={index.toString()} label={"Lvl " + (index + that.state.min_level).toString()} defaultValue={value} disabled></Input>
+        )
+      })
+      return forms;
+    };
+  },
+
   displaySubmitButton(){
     if(this.state.songs.length === 0){
       return(
@@ -499,26 +540,12 @@ var Random = createReactClass({
   changeWeight(event){
     var array = this.state.weight_dist;
     console.log(event.target.id)
-    array[parseInt(event.target.id)] = parseInt(event.target.value);
+    array[parseInt(event.target.id, 10)] = parseInt(event.target.value, 10);
     this.setState({
       weight_dist: array
     })
   },
 
-  displayWeightForm(){
-    if(this.state.weight){
-      var forms = this.state.weight_dist.length;
-      var array = this.state.weight_dist;
-      var that = this;
-      var forms = array.map(function(value, index){
-        return(
-          <Input s={2} m={1} name={'weight_'+index} key={'key_'+index} id={index.toString()} label={"Lvl " + (index + that.state.min_level).toString()} onChange={that.changeWeight} defaultValue={value}></Input>
-        )
-      })
-      return forms;
-    }
-    else return null;
-  },
 
   changeWeightSettings(){
     this.setState({
@@ -572,10 +599,10 @@ var Random = createReactClass({
         <div className="valign-wrapper">
           <div className="valign">
             <div className="row">
-              <Input s={6} l={1} label="Min Lvl" type='select' defaultValue={this.state.min_level} onChange={this.changeMinLevel}>
+              <Input s={6} l={2} label="Min Lvl" type='select' defaultValue={this.state.min_level} onChange={this.changeMinLevel}>
                 {min_level_dropdown}
               </Input>
-              <Input s={6} l={1} label="Max Lvl" type='select' defaultValue={this.state.max_level} onChange={this.changeMaxLevel}>
+              <Input s={6} l={2} label="Max Lvl" type='select' defaultValue={this.state.max_level} onChange={this.changeMaxLevel}>
                 {max_level_dropdown}
               </Input>
               <Input s={6} l={3} label="Min Diff" type='select' defaultValue={this.state.min_diff} onChange={this.changeMinDifficulty}>
@@ -585,19 +612,9 @@ var Random = createReactClass({
                 {max_diff_dropdown}
               </Input>
               <Input s={6} l={2} type='number' label="# to Grab" defaultValue={this.state.song_num} onChange={this.changeSongNum}></Input>
-              {this.displayCardDraw()}
             </div>
             <div className="row">
-              <div className="center-forms">
-                <Input name='cd_option' type='checkbox' label='Card Draw' checked={this.state.card_draw} onChange={this.changeCardDrawSettings}></Input>
-                <Input name='weight_option' type='checkbox' label='Use Weights' checked={this.state.weight} onChange={this.changeWeightSettings}></Input>
-                {this.displayNATab()}
-              </div>
-            </div>
-            <div className="row">
-              {this.displayWeightForm()}
-            </div>
-            <div className="row">
+              {this.displayDetailedOptionModal()}
               {this.displaySubmitButton()}
             </div>
           </div>
