@@ -466,7 +466,7 @@ var Random = createReactClass({
           {this.displayNATab()}
         </div>
         <div className="row">
-          <Input s={6} l={2} type='number' label="# to Grab" defaultValue={this.state.song_num} onChange={this.changeSongNum}></Input>
+          <Input s={6} l={2} type='number' label="# to Grab" defaultValue={this.state.song_num} value={this.state.song_num} onChange={this.changeSongNum}></Input>
           {this.displayCardDraw()}
         </div>
         <div className="row">
@@ -596,27 +596,25 @@ var Random = createReactClass({
       });
 
       return(
-        <div className="valign-wrapper">
-          <div className="valign">
-            <div className="row">
-              <Input s={6} l={2} label="Min Lvl" type='select' defaultValue={this.state.min_level} onChange={this.changeMinLevel}>
-                {min_level_dropdown}
-              </Input>
-              <Input s={6} l={2} label="Max Lvl" type='select' defaultValue={this.state.max_level} onChange={this.changeMaxLevel}>
-                {max_level_dropdown}
-              </Input>
-              <Input s={6} l={3} label="Min Diff" type='select' defaultValue={this.state.min_diff} onChange={this.changeMinDifficulty}>
-                {min_diff_dropdown}
-              </Input>
-              <Input s={6} l={3} label="Max Diff" type='select' defaultValue={this.state.max_diff} onChange={this.changeMaxDifficulty}>
-                {max_diff_dropdown}
-              </Input>
-              <Input s={6} l={2} type='number' label="# to Grab" defaultValue={this.state.song_num} onChange={this.changeSongNum}></Input>
-            </div>
-            <div className="row">
-              {this.displayDetailedOptionModal()}
-              {this.displaySubmitButton()}
-            </div>
+        <div>
+          <div className="row">
+            <Input s={6} l={2} label="Min Lvl" type='select' defaultValue={this.state.min_level} onChange={this.changeMinLevel}>
+              {min_level_dropdown}
+            </Input>
+            <Input s={6} l={2} label="Max Lvl" type='select' defaultValue={this.state.max_level} onChange={this.changeMaxLevel}>
+              {max_level_dropdown}
+            </Input>
+            <Input s={6} l={3} label="Min Diff" type='select' defaultValue={this.state.min_diff} onChange={this.changeMinDifficulty}>
+              {min_diff_dropdown}
+            </Input>
+            <Input s={6} l={3} label="Max Diff" type='select' defaultValue={this.state.max_diff} onChange={this.changeMaxDifficulty}>
+              {max_diff_dropdown}
+            </Input>
+            <Input s={6} l={2} type='number' label="# to Grab" defaultValue={this.state.song_num} value={this.state.song_num} onChange={this.changeSongNum}></Input>
+          </div>
+          <div className="row">
+            {this.displayDetailedOptionModal()}
+            {this.displaySubmitButton()}
           </div>
         </div>
       );
