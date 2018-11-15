@@ -5132,36 +5132,6 @@
       "version": "jubeat saucer"
     },
     {
-      "artist": "(GReeeeN)",
-      "bpm": "182",
-      "difficulty": 0,
-      "genre": "\u30dd\u30c3\u30d7\u30b9",
-      "level": "3",
-      "style": "single",
-      "title": "\u30aa\u30ec\u30f3\u30b8",
-      "version": "jubeat saucer"
-    },
-    {
-      "artist": "(GReeeeN)",
-      "bpm": "182",
-      "difficulty": 1,
-      "genre": "\u30dd\u30c3\u30d7\u30b9",
-      "level": "6",
-      "style": "single",
-      "title": "\u30aa\u30ec\u30f3\u30b8",
-      "version": "jubeat saucer"
-    },
-    {
-      "artist": "(GReeeeN)",
-      "bpm": "182",
-      "difficulty": 2,
-      "genre": "\u30dd\u30c3\u30d7\u30b9",
-      "level": "8",
-      "style": "single",
-      "title": "\u30aa\u30ec\u30f3\u30b8",
-      "version": "jubeat saucer"
-    },
-    {
       "artist": "\u732b\u53c9L.E.D.Master+",
       "bpm": "180",
       "difficulty": 0,
@@ -9663,36 +9633,6 @@
     },
     {
       "artist": "ST\u2606RISH",
-      "bpm": "129",
-      "difficulty": 0,
-      "genre": "\u30a2\u30cb\u30e1",
-      "level": "2",
-      "style": "single",
-      "title": "\u30de\u30b8LOVE1000%",
-      "version": "jubeat saucer"
-    },
-    {
-      "artist": "ST\u2606RISH",
-      "bpm": "129",
-      "difficulty": 1,
-      "genre": "\u30a2\u30cb\u30e1",
-      "level": "7",
-      "style": "single",
-      "title": "\u30de\u30b8LOVE1000%",
-      "version": "jubeat saucer"
-    },
-    {
-      "artist": "ST\u2606RISH",
-      "bpm": "129",
-      "difficulty": 2,
-      "genre": "\u30a2\u30cb\u30e1",
-      "level": "8",
-      "style": "single",
-      "title": "\u30de\u30b8LOVE1000%",
-      "version": "jubeat saucer"
-    },
-    {
-      "artist": "ST\u2606RISH",
       "bpm": "141",
       "difficulty": 0,
       "genre": "\u30a2\u30cb\u30e1",
@@ -13036,7 +12976,7 @@
       "bpm": "85",
       "difficulty": 1,
       "genre": "\u6771\u65b9\u30a2\u30ec\u30f3\u30b8",
-      "level": "6",
+      "level": "5",
       "style": "single",
       "title": "\u5996\u96a0\u3057 -\u3042\u3084\u304b\u3057\u304b\u304f\u3057-",
       "version": "jubeat prop"
@@ -13352,36 +13292,6 @@
       "version": "jubeat prop"
     },
     {
-      "artist": "\u5185\u7530\u771f\u793c",
-      "bpm": "136",
-      "difficulty": 0,
-      "genre": "\u30a2\u30cb\u30e1",
-      "level": "3",
-      "style": "single",
-      "title": "\u304b\u3089\u3063\u307d\u30ab\u30d7\u30bb\u30eb",
-      "version": "jubeat prop"
-    },
-    {
-      "artist": "\u5185\u7530\u771f\u793c",
-      "bpm": "136",
-      "difficulty": 1,
-      "genre": "\u30a2\u30cb\u30e1",
-      "level": "5",
-      "style": "single",
-      "title": "\u304b\u3089\u3063\u307d\u30ab\u30d7\u30bb\u30eb",
-      "version": "jubeat prop"
-    },
-    {
-      "artist": "\u5185\u7530\u771f\u793c",
-      "bpm": "136",
-      "difficulty": 2,
-      "genre": "\u30a2\u30cb\u30e1",
-      "level": "8",
-      "style": "single",
-      "title": "\u304b\u3089\u3063\u307d\u30ab\u30d7\u30bb\u30eb",
-      "version": "jubeat prop"
-    },
-    {
       "artist": "\u65e5\u5411\u7f8e\u30d3\u30bf\u30fc\u30b9\u30a4\u30fc\u30c4\u266a",
       "bpm": "122",
       "difficulty": 0,
@@ -13739,36 +13649,6 @@
       "level": "9",
       "style": "single",
       "title": "\u604b\u3092\u3057\u305f\u3044\u3001\u3082\u3046\u4e00\u5ea6",
-      "version": "jubeat prop"
-    },
-    {
-      "artist": "Charisma.com",
-      "bpm": "146",
-      "difficulty": 0,
-      "genre": "\u30dd\u30c3\u30d7\u30b9",
-      "level": "2",
-      "style": "single",
-      "title": "\u3053\u3093\u304c\u3089\u30ac\u30fc\u30eb",
-      "version": "jubeat prop"
-    },
-    {
-      "artist": "Charisma.com",
-      "bpm": "146",
-      "difficulty": 1,
-      "genre": "\u30dd\u30c3\u30d7\u30b9",
-      "level": "5",
-      "style": "single",
-      "title": "\u3053\u3093\u304c\u3089\u30ac\u30fc\u30eb",
-      "version": "jubeat prop"
-    },
-    {
-      "artist": "Charisma.com",
-      "bpm": "146",
-      "difficulty": 2,
-      "genre": "\u30dd\u30c3\u30d7\u30b9",
-      "level": "8",
-      "style": "single",
-      "title": "\u3053\u3093\u304c\u3089\u30ac\u30fc\u30eb",
       "version": "jubeat prop"
     },
     {
@@ -14219,36 +14099,6 @@
       "level": "9",
       "style": "single",
       "title": "3 A.M. \u30c7\u30a3\u30c6\u30af\u30c6\u30a3\u30d6\u30fb\u30b2\u30fc\u30e0",
-      "version": "jubeat prop"
-    },
-    {
-      "artist": "\u6709\u5f62\u30e9\u30f3\u30da\u30a4\u30b8",
-      "bpm": "140-195",
-      "difficulty": 0,
-      "genre": "\u30dd\u30c3\u30d7\u30b9",
-      "level": "4",
-      "style": "single",
-      "title": "\u4e16\u754c\u4e94\u5206\u524d\u4eee\u8aac",
-      "version": "jubeat prop"
-    },
-    {
-      "artist": "\u6709\u5f62\u30e9\u30f3\u30da\u30a4\u30b8",
-      "bpm": "140-195",
-      "difficulty": 1,
-      "genre": "\u30dd\u30c3\u30d7\u30b9",
-      "level": "6",
-      "style": "single",
-      "title": "\u4e16\u754c\u4e94\u5206\u524d\u4eee\u8aac",
-      "version": "jubeat prop"
-    },
-    {
-      "artist": "\u6709\u5f62\u30e9\u30f3\u30da\u30a4\u30b8",
-      "bpm": "140-195",
-      "difficulty": 2,
-      "genre": "\u30dd\u30c3\u30d7\u30b9",
-      "level": "9",
-      "style": "single",
-      "title": "\u4e16\u754c\u4e94\u5206\u524d\u4eee\u8aac",
       "version": "jubeat prop"
     },
     {
@@ -15212,36 +15062,6 @@
       "version": "jubeat prop"
     },
     {
-      "artist": "\u3067\u3093\u3071\u7d44.inc",
-      "bpm": "183",
-      "difficulty": 0,
-      "genre": "\u30dd\u30c3\u30d7\u30b9",
-      "level": "4",
-      "style": "single",
-      "title": "\u30d0\u30ea3\u5171\u548c\u56fd",
-      "version": "jubeat prop"
-    },
-    {
-      "artist": "\u3067\u3093\u3071\u7d44.inc",
-      "bpm": "183",
-      "difficulty": 1,
-      "genre": "\u30dd\u30c3\u30d7\u30b9",
-      "level": "7",
-      "style": "single",
-      "title": "\u30d0\u30ea3\u5171\u548c\u56fd",
-      "version": "jubeat prop"
-    },
-    {
-      "artist": "\u3067\u3093\u3071\u7d44.inc",
-      "bpm": "183",
-      "difficulty": 2,
-      "genre": "\u30dd\u30c3\u30d7\u30b9",
-      "level": "9",
-      "style": "single",
-      "title": "\u30d0\u30ea3\u5171\u548c\u56fd",
-      "version": "jubeat prop"
-    },
-    {
       "artist": "\u30d3\u30fc\u30c8\u307e\u308a\u304a\uff08COOL&CREATE\uff09",
       "bpm": "190",
       "difficulty": 0,
@@ -15449,36 +15269,6 @@
       "level": "10",
       "style": "single",
       "title": "\u30d7\u30ec\u30a4\u30f3\u30a8\u30a4\u30b8\u30a2 -PHQ remix-",
-      "version": "jubeat prop"
-    },
-    {
-      "artist": "\u5317\u9ad8\u6587\u82b8\u90e8\u5973\u5b50\u4f1a",
-      "bpm": "172",
-      "difficulty": 0,
-      "genre": "\u30a2\u30cb\u30e1",
-      "level": "3",
-      "style": "single",
-      "title": "\u30d5\u30ec\u964d\u30ec\u30df\u30e9\u30a4",
-      "version": "jubeat prop"
-    },
-    {
-      "artist": "\u5317\u9ad8\u6587\u82b8\u90e8\u5973\u5b50\u4f1a",
-      "bpm": "172",
-      "difficulty": 1,
-      "genre": "\u30a2\u30cb\u30e1",
-      "level": "5",
-      "style": "single",
-      "title": "\u30d5\u30ec\u964d\u30ec\u30df\u30e9\u30a4",
-      "version": "jubeat prop"
-    },
-    {
-      "artist": "\u5317\u9ad8\u6587\u82b8\u90e8\u5973\u5b50\u4f1a",
-      "bpm": "172",
-      "difficulty": 2,
-      "genre": "\u30a2\u30cb\u30e1",
-      "level": "8",
-      "style": "single",
-      "title": "\u30d5\u30ec\u964d\u30ec\u30df\u30e9\u30a4",
       "version": "jubeat prop"
     },
     {
@@ -15809,66 +15599,6 @@
       "level": "8",
       "style": "single",
       "title": "MURASAKI",
-      "version": "jubeat prop"
-    },
-    {
-      "artist": "\u30ad\u30e5\u30a6\u30bd\u30cd\u30b3\u30ab\u30df",
-      "bpm": "190",
-      "difficulty": 0,
-      "genre": "\u30dd\u30c3\u30d7\u30b9",
-      "level": "4",
-      "style": "single",
-      "title": "MEGA SHAKE IT !",
-      "version": "jubeat prop"
-    },
-    {
-      "artist": "\u30ad\u30e5\u30a6\u30bd\u30cd\u30b3\u30ab\u30df",
-      "bpm": "190",
-      "difficulty": 1,
-      "genre": "\u30dd\u30c3\u30d7\u30b9",
-      "level": "7",
-      "style": "single",
-      "title": "MEGA SHAKE IT !",
-      "version": "jubeat prop"
-    },
-    {
-      "artist": "\u30ad\u30e5\u30a6\u30bd\u30cd\u30b3\u30ab\u30df",
-      "bpm": "190",
-      "difficulty": 2,
-      "genre": "\u30dd\u30c3\u30d7\u30b9",
-      "level": "9",
-      "style": "single",
-      "title": "MEGA SHAKE IT !",
-      "version": "jubeat prop"
-    },
-    {
-      "artist": "BABYMETAL",
-      "bpm": "142",
-      "difficulty": 0,
-      "genre": "\u30dd\u30c3\u30d7\u30b9",
-      "level": "3",
-      "style": "single",
-      "title": "\u30e1\u30ae\u30c4\u30cd",
-      "version": "jubeat prop"
-    },
-    {
-      "artist": "BABYMETAL",
-      "bpm": "142",
-      "difficulty": 1,
-      "genre": "\u30dd\u30c3\u30d7\u30b9",
-      "level": "6",
-      "style": "single",
-      "title": "\u30e1\u30ae\u30c4\u30cd",
-      "version": "jubeat prop"
-    },
-    {
-      "artist": "BABYMETAL",
-      "bpm": "142",
-      "difficulty": 2,
-      "genre": "\u30dd\u30c3\u30d7\u30b9",
-      "level": "9",
-      "style": "single",
-      "title": "\u30e1\u30ae\u30c4\u30cd",
       "version": "jubeat prop"
     },
     {

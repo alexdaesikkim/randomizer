@@ -42,14 +42,17 @@ var Random = createReactClass({
       north_america: false,
       card_draw: false,
       card_draw_panel: false,
+      protect: false,
+      protect_count: 2,
       cd_song_num: 0,
       cd_form_num: 1,
       cd_curr_num: 0,
       songs: [],
-      undo_bans: [],
+      undos: [],
       weight: false,
       weight_lvl: 0,
       weight_dist: [],
+      tiebreaker: false,
       errors:{
         error_messages: [],
         error_class: "no-error"
@@ -134,9 +137,11 @@ var Random = createReactClass({
             max_diff: 0,
             card_draw: false,
             card_draw_panel: false,
+            protect: false,
             cd_song_num: 0,
             cd_curr_num: 0,
             cd_form_num: 1,
+            protect_count: 2,
             song_num: 1,
             versions: version_list,
             songs: [],
@@ -310,6 +315,12 @@ var Random = createReactClass({
     })
   },
 
+  changeProtectSettings(){
+    this.setState({
+      protect: !this.state.protect
+    })
+  },
+
   handleRandomCall(){
     if(!this.errorCheck()){
       var that = this;
@@ -350,6 +361,7 @@ var Random = createReactClass({
               style: style,
               difficulty: raw_songs[i].difficulty,
               version: raw_songs[i].version,
+              protect: false,
               active: true
             }
             songs.push(object);
@@ -358,9 +370,10 @@ var Random = createReactClass({
           that.setState({
             songs: songs,
             panel: false,
-            undo_bans: [],
+            undos: [],
             cd_curr_num: songs.length,
             card_draw_panel: that.state.card_draw,
+            protect_count:that.state.protect_count,
             cd_song_num: that.state.cd_form_num,
             errors:{
               error_messages: [],
@@ -462,6 +475,7 @@ var Random = createReactClass({
       <Modal header='Advanced Options' trigger={<Button>Advanced Options</Button>}>
         <div className="row">
           <Input name='cd_option' type='checkbox' label='Card Draw' checked={this.state.card_draw} onChange={this.changeCardDrawSettings}></Input>
+          <Input name='protect_option' type='checkbox' label='Protect 2 Songs' checked={this.state.protect} onChange={this.changeProtectSettings}></Input>
           <Input name='weight_option' type='checkbox' label='Use Weights' checked={this.state.weight} onChange={this.changeWeightSettings}></Input>
           {this.displayNATab()}
         </div>
@@ -631,30 +645,58 @@ var Random = createReactClass({
 
   //changing props will change child value at the same time
   //NOT sure if this is react way of doing things. but in this case, it works
-  undoBans(){
-    if(this.state.undo_bans.length > 0){
+  undo(){
+    if(this.state.undos.length > this.state.protect_count){
       var songs = this.state.songs;
-      var undos = this.state.undo_bans;
+      var undos = this.state.undos;
       var num = undos.pop();
-      songs[num].active = true;
-      this.setState({
-        songs: songs,
-        undo_bans: undos,
-        cd_curr_num: this.state.cd_curr_num+1,
-        card_draw_panel: true
-      })
     }
+    if(this.state.undos.length > 0){
+      var songs = this.state.songs;
+      var undos = this.state.undos;
+      var num = undos.pop();
+      if(this.state.undos.length > this.state.protect_count){
+        songs[num].active = true;
+        this.setState({
+          songs: songs,
+          undos: undos,
+          cd_curr_num: this.state.cd_curr_num+1,
+          card_draw_panel: true
+        })
+      }
+      else{
+        songs[num].protect = false;
+        this.setState({
+          songs: songs,
+          undos: undos,
+          protect_count: this.state.protect_count+1
+        })
+      }
+    }
+  },
+
+  handleProtect(num){
+    var songs = this.state.songs;
+    songs[num].protect = true;
+    var undos = this.state.undos;
+    undos.push(num);
+    var protect_count = this.state.protect_count-1;
+    this.setState({
+      songs: songs,
+      undos: undos,
+      protect_count: protect_count
+    })
   },
 
   handleBans(num){
     var songs = this.state.songs;
     songs[num].active = false;
-    var undos = this.state.undo_bans;
+    var undos = this.state.undos;
     undos.push(num);
     var cd_curr_num = this.state.cd_curr_num-1
     this.setState({
       songs: songs,
-      undo_bans: undos,
+      undos: undos,
       cd_curr_num: cd_curr_num,
       card_draw_panel: !(cd_curr_num === this.state.cd_song_num)
     })
@@ -668,7 +710,7 @@ var Random = createReactClass({
     })
     this.setState({
       songs: songs,
-      undo_bans: [],
+      undos: [],
       cd_curr_num: songs.length,
       card_draw_panel: true
     })
@@ -700,12 +742,21 @@ var Random = createReactClass({
         return(
           <div>
             <Button floating fab='horizontal' fabClickOnly={true} icon='menu' className='gray' large style={{bottom: '25px', right: '25px'}}>
-              <Button floating icon='undo' className={this.state.undo_bans.length > 0 ? "deep-orange darken-4" : "disabled"} onClick={this.undoBans}/>
-              <Button floating icon='replay' className={this.state.undo_bans.length > 0 ? "blue" : "disabled"} onClick={this.resetSongs}/>
+              <Button floating icon='undo' className={this.state.undos.length > 0 ? "deep-orange darken-4" : "disabled"} onClick={this.undoBans}/>
+              <Button floating icon='replay' className={this.state.undos.length > 0 ? "blue" : "disabled"} onClick={this.resetSongs}/>
             </Button>
           </div>
         )
       }
+  },
+
+  protectPanel(){
+    return(
+      <div className="Protect-panel">
+        <h4>Protect Phase</h4>
+        <h5>{(this.state.protect_count) + " more song(s) to protect"}</h5>
+      </div>
+    )
   },
 
   banPanel(){
@@ -716,11 +767,19 @@ var Random = createReactClass({
       )
   },
 
+  infoPanel(){
+    return(
+      <div className="Info-panel">
+        <h4>Song(s) to be Played</h4>
+      </div>
+    )
+  },
+
   render() {
     var that = this;
     var song_cards = this.state.songs.map(function(obj){
       return(
-        <Song song={obj} card_draw_panel={that.state.card_draw_panel} game={that.state.game_name} version={that.state.version_name} difficulties={that.state.game_data.games[that.state.game_name].versions[that.state.version_name].difficulty.list} ban = {that.handleBans} key={obj.name + "_" + obj.difficulty} />
+        <Song song={obj} protect_panel={that.state.protect_count > 0} card_draw_panel={(!that.state.protect_count > 0 && that.state.cd_curr_num > 0)} game={that.state.game_name} version={that.state.version_name} difficulties={that.state.game_data.games[that.state.game_name].versions[that.state.version_name].difficulty.list} protect = {that.handleProtect} ban = {that.handleBans} key={obj.name + "_" + obj.difficulty} />
       )
     })
     return (
@@ -736,7 +795,7 @@ var Random = createReactClass({
             </div>
           </div>
         </div>
-        {this.banPanel()}
+        {this.state.songs.length > 0 ? (this.state.protect_count > 0 && this.state.songs.length > 1 ? this.protectPanel() : (this.state.cd_curr_num && this.state.songs.length > 1 ? this.banPanel() : this.infoPanel())) : null}
         <div className="Song-container">
           {song_cards}
         </div>
@@ -772,18 +831,31 @@ var Song = createReactClass({
     return object;
   },
 
-  changeActiveClass(){
+  changeBanClass(){
     this.props.ban(this.props.song.id);
+  },
+
+  changeProtectClass(){
+    this.props.protect(this.props.song.id);
   },
 
   card_ban(){
     var url = "https://www.google.com/search?q=" + this.props.song.name + "+" + this.props.song.version + "+" + this.props.game
-    if(this.props.card_draw_panel){
+    if(this.props.protect_panel && !this.props.song.protect){
       return(
         <div>
           <a href={url} target="_blank"><i className="small material-icons">search</i></a>
           &ensp;&ensp;
-          <i className="small material-icons" onClick={this.changeActiveClass}>block</i>
+          <i className="small material-icons" onClick={this.changeProtectClass}>check_circle_outline</i>
+        </div>
+      )
+    }
+    else if(this.props.card_draw_panel && !this.props.song.protect){
+      return(
+        <div>
+          <a href={url} target="_blank"><i className="small material-icons">search</i></a>
+          &ensp;&ensp;
+          <i className="small material-icons" onClick={this.changeBanClass}>block</i>
         </div>
       )
     }
