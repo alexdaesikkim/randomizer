@@ -694,6 +694,8 @@ var Random = createReactClass({
     var undos = this.state.undos;
     undos.push(num);
     var cd_curr_num = this.state.cd_curr_num-1
+    console.log(cd_curr_num)
+    console.log(this.state.cd_song_num)
     this.setState({
       songs: songs,
       undos: undos,
@@ -712,6 +714,7 @@ var Random = createReactClass({
       songs: songs,
       undos: [],
       cd_curr_num: songs.length,
+      protect_count: 2,
       card_draw_panel: true
     })
   },
@@ -779,7 +782,7 @@ var Random = createReactClass({
     var that = this;
     var song_cards = this.state.songs.map(function(obj){
       return(
-        <Song song={obj} protect_panel={that.state.protect_count > 0} card_draw_panel={(!that.state.protect_count > 0 && that.state.cd_curr_num > 0)} game={that.state.game_name} version={that.state.version_name} difficulties={that.state.game_data.games[that.state.game_name].versions[that.state.version_name].difficulty.list} protect = {that.handleProtect} ban = {that.handleBans} key={obj.name + "_" + obj.difficulty} />
+        <Song song={obj} protect_panel={that.state.protect_count > 0} card_draw_panel={that.state.card_draw_panel} game={that.state.game_name} version={that.state.version_name} difficulties={that.state.game_data.games[that.state.game_name].versions[that.state.version_name].difficulty.list} protect = {that.handleProtect} ban = {that.handleBans} key={obj.name + "_" + obj.difficulty} />
       )
     })
     return (
