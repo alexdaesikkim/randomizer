@@ -3272,6 +3272,66 @@
       "version": "REFLEC BEAT limelight"
     },
     {
+      "artist": "DJ YOSHITAKA",
+      "bpm": "185",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "7",
+      "style": "single",
+      "title": "ALBIDA",
+      "version": "REFLEC BEAT limelight"
+    },
+    {
+      "artist": "DJ YOSHITAKA",
+      "bpm": "185",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "ALBIDA",
+      "version": "REFLEC BEAT limelight"
+    },
+    {
+      "artist": "DJ YOSHITAKA",
+      "bpm": "185",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "13",
+      "style": "single",
+      "title": "ALBIDA",
+      "version": "REFLEC BEAT limelight"
+    },
+    {
+      "artist": "S-C-U",
+      "bpm": "190",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "6",
+      "style": "single",
+      "title": "robin",
+      "version": "REFLEC BEAT limelight"
+    },
+    {
+      "artist": "S-C-U",
+      "bpm": "190",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "8",
+      "style": "single",
+      "title": "robin",
+      "version": "REFLEC BEAT limelight"
+    },
+    {
+      "artist": "S-C-U",
+      "bpm": "190",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "robin",
+      "version": "REFLEC BEAT limelight"
+    },
+    {
       "artist": "Zektbach",
       "bpm": "170",
       "difficulty": 0,
@@ -3972,6 +4032,66 @@
       "version": "REFLEC BEAT colette -Winter-"
     },
     {
+      "artist": "Qrispy Joybox",
+      "bpm": "186",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "5",
+      "style": "single",
+      "title": "Almace -HI SPEED EDITION-",
+      "version": "REFLEC BEAT colette -Winter-"
+    },
+    {
+      "artist": "Qrispy Joybox",
+      "bpm": "186",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "8",
+      "style": "single",
+      "title": "Almace -HI SPEED EDITION-",
+      "version": "REFLEC BEAT colette -Winter-"
+    },
+    {
+      "artist": "Qrispy Joybox",
+      "bpm": "186",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "Almace -HI SPEED EDITION-",
+      "version": "REFLEC BEAT colette -Winter-"
+    },
+    {
+      "artist": "Tatsh",
+      "bpm": "200",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "6",
+      "style": "single",
+      "title": "Wizard",
+      "version": "REFLEC BEAT colette -Winter-"
+    },
+    {
+      "artist": "Tatsh",
+      "bpm": "200",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "9",
+      "style": "single",
+      "title": "Wizard",
+      "version": "REFLEC BEAT colette -Winter-"
+    },
+    {
+      "artist": "Tatsh",
+      "bpm": "200",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "12",
+      "style": "single",
+      "title": "Wizard",
+      "version": "REFLEC BEAT colette -Winter-"
+    },
+    {
       "artist": "TAG",
       "bpm": "144",
       "difficulty": 0,
@@ -7362,6 +7482,36 @@
       "version": "REFLEC BEAT colette -All Seasons-"
     },
     {
+      "artist": "Ryu\u2606 \u221e Des-ROW",
+      "bpm": "188",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "6",
+      "style": "single",
+      "title": "Engraved Mark",
+      "version": "REFLEC BEAT colette -All Seasons-"
+    },
+    {
+      "artist": "Ryu\u2606 \u221e Des-ROW",
+      "bpm": "188",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "Engraved Mark",
+      "version": "REFLEC BEAT colette -All Seasons-"
+    },
+    {
+      "artist": "Ryu\u2606 \u221e Des-ROW",
+      "bpm": "188",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "13",
+      "style": "single",
+      "title": "Engraved Mark",
+      "version": "REFLEC BEAT colette -All Seasons-"
+    },
+    {
       "artist": "\u2192Pia-no-jaC\u2190",
       "bpm": "95-127",
       "difficulty": 0,
@@ -9149,6 +9299,36 @@
       "level": "14",
       "style": "single",
       "title": "SCHWARZSCHILD FIELD",
+      "version": "REFLEC BEAT groovin'!!"
+    },
+    {
+      "artist": "TAG",
+      "bpm": "74-222",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "6",
+      "style": "single",
+      "title": "SABER WING",
+      "version": "REFLEC BEAT groovin'!!"
+    },
+    {
+      "artist": "TAG",
+      "bpm": "74-222",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "9",
+      "style": "single",
+      "title": "SABER WING",
+      "version": "REFLEC BEAT groovin'!!"
+    },
+    {
+      "artist": "TAG",
+      "bpm": "74-222",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "12",
+      "style": "single",
+      "title": "SABER WING",
       "version": "REFLEC BEAT groovin'!!"
     },
     {
@@ -11512,6 +11692,66 @@
       "version": "REFLEC BEAT groovin'!! Upper"
     },
     {
+      "artist": "Mr.T",
+      "bpm": "160",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "5",
+      "style": "single",
+      "title": "ZERO-ONE",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
+      "artist": "Mr.T",
+      "bpm": "160",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "9",
+      "style": "single",
+      "title": "ZERO-ONE",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
+      "artist": "Mr.T",
+      "bpm": "160",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "12",
+      "style": "single",
+      "title": "ZERO-ONE",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
+      "artist": "U1 undefined behavior",
+      "bpm": "205",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "7",
+      "style": "single",
+      "title": "DEADLOCK -Out Of Reach-",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
+      "artist": "U1 undefined behavior",
+      "bpm": "205",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "10",
+      "style": "single",
+      "title": "DEADLOCK -Out Of Reach-",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
+      "artist": "U1 undefined behavior",
+      "bpm": "205",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "15",
+      "style": "single",
+      "title": "DEADLOCK -Out Of Reach-",
+      "version": "REFLEC BEAT groovin'!! Upper"
+    },
+    {
       "artist": "n-buna",
       "bpm": "120",
       "difficulty": 0,
@@ -13029,6 +13269,76 @@
       "level": "12",
       "style": "single",
       "title": "DixieLand a la mode",
+      "version": "REFLEC BEAT VOLZZA"
+    },
+    {
+      "artist": "Asaki",
+      "bpm": "185",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "6",
+      "style": "single",
+      "title": "NIRVANA",
+      "version": "REFLEC BEAT VOLZZA"
+    },
+    {
+      "artist": "Asaki",
+      "bpm": "185",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "9",
+      "style": "single",
+      "title": "NIRVANA",
+      "version": "REFLEC BEAT VOLZZA"
+    },
+    {
+      "artist": "Asaki",
+      "bpm": "185",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "12",
+      "style": "single",
+      "title": "NIRVANA",
+      "version": "REFLEC BEAT VOLZZA"
+    },
+    {
+      "artist": "USAO",
+      "bpm": "118",
+      "difficulty": 0,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "6",
+      "style": "single",
+      "title": "Hastur",
+      "version": "REFLEC BEAT VOLZZA"
+    },
+    {
+      "artist": "USAO",
+      "bpm": "118",
+      "difficulty": 1,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "8",
+      "style": "single",
+      "title": "Hastur",
+      "version": "REFLEC BEAT VOLZZA"
+    },
+    {
+      "artist": "USAO",
+      "bpm": "118",
+      "difficulty": 2,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "11",
+      "style": "single",
+      "title": "Hastur",
+      "version": "REFLEC BEAT VOLZZA"
+    },
+    {
+      "artist": "USAO",
+      "bpm": "118",
+      "difficulty": 3,
+      "genre": "\u30aa\u30ea\u30b8\u30ca\u30eb",
+      "level": "14",
+      "style": "single",
+      "title": "Hastur",
       "version": "REFLEC BEAT VOLZZA"
     },
     {
