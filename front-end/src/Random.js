@@ -753,7 +753,7 @@ var Random = createReactClass({
         return(
           <div>
             <Button floating fab='horizontal' fabClickOnly={true} icon='menu' className='gray' large style={{bottom: '25px', right: '25px'}}>
-              <Button floating icon='undo' className={this.state.undos.length > 0 ? "deep-orange darken-4" : "disabled"} onClick={this.undoBans}/>
+              <Button floating icon='undo' className={this.state.undos.length > 0 ? "deep-orange darken-4" : "disabled"} onClick={this.undo}/>
               <Button floating icon='replay' className={this.state.undos.length > 0 ? "blue" : "disabled"} onClick={this.resetSongs}/>
             </Button>
           </div>
