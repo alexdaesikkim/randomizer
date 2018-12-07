@@ -373,7 +373,7 @@ var Random = createReactClass({
             undos: [],
             cd_curr_num: songs.length,
             card_draw_panel: that.state.card_draw,
-            protect_count:this.state.protect ? 2 : 0
+            protect_count:this.state.protect ? 2 : 0,
             cd_song_num: that.state.cd_form_num,
             errors:{
               error_messages: [],
