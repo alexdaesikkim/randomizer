@@ -646,21 +646,16 @@ var Random = createReactClass({
   //changing props will change child value at the same time
   //NOT sure if this is react way of doing things. but in this case, it works
   undo(){
-    if(this.state.undos.length > this.state.protect_count){
+    if(this.state.protect === true){
       var songs = this.state.songs;
       var undos = this.state.undos;
       var num = undos.pop();
-    }
-    if(this.state.undos.length > 0){
-      var songs = this.state.songs;
-      var undos = this.state.undos;
-      var num = undos.pop();
-      if(this.state.undos.length > this.state.protect_count){
+      if(this.state.undos.length > 2){
         songs[num].active = true;
         this.setState({
           songs: songs,
           undos: undos,
-          cd_curr_num: this.state.cd_curr_num+1,
+          cd_carr_num: this.state.cd_curr_num+1,
           card_draw_panel: true
         })
       }
@@ -669,9 +664,21 @@ var Random = createReactClass({
         this.setState({
           songs: songs,
           undos: undos,
-          protect_count: this.state.protect_count+1
+          protect_count: this.state.protect_count + 1
         })
       }
+    }
+    else if(this.state.undos.length > 0){
+      var songs = this.state.songs;
+      var undos = this.state.undos;
+      var num = undos.pop();
+      songs[num].active = true;
+      this.setState({
+        songs: songs,
+        undos: undos,
+        cd_curr_num: this.state.cd_curr_num+1,
+        card_draw_panel: true
+      });
     }
   },
 
@@ -708,13 +715,14 @@ var Random = createReactClass({
     var songs = this.state.songs;
     songs.map(function(obj){
       obj.active = true;
+      obj.protect = false;
       return obj;
     })
     this.setState({
       songs: songs,
       undos: [],
       cd_curr_num: songs.length,
-      protect_count: 2,
+      protect_count: (this.state.protect ? 2 : 0),
       card_draw_panel: true
     })
   },
