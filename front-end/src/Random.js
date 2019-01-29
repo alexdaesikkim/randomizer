@@ -47,8 +47,9 @@ var Random = createReactClass({
       cd_song_num: 0,
       cd_form_num: 1,
       cd_curr_num: 0,
+      grabbed_songs: [],
       songs: [],
-      undos: [],
+      bans: [],
       weight: false,
       weight_lvl: 0,
       weight_dist: [],
@@ -144,7 +145,9 @@ var Random = createReactClass({
             protect_count: 2,
             song_num: 1,
             versions: version_list,
+            grabbed_songs: [],
             songs: [],
+            bans: [],
             weight: false
           })
         }
@@ -346,7 +349,7 @@ var Random = createReactClass({
         data: query,
         success: function(data){
           var raw_songs = data.songs;
-          var songs = [];
+          var grabbed_songs = [];
           var styles = that.state.styles;
           for(var i = 0; i < raw_songs.length; i++){
             var style = styles.length === 1 ? "" : raw_songs[i].style;
@@ -364,14 +367,15 @@ var Random = createReactClass({
               protect: false,
               active: true
             }
-            songs.push(object);
+            grabbed_songs.push(object);
           }
 
           that.setState({
-            songs: songs,
             panel: false,
-            undos: [],
-            cd_curr_num: songs.length,
+            bans: [],
+            grabbed_songs: grabbed_songs,
+            songs: [],
+            cd_curr_num: grabbed_songs.length,
             card_draw_panel: that.state.card_draw,
             protect_count:that.state.protect ? 2 : 0,
             cd_song_num: that.state.cd_form_num,
@@ -643,84 +647,91 @@ var Random = createReactClass({
     })
   },
 
-  //changing props will change child value at the same time
-  //NOT sure if this is react way of doing things. but in this case, it works
   undo(){
     if(this.state.protect === true){
+      //case where protect phase is happening
+      var grabbed_songs = this.state.grabbed_songs;
       var songs = this.state.songs;
-      var undos = this.state.undos;
-      var num = undos.pop();
-      if(this.state.undos.length > 2){
-        songs[num].active = true;
-        this.setState({
-          songs: songs,
-          undos: undos,
-          cd_carr_num: this.state.cd_curr_num+1,
-          card_draw_panel: true
-        })
-      }
-      else{
-        songs[num].protect = false;
-        this.setState({
-          songs: songs,
-          undos: undos,
-          protect_count: this.state.protect_count + 1
-        })
-      }
-    }
-    else if(this.state.undos.length > 0){
-      var songs = this.state.songs;
-      var undos = this.state.undos;
-      var num = undos.pop();
-      songs[num].active = true;
+      var song = songs.pop();
+      grabbed_songs[song.id].protect = false;
       this.setState({
+        grabbed_songs: grabbed_songs,
         songs: songs,
-        undos: undos,
+        protect_count: this.state.protect_count + 1
+      })
+    }
+    else if(this.state.bans.length > 0){
+      var grabbed_songs = this.state.grabbed_songs;
+      var bans = this.state.bans;
+      var num = bans.pop();
+      grabbed_songs[num].active = true;
+      this.setState({
+        grabbed_songs: grabbed_songs,
+        bans: bans,
         cd_curr_num: this.state.cd_curr_num+1,
         card_draw_panel: true
       });
     }
   },
 
+  handleReDraw(num){
+    var grabbed_songs = this.state.grabbed_songs;
+    var song = grabbed_songs[num];
+  },
+
   handleProtect(num){
+    var grabbed_songs = this.state.grabbed_songs;
+    grabbed_songs[num].protect = true;
+    grabbed_songs[num].active = false;
     var songs = this.state.songs;
-    songs[num].protect = true;
-    var undos = this.state.undos;
-    undos.push(num);
+    var song = Object.assign({}, grabbed_songs[num]);
+    song.active = true;
+    songs.push(song);
     var protect_count = this.state.protect_count-1;
     this.setState({
+      grabbed_songs: grabbed_songs,
       songs: songs,
-      undos: undos,
       protect_count: protect_count
     })
   },
 
   handleBans(num){
+    var grabbed_songs = this.state.grabbed_songs;
     var songs = this.state.songs;
-    songs[num].active = false;
-    var undos = this.state.undos;
-    undos.push(num);
-    var cd_curr_num = this.state.cd_curr_num-1
-    console.log(cd_curr_num)
-    console.log(this.state.cd_song_num)
+    grabbed_songs[num].active = false;
+    var bans = this.state.bans;
+    bans.push(num);
+    var cd_curr_num = this.state.cd_curr_num-1;
+    if(cd_curr_num === this.state.cd_song_num){
+      for(var x = 0; x < grabbed_songs.length; x++){
+        if(grabbed_songs[x].active === true){
+          var song = Object.assign({}, grabbed_songs[x]);
+          songs.push(song);
+          grabbed_songs[x].active = false;
+        }
+      }
+    }
     this.setState({
+      grabbed_songs: grabbed_songs,
       songs: songs,
-      undos: undos,
+      bans: bans,
       cd_curr_num: cd_curr_num,
       card_draw_panel: !(cd_curr_num === this.state.cd_song_num)
     })
   },
 
   resetSongs(){
-    var songs = this.state.songs;
-    songs.map(function(obj){
+    var grabbed_songs = this.state.grabbed_songs;
+    grabbed_songs.map(function(obj){
       obj.active = true;
       obj.protect = false;
       return obj;
     })
+    var songs = [];
     this.setState({
       songs: songs,
-      undos: [],
+      grabbed_songs: grabbed_songs,
+      bans: [],
       cd_curr_num: songs.length,
       protect_count: (this.state.protect ? 2 : 0),
       card_draw_panel: true
@@ -753,8 +764,8 @@ var Random = createReactClass({
         return(
           <div>
             <Button floating fab='horizontal' fabClickOnly={true} icon='menu' className='gray' large style={{bottom: '25px', right: '25px'}}>
-              <Button floating icon='undo' className={this.state.undos.length > 0 ? "deep-orange darken-4" : "disabled"} onClick={this.undo}/>
-              <Button floating icon='replay' className={this.state.undos.length > 0 ? "blue" : "disabled"} onClick={this.resetSongs}/>
+              <Button floating icon='undo' className={this.state.songs.length > 0 ? "deep-orange darken-4" : "disabled"} onClick={this.undo}/>
+              <Button floating icon='replay' className={this.state.songs.length > 0 ? "blue" : "disabled"} onClick={this.resetSongs}/>
             </Button>
           </div>
         )
@@ -772,8 +783,9 @@ var Random = createReactClass({
 
   banPanel(){
       return(
-            <div className={(this.state.songs.length > 0 && this.state.card_draw_panel) ? "Ban-panel" : "Ban-panel-out"}>
-              <h5>{(this.state.songs.length > 0 && this.state.card_draw_panel) ? (this.state.cd_curr_num-this.state.cd_song_num) + " more song(s) to ban" : ""}</h5>
+            <div className={"Ban-panel"}>
+              <h4>Ban Phase</h4>
+              <h5>{(this.state.cd_curr_num-this.state.cd_song_num) + " more song(s) to ban"}</h5>
             </div>
       )
   },
@@ -788,9 +800,14 @@ var Random = createReactClass({
 
   render() {
     var that = this;
-    var song_cards = this.state.songs.map(function(obj){
+    var grabbed_song_cards = this.state.grabbed_songs.map(function(obj){
       return(
         <Song song={obj} protect_panel={that.state.protect_count > 0} card_draw_panel={that.state.card_draw_panel} game={that.state.game_name} version={that.state.version_name} difficulties={that.state.game_data.games[that.state.game_name].versions[that.state.version_name].difficulty.list} protect = {that.handleProtect} ban = {that.handleBans} key={obj.name + "_" + obj.difficulty} />
+      )
+    })
+    var song_cards = this.state.songs.map(function(obj){
+      return(
+        <Song song={obj} protect_panel={false} card_draw_panel={false} game={that.state.game_name} version={that.state.version_name} difficulties={that.state.game_data.games[that.state.game_name].versions[that.state.version_name].difficulty.list} key={obj.name + "_" + obj.difficulty} />
       )
     })
     return (
@@ -806,7 +823,11 @@ var Random = createReactClass({
             </div>
           </div>
         </div>
-        {this.state.songs.length > 0 ? (this.state.protect_count > 0 && this.state.songs.length > 1 ? this.protectPanel() : (this.state.cd_curr_num && this.state.songs.length > 1 ? this.banPanel() : this.infoPanel())) : null}
+        {this.state.grabbed_songs.length > 0 ? (this.state.protect_count > 0 ? this.protectPanel() : (this.state.cd_curr_num !== this.state.cd_song_num ? this.banPanel() : null)) : null}
+        <div className="Song-container">
+          {grabbed_song_cards}
+        </div>
+        {this.state.grabbed_songs.length > 0 ? this.infoPanel() : null}
         <div className="Song-container">
           {song_cards}
         </div>
